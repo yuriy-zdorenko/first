@@ -1,1 +1,0 @@
-document.body.innerHTML='<h1>hello mz</h1>'
