@@ -1,0 +1,72 @@
+body{ 
+  BACKGROUND : URL(https://cdn.wallpapersafari.com/37/45/mzGToU.jpg);
+}
+.kot
+ { 
+color : blue; 
+ font-family: Arial;
+font-size: 18pt;	    
+ font-style: italic; 
+ font-weight: bold; 
+ line-height : 20 pt; 
+text-align: justify;  
+ text-decoration : underline; 
+ text-transform: uppercase; 
+ text-indent: 5%; 
+  } 
+.p1 {font-family: Times New Roman;
+font-size:16pt;
+  font-style : italic;
+   color: #990033;
+    text-align: justify;
+     text-indent: 4%;
+    } 
+    .p2{ 
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size:18pt;
+  font-style : oblique;
+  text-indent: 2%;
+  color: coral;
+  text-align: justify;
+
+
+    }
+    .p3{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  text-indent: 2%;
+font-size:18pt;
+color: cadetblue;
+text-align: justify;
+
+
+
+
+    }
+.pipy {font-size: 35pt;
+   font-weight: bolder;
+   color: #006b99;
+   text-align: center;
+   background-color: rgb(97, 37, 45);
+     }
+     .pipy2{
+      font-size: 35pt;
+      color: blue;
+      background-color: burlywood;
+      font-style: oblique;
+      text-align: center;
+
+
+     }
+     .pipy3{
+      font-size: 35pt;
+font-style: italic;
+      text-align: center;
+      color:black;
+      background-color: #006b99;
+     }
+    
+
+ 
+ 
+
+     
