@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            width: 100%;
+            height: 50px;
+            background-color: bisque;
+        }
+
+        .header .navbar .navlist {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .header .navbar .navlist .navitem {
+            margin: 5px;
+        }
+
+        .header .navbar .navlist .navitem a {
+            text-decoration: none;
+            color: black;
+            font-family:'Segoe UI';
+            font-size: 18px;
+        }
+
+        .main {
+            flex: 1;
+            padding-left: 5px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 50px;
+            background-color: bisque;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <ol class="navlist">
+                <li class="navitem"><a href="lab 6.3.html">Home</a></li>
+                <li class="navitem"><a href="MedvLab01FINAL.html">My page</a></li>
+                <li class="navitem"><a href="lab 6.4.html">Navigator</a></li>
+                
+            </ol>
+        </nav>
+    </header>
+
+    <main class="main">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus optio, iusto corporis facilis temporibus aliquid ab dolor ex vel soluta. Id, officia exercitationem? Aspernatur, iste laudantium. Aut iure inventore molestias.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus optio, iusto corporis facilis temporibus aliquid ab dolor ex vel soluta. Id, officia exercitationem? Aspernatur, iste laudantium. Aut iure inventore molestias.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus optio, iusto corporis facilis temporibus aliquid ab dolor ex vel soluta. Id, officia exercitationem? Aspernatur, iste laudantium. Aut iure inventore molestias.</p>
+    </main>
+
+    <footer class="footer">
+        <div>
+            ivmedv TK103
+        </div>
+    </footer>
+</body>
+</html>
