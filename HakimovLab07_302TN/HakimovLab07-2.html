@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post" enctype="multipart/form-data">
+		<p>Ваше ім'я:</p>
+		<input type="text" name="name" maxlength="40" size="40" value="" placeholder="Введіть ім'я">
+		<p>Ваша стать:</p>
+		<input type="radio" name="gender" value="male">Чоловіча
+		<input type="radio" name="gender" value="female">Жіноча
+		<p>Оберіть ваше місто:</p>
+		<select name="city">
+			<option value="Kyiv">Київ</option>
+			<option value="Lviv">Львів</option>
+			<option value="Odessa">Одеса</option>
+			<option value="Kharkiv">Харків</option>
+		</select>
+		<p>Оберіть ваші улюблені кольори:</p>
+		<input type="checkbox" name="color[]" value="red">Червоний
+		<input type="checkbox" name="color[]" value="blue">Синій
+		<input type="checkbox" name="color[]" value="green">Зелений
+		<p>Напишіть про себе:</p>
+		<textarea name="about" rows="6" cols="60" placeholder="Введіть інформацію про себе"></textarea>
+		<p>Введіть пароль:</p>
+		<input type="password" name="password" placeholder="Введіть пароль">
+		<p>Виберіть файл:</p>
+		<input type="file" name="file">
+		<br>
+		<br>
+		<input type="submit" value="Надіслати">
+		<input type="reset" value="Очистити">
+	</form>
+</body>
+</html>

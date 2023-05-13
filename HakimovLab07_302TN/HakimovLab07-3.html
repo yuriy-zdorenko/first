@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <style>
+        body {
+            background-color: #E6F3FF;
+        }
+        h1 {
+            color: red;
+
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+   
+    <table>
+        <td colspan="2" style="text-align: center; padding: 10px;">
+            <h1>Анкета</h1>
+          </td>
+        <tr>
+            <td>1. Прізвище:</td>
+            <td><input type="text" name="surname"></td>
+        </tr>
+        <tr>
+            <td>2. Ім'я, по-батькові:</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>3. Число і рік народження:</td>
+            <td><input type="date" name="birthdate"></td>
+        </tr>
+        <tr>
+            <td>4. Домашня адреса:</td>
+            <td><input type="text" name="address"></td>
+        </tr>
+        <tr>
+            <td>5. Місце роботи або навчання:</td>
+            <td><input type="text" name="workplace"></td>
+        </tr>
+        <tr>
+            <td>6. Телефон:</td>
+            <td><input type="tel" name="phone"></td>
+        </tr>
+        <tr>
+            <td>7. Email:</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>8. Область наукових інтересів:</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="text" name="interest1"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><input type="text" name="interest2"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><input type="text" name="interest3"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><input type="text" name="interest4"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><input type="text" name="interest5"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><input type="text" name="interest6"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="reset">Відмінити введення</button> <br>
+                <button type="submit">Надіслати дані і перейти до 2 етапу реєстрації</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
