@@ -1,0 +1,45 @@
+.block {
+    border: 1px solid gray;
+}
+
+
+@media (min-width: 768px) {
+    .pink-md {
+        background-color: pink;
+    }
+}
+
+@media (max-width: 767px) {
+    .pink-md {
+        background-color: rgb(247, 118, 225);
+    }
+
+    .green-text-sm {
+        color: green;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 992px) {
+    .red-lg {
+        background-color: rgb(250, 154, 154);
+    }
+}
+
+@media (max-width: 991px) {
+    .red-lg {
+        background-color: white;
+    }
+}
+
+@media (min-width: 1200px) {
+    .yellow-xl {
+        background-color: yellow;
+    }
+}
+
+@media (max-width: 1199px) {
+    .yellow-xl {
+        background-color: white;
+    }
+}
