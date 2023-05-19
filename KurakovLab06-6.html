@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KurakovLab06-6</title>
+    <style>
+        /* Стилі для навігаційної карти */
+        #map {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+        }
+
+        .marker {
+            position: absolute;
+            display: inline-block;
+            width: 250px;
+            height: 250px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .marker:hover {
+            background-color: #00ff00;
+        }
+
+        .tooltip {
+            position: absolute;
+            display: none;
+            padding: 5px;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+ 	h1 {
+            text-align: center;
+        }
+
+        .marker:hover + .tooltip {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Мої чудові одногрупники</h1>
+    <div id="map">
+        <img src="friend1.jpg" alt="Друг 1" class="marker" style="top: 100px; left: 200px;">
+        <div class="tooltip">
+            <h3>Chrisixxx</h3>
+            <p>Дуже крута дівчина, файна, от така!</p>
+        </div>
+
+        <img src="friend2.jpg" alt="Друг 2" class="marker" style="top: 300px; left: 400px;">
+        <div class="tooltip">
+            <h3>Чайка</h3>
+            <p>Ходить в зал щодня вона, файна дівчина!</p>
+        </div>
+
+        <img src="friend3.jpg" alt="Друг 3" class="marker" style="top: 200px; left: 700px;">
+        <div class="tooltip">
+            <h3>Бодька босс всіх павуків</h3>
+            <p>Він їв мух та комарів, шкода бодьки вже нема :(</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- CSS-стилі задають розташування та вигляд елементів. Наприклад, елементи з класом "marker" встановлюють абсолютне позиціонування, розміри, колір фону та стилізацію при наведенні курсору миші. Елементи з класом "tooltip" також мають абсолютне позиціонування та приховані до наведення курсору, але відображаються як спливаючі підказки зі своїм вмістом.
+
+Зображення друзів (img) розташовуються в межах контейнера з вказаними координатами (top і left). Альтернативний текст (alt) вказується для кожного зображення.
+
+Спливаючі підказки (div.tooltip) розташовуються поруч з відповідним зображенням і містять заголовок (h3) та текстовий опис (p) про кожного друга. -->

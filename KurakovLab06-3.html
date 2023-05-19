@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>KurakovLab06-3</title>
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .photo {
+      position: relative;
+      display: inline-block;
+      margin: 10px;
+    }
+    
+    .photo img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .photo .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .photo:hover .caption {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="photo">
+      <img src="photo1.jpg" alt="Фото 1">
+      <div class="caption"> Нікополь — місто на півдні Україні, моя Батківщина, місто де я народився, місто де я провів більшу частину свого життя. Четверте за чисельністю населення місто Дніпропетровської області. Центр Нікопольського марганцевого басейну. У місті працюють два підприємства металургійної та декілька машинобудівної промисловості.</div>
+    </div>
+    <div class="photo">
+      <img src="photo2.jpg" alt="Фото 2">
+      <div class="caption">Вид з місцевої дамби на АЄС у місті Енергодар.</div>
+    </div>
+    <div class="photo">
+      <img src="photo3.jpg" alt="Фото 3">
+      <div class="caption">З тимчасово окупованого міста Енергодар майже щодня ведуться обстріли мого рідного міста, моєї Батьківщини. Дуже прикро спостерігати за тим, як руйнується твоє рідне місто, відчуття неначе частинка тебе зникає. Проте я вірю в нашу перемогу! Все буде Україна!</div>
+    </div>
+  </div>
+</body>
+</html>
