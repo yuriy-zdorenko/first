@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Гра</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        #game-board {
+            width: 310px;
+            height: 310px;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+        .game-square {
+            width: 60px;
+            height: 60px;
+            float: left;
+            border: 1px solid #ccc;
+            background-color: #eee;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .game-square img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="main-page">
+    <h1>Моя гра</h1>
+    <button id="start-game">Почати гру</button>
+</div>
+
+<div id="game-page" style="display: none;">
+    <h1>Гра</h1>
+    <div>
+        <label for="category">Розділ:</label>
+        <select id="category">
+            <option value="animals">Тварини</option>
+            <option value="insects">Комахи</option>
+            <option value="fish">Риби</option>
+        </select>
+    </div>
+    <div id="game-board">
+        <!-- Сюди будуть додані квадрати гри -->
+    </div>
+    <div>
+        <h2>Поточна картинка:</h2>
+        <div class="game-square ui-droppable">
+            <img id="current-image" alt="Картинка" class="ui-draggable ui-draggable-handle" style="position: relative;">
+        </div>
+    </div>
+    <button id="reset-game">Почати з початку</button>
+</div>
+
+<div id="congratulations-dialog" style="display: none;">
+    <h2>Вітаємо!</h2>
+    <p>Ви завершили гру. Хочете зіграти ще раз?</p>
+    <button id="play-again">Зіграти ще раз</button>
+</div>
+
+<script>
+    $(document).ready(function() {
+        var category;
+        var images = [];
+        var currentImageIndex;
+        var gameStarted = false;
+
+        $("#start-game").click(function() {
+            $("#main-page").hide();
+            $("#game-page").show();
+            startGame();
+        });
+
+        $("#reset-game").click(function() {
+            startGame();
+        });
+
+        $("#play-again").click(function() {
+            $("#congratulations-dialog").hide();
+            startGame();
+        });
+
+        $("#category").change(function() {
+            category = $(this).val();
+        });
+
+        function startGame() {
+            category = $("#category").val();
+            images = generateRandomImages(category);
+            currentImageIndex = Math.floor(Math.random() * images.length);
+            renderGameBoard();
+            $("#current-image").attr("src", images[currentImageIndex]);
+
+            $(".game-square").droppable({
+                drop: function(event, ui) {
+                    var droppedImageSrc = $(ui.draggable).attr("src");
+                    if (droppedImageSrc === images[currentImageIndex]) {
+                        currentImageIndex = Math.floor(Math.random() * images.length);
+                        $("#current-image").attr("src", images[currentImageIndex]);
+                    }
+                }
+            });
+
+            $(".game-square img").draggable({
+                revert: "invalid"
+            });
+        }
+
+        function generateRandomImages(category) {
+            var imageBasePath = "images/" + category + "/";
+            var images = [];
+            for (var i = 1; i <= 5; i++) {
+                images.push(imageBasePath + i + ".jpg");
+            }
+            return images;
+        }
+
+        function renderGameBoard() {
+            var gameBoard = $("#game-board");
+            gameBoard.empty();
+            for (var i = 0; i < 25; i++) {
+                var imageIndex = Math.floor(Math.random() * images.length);
+                var imageSrc = images[imageIndex];
+                var gameSquare = $("<div>").addClass("game-square");
+                var image = $("<img>").attr("src", imageSrc).attr("alt", "Картинка");
+                gameSquare.append(image);
+                gameBoard.append(gameSquare);
+            }
+        }
+
+        function checkGameCompletion() {
+            if ($("#game-board img[src='']").length === 25) {
+                $("#congratulations-dialog").show();
+            }
+        }
+    });
+</script>
+</body>
+</html>

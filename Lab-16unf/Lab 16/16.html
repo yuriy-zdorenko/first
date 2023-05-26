@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">Div 1</div>
+<div id="div2">Div 2</div>
+<div id="div3">Div 3</div>
+
+<script>
+    // Початкові кольори фону
+    var colors = {
+        div1: 'red',
+        div2: 'red',
+        div3: 'red'
+    };
+
+    // Додати обробник події на кожен <div>
+    document.getElementById('div1').addEventListener('click', changeColor);
+    document.getElementById('div2').addEventListener('click', changeColor);
+    document.getElementById('div3').addEventListener('click', changeColor);
+
+    function changeColor(event) {
+        var divId = event.target.id;
+        var div = document.getElementById(divId);
+
+        if (colors[divId] === 'red') {
+            div.style.backgroundColor = 'green';
+            colors[divId] = 'green';
+            div.removeEventListener('click', changeColor);
+            div.addEventListener('click', changeColorGreen);
+        } else if (colors[divId] === 'green') {
+            div.style.backgroundColor = 'red';
+            colors[divId] = 'red';
+            div.removeEventListener('click', changeColorGreen);
+            div.addEventListener('click', changeColor);
+        }
+    }
+
+    function changeColorGreen(event) {
+        var divId = event.target.id;
+        var div = document.getElementById(divId);
+
+        if (colors[divId] === 'green') {
+            div.style.backgroundColor = 'red';
+            colors[divId] = 'red';
+            div.removeEventListener('click', changeColorGreen);
+            div.addEventListener('click', changeColor);
+        }
+    }
+</script>
+</body>
+</html>
