@@ -1,0 +1,55 @@
+.blue{
+    width: 85.5%;
+    height: 30vw;
+    background-color: lightblue;
+}
+.gray{
+    width: 15%;
+    height: 100.7vw;
+    background-color: gray;
+    position: absolute;
+    right: 0px;
+    z-index: 10;
+    top: 0px;
+}
+
+.greenblue{
+    width: 26.5%;
+    height: 20vw;
+    background-color: greenyellow;
+}
+.red{
+    width: 26.5%;
+    height: 20vw;
+    background-color: lightcoral;
+}
+.flex-two{
+    width: 85%;
+    display: flex;
+}
+.green{
+    height: 30vw;
+    width: 53%;
+    background-color: green;
+}
+.yellow{
+    width: 40%;
+    height: 50vw;
+    background-color: yellow;
+    position: absolute;
+    top: 30.5vw;
+    right: 15%;
+}
+.flex-three{
+    width: 85%;
+    display: flex;
+}
+.orange{
+    width: 85.5%;
+    height: 20vw;
+    background-color: orangered;
+}
+div{
+    margin: 0;
+    padding: 0;
+}
