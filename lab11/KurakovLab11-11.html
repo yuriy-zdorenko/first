@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Приклад 11: Використання об'єкту document</title>
+    <script>
+        function showDocumentInfo() {
+            var documentTitle = document.title;
+            var documentURL = document.URL;
+            var formsCount = document.forms.length;
+            var imagesCount = document.images.length;
+            var linksCount = document.links.length;
+
+            alert('Заголовок документа: ' + documentTitle +
+                  '\nURL документа: ' + documentURL +
+                  '\nКількість форм: ' + formsCount +
+                  '\nКількість зображень: ' + imagesCount +
+                  '\nКількість посилань: ' + linksCount);
+        }
+    </script>
+</head>
+<body>
+    <h1>Приклад 11: Використання об'єкту document</h1>
+    <button onclick="showDocumentInfo()">Показати інформацію про документ</button>
+</body>
+</html>
