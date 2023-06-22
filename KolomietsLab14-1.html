@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Адаптивна розмітка з Bootstrap</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      header,
+      nav,
+      footer {
+        padding: 20px;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .left-header {
+        background-color: #4287f5; /* Синій колір для шапки */
+        border: 1px solid #ccc;
+      }
+
+      .right-header {
+        background-color: #f5d142; /* Жовтий колір для шапки */
+        border: 1px solid #ccc;
+      }
+
+      .left-menu {
+        background-color: #42f5b7; /* Зелений колір для меню */
+        border: 1px solid #ccc;
+      }
+
+      .right-menu {
+        background-color: #f542f5; /* Фіолетовий колір для меню */
+        border: 1px solid #ccc;
+      }
+
+      .content {
+        background-color: #f5a842; /* Оранжевий колір для контенту */
+        border: 1px solid #ccc;
+      }
+
+      .left-footer {
+        background-color: #42f5f5; /* Бірюзовий колір для підвалу */
+        border: 1px solid #ccc;
+      }
+
+      .right-footer {
+        background-color: #f54242; /* Червоний колір для підвалу */
+        border: 1px solid #ccc;
+      }
+
+      .main-block {
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 left-header">Ліва частина шапки</div>
+            <div class="col-lg-6 right-header">Права частина шапки</div>
+          </div>
+        </div>
+      </header>
+
+      <nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2 left-menu">Ліве меню</div>
+            <div class="col-lg-8 content">
+              <h1>Вітаємо на нашому сайті!</h1>
+            </div>
+            <div class="col-lg-2 right-menu">Праве меню</div>
+          </div>
+        </div>
+      </nav>
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 left-footer">Ліва частина підвалу</div>
+            <div class="col-lg-6 right-footer">Права частина підвалу</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
