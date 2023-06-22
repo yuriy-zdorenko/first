@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Малюнки</title>
+</head>
+<body>
+<div>
+    <img src="/HakimovLab16_302TN/images/image1.webp" alt="Рисунок 1" width="200" height="300" id="image1">
+</div>
+ <div>
+    <img src="/HakimovLab16_302TN/images/image2.jpg" alt="Рисунок 2" width="200" height="300" id="image2">
+ </div>
+  <div>
+    <img src="/HakimovLab16_302TN/images/image3.jpg" alt="Рисунок 3" width="200" height="300" id="image3">
+  </div>
+  
+
+  <script>
+    const image1 = document.getElementById("image1");
+    const image2 = document.getElementById("image2");
+    const image3 = document.getElementById("image3");
+
+    image1.onclick = function() {
+      alert(image1.src);
+    };
+
+    image2.onclick = function() {
+      alert(image2.src);
+    };
+
+    image3.onclick = function() {
+      alert(image3.src);
+    };
+  </script>
+</body>
+</html>
