@@ -11,7 +11,7 @@ header{
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid red;
-    height: 45px;
+    height: 60px;
 }
 .header-name{
     color: white;
@@ -76,7 +76,7 @@ form{
   .container {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 32px;
+    padding-top: 16px;
   }
   ul{
     list-style-type: none;
@@ -85,4 +85,27 @@ form{
     flex: 1 1 15%;
     margin-bottom: 20px;
     padding: 0 10px;
+  }
+  h2{
+    margin-bottom: 12px;
+  }
+  .first-column{
+    color: #66b3ff;
+  }
+  .second-column{
+    color: aqua;
+    margin-top: 16px;
+  }
+  .third-column{
+    color: greenyellow;
+  }
+  .fourth-column{
+    color: darkgreen
+  }
+  .fifth-column{
+    color: orange;
+  }
+  .sixth-column{
+    color: orangered;
+    margin-top: 16px;
   }
