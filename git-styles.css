@@ -24,13 +24,12 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 700px;
   }
 form{
     width: 240px;
     display: flex;
     flex-direction: column;
-    /* margin-left: 200px; */
     border: solid 1px black;
   }
 .form-title{
@@ -54,3 +53,23 @@ form{
 .form-button{
     margin-left: 80px;
 }
+.footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px;
+  }
+  
+  .footer-content {
+    text-align: center;
+  }
+  
+  .footer-content .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-content .copyright:before {
+    content: "\00A9"; 
+    margin-right: 5px;
+  }
