@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.6</title>
+
+    <!--Створити довільну таблицю, яка складається з 5-ти стовпців та не менш ніж 7 рядків,
+        в якій застосовані елементи назви Caption,  заголовку TH. Вирівнювання вмісту таблиці 
+        зробити різними для окремих рядків.-->
+
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+    
+            caption {
+                font-size: 20px;
+                text-align: center;
+                font-weight: 700;
+            }
+    
+            th, td {
+                border: 1px solid black;
+                padding: 10px;
+            }
+    
+            .left-align {
+                text-align: left;
+            }
+    
+            .center-align {
+                text-align: center;
+            }
+    
+            .right-align {
+                text-align: right;
+            }
+            </style>
+
+</head>
+<body>
+    <table>
+        <caption>Заголовок таблиці</caption>
+        <tr>
+            <th>СТОВПЕЦЬ 1</th>
+            <th>СТОВПЕЦЬ 2</th>
+            <th>СТОВПЕЦЬ 3</th>
+            <th>СТОВПЕЦЬ 4</th>
+            <th>СТОВПЕЦЬ 5</th>
+        </tr>
+        <tr class="left-align">
+            <td>Рядок 1, Стовпець 1</td>
+            <td>Рядок 1, Стовпець 2</td>
+            <td>Рядок 1, Стовпець 3</td>
+            <td>Рядок 1, Стовпець 4</td>
+            <td>Рядок 1, Стовпець 5</td>
+        </tr>
+        <tr class="center-align">
+            <td>Рядок 2, Стовпець 1</td>
+            <td>Рядок 2, Стовпець 2</td>
+            <td>Рядок 2, Стовпець 3</td>
+            <td>Рядок 2, Стовпець 4</td>
+            <td>Рядок 2, Стовпець 5</td>
+        </tr>
+        <tr class="right-align">
+            <td>Рядок 3, Стовпець 1</td>
+            <td>Рядок 3, Стовпець 2</td>
+            <td>Рядок 3, Стовпець 3</td>
+            <td>Рядок 3, Стовпець 4</td>
+            <td>Рядок 3, Стовпець 5</td>
+        </tr>
+        <tr class="left-align">
+            <td>Рядок 4, Стовпець 1</td>
+            <td>Рядок 4, Стовпець 2</td>
+            <td>Рядок 4, Стовпець 3</td>
+            <td>Рядок 4, Стовпець 4</td>
+            <td>Рядок 4, Стовпець 5</td>
+        </tr>
+        <tr class="center-align">
+            <td>Рядок 5, Стовпець 1</td>
+            <td>Рядок 5, Стовпець 2</td>
+            <td>Рядок 5, Стовпець 3</td>
+            <td>Рядок 5, Стовпець 4</td>
+            <td>Рядок 5, Стовпець 5</td>
+        </tr>
+        <tr class="right-align">
+            <td>Рядок 6, Стовпець 1</td>
+            <td>Рядок 6, Стовпець 2</td>
+            <td>Рядок 6, Стовпець 3</td>
+            <td>Рядок 6, Стовпець 4</td>
+            <td>Рядок 6, Стовпець 5</td>
+        </tr>
+        <tr class="left-align">
+            <td>Рядок 7, Стовпець 1</td>
+            <td>Рядок 7, Стовпець 2</td>
+            <td>Рядок 7, Стовпець 3</td>
+            <td>Рядок 7, Стовпець 4</td>
+            <td>Рядок 7, Стовпець 5</td>
+        </tr>
+    </table>
+</body>
+</html>
