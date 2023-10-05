@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ByndasLab02</title>
+    <meta name="description" content="Lab Work">
+    <meta name="keywords" content="HTM, CSS, Lab Work">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000;
+        }
+        .wrapper {
+            background: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+            padding: 24px 36px;
+            margin: 24px auto;
+            max-width: 720px;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .row     {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body background="image/flowers.jpeg">
+<div class="wrapper">
+    <h1 align='center'>Галерея</h1>
+    <div class="row">
+        <div class="item">
+            <img src="image/photo1.jpg" alt="This is photo 1" border="2" height="200" width="200">
+            <p>Поле</p>
+        </div>
+        <div class="item">
+            <img src="image/photo2.jpg" alt="This is photo 2" border="2" height="200" width="200">
+            <p>Вовк іде</p>
+        </div>
+        <div class="item">
+            <img src="image/photo3.jpg" alt="This is photo 3" border="2" height="200" width="200">
+            <p>Курча</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
