@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Моя сторінка</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        margin: 20px auto;
+        max-width: 500px; 
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: relative; 
+    }
+
+    .popup {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #000;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    area {
+        cursor: pointer;
+    }
+
+
+    area:hover + .popup {
+        display: block;
+    }
+    </style> 
+</head>
+<body>
+    <header>
+        <h1>Моя сторінка</h1>
+    </header>
+
+    <div class="container">
+       
+        <img src="geometric_figures.png" width="500" height="434" border="1" usemap="#figures-map">
+        
+     
+        <map name="figures-map">
+            <area shape="poly" coords="100,100,150,50,200,100" href="KurnakowLab01-9.html" title="Трикутник">
+            <area shape="circle" coords="275,100,25" href="KurnakowLab05-3.html" title="Круг">
+            <area shape="rect" coords="200,300,300,350" href="KurnakowLab06-3.html" title="Чотирикутник">
+        </map>
+        
+        <div class="popup">Трикутник</div>
+        <div class="popup">Круг</div>
+        <div class="popup">Чотирикутник</div>
+        
+    </div>
+</body>
+</html>

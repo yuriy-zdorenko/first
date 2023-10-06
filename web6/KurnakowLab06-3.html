@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Місто Полтава</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            
+            margin-top: 20px;
+            height: 65vh;
+        }
+
+        .image {
+            width: 300px;
+            height: 200px; 
+            margin-right: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-text {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .image:hover .image-text {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Місто Полтава</h1>
+    </header>
+
+    <div class="container">
+        <div class="image-container">
+            <div class="image">
+                <img src="park.jpg" alt="Фото 1"usemap="#map1">
+                <div class="image-text">
+                    <h2>Корпусний парк</h2>
+                    <p>Корпусний парк у Полтаві - одне з улюблених місць для відпочинку місцевих мешканців і гостей міста.</p>
+                </div>
+            </div>
+            <div class="image">
+                <img src="theatre.jpg" alt="Фото 2" usemap="#map2">
+                <div class="image-text">
+                    <h2>Полтавський оперний театр</h2>
+                    <p>Оперний театр є однією з культурних перлин Полтави та проводить чудові вистави для дорослих.</p>
+                </div>
+            </div>
+            <div class="image">
+                <img src="cathedral.jpg" alt="Фото 3" usemap="#map3">
+                <div class="image-text">
+                    <h2>Полтавський Хрестовоздвиженський Собор</h2>
+                    <p>Хрестовоздвиженський Собор - це архітектурна краса та важливий релігійний об'єкт міста Полтава.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <map name="map1">
+        <area shape="rect" coords="0,0,300,260" href="#" title="Парк">
+      </map>
+      <map name="map2">
+        <area shape="rect" coords="0,0,300,260" href="#" title="Театр">
+      </map>
+      <map name="map3">
+        <area shape="rect" coords="0,0,300,260" href="#" title="Собор">
+      </map>
+</body>
+</html>
+
+
+

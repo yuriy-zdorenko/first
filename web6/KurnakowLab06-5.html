@@ -1,0 +1,81 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Сторінка з картою і спливаючими заголовками</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 500px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .popup {
+            display: none;
+            position: absolute;
+            background-color: #fff; 
+            border: 1px solid #000;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        area {
+            cursor: pointer;
+        }
+
+        area:hover + .popup {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Сторінка з картою і спливаючими заголовками</h1>
+    </header>
+
+    <div class="container">
+        <map name="map2">
+        
+            <area shape="poly" coords="400, 0, 500, 0, 500, 84, 400, 84" href="#" title="1 - Правий верхній кут">
+      
+            <area shape="poly" coords="400, 350, 500, 350, 500, 434, 400, 434" href="#" title="2 - Правий нижній кут">
+       
+            <area shape="poly" coords="0, 350, 100, 350, 100, 434, 0, 434" href="#" title="3 - Лівий нижній кут">
+       
+            <area shape="poly" coords="0, 0, 100, 0, 100, 84, 0, 84" href="#" title="4 - Лівий верхній кут">
+        </map>
+
+        <img src="1.jpg" width="500" height="434" border="1" usemap="#map2">
+
+        <div class="popup">1 - Правий верхній кут: Додатковий текст 1</div>
+        <div class="popup">2 - Правий нижній кут: Додатковий текст 2</div>
+        <div class="popup">3 - Лівий нижній кут: Додатковий текст 3</div>
+        <div class="popup">4 - Лівий верхній кут: Додатковий текст 4</div>
+    </div>
+</body>
+</html>
