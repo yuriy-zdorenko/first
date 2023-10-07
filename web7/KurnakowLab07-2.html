@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        pre {
+            white-space: pre-wrap;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #88ab18;
+            border-radius: 4px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="submit"],
+        input[type="reset"],
+        input[type="file"] {
+            padding: 10px 20px;
+            background-color: #00ff62;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover,
+        input[type="file"]:hover {
+            background-color: #00b31e;
+        }
+    </style>
+</head>
+<body>
+    <h2>Форма</h2>
+
+    <form action="confirmation.html" method="POST" target="_blank">
+        <pre>
+            Ваше ім'я: <input name="name" type="text" maxlength="40" size="40" value="">
+            Ваша стать: <input type="radio" name="pol" value="male">Чоловіча
+                        <input type="radio" name="pol" value="female">Жіноча
+            Де працюєте?
+            <select name="curs" size="1">
+                <option value="1" selected> Сільське господарство </option>
+                <option value="2"> Промисловість </option>
+                <option value="3"> Сфера послуг </option>
+                <option value="4"> Безробітний </option>
+                <option value="5"> Пенсіонер </option>
+            </select>
+            Хотіли б ви отримувати допомогу від держави?
+            <input type="checkbox" name="yes" value="yes" checked> так
+            <input type="checkbox" name="no" value="yes"> ні
+
+            Напишіть декілька слів про себе:
+            <textarea name="about" rows="6" cols="60" wrap="off"></textarea>
+
+            <p>
+                <input type="submit" value=" Відіслати дані ">
+                <input type="reset" value=" Очистити форму ">
+                <input type="file" name="friend" size="50" accept="припустимий тип файлу">
+            </p>
+        </pre>
+    </form>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Форма замовлення</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            padding: 20px 0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        select {
+            height: 35px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .additional-info label {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Форма замовлення на товар</h1>
+    <form action="confirmation.html" method="POST" target="_blank">
+        <label for="bank_account">Номер банківського рахунку:</label>
+        <input type="text" id="bank_account" name="bank_account" required>
+
+        <label for="user_id">Особистий номер користувача:</label>
+        <input type="text" id="user_id" name="user_id" required>
+
+        <label for="products">Виберіть товари:</label>
+        <select id="products" name="products[]" multiple>
+            <option value="товар1">Продовольчі</option>
+            <option value="товар2">Одяг</option>
+            <option value="товар3">Техніка</option>
+        </select>
+
+        <label for="comments">Довільні коментарі:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+        <label>Виберіть вид оплати:</label><br>
+        <input type="radio" id="cash_payment" name="payment_method" value="готівковий" required>
+        <label for="cash_payment">Готівковий</label>
+        <input type="radio" id="non_cash_payment" name="payment_method" value="безготівковий" required>
+        <label for="non_cash_payment">Безготівковий</label>
+
+        <div class="additional-info">
+            <label>Додаткова інформація:</label><br>
+            <input type="checkbox" id="balance_info" name="additional_info[]" value="залишки на рахунку">
+            <label for="balance_info">Дані про залишки на рахунку</label><br>
+            <input type="checkbox" id="payment_history" name="additional_info[]" value="список останніх виплат">
+            <label for="payment_history">Список останніх виплат по рахунку</label><br>
+        </div>
+
+        <input type="submit" value="Відправити замовлення">
+    </form>
+</body>
+</html>
+
