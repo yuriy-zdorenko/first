@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            form {
+                width: 500px;
+                padding: 1em;
+                background-color: cadetblue;
+            }
+            label {
+                font-size: 1.5rem;
+                font-style: italic;
+                padding: 10px;
+            }
+            input {
+                width: 200px;
+                padding: 0.25em;
+            }
+            input[type='checkbox'],
+            input[type='radio'] {
+                width: 25px;
+            }
+            button {
+                width: 100px;
+                height: 50px;
+                border-radius: 6px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Order Form</h1>
+        <form>
+            <label for="card">
+                Card Number:
+                <input type="text" name="card" id="card" /> </label
+            ><br />
+            <label for="userId">
+                Your id:
+                <input type="text" name="userId" id="userId" /> </label
+            ><br />
+            <label for="products">
+                List of Products: <br />
+                <input type="checkbox" name="apples" />Apples <br />
+                <input type="checkbox" name="oranges" />Oranges <br />
+                <input type="checkbox" name="call-of-duty" />Call Of Duty <br />
+                <input type="checkbox" name="wood" />Wood <br /></label
+            ><br />
+            <label for="info">
+                Additional information:
+                <textarea
+                    name="info"
+                    cols="50"
+                    rows="1"
+                    wrap="off"
+                ></textarea></label
+            ><br />
+            <label for="method">
+                Payment method: <br />
+                <input type="radio" name="method" value="card" /><label
+                    >Card</label
+                >
+                <input type="radio" name="method" value="cash" /><label
+                    >Cash</label
+                > </label
+            ><br />
+            <label for="bank-info">
+                <input type="checkbox" name="bank-info" checked /><label
+                    >Sent check to E-mail</label
+                ><br />
+                <input type="checkbox" name="bank-info" /><label
+                    >Get a list of last bought products</label
+                > </label
+            ><br />
+            <button type="submit">Place order</button>
+            <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>
