@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мої Друзі</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .friend {
+            float: left;
+            width: 30%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .friend img {
+            max-width: 100%;
+            height: auto;
+        }
+        .friend:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Мої Друзі</h1>
+        <div class="friend">
+            <img src="/img/1.jpeg" alt="Friend" usemap="#map1">
+        </div>
+        <div class="friend">
+            <img src="/img/2.jpeg" alt="Friend" usemap="#map2">
+        </div>
+        <div class="friend">
+            <img src="/img/3.jpeg" alt="Friend" usemap="#map3">
+        </div>
+    </div>
+
+    <map name="map1">
+        <area shape="rect" coords="0, 0, 300, 50" href="#" title="Barbara">
+    </map>
+
+    <map name="map2">
+        <area shape="rect" coords="0, 0, 300, 50" href="#" title="July">
+    </map>
+
+    <map name="map3">
+        <area shape="rect" coords="0, 0, 300, 50" href="#" title="Kevin">
+    </map>
+
+</body>
+</html>
