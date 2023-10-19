@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+      .card{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+       align-items: center;
+      }
+      .title{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">My Friends</h1>
+    <div class="container">
+      <div class="card">
+        <img src="./i/crew24.jpg" alt="Archie Madekwe" usemap="#map1" />
+        <h3>Archie Madekwe</h3>
+      </div>
+      <div class="card">
+        <img src="./i/crew25.jpg" alt="David Harbour" usemap="#map2" />
+        <h3>David Harbour</h3>
+      </div class="card">
+      <div class="card">
+        <img src="./i/crew26.jpg" alt="Orlando Bloom" usemap="#map3" />
+        <h3>Orlando Bloom</h3>
+      </div>
+    </div>
+
+    <map name="map1">
+      <area shape="rect" coords="1, 1, 300, 450" title="Archie Madekwe" />
+    </map>
+    <map name="map2">
+      <area shape="rect" coords="1, 1, 300, 450" title="David Harbour" />
+    </map>
+    <map name="map3">
+      <area shape="rect" coords="1, 1, 300, 450" title="Orlando Bloom" />
+    </map>
+  </body>
+</html>
