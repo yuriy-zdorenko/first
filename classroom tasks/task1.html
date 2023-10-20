@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="accept.html">
+      <label for="name">
+        Ваше ім'я: <input name="name" id="name" type="text" maxlength="40" size="40" value="" />
+      </label>
+      <div>
+        Ваша стать:
+        <label for="man"> <input type="radio" name="pol" id="man" value="male" />Чоловіча </label>
+        <label for="woman"> <input type="radio" name="pol" id="woman" value="female" />Жіноча </label>
+      </div>
+      <label for="course">
+        На якому курсі Ви навчаєтесь?
+        <select name="curs" id="course" size="1">
+          <option value="1" selected>Перший</option>
+          <option value="2">Другий</option>
+          <option value="3">Третій</option>
+          <option value="4">Четвертий</option>
+          <option value="5">П'ятий</option>
+        </select>
+      </label>
+      <br />
+
+      <div>
+        Які дисципліни ви вивчаєте на курсі?
+        <label for="web"> <input type="checkbox" id="web" name="web" value="yes" checked /> WEB-програмування</label>
+        <label for="eldinam">
+          <input type="checkbox" id="eldinam" name="eldinam" value="yes" /> Технічна електродинаміка</label
+        >
+        <label for="eng"> <input type="checkbox" id="eng" name="eng" value="yes" /> Англійська мова</label>
+        <label for="int"> <input type="checkbox" id="int" name="int" value="yes" /> Штучний інтелект</label>
+      </div>
+      <label for="about"
+        >Напишіть декілька слів про себе:
+        <br />
+        <textarea name="about" id="about" rows="6" cols="60" wrap="off"></textarea>
+      </label>
+
+      <div>
+        <input type="submit" value="Відіслати дані" />
+        <input type="reset" value="Очистити форму" />
+        <input type="file" name="friend" size="50" accept="припустимий тип файлу" />
+      </div>
+    </form>
+  </body>
+</html>
