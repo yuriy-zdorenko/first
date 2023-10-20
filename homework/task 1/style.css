@@ -1,0 +1,14 @@
+.title1 {
+  color: red;
+  text-decoration: dashed;
+  font-weight: bold;
+}
+.title2 {
+  color: blue;
+  text-decoration: dotted;
+  font-size: 40px;
+}
+.title3 {
+  color: green;
+  text-decoration: underline;
+}
