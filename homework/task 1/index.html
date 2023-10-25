@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="../../classroom tasks/accept.html">
+      <label for="name"> Введіть ваше ім'я: <input name="name" id="name" type="text" value="" /> </label>
+      <div>
+        Ваша стать:
+        <label for="man"> <input type="radio" name="pol" id="man" value="male" />Чоловіча </label>
+        <label for="woman"> <input type="radio" name="pol" id="woman" value="female" />Жіноча </label>
+      </div>
+      <div>
+        <label for="uni">Введіть назву вашого ВНЗ <input type="text" id="uni" /></label>
+      </div>
+      <label for="course">
+        На якому курсі Ви навчаєтесь?
+        <select name="curs" id="course" size="1">
+          <option value="1" selected>Перший</option>
+          <option value="2">Другий</option>
+          <option value="3">Третій</option>
+          <option value="4">Четвертий</option>
+          <option value="5">П'ятий</option>
+        </select>
+      </label>
+      <br />
+      <label for="about"
+        >Напишіть про себе:
+        <br />
+        <textarea name="about" id="about" rows="6" cols="60" wrap="off"></textarea>
+      </label>
+      <div>
+        <label for="cv">
+          Додайте ваше резюме
+          <input type="file" name="friend" id="cv" size="50" accept="припустимий тип файлу" />
+        </label>
+      </div>
+      <br />
+      <div>
+        <input type="submit" value="Відіслати дані" />
+        <input type="reset" value="Очистити форму" />
+      </div>
+    </form>
+  </body>
+</html>
