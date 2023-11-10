@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <label for="bankAccount">Номер банківського рахунку:</label>
+        <input type="text" id="bankAccount" name="bankAccount" required>
+
+        <label for="personalNumber">Особистий номер користувача:</label>
+        <input type="text" id="personalNumber" name="personalNumber" required>
+
+        <label for="products">Виберіть товари:</label>
+        <select id="products" name="products[]" multiple>
+            <option value="product1">Товар 1</option>
+            <option value="product2">Товар 2</option>
+            <option value="product3">Товар 3</option>
+        </select>
+
+        <label for="comments">Довільні коментарі:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+
+        <label>Вид оплати:</label>
+        <label><input type="radio" name="paymentType" value="cash"> Готівковий</label>
+        <label><input type="radio" name="paymentType" value="non-cash"> Безготівковий розрахунок</label>
+
+        <label>Додаткова інформація:</label>
+        <label><input type="checkbox" name="balanceInfo" value="yes"> Залишки на рахунку</label>
+        <label><input type="checkbox" name="lastPayments" value="yes"> Список останніх виплат по рахунку</label>
+
+        <button type="submit">Замовити</button>
+    </form>
+</body>
+</html>
