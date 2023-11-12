@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Створення і використання форм</title>
+    <meta charset=UTF-8>
+</head>
+<body>
+
+<h2>Форма</h2>
+
+<form action="confirmation.html" method="POST" target="_blank">
+        <pre>
+            Ваше ім'я: <input name="name" type="text" maxlength="40" size="40" value="">
+            Ваш вік: <input type="number" name="age" value="" min="0" max="100">
+            Яке ваше улюблене хобі?
+            <select name="hobby" size="1">
+                <option value="reading" selected>Читання</option>
+                <option value="sports">Спорт</option>
+                <option value="traveling">Подорожі</option>
+                <option value="music">Музика</option>
+                <option value="gaming">Відеоігри</option>
+            </select>
+            Які жанри книг/музики ви вважаєте улюбленими?
+            <input type="checkbox" name="genre_fantasy" value="yes"> Фентезі
+            <input type="checkbox" name="genre_sci_fi" value="yes" checked> Наукова фантастика
+            <input type="checkbox" name="genre_classic" value="yes"> Класика
+            <input type="checkbox" name="genre_rock" value="yes"> Рок
+
+            Поділіться вашими враженнями від останньої подорожі або улюбленої книги:
+            <textarea name="impressions" rows="6" cols="60" wrap="off"></textarea>
+
+            <p>
+                <input type="submit" value=" Відіслати дані ">
+                <input type="reset" value=" Очистити форму ">
+                <input type="file" name="picture" size="50" accept="image/*">
+            </p>
+        </pre>
+</form>
+
+</body>
+</html>
