@@ -1,0 +1,30 @@
+html {
+  background: no-repeat
+    url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/3651fa81381729.5cfe55542529a.jpg);
+  background-size: cover;
+}
+h1 {
+  font-size: 35px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: darkred;
+  font-weight: bold;
+  text-align: center;
+}
+li, a, a:visited {
+  font-size: 20px;
+  font-weight: bold;
+  color: violet;
+  text-decoration: none;
+}
+p {
+  font-style: italic;
+  font-size: 14px;
+  text-align: justify;
+}
+img {
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+}
