@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Кращий сайт для покупки квитків на концерт</h1>
+    <form action="accept.html">
+      <label for="bankAccount">Особистий номер користувача:</label>
+      <input type="text" id="bankAccount" name="bankAccount" required /><br /><br />
+
+      <label for="userId">Номер банківського рахунку:</label>
+      <input type="text" id="userId" name="userId" required /><br /><br />
+
+      <label for="products">Оберіть концерт:</label>
+      <br />
+      <select id="products" name="products" multiple>
+        <option value="">Без обмежень</option>
+
+        <option value="">Діджей Петько</option>
+        <option value="">Аріана Гранде</option>
+      </select>
+
+      <br />
+
+      <label for="comments">Ваш коментар:</label>
+      <br />
+      <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+      <br />
+      <br />
+
+      <label>Тип оплати:</label>
+      <br />
+      <input type="radio" id="payment_cash" name="payment" value="готівковий" required />
+      <label for="payment_cash">Готівковий</label><br />
+
+      <input type="radio" id="payment_non_cash" name="payment" value="безготівковий" required />
+      <label for="payment_non_cash">Безготівковий</label>
+      <br />
+      <br />
+
+      <label>Виберіть додаткову опцію:</label>
+      <br />
+      <label for="rest"><input type="checkbox" id="rest" />Залишки на рахунку </label>
+      <label for="list"><input type="checkbox" id="list" />Список останніх виплат по рахунку</label>
+
+      <br />
+      <br />
+      <input type="submit" value="Замовити" />
+    </form>
+  </body>
+</html>
