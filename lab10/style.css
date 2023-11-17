@@ -1,0 +1,34 @@
+.title {
+  text-align: center;
+  color: darkred;
+}
+body {
+  background-image: url(https://m-dekor.by/catalog/2365/main.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a {
+  font-size: 25px;
+  text-decoration: none;
+}
+a:active {
+  color: black;
+}
+a:visited {
+  color: blueviolet;
+}
+a:link {
+  color: chocolate;
+}
+.text {
+  font-size: 20px;
+  font-style: italic;
+  text-align: justify;
+  margin: 0px 20px;
+  text-indent: 50px;
+}
+.pic {
+  margin: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
