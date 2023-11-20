@@ -1,0 +1,37 @@
+body{background-image:url('Images/11.jpg');
+    background-size:cover;
+    margin-right:70;
+    margin-left:70;
+    font-style:italic;
+    font-size:25}
+
+p::first-line{color:red;}
+
+p{text-align:justify;
+    text-indent:5%}
+
+h1{font-weight:bold;
+    text-align:center;
+    font-style:normal;
+    color:black}
+
+a:link{color:blue;
+    text-decoration:none}
+a:active{color:orange;
+    text-decoration:none}
+a:visited{color:grey;
+    text-decoration:none}
+a:hover{color:indigo;
+    text-decoration:underline}
+
+h2.table_of_contents{padding-left:35}
+
+dl dt{font-size:25;
+    line-height:2}
+dl dd{font-size:20;
+    text-indent:5%}
+
+div.container{display:flex;
+    align-items:center}
+div p{margin-right:40}
+div img{max-width:50%}
