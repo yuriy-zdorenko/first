@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма замовлення товару</title>
+</head>
+<body>
+    <h1>Форма замовлення товару</h1>
+    <form>
+        <label for="bank_account">Номер банківського рахунку:</label>
+        <input type="text" name="bank_account"><br><br>
+
+        <label for="user_id">Особистий номер користувача:</label>
+        <input type="text" name="user_id"><br><br>
+
+        <label for="products">Список товарів:</label><br>
+        <input type="checkbox" name="prod1" value="kurtka">Куртка<br>
+        <input type="checkbox" name="prod2" value="Шкарпетки">Шкарпетки<br>
+        <input type="checkbox" name="prod3" value="Бомбер">Бомбер<br>
+        <input type="checkbox" name="prod4" value="Кросівки">Кросівки<br><br>
+        
+
+        <label for="comments">Коментар до замовлення:</label><br>
+        <textarea name="comments" rows="4" cols="50"></textarea><br><br>
+
+        <label>Вид оплати:</label><br>
+        <input type="radio" name="payment_type" value="готівковий">
+        <label>Готівковий</label><br>
+        <input type="radio" name="payment_type" value="безготівковий">
+        <label>Безготівковий</label><br><br>
+
+        <label>Додаткова інформація:</label><br>
+        <input type="checkbox" name="additional_info[]" value="залишки_на_рахунку">
+        <label>Дані про залишки на рахунку</label><br>
+        <input type="checkbox" name="additional_info[]" value="список_виплат">
+        <label>Список останніх виплат по рахунку</label><br><br>
+
+        <input type="submit" value="Надіслати замовлення">
+    </form>
+</body>
+</html>
