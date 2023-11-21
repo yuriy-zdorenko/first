@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>7-4</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+<h1>Форма замовлення товару</h1>
+<form action="" method="POST" target="_blank">
+
+    <label for="account-number">Номер банківського рахунку:</label>
+    <input type="text" id="account-number" name="account_number" required>
+    <br><br>
+
+    <label for="user-id">Особистий номер користувача:</label>
+    <input type="text" id="user-id" name="user_id" required>
+    <br><br>
+
+    <label>Список товарів:</label><br>
+        <input type="checkbox" name="list" value="" checked> товар 1 <BR>
+        <input type="checkbox" name="list" value=""> товар 2 <BR>
+         <input type="checkbox" name="list" value=""> товар 3 <BR>
+    </select>
+    <br><br>
+       
+
+    <label for="comments">Коментарі:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+    <br><br>
+
+    <label>Вид оплати:</label><br>
+    <input type="radio" id="cash-payment" name="payment_type" value="cash" checked>
+    <label for="cash-payment">Готівковий</label><br>
+    <input type="radio" id="non-cash-payment" name="payment_type" value="non_cash">
+    <label for="non-cash-payment">Безготівковий</label>
+    <br><br>
+
+    <label>Додаткова інформація:</label><br>
+    <input type="checkbox" id="account-balance" name="additional_info" value="account_balance">
+    <label for="account-balance">Дані про залишки на рахунку</label><br>
+    <input type="checkbox" id="last-payments" name="additional_info" value="last_payments">
+    <label for="last-payments">Список останніх виплат по рахунку</label>
+    <br><br>
+
+    <input type="submit" value="Відправити замовлення">
+</form>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>7-3</title>
+    <style>
+        body {
+            font-family: "Times New Roman", sans-serif;
+        }
+        .form-table {
+            width: 100%;
+            background-color:#c2fff9;
+            max-width: 600px;
+        }
+        .form-table td, .form-table th {
+            padding: 8px;
+            border: 1px solid black; 
+        }
+        .form-title {
+            text-align: center;
+            color: red;
+            font-size: 36px;
+        }
+        td {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="POST" target="_blank">
+    <table class="form-table">
+        <tr>
+            <th colspan="3" class="form-title">Анкета</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>Прізвище:</td>
+            <td><input type="text" name="surname"></td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Ім'я, по батькові:</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Число і рік народження:</td>
+            <td><input type="date" name="birthdate"></td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>Домашня адреса:</td>
+            <td><input type="text" name="address"></td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>Місце навчання (роботи):</td>
+            <td><input type="text" name="workplace"></td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>Домашній (робочий) телефон:</td>
+            <td><input type="text" name="phone"></td>
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td>E-mail:</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>8. </td>
+            <td>Область наукових інтересів:</td>
+            <td>
+                <ol>
+                    <li><input type="text" name="interest1"></li>
+                    <li><input type="text" name="interest2"></li>
+                    <li><input type="text" name="interest3"></li>
+                    <li><input type="text" name="interest4"></li>
+                    <li><input type="text" name="interest5"></li>
+                    <li><input type="text" name="interest6"></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <button type="reset">Відмінити введення</button>
+                <button type="submit">Надіслати дані та перейти до 2 етапу реєстрації</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
