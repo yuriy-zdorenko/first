@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Л.р. 7</title>
+</head>
+<body>
+    <form action="">
+        <p>Ваше ім'я:</p>
+        <input type="text" name="name" maxlength="30" size="40">
+        <p>Ваша стать:</p>
+        <input type="radio" name="pol" value="male">Чоловіча
+        <input type="radio" name="pol" value="female">Жіноча
+        <p>Курс:</p>
+        <select name="curs" >
+            <option value="1" selected>Перший</option>
+            <option value="2" >Другий</option>
+            <option value="3" >Третій</option>
+            <option value="4" >Четвертий</option>
+            <option value="5" >П'ятий</option>
+        </select>
+        <p>Які дисципліни вивчаєте на курсі?</p>
+        <input type="checkbox" name="web" value="yes" cheked> Web-програмування
+        <input type="checkbox" name="web" value="yes" cheked> Методи та засоби штучного інтелекту
+        <input type="checkbox" name="web" value="yes" cheked> Іноземна мова
+        <input type="checkbox" name="web" value="yes" cheked> Бази даних
+        <p>Напишіть декілька слів про себе:</p>
+         <textarea name="about" id="" cols="60" rows="10" wrap="off"></textarea>
+         <input type="submit" value="Надіслати форму">
+         <input type="reset" value="Очистити форму">
+         <input type="file" name="friend" size="50">
+    </form>
+</body>
+</html>

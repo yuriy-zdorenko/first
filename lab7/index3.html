@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 7_3</title>
+</head>
+<body>
+    <h2>Форма замовлення товару</h2>
+
+    <form action="#" >
+        <label for="bankAccount">Номер банківського рахунку:</label>
+        <input type="text" id="bankAccount" name="bankAccount" required><br>
+
+        <label for="personalNumber">Особистий номер користувача:</label>
+        <input type="text" id="personalNumber" name="personalNumber" required><br>
+
+        <label for="products">Список товарів:</label>
+        <p>
+        <select id="products" name="products" multiple>
+            <option value="product1">Товар 1</option>
+            <option value="product2">Товар 2</option>
+            <option value="product3">Товар 3</option>
+            <option value="product3">Товар 4</option>
+            <option value="product3">Товар 5</option>
+            <option value="product3">Товар 6</option>
+            <option value="product3">Товар 7</option>
+            <option value="product3">Товар 8</option>
+        </select><br>
+        </p>
+
+        <label for="comments">Довільні коментарі:</label>
+        <p>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+        </p>
+        <label for="paymentMethod">Вид оплати:</label>
+        <input type="radio" id="cash" name="paymentMethod" value="cash">
+        <label for="cash">Готівкою</label>
+        <input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
+        <label for="creditCard">Банківською карткою</label><br>
+
+        <label>Додаткова інформація:</label><br>
+        <input type="checkbox" id="accountBalance" name="additionalInfo" value="accountBalance">
+        <label for="accountBalance">Залишки на рахунку</label><br>
+        <input type="checkbox" id="recentPayments" name="additionalInfo" value="recentPayments">
+        <label for="recentPayments">Список останніх виплат на рахунок</label><br>
+
+        <input type="submit" value="Відправити замовлення">
+    </form>
+</body>
+</html>
