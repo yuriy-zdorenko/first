@@ -1,0 +1,42 @@
+body{background-image:url('https://img.freepik.com/free-vector/geometric-shapes-pastel-background_53876-116955.jpg');
+    background-size:cover;
+    margin-right:70;
+    margin-left:70;
+    font-style:italic;
+    font-size: 30px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+p::first-line{color:red;}
+
+p{text-align:justify;
+    text-indent:5%}
+
+h1{font-weight:bold;
+    text-align:center;
+    font-style:normal;
+    color: darkorchid;}
+
+    a:link {
+        color: blueviolet;
+        text-decoration: none;
+    }
+    
+    a:active {
+        color: cadetblue;
+        text-decoration: none;
+
+    }
+    
+    a:visited {
+        color: coral;
+        text-decoration: none;
+
+    }
+    
+    a:hover {
+        color: crimson;
+        text-decoration: underline;
+
+    }
+    
+
