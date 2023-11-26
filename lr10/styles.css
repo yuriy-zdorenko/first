@@ -1,0 +1,40 @@
+/* Основні стилі для всіх сторінок */
+body {
+    background-image: url('images/background.jpg');
+    font-style: italic;
+    font-family: sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+    color: #ffffff;
+}
+
+p {
+    text-indent: 50px; /* Червоний рядок */
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    font-style: normal;
+}
+
+/* Стилі для посилань */
+a:link { color: #ffffff; }
+a:visited { color: lightgray }
+a:hover { color: orange; }
+
+/* Стилі для зображень */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
