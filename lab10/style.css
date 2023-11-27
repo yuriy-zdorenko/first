@@ -1,0 +1,86 @@
+/*Main page*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(https://t4.ftcdn.net/jpg/03/01/16/41/360_F_301164174_cwkA3lQmphf1wwemWEA6TYpmxtC4Fdnh.jpg);
+}
+
+nav {
+   background-color: #CD7F32;
+   height: 50px;
+}
+
+.links {
+    text-align: center;
+    padding-top: 15px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    
+}
+
+a {
+    padding-right: 15px;
+
+    color: aliceblue;
+    text-decoration: none;
+}
+
+a:active {
+    color: #993300;
+}
+
+.link_active {
+    text-decoration: underline;
+    color: #993300;
+}
+
+.container {
+    height: 1000px;
+    width: 800px;
+    margin: 30px  340px;
+    padding: 20px 15px;
+    text-align: justify;
+    
+
+    background-color: aliceblue;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+}
+
+h1, h2 {
+    text-align: center;
+    color: #993300;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: 800;
+}
+
+p {
+    color: 	#CC5500;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.red_row {
+    padding-left: 25px;
+}
+
+.assortment {
+    color: 	#CC5500;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.assortment_bold {
+    color: 	#CC5500;
+    font-weight: 900;
+}
+
+img {
+    padding-left: 100px;
+}
+
+
+
