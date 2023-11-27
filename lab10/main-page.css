@@ -1,0 +1,19 @@
+body {
+  font-size: 20px;
+  background: no-repeat url("https://i.pinimg.com/originals/5a/c1/29/5ac1296b709f4427d4c7785a322d78a2.png");
+  background-size: cover;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
