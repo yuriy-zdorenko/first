@@ -1,0 +1,99 @@
+<html>
+<head>
+    <title>Flexbox</title>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /**{
+            box-sizing: border-box;
+        }*/
+
+        body{
+            display:flex;
+            height: 100%;
+        }
+        .column {
+            display:flex;
+            width: 100%;
+            flex-direction:column;
+        }
+        .row{
+            display:flex;
+            flex-direction:row;
+        }
+        .item {
+            display: flex;
+            border:1px solid black;
+            margin:3px;
+            min-height: 24vh;
+            min-width: 24vw;
+            flex-grow: 1;
+        }
+        .item_1{
+        background-color: dodgerblue;
+        }
+        .item_2{
+        background-color: grey;
+        }
+        .item_3{
+        background-color: darkturquoise;
+        }
+        .item_4{
+        background-color: tomato;
+        }
+        .item_5{
+        background-color: orange;
+        }
+        .item_6{
+        background-color: seagreen;
+        }
+        .item_7{
+        background-color: chocolate;
+        }
+
+        @media screen and (max-width: 1000px) {
+        .item6{
+            flex-direction:column;
+        }
+        .row{
+            display:flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+        }
+        }
+
+        @media screen and (max-width: 600px) {
+        .row{
+            display:flex;
+            flex-direction:column;
+            width: 100%;
+        }
+        }
+
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="column item1">
+        <div class="row item2">
+            <div class="column item3">
+                <div class="item item_1"></div>
+                <div class="row item4">
+                    <div class="column item5">
+                        <div class="row item6">
+                            <div class="item item_3"></div>
+                            <div class="item item_4"></div>
+                        </div>
+                        <div class="item item_6"></div>
+                    </div>
+                    <div class="item item_5"></div>
+                </div>
+            </div>
+            <div class="item item_2"></div>
+        </div>
+        <div class="item item_7"></div>
+    </div>
+</div>
+</body>
+</html>
