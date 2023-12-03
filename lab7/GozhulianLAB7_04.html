@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GozhulianLAB7_04</title>
+</head>
+<body>
+    <h2>Замовлення відеокарт по Україні</h2>
+    <form action="#" >
+        <label for="bankAccount">Номер банківського рахунку:</label><br>
+        <input type="text" id="bankAccount" name="bankAccount" required><br>
+        <br>
+        <label for="personalNumber">Особистий номер користувача:</label><br>
+        <input type="text" id="personalNumber" name="personalNumber" required><br>
+<label for="products"><h2>Список товарів:</h2></label>
+<select id="products" name="products" multiple size="8">
+        <option value="RTX 3060">RTX 3060</option>
+        <option value="RTX 3060 TI">RTX 3060 TI</option>
+        <option value="RTX 3070">RTX 3070</option>
+        <option value="RTX 3070 TI">RTX 3070 TI</option>
+        <option value="RTX 3080">RTX 3080</option>
+        <option value="RTX 3080 TI">RTX 3080 TI</option>
+        <option value="RTX 3090">RTX 3090</option>
+        <option value="RTX 3090 TI">RTX 3090 TI</option>
+        </select><br><br>
+        <label for="comments">Довільні коментарі:</label>
+        <p>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+        </p>
+        <label for="paymentMethod">Вид оплати:</label>
+        <input type="radio" id="cash" name="paymentMethod" value="cash">
+        <label for="cash">Готівкою</label>
+        <input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
+        <label for="creditCard">Банківською карткою</label><br>
+
+        <label>Додаткова інформація:</label><br>
+        <input type="checkbox" id="accountBalance" name="additionalInfo" value="accountBalance">
+        <label for="accountBalance">Залишки на рахунку</label><br>
+        <input type="checkbox" id="recentPayments" name="additionalInfo" value="recentPayments">
+        <label for="recentPayments">Список останніх виплат на рахунок</label><br>
+<br>
+        <input type="submit" value="Відправити замовлення">
+        <input type="reset" value=" Очистити форму ">
+    </form>
+</body>
+</html>
