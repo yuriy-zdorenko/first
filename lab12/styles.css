@@ -1,0 +1,154 @@
+header {
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+header .head {
+  background-color: rgba(0, 0, 0, 0.92);
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+header .head .logo-head {
+  padding-left: 10px;
+  height: 100%;
+  width: 15%;
+  display: flex;
+}
+header .head .logo-head img {
+  height: 35px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 25px;
+}
+header .head .nav-head {
+  width: 70%;
+  height: 100%;
+  text-align: center;
+}
+header .head .nav-head ul {
+  list-style-type: none;
+  padding: 0px;
+}
+header .head .nav-head li {
+  display: inline;
+}
+header .head .nav-head li a {
+  padding: 14px;
+  font-size: 15pt;
+  font-weight: 600;
+  color: aliceblue;
+  float: none;
+}
+header .head .icons-head {
+  width: 15%;
+  height: 100%;
+}
+header .head .icons-head ul {
+  list-style-type: none;
+  padding: 0px;
+}
+header .head .icons-head li {
+  display: inline;
+}
+header .head .icons-head li i {
+  font-size: 17pt;
+  float: none;
+  color: aliceblue;
+  padding: 10px;
+}
+header .head .icons-head li span {
+  color: aliceblue;
+  text-decoration: underline;
+}
+
+main {
+  height: 95vh;
+  background-color: rgba(16, 16, 16, 0.943);
+}
+main .mults-showcase {
+  height: 40vh;
+  background-color: rgba(16, 16, 16, 0.32);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+main .mults-showcase .mults-showcase-head {
+  height: 10%;
+  background-color: rgb(16, 16, 16);
+  display: flex;
+}
+main .mults-showcase .mults-showcase-head .mults-showcase-head-left-text {
+  height: 38px;
+  width: 60%;
+  line-height: 38px;
+  padding-left: 40px;
+  color: aliceblue;
+}
+main .mults-showcase .mults-showcase-head .mults-showcase-head-right-text {
+  height: 38px;
+  text-align: right;
+  line-height: 38px;
+  color: aliceblue;
+  width: 40%;
+  padding-right: 40px;
+}
+main .mults-showcase .mults-showcase-body {
+  height: 90%;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+main .serials-showcase {
+  height: 40vh;
+  background-color: rgba(43, 33, 94, 0.27);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+main .serials-showcase .serials-showcase-head {
+  height: 10%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+}
+main .serials-showcase .serials-showcase-head .serials-showcase-head-left-text {
+  height: 38px;
+  width: 60%;
+  line-height: 38px;
+  padding-left: 40px;
+  color: aliceblue;
+}
+main .serials-showcase .serials-showcase-head .serials-showcase-head-right-text {
+  height: 38px;
+  text-align: right;
+  line-height: 38px;
+  color: aliceblue;
+  width: 40%;
+  padding-right: 40px;
+}
+main .serials-showcase .serials-showcase-body {
+  height: 90%;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card {
+  width: 13%;
+  height: 100%;
+  text-align: center;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.card .card-img {
+  padding-top: 10px;
+  width: 95%;
+  height: 80%;
+}
+.card span {
+  color: rgba(128, 128, 128, 0.939);
+  font-weight: 600;
+}
+
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,75 @@
+header {
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .head {
+    background-color: rgba(0, 0, 0, 0.92);
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+    .logo-head {
+      padding-left: 10px;
+      height: 100%;
+      width: 15%;
+      display: flex;
+
+      img {
+        height: 35px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 25px;
+      }
+    }
+
+    .nav-head {
+      width: 70%;
+      height: 100%;
+      text-align: center;
+
+      ul {
+        list-style-type: none;
+        padding: 0px;
+      }
+
+      li {
+        display: inline;
+
+        a {
+          padding: 14px;
+          font-size: 15pt;
+          font-weight: 600;
+          color: $whiteText;
+          float: none;
+        }
+      }
+    }
+
+    .icons-head {
+      width: 15%;
+      height: 100%;
+
+      ul {
+        list-style-type: none;
+        padding: 0px;
+      }
+
+      li {
+        display: inline;
+
+        i {
+          font-size: 17pt;
+          float: none;
+          color: $whiteText;
+          padding: 10px;
+        }
+
+        span {
+          color: $whiteText;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

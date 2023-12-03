@@ -1,0 +1,18 @@
+.card {
+  width: 13%;
+  height: 100%;
+  text-align: center;
+  padding-left: 6px;
+  padding-right: 6px;
+
+  .card-img {
+    padding-top: 10px;
+    width: 95%;
+    height: 80%;
+  }
+
+  span {
+    color: $grayText;
+    font-weight: 600;
+  }
+}
