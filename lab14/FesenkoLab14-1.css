@@ -1,0 +1,31 @@
+@media screen and (min-width: 1200px) {
+  .yellow-cell {
+    background-color: sandybrown;
+  }
+
+  .red-text {
+    color: red;
+  }
+
+  .blue-text {
+    color: blue;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .pink-cell {
+    background-color: lightpink;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .violet-cell {
+    background-color: plum;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .row {
+    color: forestgreen;
+  }
+}
