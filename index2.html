@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body, html {
+            margin: 0;
+            height: 100%;
+        }
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100vh;
+            padding: 3px;
+        }
+        .block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+            flex-grow: 1;
+
+            min-height: 24vh;
+            min-width: 24vw;
+        }
+
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-column-gap: 3px;
+            grid-row-gap: 3px;
+            grid-template-areas:
+                    "a a a b"
+                    "d e f b"
+                    "g g f b"
+                    "c c c c";
+        }
+
+        .blue {
+            background-color: #609ecb;
+            grid-area: a;
+        }
+        .dark-grey {
+            background-color: #555555;
+            grid-area: b;
+        }
+        .teal {
+            background-color: #8ed6d2;
+            grid-area: d;
+        }
+        .red {
+            background-color: #e57373;
+            grid-area: e;
+        }
+        .yellow {
+            background-color: #ffd54f;
+            grid-area: f;
+        }
+        .green {
+            background-color: #81c784;
+            grid-area: g;
+        }
+        .orange {
+            background-color: #ffb74d;
+            grid-area: c;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .parent {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                grid-template-areas:
+                    "a a b"
+                    "d e b"
+                    "g g b"
+                    "f f b"
+                    "c c c";
+            }
+        }
+        @media screen and (max-width: 950px) {
+            .parent {
+                grid-template-columns: 70% 30%;
+                grid-template-rows: repeat(6, 1fr);
+                grid-template-areas:
+                    "a b"
+                    "d b"
+                    "e b"
+                    "g b"
+                    "f b"
+                    "c c";
+            }
+        }
+        @media screen and (max-width: 750px) {
+            .parent {
+                grid-template-columns: 1fr;
+                grid-template-rows: unset;
+                grid-template-areas: unset;
+            }
+            .block {
+                grid-area: unset;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper parent">
+    <div class="block blue"></div>
+    <div class="block teal"></div>
+    <div class="block red"></div>
+    <div class="block green"></div>
+    <div class="block yellow"></div>
+    <div class="block dark-grey"></div>
+    <div class="block orange"></div>
+</div>
+</body>
+</html>
