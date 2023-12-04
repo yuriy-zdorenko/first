@@ -1,0 +1,55 @@
+body {
+    background-image: url("image/333.png");
+    background-size: cover;
+    margin: 20px;
+    text-align: justify;
+}
+dl
+{
+    color: #ffffff;
+}
+div.ant
+{
+text-align: right;
+}
+p {
+    margin: 0 20px;
+    border-left: 2px solid red;
+    font-style: italic;
+}
+    .small {
+        font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+    }
+
+h1 {
+    font-weight: normal;
+    text-align: center;
+    color: #ff0000;
+}
+
+a:link {
+    color: #0000ff;
+}
+
+a:visited {
+    color: #800080;
+}
+
+a:hover {
+    color: #ff00ff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    text-align: left;
+    background-color: #ffffff;
+    padding: 20px;
+    display: inline-block;
+}
+
