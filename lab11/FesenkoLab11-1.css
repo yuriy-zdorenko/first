@@ -1,85 +1,174 @@
+@media screen and (max-width: 800px) {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+  }
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0px;
+  .wrapper {
+    display: flex;
+    height: 100%;
+    gap: 5px;
+    flex-direction: column;
+  }
+
+  .main-1 {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .main-2 {
+    background-color: darkorange;
+    width: 100%;
+    height: 10%;
+  }
+
+  .child-1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .child-2 {
+    width: 100%;
+    height: 90%;
+    background-color: grey;
+  }
+
+  .child-1-1 {
+    width: 100%;
+    height: 30%;
+    background-color: cornflowerblue;
+  }
+
+  .child-1-2 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+
+  .child-1-3 {
+    height: 70%;
+    width: 100%;
+    background-color: gold;
+  }
+
+  .child-1-2-1 {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    gap: 2px;
+  }
+
+  .child-1-2-1-1 {
+    height: 100%;
+    width: 50%;
+    background-color: darkturquoise;
+  }
+
+  .child-1-2-1-2 {
+    height: 100%;
+    width: 50%;
+    background-color: crimson;
+  }
+
+  .child-1-2-2 {
+    height: 100%;
+    width: 100%;
+    background-color: forestgreen;
+  }
 }
 
-.wrapper {
-  display: flex;
-  height: 100%;
-  gap: 5px;
-  flex-direction: column;
-}
+@media screen and (min-width: 801px) {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+  }
 
-.main-1 {
-  width: 100%;
-  height: 80%;
-  display: flex;
-  gap: 5px;
-}
+  .wrapper {
+    display: flex;
+    height: 100%;
+    gap: 5px;
+    flex-direction: column;
+  }
 
-.main-2 {
-  background-color: darkorange;
-  width: 100%;
-  height: 20%;
-}
+  .main-1 {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    gap: 5px;
+  }
 
-.child-1 {
-  width: 85%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
+  .main-2 {
+    background-color: darkorange;
+    width: 100%;
+    height: 20%;
+  }
 
-.child-2 {
-  width: 15%;
-  height: 100%;
-  background-color: grey;
-}
+  .child-1 {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.child-1-1 {
-  width: 100%;
-  height: 35%;
-  background-color: cornflowerblue;
-}
+  .child-2 {
+    width: 15%;
+    height: 100%;
+    background-color: grey;
+  }
 
-.child-1-2 {
-  width: 64%;
-  height: 64%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3px;
-}
+  .child-1-1 {
+    width: 100%;
+    height: 35%;
+    background-color: cornflowerblue;
+  }
 
-.child-1-3 {
-  height: 64%;
-  width: 36%;
-  background-color: gold;
-}
+  .child-1-2 {
+    width: 64%;
+    height: 64%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
 
-.child-1-2-1 {
-  height: 45%;
-  width: 100%;
-  display: flex;
-  gap: 2px;
-}
+  .child-1-3 {
+    height: 64%;
+    width: 36%;
+    background-color: gold;
+  }
 
-.child-1-2-1-1 {
-  height: 100%;
-  width: 50%;
-  background-color: darkturquoise;
-}
+  .child-1-2-1 {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    gap: 2px;
+  }
 
-.child-1-2-1-2 {
-  height: 100%;
-  width: 50%;
-  background-color: crimson;
-}
+  .child-1-2-1-1 {
+    height: 100%;
+    width: 50%;
+    background-color: darkturquoise;
+  }
 
-.child-1-2-2 {
-  height: 55%;
-  width: 100%;
-  background-color: forestgreen;
+  .child-1-2-1-2 {
+    height: 100%;
+    width: 50%;
+    background-color: crimson;
+  }
+
+  .child-1-2-2 {
+    height: 55%;
+    width: 100%;
+    background-color: forestgreen;
+  }
 }
