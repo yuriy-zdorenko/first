@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Моя Батьківщина</title>
+    <meta charset="UTF-8">
+    <style>
+        #imageText {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Лютенька</h1>
+    <img src="center.jpg" alt="Map" usemap="#imageMap" width="800" height="auto">
+    
+    <map name="imageMap">
+        <area shape="rect" coords="150,150,600,600" title="Свято-Успенська церква" onmouseover="showText('Свято-Успенська церква')" onmouseout="hideText();">
+    </map>
+
+    <img src="373.jpg" alt="Map 373" usemap="#map373" width="800" height="auto">
+    <map name="map373">
+        <area shape="rect" coords="300,300,500,500" title="Меморіал 373 дивізії" onmouseover="showText('Меморіал 373 дивізії')" onmouseout="hideText();">
+    </map>
+
+    <img src="rada.jpg" alt="Map Rada" usemap="#mapRada" width="800" height="auto">
+    <map name="mapRada">
+        <area shape="rect" coords="125,150,650,350" title="Сільська Рада" onmouseover="showText('Сільська Рада')" onmouseout="hideText();">
+    </map>
+
+    <p id="imageText"></p>
+
+    <script>
+        function showText(text) {
+            var textElement = document.getElementById("imageText");
+            textElement.style.display = "block";
+            textElement.innerHTML = text;
+        }
+
+        function hideText() {
+            document.getElementById("imageText").style.display = "none";
+        }
+
+        var areas = document.getElementsByTagName('area');
+        for (var i = 0; i < areas.length; i++) {
+            areas[i].addEventListener('mouseover', function() {
+                document.body.style.cursor = 'pointer';
+            });
+            areas[i].addEventListener('mouseout', function() {
+                document.body.style.cursor = 'default';
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
