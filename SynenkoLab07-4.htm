@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Форма замовлення на товар</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    input[type="text"],
+    textarea {
+      width: calc(100% - 10px);
+      padding: 8px;
+      margin-bottom: 15px;
+    }
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    input[type="submit"] {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+  </style>
+</head>
+<body>
+
+<form action="process_order.php" method="post">
+  <label for="bank_account">Номер банківського рахунку:</label>
+  <input type="text" id="bank_account" name="bank_account" placeholder="UA2532820912340000056789"><br>
+  
+  <label for="personal_id">Ваш номер телефону:</label>
+  <input type="text" id="personal_id" name="personal_id" placeholder="+380661234567"><br>
+  
+  <label>Список товарів:</label><br>
+  <label for="product1"><input type="checkbox" id="product1" name="products[]" value="item1">Футболка</label><br>
+  <label for="product2"><input type="checkbox" id="product2" name="products[]" value="item2">Куртка</label><br>
+  <label for="product3"><input type="checkbox" id="product3" name="products[]" value="item3">Штани</label><br>    
+  
+  <label for="comments">Довільні коментарі:</label><br>
+  <textarea id="comments" name="comments" rows="4" cols="50" ></textarea><br>
+  
+  <label>Вид оплати:</label><br>
+  <label for="cash"><input type="radio" id="cash" name="payment_type" value="cash">Готівковий</label><br>
+  <label for="non_cash"><input type="radio" id="non_cash" name="payment_type" value="non_cash">Безготівковий розрахунок</label><br>
+  
+  <label>Додаткова інформація:</label><br>
+  <label for="account_balance"><input type="checkbox" id="account_balance" name="additional_info[]" value="account_balance">Залишки на рахунку</label><br>
+  <label for="recent_payments"><input type="checkbox" id="recent_payments" name="additional_info[]" value="recent_payments">Список останніх виплат по рахунку</label><br>
+  
+  <input type="submit" value="Надіслати замовлення">
+</form>
+
+<p style="text-align: center; color: #888;">Дякуємо що вибрали наш магазин <3</p>
+
+</body>
+</html>
+
