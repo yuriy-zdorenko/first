@@ -1,0 +1,191 @@
+$background-color: #1d1c1c;
+$header1: 20px;
+
+body{
+    background-color: $background-color;
+    margin: 0;
+    padding: 0;
+}
+
+    .wrapper_body_header{
+        background-color: #302e2e;
+        height: auto;
+        max-width: 100%;
+
+        .first_block--header{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 auto;
+
+            .first_title{
+                color: white;
+                font: {
+                    size: $header1;
+                    family: 'Roboto', sans-serif;
+                }
+            }
+
+            .details{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                a{
+                    color: #a19f9f;
+                    text-decoration: none;
+                }
+                font: {
+                    family: 'Roboto', sans-serif;
+                }
+            }
+        }
+    }
+    .wrapper_body_movies{
+        background-color: #0f0e0e;
+        height: auto;
+        max-width: 100%;
+
+        .first_block--movies{
+            display: flex;
+            justify-content: space-between;
+            width: 99%;
+            margin: 0 auto;
+            align-items: center;
+    
+            .left_arrow, .right_arrow{
+                height: 40px;
+                font-weight: 40px;
+            }
+
+            .movie_item{
+                padding: 15px 0 15px 0;
+                .caption{
+                    text-align: center;
+                    width: 170px;
+                    a{
+                        color: rgb(176, 168, 168);
+                        text-decoration: none;
+                    }
+                    
+                    font: {
+                        family: 'Roboto', sans-serif;
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    
+    
+    
+    .wrapper_body_header_spec{
+        background-color: #302e2e;
+        height: auto;
+        max-width: 100%;
+
+        .second_block--header{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 auto;
+    
+            .second_title{
+                color: white;
+                font: {
+                    size: $header1;
+                    family: 'Roboto', sans-serif;
+                }
+            }
+
+            .details{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                a{
+                    color: #a19f9f;
+                    text-decoration: none;
+                }
+                font: {
+                    family: 'Roboto', sans-serif;
+                }
+            }
+    
+        }
+    }
+    .wrapper_body_movies_spec{
+        background-color: #253c5c;
+        height: auto;
+        max-width: 100%;
+
+        .second_block--movies{
+            display: flex;
+            justify-content: space-between;
+            width: 99%;
+            margin: 0 auto;
+            align-items: center;
+
+            .left_arrow, .right_arrow{
+                height: 40px;
+                font-weight: 40px;
+            }
+            
+            .movie_item{
+                padding-bottom: 15px 0 15px 0;
+                margin: 15px 0 15px 0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+                .caption{
+                    text-align: center;
+                    width: 170px;
+                    a{
+                        color: rgb(176, 168, 168);
+                        text-decoration: none;
+                    }
+                    
+                    font: {
+                        family: 'Roboto', sans-serif;
+                    }
+                }
+            }
+        }
+    }
+
+    .wrapper_body_header_third{
+        background-color: #302e2e;
+        height: auto;
+        max-width: 100%;
+
+        .third_block--header{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 auto;
+    
+            .third_title{
+                color: white;
+                font: {
+                    size: $header1;
+                    family: 'Roboto', sans-serif;
+                }
+            }
+
+            .details{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                a{
+                    color: #a19f9f;
+                    text-decoration: none;
+                }
+                font: {
+                    family: 'Roboto', sans-serif;
+                }
+                .comment{
+                    text-transform: uppercase;
+                    color: white;
+                    margin-left: 200px;
+                }
+            }
+    
+        }
+    }
