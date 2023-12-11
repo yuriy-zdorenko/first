@@ -1,0 +1,111 @@
+* {
+    font-family: 'Golos Text', sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #27a9d4;
+    text-shadow: 6px 4px 10px rgba(0, 0, 0, 0.15);
+    -webkit-text-stroke-width: .01px;
+    -webkit-text-stroke-color: #1f87aa;
+}
+
+p {
+    font-size: 19px;
+    margin: 15px;
+    text-align: justify;
+}
+
+.program-cs {
+    font-family: Consolas;
+}
+
+.signature {
+    font-style: italic;
+    text-decoration: underline;
+    text-align: right;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.contacts, .navigator {
+    list-style: none;
+}
+
+.uni-images {
+	height: 100px;
+	margin-top: 5px;
+}
+
+.home {
+	height: 50px;
+	margin-bottom: 0px;
+}
+
+table, td {
+    border: 1px solid;
+    padding: 6px;
+    margin: auto;
+}
+
+.bottom-btns {
+    display: flex;
+    justify-content: center;
+}
+
+.btns-margin {
+    margin: 3px;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.home-login {
+    border: 0px solid;
+}
+
+header {	
+    margin-right: 5%;
+    margin-left: 5%;
+    background: rgba(128, 128, 128, 0.4);
+    color: #fff;
+    padding: 1rem;
+}
+ 
+main {
+    margin:2%;
+    margin-right: 5%;
+    margin-left: 5%;
+    position:relative;
+    min-height: 100%;
+    padding-bottom: 150px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+ 
+footer {
+    margin:0 auto;
+    background: rgba(128, 128, 128, 0.4);
+    color: #fff;
+    overflow: visible;
+    padding: 1rem;
+}
+
+article {
+    font-weight: 600;
+}
+
+.forms {
+    float:right;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Завдання 4</title>
+  </head>
+  <body>
+    <form>
+      Номер рахунку: <input type="number" required /><br />
+      Номер користувача: <input type="number" required /><br />
+
+      Список товарів:
+      <ul>
+        <li><input type="checkbox" />Товар 1</li>
+        <li><input type="checkbox" />Товар 2</li>
+        <li><input type="checkbox" />Товар 3</li>
+        <li><input type="checkbox" />Товар 4</li>
+        <li><input type="checkbox" />Товар 5</li>
+      </ul>
+
+      Коментар:<br />
+      <textarea></textarea><br />
+
+      Вид оплати:<br />
+      <input type="radio" id="payment_cash" name="payment" />
+      <label for="payment_cash">Готівка</label><br />
+      <input type="radio" id="payment_card" name="payment" />
+      <label for="payment_card">Безготівка</label><br />
+
+      <br />
+      Додаткова інформація:<br />
+      <input type="checkbox" id="balance" />
+      <label for="balance">Баланс рахунку</label><br />
+      <input type="checkbox" id="payment_list" />
+      <label for="payment_list">Історія останніх списань</label><br />
+
+      <button type="submit">Відправити</button>
+      <button type="reset">Відмінити</button>
+    </form>
+  </body>
+</html>

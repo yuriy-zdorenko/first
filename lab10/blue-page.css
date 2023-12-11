@@ -1,0 +1,26 @@
+body {
+  background: no-repeat url("https://img.freepik.com/free-vector/abstract-watercolor-pastel-background_87374-139.jpg");
+  background-size: cover;
+  color:rgb(58, 125, 248);
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  text-indent: 25px;
+  text-align: justify;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-style: italic;
+}
+
+img {
+  height: 300px;
+  float: right;
+  margin: 10px;
+  border-radius: 25px;
+}

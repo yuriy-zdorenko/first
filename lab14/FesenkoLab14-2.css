@@ -1,0 +1,16 @@
+.blue-cell {
+  background-color: rgb(79, 129, 190);
+}
+
+.yellow-cell {
+  background-color: rgb(255, 192, 1);
+}
+
+.red-cell {
+  background-color: rgb(193, 0, 1);
+}
+
+.white-text {
+  font-size: 90pt;
+  color: white;
+}

@@ -1,0 +1,11 @@
+$whiteText: aliceblue;
+$grayText: rgba(128, 128, 128, 0.939);
+
+@import "./header";
+@import "./main";
+@import "./card";
+
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}

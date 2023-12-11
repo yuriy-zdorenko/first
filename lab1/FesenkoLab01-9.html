@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Моя перша сторінка">
+ 		<meta name="keywords" content="202-ТН, НУПП, Фесенко, Антон, студент">
+		<title>Головна сторінка</title>
+
+		<script src="https://kit.fontawesome.com/c91902ee4f.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Golos+Text&display=swap" rel="stylesheet">
+
+		<style>
+			* {
+				font-family: 'Golos Text', sans-serif;
+			}
+
+			h1, h2 {
+				text-align: center;
+				color: #27a9d4;
+				text-shadow: 6px 4px 10px rgba(0, 0, 0, 0.15);
+			}
+
+			p {
+				font-size: 19px;
+				margin: 15px;
+				text-align: justify;
+			}
+
+			.program-cs {
+				font-family: Consolas;
+			}
+
+			.signature {
+				font-style: italic;
+				text-decoration: underline;
+				text-align: right;
+			}
+
+			a {
+				display: flex;
+				justify-content: center;
+				font-size: 19px;
+			}
+			
+			a:link {
+				text-decoration: none;
+				color: black;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<section>
+			<h1>Про себе</h1>
+			<p><strong>Фесенко Антон Богданович</strong>, 2004 року народження, проживаю на вул. Героїв <strike>Сталінграда</strike> України</p>
+			<p>Народився в <u>Україні, м. Полтава.</u> Навчався 11 років у Полтавській гімназії <small>(нині ліцей)</small> №33.</p>
+			<p>На даний момент навчаюся у Полтавській політехніці імені Юрія Кондратюка на 2 курсі спеціальності 122 Комп'ютерні науки.</p>
+		</section>
+
+		<section>
+			<h1>Моє хобі</h1>
+			<p><strong>Люблю грати на гітарі</strong>, маю <big>акустичну та електрогітару</big> вдома.</p>
+			<p>За гарної погоди та вільного часу люблю виходити на довгі прогулянки від 6 кілометрів вулицями міста.</p>
+			<p>Полюбляю автомобілі, просто обожнюю їх! Особливо американський автопром :) <small>(електромобілі не дуже люблю)</small></p>
+			<h2>Програмування</h2>
+			<p>Минулого року вивчав мову С++, на даний момент - C#.</p>
+			<p class="program-cs">
+				using System;<br><br>namespace Hello {<br>&emsp;class HelloWorld {<br>&emsp;&emsp;public static void Main(string args[]) {&emsp;&emsp;&emsp;<br>
+					&emsp;&emsp;&emsp;&emsp;Console.WriteLine("Hello World!");<br>
+					&emsp;&emsp;&emsp;}<br>
+					&emsp;&emsp;}<br>
+					&emsp;}
+			</p>
+		</section>
+
+		<p class="signature">Студент групи 202-ТН Фесенко А.Б.</p>
+
+		
+		<a href="tel:+(380)95-478-24-97"><i class="fa-solid fa-phone fa-fw"></i>+(380)95-478-24-97</a>
+		<a href="mailto:tohafesenkolovep@gmail.com"><i class="fa-sharp fa-solid fa-envelope fa-fw"></i>tohafesenkolovep@gmail.com</a>
+	</body>
+
+</html>
