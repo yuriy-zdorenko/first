@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+    <title>Title</title>
+    <style>
+    .items{
+        background-color:white;
+        border: 1px solid gray;
+        display:flex;
+        height:100vh;
+        align-items:center;
+        justify-content:center;
+        font-size:70px;
+        color:white;
+      }
+    .item1{
+        background-color:blue;
+      }
+      .item2{
+        background-color:yellow;
+      }
+      .item3{
+        background-color:red;
+      }
+
+    @media screen and (min-width: 992px) and (max-width: 1199px){
+      .item1{
+        height:60vh;
+      }
+      .item2{
+        height:60vh;
+      }
+      .item3{
+        height:40vh;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 991px){
+      .items{
+        height:50vh;
+      }
+    }
+
+    @media screen and (max-width: 767px){
+      .items{
+        height:33.33vh;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-6 col-lg-8 col-md-12 items item1">
+            #1
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 items item2">
+            #2
+        </div>
+        <div class="col-xl-3 col-lg-12 col-md-6 items item3">
+            #3
+        </div>
+    </div>
+</div>
+</body>
+</html>
