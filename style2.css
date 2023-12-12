@@ -1,0 +1,22 @@
+body{
+font-family: 'Courier New', Courier, monospace;
+font-size: 15px;
+background: rgb(196, 183, 225);
+margin: 0;
+}
+h1{
+cursor: help;
+margin: 0;
+text-transform: uppercase;
+padding-bottom: 10px;
+border-bottom: 3px solid black;
+}
+form{
+margin: 0 auto;
+background: rgba(153, 127, 160, 0.77);
+width: 650px;
+height: 650px;
+padding: 50px;
+box-shadow: 4px 4px 7px rgba(0, 0, 0, 0,82);
+}
+
