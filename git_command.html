@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git commands</title>
+    <link rel="stylesheet" href="/git_command.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="header_container">
+            <div class="logo">
+                <h1>Мій особистий блог</h1>
+                <p>Карина Шупик</p>
+            </div>
+    
+            <div class="nav_menu">
+                <a href="#">Вхід</a>
+                <a href="/form2.html">Реєстрація</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="body_container">
+        <div class="column_container">
+            <div class="first_column">
+                <div class="create_part">
+                    <h1 class="column_title color_blue">Create a Repository</h1>
+
+                    <p>From scratch - Create a new local repository</p>
+                    <p><b>$ git init [project name]</b></p>
+
+                    <p>Download from an existing repository</p>
+                    <p><b>$ git clone my_url</b></p>
+                </div>
+                <div class="observe_part">
+                    <h1 class="column_title color_dark-blue">Observe your Repository</h1>
+
+                    <p>List new or modified files not yet committed</p>
+                    <p><b>$ git status</b></p>
+
+                    <p>Show the changes to files not yet staged</p>
+                    <p><b>$ git diff</b></p>
+
+                    <p>Show the changes to staged files </p>
+                    <p><b>$ git diff -cached</b></p>
+
+                    <p>Show all staged and unstaged file changes</p>
+                    <p><b>$ git diff HEAD</b></p>
+
+                    <p>Show the changes between two commitids</p>
+                    <p><b>$ git diff commitl commit2</b></p>
+
+                    <p>List the change dates and authors for a file </p>
+                    <p><b>$ git blame [file]</b></p>
+
+                    <p>Show the file changes for a commit</p>
+                    <p><b>$ git show [commit]: [file]</b></p>
+
+                    <p>Show full change history</p>
+                    <p><b>$ git log</b></p>
+
+                    <p>Show change history for file/directory including diffs</p>
+                    <p><b>$ git log -p [file/directory]</b></p>
+
+                </div>
+            </div>
+
+            <div class="second_column">
+                <h1 class="column_title color_light-blue">Working with Branches</h1>
+
+                <p>List all local branches</p>
+                <p><b>$ git branch</b></p>
+
+                <p>List all branches, local and remote</p>
+                <p><b>$ git branch -av</b></p>
+
+                <p>Switch to a branch, 'my_branch', and update working directory</p>
+                <p><b>$ git checkout my_branch</b></p>
+
+                <p>Create a new branch called 'new_branch'</p>
+                <p><b>$ git branch new_branch</b></p>
+
+                <p>Delete the branch called 'my_branch'</p>
+                <p><b>$ git branch -d my_branch</b></p>
+
+                <p>Merge branch 'branch_a' into branch 'branch_b'</p>
+                <p><b>$ git checkout branch_b</b></p>
+                <p><b>$ git merge branch_a</b></p>
+
+                <p>Tag the current commit</p>
+                <p><b>$ git tag my_tag</b></p>
+            </div>
+
+            <div class="third_column">
+                <h1 class="column_title color_green">Make a change</h1>
+
+                <p><b>Stages the file, ready for commit</b></p>
+                <p><b>$ git add [file]</b></p>
+
+                <p>Stage all changed files, ready for commit</p>
+                <p><b>$ git add .</b></p>
+
+                <p>Commit all staged files to versioned history</p>
+                <p><b>$ git commit -m "commit message"</b></p>
+
+                <p>Commit all your tracked files to versioned history</p>
+                <p><b>$ git commit -a -m "commit message"</b></p>
+
+                <p>Unstage file, keeping the file changes</p>
+                <p><b>$ git reset [file]</b></p>
+
+                <p>Revert everything to the last commit</p>
+                <p><b>$ git reset --hard</b></p>
+
+            </div>
+
+            <div class="fourth_column">
+                <div class="fifth_block">
+                    <h1 class="column_title color_orange">Synchronization in Git</h1>
+
+                    <p>Get the latest changes from origin (no merge)</p>
+                    <p><b>$ git fetch</b></p>
+
+                    <p>Fetch the latest changes from origin and merge</p>
+                    <p><b>$ git pull</b></p>
+
+                    <p>Fetch the latest changes from origin and rebase</p>
+                    <p><b>$ git pull --rebase</b></p>
+
+                    <p>Push local changes to the origin</p>
+                    <p><b>$ git push</b></p>
+                </div>
+            
+                <div class="six_block">
+                    <h1 class="column_title color_red">Finally!</h1>
+
+                    <p>When in doubt, use <code>git help</code></p>
+                    <p><b>$ git command --help</b></p>
+
+                    <p>Or visit <a href="https://training.github.com/" target="_blank">GitHub Training</a> for official GitHub training</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer_rule">
+            <p>Всі права захищені</p>
+        </div>
+    </div>
+
+</body>
+</html>
