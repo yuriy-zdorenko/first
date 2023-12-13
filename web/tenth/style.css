@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Red Hat Mono', monospace;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-bottom: 0px solid;
+}
+a:active {
+    letter-spacing: 2px;
+}
+a:visited {
+    color: #f34213;
+}
+a:hover {
+    transition: border 0.05s ease-in-out;
+    border-bottom: 2px solid;
+}
+h1 {
+    text-align: center;
+    font-weight: bold;
+    margin: 1em 0;
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1em 0em;
+    width: 100%;
+    background-color: #63d471;
+}
+.nav-bar ul {
+    display: flex;
+    justify-content: start;
+    list-style-type: none;
+}
+ul > li {
+    background-color: #4c061d;
+    border: 2px solid #233329;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    margin: 0px 1.5em;
+    font-size: 1.1rem;
+    box-shadow: 0px 0px 10px 2px #63a46c;
+}
+ul > li:hover {
+    background-color: #233329;
+    border-color: #63a46c;
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 4.75em;
+    flex-direction: column;
+}
+.main {
+    flex: 2 600px;
+    color: white;
+    padding: 2em;
+    background-color: #138a36;
+    height: 80%;
+    width: 100%;
+}
+.main p {
+    margin: 0.5em 0;
+    text-indent: 4rem;
+    text-align: justify;
+    font-style: italic;
+    font-size: 2rem;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.grid-item {
+    border-radius: 0.75em;
+    text-align: center;
+    padding: 1em;
+    background-color: #337357;
+    height: 400px;
+    box-shadow: 0px 0px 20px 1px #6d9f71;
+}
+.grid-item > p {
+    margin: 0.5em 0;
+    text-indent: 0rem;
+    text-align: center;
+    font-style: normal;
+    font-size: 2rem;
+}
+.grid-item img {
+    height: 250px;
+    margin-bottom: 2em;
+}
+.grid-item:hover {
+    box-shadow: inset 0px 0px 10px 2px #6d9f71;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.25);
+}
+.info {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background-image: url(https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_1920,h_1080/https://ubuntu.com/wp-content/uploads/72a9/trotoar-1.jpg);
+}
+p span {
+    padding-left: 0.25em;
+    padding-bottom: 0.2em;
+    font-style: normal;
+    line-height: 2;
+    border-left: 8px solid;
+    border-radius: 5px;
+}
+span:hover {
+    transition: all 1s ease;
+    padding-left: 1em;
+    border-left: 15px solid;
+    margin-left: 1em;
+}
+.footer {
+    flex: 1 auto;
+    text-align: center;
+    padding: 1em;
+    background-color: #63d471;
+    width: 100%;
+}
