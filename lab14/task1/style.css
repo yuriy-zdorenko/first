@@ -1,0 +1,36 @@
+div {
+  color: green;
+}
+
+@media (min-width: 768px) {
+  div {
+    color: black;
+  }
+
+  .side-row {
+    background-color: plum;
+  }
+}
+
+@media (min-width: 992px) {
+  .side-row {
+    background-color: transparent;
+  }
+  .huge-el {
+    background-color: rgb(236, 134, 134);
+  }
+}
+@media (min-width: 1200px) {
+  .huge-el {
+    background-color: transparent;
+  }
+  .huge-el-second {
+    background-color: rgb(237, 237, 139);
+  }
+  .header-right {
+    color: red;
+  }
+  .footer-left {
+    color: blue;
+  }
+}
