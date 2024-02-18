@@ -16,8 +16,8 @@
 @media (min-width: 1024px) {
     .code {
         font-size: 20px;
-        min-width: 500px;
-        max-width: 450px;
+        min-width: 450px;
+        max-width: 500px;
     }
 }
 
