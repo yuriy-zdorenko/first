@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рядки, що біжать вертикально</title>
+    <style>
+        p{
+            writing-mode: vertical-rl;
+        }
+        .image{
+            height: 50px;
+            width: 50px;
+        }
+        div{
+            columns: 5;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <p>
+        <marquee behavior="alternate" direction="down" width="50" bgcolor="#FFFAE3" height="500">
+            <font color="#000000" face="Veranda" size="4">
+                <b><i>
+                    <br>
+                        Текст у рядку коливається
+                    <br>
+                </i>
+                </b>
+            </font>            
+        </marquee>
+    </p> 
+    <p>
+        <marquee behavior="scroll" direction="up" width="50" bgcolor="#F7567C" height="500">
+            <img class="image" src="320465.png" alt="image">          
+        </marquee>
+    </p> 
+    <p>
+        <marquee behavior="slide" direction="down" width="50" bgcolor="#99E1D9" height="500">
+            <img class="image" src="320465.png" alt="image">          
+        </marquee>
+    </p> 
+    <p>
+        <marquee behavior="scroll" direction="down" scrolldelay="85" width="50" bgcolor="#5D576B" height="500">
+            <font color="#FFFFFF" face="Veranda" size="4">
+                <b><i>
+                    <br>
+                        Текст із запізненням 85 мс
+                    <br>
+                </i>
+                </b>
+            </font>            
+        </marquee>
+    </p> 
+    <p>
+        <marquee behavior="scroll" direction="down" scrolldelay="200" width="50" bgcolor="#FFFAE3" height="500">
+            <font color="#000000" face="Veranda" size="4">
+                <b><i>
+                    <br>
+                        Текст із запізненням 200 мс
+                    <br>
+                </i>
+                </b>
+            </font>            
+        </marquee>
+    </p> 
+    </div>
+</body>
+</html>
