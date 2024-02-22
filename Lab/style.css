@@ -38,4 +38,9 @@ position: relative;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 text-align: center;
 position: relative;
+
+}
+
+.div6 .div7 .div8 .div9 .div10 {
+  float: right;
 }
