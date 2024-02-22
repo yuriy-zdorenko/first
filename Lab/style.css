@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+
+
+h3 {
+    text-align: center;
+    position: relative;
+    top: 20%;  
+}
+
+.div1 {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: center;
+position: relative;
+}
+
+.div2 {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: center;
+position: relative;
+}
+
+.div3 {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: center;
+position: relative;
+}
+
+.div4 {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: center;
+position: relative;
+}
+
+.div5 {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: center;
+position: relative;
+}
