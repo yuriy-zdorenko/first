@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    <script>
+        /*Задати температуру в градусах за Цельсієм. Вивести в alert відповідну
+        температуру в градусах за Фаренгейтом. Підказка: розрахунок йде за формулою:
+        Tf = (9/5)*Tc + 32, де Tf – температура за Фаренгейтом, Tc – температура за Цельсієм*/
+        
+        let temperatureCelsius = parseFloat(prompt("Введіть температуру в градусах Цельсія:"));
+
+        let temperatureFahrenheit = (9 / 5) * temperatureCelsius + 32;
+
+        alert(`Температура в градусах Фаренгейта: ${temperatureFahrenheit}`);
+
+    </script>
+</body>
+</html>

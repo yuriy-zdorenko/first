@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    <script>
+        /*Дано число numb = 10000. Діліть його на 2 стільки раз, поки результат ділення
+        не стане менше 50. Число яке отримаєте, запишіть в змінну result. 
+        Порахуйте кількість ітерацій,  необхідних для цього і запишіть її в змінну counter.
+        Результат записаний в змінні result і counter виведіть в консолі.*/
+        
+        let numb = 10000;
+        let result;
+        let counter = 0;
+
+        while (numb >= 50) {
+            result = numb;
+            numb /= 2;
+            counter++;
+        }
+
+        console.log("Результат:", result);
+        console.log("Кількість ітерацій:", counter);
+
+    </script>
+</body>
+</html>

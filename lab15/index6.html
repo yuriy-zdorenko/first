@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+
+    <script>
+        /*Отримати з модального вікна prompt число від 1 до 7, і вивести в вікні браузера день неділі,
+        якому відповідає задане число.*/
+        
+        let dayNumber = parseInt(prompt("Введіть число від 1 до 7:"));
+
+        let dayName;
+
+        switch (dayNumber) {
+            case 1:
+                dayName = "Понеділок";
+                break;
+            case 2:
+                dayName = "Вівторок";
+                break;
+            case 3:
+                dayName = "Середа";
+                break;
+            case 4:
+                dayName = "Четвер";
+                break;
+            case 5:
+                dayName = "П'ятниця";
+                break;
+            case 6:
+                dayName = "Субота";
+                break;
+            case 7:
+                dayName = "Неділя";
+                break;
+            default:
+                dayName = "невідомий день тижня";
+        }
+
+        document.body.innerHTML = `<p>День тижня за введеним числом: ${dayName}</p>`;
+
+    </script>
+</body>
+</html>
