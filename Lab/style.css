@@ -10,37 +10,14 @@ h3 {
     top: 20%;  
 }
 
-.div1 {
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-text-align: center;
-position: relative;
-}
-
-.div2 {
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-text-align: center;
-position: relative;
-}
-
-.div3 {
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-text-align: center;
-position: relative;
-}
-
-.div4 {
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-text-align: center;
-position: relative;
-}
-
-.div5 {
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-text-align: center;
-position: relative;
-
-}
 
 .div6 .div7 .div8 .div9 .div10 {
   float: right;
+}
+
+.header {
+display: flex
+}
+.mar {
+  width: 300px;
 }
