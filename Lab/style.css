@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    position: relative;
+
+  }
+
+
+h3 {
+    text-align: center;
+    position: relative;
+    top: 20%;  
+}
+
+.div6 .div7 .div8 .div9 .div10 {
+  float: right;
+}
+
+.header {
+display: flex
+}
+.mar {
+  width: 300px;
+}
