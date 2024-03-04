@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Завдання 4</title>
+  </head>
+  <body>
+    <script>
+      let a = prompt("Введіть номер місяця");
+      a = parseInt(a);
+      let month;
+      let season;
+
+      if (a <= 0 || a > 12) season = "Невідомий сезон";
+      if (a == 12 || a == 1 || a == 2) season = "Зима";
+      if (a >= 3 && a <= 5) season = "Весна";
+      if (a >= 6 && a <= 8) season = "Літо";
+      if (a >= 9 && a <= 11) season = "Осінь";
+
+      switch (a) {
+        case 1:
+          month = "Січень";
+          break;
+        case 2:
+          month = "Лютий";
+          break;
+        case 3:
+          month = "Березень";
+          break;
+        case 4:
+          month = "Квітень";
+          break;
+        case 5:
+          month = "Травень";
+          break;
+        case 6:
+          month = "Червень";
+          break;
+        case 7:
+          month = "Липень";
+          break;
+        case 8:
+          month = "Серпень";
+          break;
+        case 9:
+          month = "Вересень";
+          break;
+        case 10:
+          month = "Жовтень";
+          break;
+        case 11:
+          month = "Листопад";
+          break;
+        case 12:
+          month = "Грудень";
+          break;
+        default:
+          month = "Невідомий місяць";
+          break;
+      }
+
+      alert(season + " - " + month);
+    </script>
+  </body>
+</html>
