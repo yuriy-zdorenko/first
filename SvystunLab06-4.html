@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Форма для заповнення замовлення на товар</h1>
+    <form action="">
+        <pre>
+            <font size="5">
+                Номер банківського рахунку: <input type="text" name="bank_card" value="" size="40" maxlength="60">
+                Номер телефону: <input type="text" name="phone_number" value="" size="40" maxlength="60">
+                Список товарів: <select name="list" multiple size="3">
+                                    <option value="1">Яблуко</option>
+                                    <option value="2">Апельсин</option>
+                                    <option value="3">Мандарин</option>
+                                    <option value="4">Персик</option>
+                                    <option value="5">Груша</option>
+                                </select>
+                Коментарі: <textarea name="coment" cols="30" rows="4"></textarea>
+                Вид оплати: <input type="radio" name="oplata" value="cash">Готівка
+                            <input type="radio" name="oplata" value="card">Безготівковий
+                Додаткова інформація:<input type="checkbox" name="info1" value="yes">Залишок на рахунку
+                                     <input type="checkbox" name="info2" value="yes">Список останніх виплат
+            </font>
+        </pre>
+        <p align="center">
+            <input type="submit" name="subm" value="Надіслати">
+            <input type="reset" name="name" value="Очистити форму">
+        </p>
+    </form>
+</body>
+</html>
