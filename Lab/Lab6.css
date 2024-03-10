@@ -10,3 +10,8 @@ h1, img {
     border-radius: 35px;
 
 }
+.img3 {
+    position: absolute;
+    top: 190px;
+    right: 330px;
+}
