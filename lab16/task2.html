@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+  </head>
+  <body>
+    <a href="https://google.com" target="_blank" id="google">Google</a>
+    <br />
+
+    <a href="https://volvo.com" target="_blank" title="123" id="volvo">Volvo</a>
+    <br />
+
+    <a
+      href="https://store.google.com"
+      target="_blank"
+      title="12354"
+      id="googlestore"
+    >
+      Google Store
+    </a>
+
+    <script>
+      document.getElementById("google").addEventListener("mouseover", setTitle);
+      document.getElementById("volvo").addEventListener("mouseover", setTitle);
+      document
+        .getElementById("googlestore")
+        .addEventListener("mouseover", setTitle);
+
+      function setTitle() {
+        this.title = this.textContent;
+      }
+    </script>
+  </body>
+</html>

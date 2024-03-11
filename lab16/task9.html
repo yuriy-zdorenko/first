@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 9</title>
+    <style>
+      div {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">first div</div>
+    <div id="div2">second div</div>
+    <div id="div3">third div</div>
+
+    <script>
+      document.getElementById("div1").addEventListener("click", paintDiv);
+      document.getElementById("div2").addEventListener("click", paintDiv);
+      document.getElementById("div3").addEventListener("click", paintDiv);
+
+      function paintDiv() {
+        if (
+          this.style.backgroundColor === "white" ||
+          this.style.backgroundColor === "green"
+        ) {
+          this.style.backgroundColor = "red";
+        } else {
+          this.style.backgroundColor = "green";
+        }
+      }
+    </script>
+  </body>
+</html>

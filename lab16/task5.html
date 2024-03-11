@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 5</title>
+  </head>
+  <body>
+    <input id="inp1" type="text" /><br /><br />
+    <input id="inp2" type="text" /><br /><br />
+    <input id="inp3" type="text" /><br /><br />
+
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("inp1").addEventListener("blur", addText);
+      document.getElementById("inp2").addEventListener("blur", addText);
+      document.getElementById("inp3").addEventListener("blur", addText);
+
+      function addText() {
+        document.getElementById("demo").textContent += this.value;
+      }
+    </script>
+  </body>
+</html>

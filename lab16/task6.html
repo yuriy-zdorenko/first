@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 6</title>
+  </head>
+  <body>
+    <input id="inp1" value="test1" type="text" /><br /><br />
+    <input id="inp2" value="test2" type="text" /><br /><br />
+    <input id="inp3" value="test3" type="text" /><br /><br />
+
+    <script>
+      document.getElementById("inp1").addEventListener("click", clickInp);
+      document.getElementById("inp2").addEventListener("click", clickInp);
+      document.getElementById("inp3").addEventListener("click", clickInp);
+
+      function clickInp() {
+        alert(this.value);
+        this.removeEventListener("click", clickInp);
+      }
+    </script>
+  </body>
+</html>

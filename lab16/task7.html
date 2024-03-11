@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 7</title>
+  </head>
+  <body>
+    <p id="p1">2</p>
+    <p id="p2">4</p>
+    <p id="p3">8</p>
+  </body>
+
+  <script>
+    document.getElementById("p1").addEventListener("click", powParagraph);
+    document.getElementById("p2").addEventListener("click", powParagraph);
+    document.getElementById("p3").addEventListener("click", powParagraph);
+
+    function powParagraph() {
+      this.innerHTML = Math.pow(Number(this.innerHTML), 2);
+    }
+  </script>
+</html>
