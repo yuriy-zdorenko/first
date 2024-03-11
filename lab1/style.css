@@ -1,0 +1,53 @@
+* {
+    line-height: 1.5;
+    min-width: 210px;
+    padding: 15px;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .code {
+        font-size: 11px;
+        min-width: 250px;
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .code {
+        font-size: 20px;
+        min-width: 450px;
+        max-width: 500px;
+    }
+}
+
+body {
+    background: #3200fa;
+}
+
+h1,
+h2 {
+    font-family: "Arial Black", sans-serif;
+    text-align: center;
+}
+
+p, a {
+    font-family: "Verdana", sans-serif;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.code {
+    background-color: black;
+    border: 5px solid grey;
+    border-radius: 45px;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    margin: 0 auto;
+}
+
+.caption {
+    font-style: italic;
+    text-decoration: underline;
+    text-align: right;
+}
