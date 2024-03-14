@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+    color: red;
+}
+.container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    height: 25px;
+}
+
+.number {
+    width: 15px;
+    text-align: right;
+    border: 1px solid #ccc;
+    padding:  5px;
+    margin-right: auto;
+    height: 20px;
+}
+
+.text {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    padding: 5px;
+    height: 20px;
+}
+
+.input {
+    border: 1px solid #ccc;
+    padding: 5px;
+    height: 20px;
+}
+
