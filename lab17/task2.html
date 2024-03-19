@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+  </head>
+  <body>
+    <script>
+      let guess = 0;
+      let target = 0;
+      let turns = 0;
+      let keep_looping = true;
+
+      while (keep_looping) {
+        target = Math.floor(Math.random() * 100) + 1;
+        alert(target);
+
+        alert("Вгадайте число від 0 до 100");
+        guess = prompt("Введіть число");
+
+        while (guess != target) {
+          let diff = Math.abs(target - guess);
+
+          if (guess == target) {
+            alert(`Ви вгадали число ${target} за ${turns} спроб!`);
+            break;
+          }
+
+          console.log(
+            `${new Date().toLocaleString()} Спроба ${turns}: число ${guess} - не вірно`
+          );
+
+          if (diff >= 90) {
+            guess = prompt("Дуже холодно. Спробуйте знову");
+          } else if (diff >= 75 && diff < 90) {
+            guess = prompt("Холодніше. Спробуйте знову");
+          } else if (diff >= 50 && diff < 75) {
+            guess = prompt("Холодно. Спробуйте знову");
+          } else if (diff >= 35 && diff < 50) {
+            guess = prompt("Тепло. Спробуйте знову");
+          } else if (diff >= 20 && diff < 35) {
+            guess = prompt("Тепліше. Спробуйте знову");
+          } else if (diff >= 5 && diff < 20) {
+            guess = prompt("Гаряче. Спробуйте знову");
+          } else if (diff < 5) {
+            guess = prompt("Дуже гаряче. Спробуйте знову");
+          }
+
+          turns++;
+        }
+      }
+    </script>
+  </body>
+</html>
