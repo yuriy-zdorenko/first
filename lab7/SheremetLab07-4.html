@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Форма замовлення товару</title>
+    </head>
+    <body>
+        <form action="">
+            <h1>Форма заповнення товару</h1>
+
+                <label for="bank_account">Номер банківського рахунку:</label>
+                <input type="text" id="bank_account" name="bank_account" required><br><br>
+
+
+                <label for="user_id">Особистий номер користувача:</label>
+                <input type="text" id="user_id" name="user_id" required><br>
+
+
+                <h2><Label for="products">Список товарів</Label></h2>
+                <select id="products" name="products" multiple>
+                    <option value="product1">Банани</option>
+                    <option value="product2">Яблука</option>
+                    <option value="product3">Вишні</option>
+                    <option value="product4">Інше</option>
+                </select><br><br>
+
+                <label for="payment_method">Вид оплати:</label>
+                <select id="payment_method" name="payment_method" required>
+                    <option value="cash">Готівка</option>
+                    <option value="cashless">Карткою</option>
+                </select><br><br>
+
+                <label for="comments">Довільні коментарі:<br></label>
+                <textarea id="comments" name="comments"></textarea>
+
+                <p>Додаткова інформація:</p>
+                <input type="checkbox" id="balance_info" name="balance_info" value="balance">
+                <label for="balance_info">Інформація про залишки на рахунку</label><br>
+                <input type="checkbox" id="payment_history" name="payment_history" value="history">
+                <label for="payment_history">Список останніх виплат по рахунку</label><br><br>
+
+
+                <input type="submit" value="Надіслати замовлення">
+        </form>
+    </body>
+</html>

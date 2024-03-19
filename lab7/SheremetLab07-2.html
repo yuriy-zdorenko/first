@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>лабораторна 7.2</title>
+    </head>
+    <body>
+        <h1 align="center">Анкета для вибору професії в фірмі</h1>
+        <form action="">
+
+            <input type="text" name="name" id="name">
+            <label for="name">Ім'я</label>
+
+
+            <h2>Яку професію ви хочете обрати?</h2>
+            <input type="radio" id="Security" name="proffesion" value="Security">
+            <label for="Security">Охоронець</label>
+            <input type="radio" id="Programmer" name="proffesion" value="Programmer">
+            <label for="Programmer">Програміст</label>
+            <input type="radio" id="Seller" name="proffesion" value="Seller">
+            <label for="Seller">Продавець</label>
+            <input type="radio" id="Builder" name="proffesion" value="Builder">
+            <label for="Builder">Будівник</label>
+
+
+            <h2><Label for="education">Освіта</Label></h2>
+            <select name="education" id="education">
+                <option value="don`t have">Не маю</option>
+                <option value="school">Школа</option>
+                <option value="univer">ВНЗ</option>
+                <option value="other">Інше</option>
+            </select>
+
+            <h2><label for="agree">Я уважно прочитав та надав вірну інформацію про себе</label></h2>
+            <input type="checkbox" id="agree" name="checkbox" value="1" required>
+
+            <h2><input type="reset" value="Відмінити введення"></h2>
+            <h2><input type="submit" value="Надіслати дані"></h2>
+
+        </form>
+    </body>
+</html>
