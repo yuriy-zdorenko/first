@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .menu {
+        list-style: "\2705" outside;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: xx-large;
+    }
+
+    .small {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: small;
+        text-align: justify;
+        border: 2px dashed palegreen;
+        float: right;
+        margin: 15px;
+    }
+</style>
+
+<body>
+    <ul class="menu">
+        <li>Перший елемент меню</li>
+        <li>Другий елемент меню</li>
+        <li>Третій елемент меню</li>
+        <li>Четвертий елемент меню</li>
+    </ul>
+
+    <p class="small">alex.cx.volkov@gmail.com</p>
+    <p class="small">Олександр</p>
+    <p class="small" id="currentAddress"></p>
+
+    <script>
+        var currentAddress = window.location.href;
+        document.getElementById("currentAddress").innerText = "Поточна адреса сторінки: " + currentAddress;
+    </script>
+</body>
+
+</html>
