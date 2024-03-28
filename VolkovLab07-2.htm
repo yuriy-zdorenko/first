@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body style="white-space: pre-line; text-align: center;">
+      <h2>Завдання 2, лабораторної роботи №7</h2>
+      <form>
+            <label for="photo">Завантажте Ваше фото</label>
+            <input type="file" name="photo" size="50" accept="image/*"><br>
+            <label for="full name">Обов'язково вкажіть Ваше ПІБ</label>
+            <input type="text" name="full name" required placeholder="ПІБ" size="45" maxlength="40"><br>
+            <label for="about">Опишіть коротко себе</label>
+            <textarea name="about" required placeholder="Хобі, інтереси" cols="50" wrap="hard""></textarea>
+            <label for=" seasons">Улюблена пора року:</label>
+            <select name="seasons">
+                  <option value="Зима">Зима</option>
+                  <option value="Весна">Весна</option>
+                  <option value="Літо">Літо</option>
+                  <option value="Осінь">Осінь</option>
+            </select>
+            <label for="good_day">Ключові елементи гарного дня:</label>
+            <input type="checkbox" name="good_day" value="Сонячна погода">Сонячна погода<br>
+            <input type="checkbox" name="good_day" value="Комфортна температура">Комфортна температура<br>
+            <input type="checkbox" name="good_day" value="Відсутність неприємностей">Відсутність неприємностей<br>
+            <label for="hands">Використання рук:</label>
+            <input type="radio" name="hands" value="Лівша">Лівша<br>
+            <input type="radio" name="hands" value="Правша">Правша<br>
+            <input type="radio" name="hands" value="Шульга">Шульга<br>
+            <label for="password">Обов'язково вкажіть пароль до 40 символів</label>
+            <input type="password" name="password" required size="45" maxlength="40"><br>
+            <input type="submit" name="submit"><br>
+      </form>
+</body>
+
+</html>

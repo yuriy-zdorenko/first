@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <h2>Завдання 4, лабораторної роботи №7</h2>
+      <form>
+            <label for="card">Введіть номер картки (14 цифр):</label><br>
+            <input type="text" id="card" name="card" minlength="14" maxlength="14" size="15"><br><br>
+            <label for="tel">Введіть особистий номер телефону</label><br>
+            <input type="tel" id="number" name="number"><br><br>
+            <label for="stuf">Оберіть товари:</label><br>
+            <input type="checkbox" name="stuf" value="Молоко">Молоко<br>
+            <input type="checkbox" name="stuf" value="Сметана">Сметана<br>
+            <input type="checkbox" name="stuf" value="Йогурт">Йогурт<br><br>
+            <label for="comment">Ви також можете залишити коментарі</label><br>
+            <textarea name="comment" cols="50" wrap="hard""></textarea><br><br>
+            <label for="payment">Бажаний спосіб оплати:</label><br>
+            <input type="radio" name="payment" value="Готівковий розрахунок">Готівковий розрахунок<br>
+            <input type="radio" name="payment" value="Безготівковий розрахунок">Безготівковий розрахунок<br><br>
+            <label for="data">Бажана додаткова інформація після замовлення:</label><br>
+            <input type="checkbox" name="data" value="Дані про залишки на рахунку">Дані про залишки на рахунку<br>
+            <input type="checkbox" name="data" value="Список останніх виплат по рахунку">Список останніх виплат по рахунку<br><br>
+            <input type="submit" name="submit">
+      </form>
+</body>
+
+</html>
