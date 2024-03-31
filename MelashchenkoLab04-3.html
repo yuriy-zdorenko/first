@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Вертикальні анімації</title>
+<style>
+  .container {
+    overflow: hidden;
+    position: relative;
+    height: 100px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .content {
+    position: absolute;
+    width: 100%;
+    animation: moveVertical 10s linear infinite;
+  }
+  .swing {
+    animation: swingVertical 2s ease-in-out infinite;
+  }
+  @keyframes swingVertical {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
+  }
+  @keyframes moveBottomToTop {
+    0% { bottom: -100%; }
+    100% { bottom: 100%; }
+  }
+  @keyframes moveTopToBottomStop {
+    0% { top: -100%; }
+    100% { top: 0%; }
+  }
+  @keyframes delayVerticalAnimation {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+  }
+  .bottomToTop {
+    animation: moveBottomToTop 10s linear infinite;
+  }
+  .topToBottomStop {
+    animation: moveTopToBottomStop 5s linear forwards;
+  }
+  .delay1 {
+    animation: delayVerticalAnimation 10s linear 2s infinite;
+  }
+  .delay2 {
+    animation: delayVerticalAnimation 15s linear 5s infinite;
+  }
+  .bg1 { background-color: #4CAF50; }
+  .bg2 { background-color: #2196F3; }
+  .bg3 { background-color: #ff9800; }
+  .bg4 { background-color: #e91e63; }
+  .bg5 { background-color: #9c27b0; }
+</style>
+</head>
+<body>
+
+<div class="container bg1">
+  <div class="content swing">Текст та рисунки, що коливаються</div>
+</div>
+
+<div class="container bg2">
+  <div class="content bottomToTop">Рисунки, що пробігають знизу до гори</div>
+</div>
+
+<div class="container bg3">
+  <div class="content topToBottomStop">Рисунки, що пробігають згори до низу із зупинкою</div>
+</div>
+
+<div class="container bg4">
+  <div class="content delay1">Текст з режимом запізнення 1</div>
+</div>
+
+<div class="container bg5">
+  <div class="content delay2">Текст з режимом запізнення 2</div>
+</div>
+
+</body>
+</html>
