@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <style>
+        .wrapper{
+            width: 100%;
+            /*border: 1px solid black;*/
+            margin: 0;
+            display: grid;
+            grid-template-areas:
+            "blue blue blue grey"
+            "aqua pink yellow grey"
+            "green green yellow grey"
+            "brown brown brown brown";
+            grid-template-rows: 25% 20% 23% 20%;
+            grid-template-columns: 25% 24% 30% 20%;
+            grid-gap: 3px;
+            height: 100vh;
+        }
+        .blocks{
+            border: 1px solid white;
+        }
+        .div1{
+            background-color: blue;
+            grid-area: blue;
+        }
+        .div2{
+            background-color: grey;
+            grid-area: grey;
+        }
+        .div3{
+            background-color: aqua;
+            grid-area: aqua;
+        }
+        .div4{
+            background-color: pink;
+            grid-area: pink;
+        }
+        .div5{
+            background-color: yellow;
+            grid-area: yellow;
+        }
+        .div6{
+            background-color: green;
+            grid-area: green;
+        }
+        .div7{
+            background-color: brown;
+            grid-area: brown;
+        }
+        @media screen and (max-width: 500px){
+            .blocks{
+                border: 2px solid black;
+            }
+        }
+        @media screen and (min-width: 500px) and (max-width: 750px){
+            .wrapper{
+                grid-gap: 1px;
+            }
+            .blocks{
+                border: 3px solid purple;
+            }
+        }
+        @media screen and (min-width: 750px) and (max-width: 950px){
+            .wrapper{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media screen and (min-width: 950px) and (max-width: 1200px){
+            .wrapper{
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="blocks div1"></div>
+        <div class="blocks div2"></div>
+        <div class="blocks div3"></div>
+        <div class="blocks div4"></div>
+        <div class="blocks div5"></div>
+        <div class="blocks div6"></div>
+        <div class="blocks div7"></div>
+    </div>
+</body>
+</html>

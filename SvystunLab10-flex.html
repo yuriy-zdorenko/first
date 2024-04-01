@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+    <style>
+        .wrapper{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .block{
+            border: 1px solid white;
+        }
+        .main-sidebar{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 75%;
+            gap: 3px;
+        }
+        .main{
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .header{
+            width: 100%;
+            height: 37.5%;
+        }
+        .blue{
+            background-color: blue;
+            width: 100%;
+            height: 100%;
+        }
+        .content{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 62.5%;
+        }
+        .i-1{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+            gap: 3px;
+        }
+        .i-1-1{
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            width: 100%;
+        }
+        .green{
+            width: 100%;
+            height: 100%;
+            background-color: green;
+        }
+        .aqua{
+            width: 100%;
+            height: 100%;
+            background-color: aqua;
+        }
+        .pink{
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+        }
+        .i-2{
+            width: 50%;
+            height: 100%;
+        }
+        .yellow{
+            width: 100%;
+            height: 100%;
+            background-color: yellow;
+        }
+        .sidebar{
+            width: 20%;
+            height: 100%;
+        }
+        .grey{
+            background-color: grey;
+            width: 100%;
+            height: 100%;
+        }
+        .brown{
+            width: 100%;
+            height: 25%;
+            background-color: brown;
+        }
+        @media screen and (max-width: 500px){
+            .wrapper{
+                display: flex;
+                flex-direction: column;
+            }
+            .block{
+                border: 1px solid black;
+            }
+        }
+        @media screen and (min-width: 500px) and (max-width: 750px){
+            .block{
+                border: 3px solid purple;
+            }
+            .wrapper{
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+        @media screen and (min-width: 750px) and (max-width: 950px){
+            .aqua{
+                width: 25%;
+            }
+            .grey{
+                width: 100%;
+            }
+        }
+        @media screen and (min-width: 950px) and (max-width: 1200px){
+            body{
+                background-color: black;
+            }
+            .blue{
+                width: 100%;
+            }
+            .aqua{
+                width: 24%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main-sidebar">
+            <div class="main">
+                <div class="header">
+                    <div class="block blue"></div>
+                </div>
+                <div class="content">
+                    <div class="i-1">
+                        <div class="i-1-1">
+                            <div class="block aqua"></div>
+                            <div class="block pink"></div>
+                        </div>
+                        <div class="block green"></div>
+                    </div>
+                    <div class="i-2">
+                        <div class="block yellow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="block grey"></div>
+            </div>
+        </div>
+        <div class="block brown"></div>
+    </div>
+</body>
+</html>
