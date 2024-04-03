@@ -1,26 +1,22 @@
 body {
     margin: 0;
-    overflow: hidden;
+    text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    position: relative;
-
-  }
-
-
-h3 {
-    text-align: center;
-    position: relative;
-    top: 20%;  
 }
 
-.div6 .div7 .div8 .div9 .div10 {
-  float: right;
+h2 {
+color: rgb(112, 12, 99);
 }
 
-.header {
-display: flex
+.text1 {
+    color: brown;
+font-size: 20px;
+background-color: aqua;
 }
-.mar {
-  width: 300px;
+
+
+.text2 {
+    color: blue;
+    font-size: 30px;
+
 }
