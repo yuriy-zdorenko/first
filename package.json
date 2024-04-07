@@ -1,0 +1,14 @@
+{
+  "name": "Lab10",
+  "version": "1.0.0",
+  "description": "Basics of creating responsive modern web pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oleksandr Volkov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

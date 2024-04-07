@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            margin: 0;
+            height: 100%;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100vh;
+            padding: 3px;
+        }
+
+        .block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            flex-grow: 1;
+            min-height: 24vh;
+            min-width: 24vw;
+        }
+
+        .blue {
+            background-color: #5b9bd5;
+
+        }
+
+        .gray {
+            background-color: #6e7d82;
+        }
+
+        .azure {
+            background-color: #5bd1d1;
+        }
+
+        .red {
+            background-color: #e16b6b;
+        }
+
+        .yellow {
+            background-color: #ffc000;
+        }
+
+        .green {
+            background-color: #31a475;
+        }
+
+        .orange {
+            background-color: #c55a11;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            gap: 3px;
+        }
+
+        .column {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+
+        @media screen and (max-width: 500px) {
+            .block-3 {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (min-width: 500px) {
+            .block-3 {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (min-width: 750px) {
+            .block-6 {
+                flex-direction: row;
+            }
+        }
+
+        @media screen and (min-width: 950px) {
+            .block-4 {
+                flex-direction: row;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .block-4 {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="column block-1">
+            <div class="row block-2">
+                <div class="column block-3">
+                    <div class="block blue"></div>
+                    <div class="row block-4">
+                        <div class="column block-5">
+                            <div class="row block-6">
+                                <div class="block azure"></div>
+                                <div class="block red"></div>
+                            </div>
+                            <div class="block green"></div>
+                        </div>
+                        <div class="block yellow"></div>
+                    </div>
+                </div>
+                <div class="block gray"></div>
+            </div>
+            <div class="block orange"></div>
+        </div>
+    </div>
+</body>
+
+</html>
