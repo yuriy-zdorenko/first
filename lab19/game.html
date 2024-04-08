@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Гра з тваринами</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      #game {
+        margin-top: 10px;
+      }
+      #game-board {
+        display: inline-block;
+        border: 2px solid #000;
+        padding: 10px;
+        width: 500px;
+        height: 550px;
+      }
+      .row {
+        margin-bottom: 10px;
+      }
+      .image-board {
+        width: 75px;
+        margin: 10px;
+      }
+      .drop-image {
+        width: 300px;
+      }
+      #drop-area {
+        width: 300px;
+        height: 300px;
+        border: 2px solid #ccc;
+        margin: auto;
+      }
+      .flex-div {
+        display: flex;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game">
+      <h1>Гра з тваринами</h1>
+      <button id="start-game">Почати гру</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        const endNumber = 25;
+        let images = [];
+        let score = 0;
+
+        function startGame() {
+          $("#game").html(
+            "<div class='flex-div'>" +
+              '<div id="game-board" class="flex-div"></div>' +
+              '<div id="drop-area"></div>' +
+              "</div><br><br>" +
+              '<button id="restart-game">Почати з початку</button>'
+          );
+          score = 0;
+          generateGameBoard();
+          generateDropArea();
+        }
+
+        $("#start-game").click(function () {
+          startGame();
+        });
+
+        function generateGameBoard() {
+          images = [];
+          let gameBoard = $("#game-board");
+          let row = $('<div class="row"></div>');
+
+          let num = 0;
+          while (num < endNumber) {
+            img = Math.floor(Math.random() * 50 + 1);
+            if (!images.includes(img)) {
+              images.push(img);
+              num++;
+            }
+          }
+
+          for (let j = 0; j < images.length; j++) {
+            let imageElement = $(
+              "<img class='image-board' src='img/" + images[j] + ".png'/>"
+            ).draggable({ revert: true });
+            row.append(imageElement);
+            if ((j + 1) % 5 === 0) {
+              gameBoard.append(row);
+              row = $('<div class="row"></div>');
+            }
+          }
+        }
+
+        function generateDropArea() {
+          nextPic();
+        }
+
+        function nextPic() {
+          let randPic = Math.floor(Math.random() * 25 + 1);
+          const srcString = "img/" + images[randPic] + ".png";
+          $("#drop-area")
+            .html($("<img class='drop-image' src=" + srcString + ">"))
+            .droppable({
+              drop: function (event, ui) {
+                let droppedImage = ui.draggable.attr("src");
+                compareImages(srcString, droppedImage);
+              },
+            });
+        }
+
+        function compareImages(src1, src2) {
+          if (src1 === src2) {
+            console.log("yes");
+            score++;
+            if (score === 5) {
+              endGame();
+            }
+            nextPic();
+          } else {
+            endGame();
+          }
+        }
+
+        function endGame() {
+          $("#game").html(
+            "<h2>Гру завершено!</h2>" +
+              '<button id="restart-game">Почати з початку</button>'
+          );
+        }
+
+        function restartGame() {
+          startGame();
+        }
+
+        $(document).on("click", "#restart-game", function () {
+          restartGame();
+        });
+      });
+    </script>
+  </body>
+</html>
