@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX Square Calculator</title>
+  </head>
+  <body>
+    <h1>AJAX Квадрат числа</h1>
+    <input type="number" id="numberInput" placeholder="Введіть число" />
+    <button onclick="calculateSquare()">Розрахувати</button>
+    <p id="result"></p>
+
+    <script>
+      function calculateSquare() {
+        let number = document.getElementById("numberInput").value;
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "/calculate?number=" + number, true);
+        xhr.onload = function () {
+          if (xhr.status == 200) {
+            let result = JSON.parse(xhr.responseText);
+            document.getElementById("result").innerText =
+              "Квадрат " + number + " дорівнює " + result.square;
+          }
+        };
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>
