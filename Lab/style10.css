@@ -1,54 +1,65 @@
-.container {
-display: grid;
-width: 80%;
-margin: 100px auto;
-border: 3px solid black;
-overflow: auto;
-}
-div {
-    border: 2px solid rgb(255, 255, 255);
-    font-size: 25px;
-}
-
-.block1 {
-background-color: rgb(87, 83, 224);
-width: 75%;
-height: 100px;
-}
-
-.block2 {
-background-color: rgb(83, 224, 217);
-width: 20%;
-height: 75px;
-}
-
-.block3 {
-background-color: rgb(224, 83, 83);
-width: 20%;
-height: 75px;
-}
-
-.block4 {
-background-color: rgb(7, 110, 59);
-width: 40%;
-height: 85px;
-}
-
-.block5 {
-background-color: rgb(248, 177, 46);
-width: 40%;
-height: 160px;
-}
-
-.block6 {
-background-color: rgb(180, 95, 46);
-width: 100%;
-height: 75px;
-}
-
-.block7 {
-background-color: rgb(99, 104, 104);
-width: 20%;
-height: 100%;
-float: right;
-}
+body{
+    margin: 0%;}
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 30% 20%; 
+    grid-template-rows: 1fr 20% 1fr 20%; 
+    grid-template-areas:
+      "header header header jojo2"
+      "sidebar main next jojo2"
+      "jojo1 jojo1 next jojo2"
+      "jojo3 jojo3 jojo3 jojo3";
+    grid-gap: 3px;
+    height: 100vh; }
+    .block1, .block2, .block3, .block4, .block5, .block6, .block7{
+      padding: 20px;
+      border: 1px solid white;}
+  .block1 {
+    grid-area: header;
+    background-color: #5b9bd5;}
+  .block2 {
+    grid-area: sidebar; 
+    background-color: #5bd1d1;}
+    .block3 {
+    grid-area: main;
+    background-color: #e16b6b;     }
+  .block4 {
+    grid-area: next;
+    background-color: #ffc000;     }
+    .block5 {
+    grid-area: jojo1; 
+    background-color: #31a475;      }
+    .block6 {
+    grid-area: jojo2; 
+    background-color: #6e7d82;      }
+    .block7 {
+    grid-area: jojo3; 
+    background-color: #c55a11;}
+  @media (min-width: 1200px){
+      .wrapper{
+        grid-template-columns: 1fr 1fr 30% 20%;
+        grid-template-rows: 1fr 20% 1fr 20%;
+        grid-template-areas:
+        "header header header jojo2"
+        "sidebar main next jojo2"
+        "jojo1 jojo1 next jojo2"
+    "jojo3 jojo3 jojo3 jojo3";}}
+    @media (min-width: 500px) and (max-width: 1199px){
+     .wrapper{
+      grid-template-columns: 1fr 1fr 30% 20%;
+      grid-template-rows: 1fr 25% 25% 20%;
+      grid-template-areas:
+      "header header header jojo2"
+      "sidebar jojo1 jojo1 jojo2" 
+      "main next next jojo2" 
+      "jojo3 jojo3 jojo3 jojo3"}}
+    @media (min-width: 1px) and (max-width: 499px){
+      .wrapper{     
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 20% 30% 15% 15%;
+        grid-template-areas: 
+        "header jojo2"
+        "sidebar jojo2" 
+        "main jojo1" 
+        "next next"  
+        "jojo3 jojo3";}}
