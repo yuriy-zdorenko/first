@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 9</title>
+  </head>
+  <body>
+    <script>
+      const checkSign = (num) => {
+        if ((num) => 0) return "Число позитивне";
+        else return "Число негативне";
+      };
+
+      const isPrime = (num) => {
+        for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
+          if (num % i === 0) return "Число складне";
+        }
+        return "Число просте";
+      };
+
+      const isDivBy = (num, divider) => {
+        if (num % divider === 0)
+          return `Число ділиться на ${divider} без залишку`;
+        else return `Число не ділиться на ${divider} без залишку`;
+      };
+
+      const num = Number(prompt("Введіть число"));
+      alert(checkSign(num));
+      alert(isPrime(num));
+      alert(isDivBy(num, 2));
+      alert(isDivBy(num, 5));
+      alert(isDivBy(num, 3));
+      alert(isDivBy(num, 6));
+      alert(isDivBy(num, 9));
+    </script>
+  </body>
+</html>

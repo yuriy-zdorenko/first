@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 8</title>
+  </head>
+  <body>
+    <script>
+      const add = (num1, num2) => {
+        return num1 + num2;
+      };
+
+      const sub = (num1, num2) => {
+        return num1 - num2;
+      };
+
+      const mul = (num1, num2) => {
+        return num1 * num2;
+      };
+
+      const div = (num1, num2) => {
+        if (num2 != 0) return (num1 / num2).toFixed(3);
+        else return "DIV BY 0";
+      };
+
+      const num1 = Number(prompt("Введіть перше число: "));
+      const num2 = Number(prompt("Введіть друге число: "));
+      const operation = prompt("Введіть операцію: add, sub, mul чи div");
+
+      switch (operation) {
+        case "add":
+          alert(add(num1, num2));
+          break;
+        case "sub":
+          alert(sub(num1, num2));
+          break;
+        case "mul":
+          alert(mul(num1, num2));
+          break;
+        case "div":
+          alert(div(num1, num2));
+          break;
+        default:
+          alert("Така дія відсутня");
+      }
+    </script>
+  </body>
+</html>
