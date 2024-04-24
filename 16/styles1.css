@@ -1,0 +1,23 @@
+.green-border {
+    border: 2px solid green;
+}
+.red-border {
+    border: 2px solid red;
+}
+img {
+    margin: 10px;
+    cursor: pointer;
+}
+a {
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+}
+input {
+    display: block;
+    margin: 10px;
+}
+p {
+    margin: 10px;
+    cursor: pointer;
+}
