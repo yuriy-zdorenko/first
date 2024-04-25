@@ -1,0 +1,65 @@
+body{
+    margin: 0%;}
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 30% 20%; 
+    grid-template-rows: 1fr 20% 1fr 20%; 
+    grid-template-areas:
+      "block1 block1 block6"
+      "block2 block3 block4 block6"
+      "block5 block5 block4 block6"
+      "block7 block7 block7 block7";
+    grid-gap: 3px;
+    height: 100vh; }
+    .block1, .block2, .block3, .block4, .block5, .block6, .block7{
+      padding: 20px;
+      border: 1px solid white;}
+  .block1 {
+    grid-area: block1;
+    background-color: #5b9bd5;}
+  .block2 {
+    grid-area: block2; 
+    background-color: #5bd1d1;}
+    .block3 {
+    grid-area: block3;
+    background-color: #e16b6b;     }
+  .block4 {
+    grid-area: block4;
+    background-color: #ffc000;     }
+    .block5 {
+    grid-area: block5; 
+    background-color: #31a475;      }
+    .block6 {
+    grid-area: block6; 
+    background-color: #6e7d82;      }
+    .block7 {
+    grid-area: block7; 
+    background-color: #c55a11;}
+  @media (min-width: 1200px){
+      .wrapper{
+        grid-template-columns: 1fr 1fr 30% 20%;
+        grid-template-rows: 1fr 20% 1fr 20%;
+        grid-template-areas:
+        "block1 block1 block1 block6"
+        "block2 block3 block4 block6"
+        "block5 block5 block4 block6"
+    "block7 block7 block7 block7";}}
+    @media (min-width: 500px) and (max-width: 1199px){
+     .wrapper{
+      grid-template-columns: 1fr 1fr 30% 20%;
+      grid-template-rows: 1fr 25% 25% 20%;
+      grid-template-areas:
+      "header header header jojo2"
+      "sidebar jojo1 jojo1 jojo2" 
+      "main next next jojo2" 
+      "jojo3 jojo3 jojo3 jojo3"}}
+    @media (min-width: 1px) and (max-width: 499px){
+      .wrapper{     
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 20% 30% 15% 15%;
+        grid-template-areas: 
+        "header jojo2"
+        "sidebar jojo2" 
+        "main jojo1" 
+        "next next"  
+        "jojo3 jojo3";}}
