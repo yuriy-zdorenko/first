@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16_2</title>
+</head>
+<body> 
+    <a href="#" id="link1">Посилання 1</a>
+    <a href="#" id="link2">Посилання 2</a>
+    <a href="#" id="link3">Посилання 3</a>  
+    
+    <script>
+    
+    function handleMouseEnter(event) {
+    const linkText = event.target.textContent;
+    event.target.setAttribute('title', linkText);
+    }
+
+    
+    function removeMouseEnter(event) {
+    event.target.removeAttribute('title');
+    }
+
+    const link1 = document.getElementById('link1');
+    const link2 = document.getElementById('link2');
+    const link3 = document.getElementById('link3');
+
+    link1.addEventListener('mouseenter', handleMouseEnter);
+    link2.addEventListener('mouseenter', handleMouseEnter);
+    link3.addEventListener('mouseenter', handleMouseEnter);
+
+    link1.addEventListener('mouseleave', removeMouseEnter);
+    link2.addEventListener('mouseleave', removeMouseEnter);
+    link3.addEventListener('mouseleave', removeMouseEnter);
+</script>
+</body>
+</html>

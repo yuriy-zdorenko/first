@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>16_1</title>
+</head>
+<body>
+    <style>
+        img {
+            cursor: pointer;
+        }
+    </style>
+
+    <img id="img1" src="./img/01.jpg" alt="project1" width="300" height="200" >
+    <img id="img2" src="./img/02.jpg" alt="project2" width="300" height="200" >
+    <img id="img3" src="./img/03.jpg" alt="project3" width="300" height="200" >
+    <script>
+        var image1 = document.getElementById('img1');
+        image1.onclick = function () {
+            alert(this.src);
+        }
+
+        var image2 = document.getElementById('img2');
+        image2.onclick = function () {
+            alert(this.src);
+        }
+
+        var image3 = document.getElementById('img3');
+        image3.onclick = function () {
+            alert(this.src);
+        }
+    </script>
+</body>
+</html>
