@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volkov</title>
+    <style>
+        div {
+            margin: 10px 0px 10px 0px;
+        }
+
+        .divs {
+            height: 250px;
+        }
+
+        .divs div {
+            margin: 5px;
+            height: 75px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="divs">
+        <div class="colors">DIV</div>
+        <div class="colors">DIV</div>
+        <div class="colors">DIV</div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const divs = document.getElementsByClassName('colors');
+    Array.from(divs).forEach((div) => {
+
+        function paintRed(e) {
+            e.target.style.backgroundColor = 'red';
+            div.removeEventListener('click', paintRed);
+            div.addEventListener('click', paintGreen);
+        }
+
+        function paintGreen(e) {
+            e.target.style.backgroundColor = 'green';
+            div.removeEventListener('click', paintGreen);
+            div.addEventListener('click', paintRed);
+        }
+
+        div.addEventListener('click', paintRed);
+    });
+</script>
