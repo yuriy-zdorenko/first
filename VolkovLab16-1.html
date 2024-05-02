@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volkov</title>
+    <style>
+        div {
+            margin: 10px 0px 10px 0px;
+        }
+
+        .imgs {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .links a {
+            font-size: 16px;
+            text-decoration: none;
+            color: blueviolet;
+            margin: 4px;
+            background-color: darkkhaki;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            background-color: tomato;
+            height: 150px;
+        }
+
+        .inputs input {
+            width: 125px;
+        }
+
+        .paras {
+            font-size: 24px;
+            background-color: olive;
+        }
+
+        input[data-valid="true"] {
+            border: 3px solid green;
+        }
+
+        input[data-valid="false"] {
+            border: 3px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="imgs">
+        <img id="img1" width="300px" height="200px" onclick="showSource(pic1)" src="./img1.jpg" alt="pic">
+        <img id="img2" width="300px" height="200px" onclick="showSource(pic2)" src="./img2.jpg" alt="pic">
+    </div>
+    <div class="links">
+        <a href="https://www.google.com/" target="_blank" class="links_t">Google</a><br>
+        <a href="https://www.youtube.com/" target="_blank" class="links_t">YouTube</a><br>
+        <a href="https://roadmap.sh/" target="_blank" class="links_t">roadmap.sh</a><br>
+    </div>
+    <div class="links">
+        <a href="https://www.google.com/" target="_blank" class="links_h">Google</a><br>
+        <a href="https://www.youtube.com/" target="_blank" class="links_h">YouTube</a><br>
+        <a href="https://roadmap.sh/" target="_blank" class="links_h">roadmap.sh</a><br>
+    </div>
+    <div class="inputs">
+        <p id="demo"></p>
+        <input type="text" class="input" value="I am a value" id="">
+        <input type="text" class="input" value="I am a value" id="">
+        <input type="text" class="input" value="I am a value" id="">
+    </div>
+    <div class="paras">
+        <p class="numbers">26</p>
+        <p class="numbers">28</p>
+        <p class="numbers">30</p>
+    </div>
+    <div class="inputs2">
+        <input type="text" class="inputs_again" data-length="3">
+        <input type="text" class="inputs_again" data-length="4">
+        <input type="text" class="inputs_again" data-length="5">
+    </div>
+</body>
+
+</html>
+
+<script>
+    const pic1 = document.getElementById('img1');
+    const pic2 = document.getElementById('img2');
+    function showSource(img) {
+        alert(img.src);
+    }
+
+    const linksTitle = document.getElementsByClassName('links_t');
+    Array.from(linksTitle).forEach((link) => {
+        link.addEventListener('mouseover', function addTitle(e) {
+            e.target.title = e.target.textContent;
+            e.target.removeEventListener('mouseover', addTitle);
+        });
+    });
+
+    const linksHref = document.getElementsByClassName('links_h');
+    Array.from(linksHref).forEach((link) => {
+        link.addEventListener('mouseover', function addHref(e) {
+            e.target.textContent = `${e.target.textContent} (${e.target.href})`;
+            e.target.removeEventListener('mouseover', addHref);
+        });
+    });
+
+    const demo = document.getElementById('demo');
+    const inputs = document.getElementsByClassName('input');
+    Array.from(inputs).forEach((input) => {
+        input.addEventListener('blur', function addText(e) {
+            demo.textContent = e.target.value;
+        });
+        input.addEventListener('click', function alertValue(e) {
+            alert(e.target.value);
+            e.target.removeEventListener('click', alertValue);
+        });
+    });
+
+    const params = document.getElementsByClassName('numbers');
+    Array.from(params).forEach((para) => {
+        para.addEventListener('click', function square(e) {
+            let txt = para.textContent;
+            e.target.textContent = txt + `(${Number(txt) * Number(txt)})`;
+            e.target.removeEventListener('click', square);
+        });
+    });
+
+    const inputs2 = document.getElementsByClassName('inputs_again');
+    Array.from(inputs2).forEach((input) => {
+        input.addEventListener('blur', function () {
+            let length = this.getAttribute('data-length');
+            if (this.value.length == length) {
+                this.setAttribute('data-valid', 'true');
+            } else {
+                this.setAttribute('data-valid', 'false');
+            }
+        });
+
+    });
+</script>
