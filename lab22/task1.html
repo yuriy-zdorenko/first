@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+  </head>
+  <body>
+    <script>
+      while (true) {
+        const lang = prompt("Виберіть мову ua або en");
+
+        if (lang.toLowerCase() === "ua") {
+          const day = Number(prompt("Введіть номер дня тижня від 1 до 7"));
+
+          switch (day) {
+            case 1:
+              alert("Понеділок");
+              break;
+            case 2:
+              alert("Вівторок");
+              break;
+            case 3:
+              alert("Середа");
+              break;
+            case 4:
+              alert("Четвер");
+              break;
+            case 5:
+              alert("П'ятниця");
+              break;
+            case 6:
+              alert("Субота");
+              break;
+            case 7:
+              alert("Неділя");
+              break;
+            default:
+              alert("Такого дня немає");
+              break;
+          }
+        } else if (lang.toLowerCase() === "en") {
+          const day = Number(
+            prompt("Enter the day number of the week from 1 to 7")
+          );
+
+          switch (day) {
+            case 1:
+              alert("Monday");
+              break;
+            case 2:
+              alert("Tuesday");
+              break;
+            case 3:
+              alert("Wednesday");
+              break;
+            case 4:
+              alert("Thursday");
+              break;
+            case 5:
+              alert("Friday");
+              break;
+            case 6:
+              alert("Saturday");
+              break;
+            case 7:
+              alert("Sunday");
+              break;
+            default:
+              alert("Such day of week does not exist");
+              break;
+          }
+        } else {
+        }
+      }
+    </script>
+  </body>
+</html>
