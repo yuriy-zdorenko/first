@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Create the calculator container
+const container = document.createElement('div');
+container.style.backgroundColor = '#fff';
+container.style.padding = '20px';
+container.style.borderRadius = '5px';
+container.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+
+// Create the display element
+const display = document.createElement('input');
+display.type = 'text';
+display.disabled = true;
+display.style.width = '100%';
+display.style.height = '50px';
+display.style.marginBottom = '10px';
+display.style.fontSize = '24px';
+display.style.textAlign = 'right';
+display.style.paddingRight = '0px';
+
+// Create the buttons container
+const buttonsContainer = document.createElement('div');
+buttonsContainer.style.display = 'grid';
+buttonsContainer.style.gridTemplateColumns = 'repeat(4, 1fr)';
+buttonsContainer.style.gap = '10px';
+
+// Create the buttons
+const buttons = [
+  'AC', '⌫', '%', '/',
+  '7', '8', '9', '*',
+  '4', '5', '6', '-',
+  '1', '2', '3', '+',
+  '0', '0', '.', '='
+];
+
+const buttonMap = {
+  '=': (currentValue) => eval(currentValue),
+  'AC': () => '',
+  '⌫': (currentValue) => currentValue.slice(0, -1),
+  '/': (currentValue) => currentValue + '/',
+  '*': (currentValue) => currentValue + '*',
+  '-': (currentValue) => currentValue + '-',
+  '+': (currentValue) => currentValue + '+',
+  '.': (currentValue) => currentValue + '.',
+  '%': (currentValue) => eval(currentValue + '*0.01'),
+};
+
+buttons.forEach(buttonText => {
+  const button = document.createElement('button');
+  button.textContent = buttonText;
+  button.style.backgroundColor = '#f0f0f0';
+  button.style.border = 'none';
+  button.style.borderRadius = '5px';
+  button.style.fontSize = '24px';
+  button.style.padding = '10px';
+  button.style.cursor = 'pointer';
+
+  if (buttonText === '=') {
+    button.addEventListener('click', () => {
+      try {
+        display.value = buttonMap[buttonText](display.value);
+      } catch (error) {
+        display.value = 'Error';
+      }
+    });
+  } else if (buttonText === 'AC') {
+    button.addEventListener('click', () => {
+      display.value = buttonMap[buttonText]();
+    });
+  } else if (buttonText === '⌫') {
+    button.addEventListener('click', () => {
+      display.value = buttonMap[buttonText](display.value);
+    });
+  } else {
+    button.addEventListener('click', () => {
+      display.value += buttonText;
+    });
+  }
+
+  buttonsContainer.appendChild(button);
+});
+
+// Append the elements to the container
+container.appendChild(display);
+container.appendChild(buttonsContainer);
+
+// Append the container to the body
+document.body.appendChild(container);
+``
+    </script>
+</body>
+</html>
