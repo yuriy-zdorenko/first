@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    background-image: 
+    url(./img/Untitled2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header {
+    display: flex;
+}
+
+ul {
+list-style-type: none;
+}
+
+a {
+    color: white;
+    font-family: raleway;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.about {
+    font-family: nunito;
+    font-weight: 500;
+    position: absolute;
+    height: 100px;
+    width: 400px;
+    left: 55%;
+    top: 60%;
+}
+
+b {
+    color: rgb(1, 197, 132);
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.partners__title {
+    text-align: center;
+    margin-top: 650px;
+}
+
+/*.partners {
+    margin: 10px 20px;
+}
+*/
+.footer {
+   
+    background-color: rgb(33, 153, 113);
+    width: 100%;
+    height: 250px;
+}
