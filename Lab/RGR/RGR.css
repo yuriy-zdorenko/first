@@ -3,31 +3,44 @@ body {
     background-image: 
     url(./img/Untitled2.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100vw;
 }
 .header {
+    margin: 0.5% 0.5%;
     display: flex;
 }
 
 ul {
 list-style-type: none;
+padding: 0 0 0 150px;
 }
 
 a {
+    
+    font-size: 16pt;
+    margin: 0 1.5vw;
     color: white;
     font-family: raleway;
     font-weight: 700;
     text-decoration: none;
 }
 
+.hat {
+    position: absolute;
+    width: 750px;
+    top: 30px;
+    left: 400px;
+}
+
 .about {
     font-family: nunito;
+    font-size: 16pt;
     font-weight: 500;
     position: absolute;
     height: 100px;
-    width: 400px;
-    left: 55%;
-    top: 60%;
+    width: 550px;
+    left: 53%;
+    top: 75%;
 }
 
 b {
@@ -38,18 +51,38 @@ b {
     display: inline;
 }
 
-.partners__title {
+.partners {
+    font-size: 16pt;
+    font-family: raleway;
+    font-weight: 700;
     text-align: center;
-    margin-top: 650px;
+    margin-top: 40%;
 }
 
-/*.partners {
+.partners__title {
+    display: inline;
     margin: 10px 20px;
 }
-*/
+
+.fb {
+    font-family: nunito;
+    color: white;
+}
+
+.f-text {
+    font-weight: 300;
+    color: white;
+    font-family: nunito;
+}
+
+.text {
+    margin: 5px 0;
+}
+
 .footer {
-   
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
     background-color: rgb(33, 153, 113);
     width: 100%;
-    height: 250px;
+    height: 200px;
 }
