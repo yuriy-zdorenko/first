@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    
+    body{
+      margin: 0%;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 30% 20%;
+      grid-template-rows: 1fr 20% 1fr 20%;
+      grid-template-areas:
+        "header header header choko"
+        "sidebar main next choko"
+        "aboba aboba next choko"
+        "pai pai pai pai";
+      grid-gap: 3px;
+      height: 100vh;
+    }
+
+    header, sidebar, main, next, aboba, choko, pai{
+        padding: 20px;
+        border: 1px solid white;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #5b9bd5;     
+    }
+
+    sidebar {
+      grid-area: sidebar;
+      background-color: #5bd1d1;      
+    }
+
+    main {
+      grid-area: main;
+      background-color: #e16b6b;     
+    }
+    next {
+      grid-area: next;
+      background-color: #ffc000;     
+    }
+    aboba {
+      grid-area: aboba;
+      background-color: #31a475;      
+    }
+    choko {
+      grid-area: choko;
+      background-color: #6e7d82;      
+    }
+    pai {
+      grid-area: pai;
+      background-color: #c55a11;
+    }
+
+    @media (min-width: 1200px){
+        .wrapper{
+          grid-template-columns: 1fr 1fr 30% 20%;
+          grid-template-rows: 1fr 20% 1fr 20%;
+          grid-template-areas:
+          "header header header choko"
+          "sidebar main next choko"
+          "aboba aboba next choko"
+          "pai pai pai pai";
+        }
+      }
+
+      @media (min-width: 500px) and (max-width: 1199px){
+       .wrapper{
+        grid-template-columns: 1fr 1fr 30% 20%;
+        grid-template-rows: 1fr 25% 25% 20%;
+        grid-template-areas:
+        "header header header choko"
+        "sidebar aboba aboba choko" 
+        "main next next choko" 
+        "pai pai pai pai"
+        }
+     }
+
+      @media (min-width: 1px) and (max-width: 499px){
+        .wrapper{
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 20% 30% 15% 15%;
+          grid-template-areas: 
+          "header choko"
+          "sidebar choko" 
+          "main aboba" 
+          "next next"  
+          "pai pai"; 
+            
+        }
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header></header>
+    <sidebar></sidebar>
+    <main></main>
+    <next></next>
+    <aboba></aboba>
+    <choko></choko>
+    <pai></pai>
+  </div>
+</body>
+</html>

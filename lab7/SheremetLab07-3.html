@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>Лабораторна 7.3</title>
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .top{
+            border: 1px solid black;
+            padding: 10px;
+            color: red;
+            text-align: center;
+        }
+
+        table {
+            text-align: left;
+            background-color: #e0ffff;
+        }
+
+        .number, .text, .input {
+            border: 1px solid black;
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: 100%;
+        }
+    </style>
+</head>
+    <body>
+        <form>
+            <div>
+                <table>
+                    <tr>
+                        <td colspan="3" class="top"><h1>Анкета</h1></td>
+                    </tr>
+                    <tr>
+                        <td class="number">1.</td>
+                        <td class="text"><label for="lastname">Прізвище</label></td>
+                        <td class="input"><input type="text" id="lastname" name="lastname" required></td>
+                    </tr>
+                    <tr>
+                        <td class="number">2.</td>
+                        <td class="text"><label for="firstname">Ім'я, по батькові</label></td>
+                        <td class="input"><input type="text" id="firstname" name="firstname" required></td>
+                    </tr>
+                    <tr>
+                        <td class="number">3.</td>
+                        <td class="text"><label for="birthdate">Число і рік народження</label></td>
+                        <td class="input"><input type="text" id="birthdate" name="birthdate" required></td>
+                    </tr>
+                    <tr>
+                        <td class="number">4.</td>
+                        <td class="text"><label for="address">Домашня адреса</label></td>
+                        <td class="input"><input type="text" id="address" name="address" required></td>
+                    </tr>
+                    <tr>
+                        <td class="number">5.</td>
+                        <td class="text"><label for="education">Місце навчання (роботи)</label></td>
+                        <td class="input"><input type="text" id="education" name="education" required></td>
+                    </tr>
+                    <tr>
+                        <td class="number">6.</td>
+                        <td class="text"><label for="phone">Домашній (робочий) телефон</label></td>
+                        <td class="input"><input type="tel" id="phone" name="phone" required></td>
+                    </tr>
+                    <tr>
+                        <td class="number">7.</td>
+                        <td class="text"><label>E-mail</label></td>
+                        <td class="input"><input type="email" id="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td class="number">8.</td>
+                        <td class="text"><label for="interests">Область наукових інтересів</label></td>
+                        <td class="input" id="interests">
+                            <ol>
+                                <li><input type="text" value="interests" required></li>
+                                <li><input type="text" value="interests1" ></li>
+                                <li><input type="text" value="interests2" ></li>
+                                <li><input type="text" value="interests3" ></li>
+                                <li><input type="text" value="interests4" ></li>
+                                <li><input type="text" value="interests5" ></li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                    <br>
+                    <tr>
+                       <td colspan="3" class="input"><input type="reset" value="Відмінити введення"><br><br>
+                       <input type="submit" value="Надіслати дані та перейти до 2 етапу реєстрації"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </body>
+</html>
