@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Лабораторна робота №6 'Створення і використання форм'</h2>
+    <form action="">
+        <pre>
+            Ваше ім'я: <input type="text" name="name" maxlength="40" size="40" value="">
+            Ваша стать: <input type="radio" name="pol" value="male">Чоловіча
+                        <input type="radio" name="pol" value="female">Жіноча
+            на якому курсі ви навчаєтесь?
+                    <select name="curs" size="1">
+                        <option value="1" selected>Перший</option>
+                        <option value="2">Другий</option>
+                        <option value="3">Третій</option>
+                        <option value="4">Четвертий</option>
+                        <option value="5">П'ятий</option>
+                    </select>
+            Які дисципліни ви вивчаєте?
+                    <input type="checkbox" name="web" value="yes" checked>WEB-програмування
+                    <input type="checkbox" name="eldinam" value="yes">Технічна електродинаміка
+            Напишіть декілька слів про себе:
+        </pre>
+            <textarea name="about" cols="60" rows="6" wrap="off"></textarea>
+            <p>
+                <input type="submit" value="Відіслані дані">
+                <input type="reset" value="Очистити форму">
+                <input type="file" name="friend" size="50" accept="припустимий тип файлу">
+            </p>
+    </form>
+</body>
+</html>
