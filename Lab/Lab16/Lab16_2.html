@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Toggle Divs</title>
+    <style>
+
+        body {
+            text-align: center;
+        }
+
+        .color-div {
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            background-color: rgb(39, 185, 39);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="color-div"></div>
+    <div class="color-div"></div>
+    <div class="color-div"></div>
+
+    <script>
+        document.querySelectorAll('.color-div').forEach(div => {
+    const toggleRed = () => {
+        div.style.backgroundColor = 'red';
+        div.removeEventListener('click', toggleRed);
+        div.addEventListener('click', toggleGreen);
+    };
+
+    const toggleGreen = () => {
+        div.style.backgroundColor = 'rgb(39, 185, 39)';
+        div.removeEventListener('click', toggleGreen);
+        div.addEventListener('click', toggleRed);
+    };
+
+    div.addEventListener('click', toggleRed);
+});
+
+    </script>
+</body>
+</html>
