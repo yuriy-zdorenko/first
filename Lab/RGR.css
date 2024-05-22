@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    background-image: 
+    url(./img/Untitled2.png);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+.header {
+    margin: 0.5% 0.5%;
+    display: flex;
+}
+
+ul {
+list-style-type: none;
+text-align: center;
+}
+
+a {
+    
+    font-size: 16pt;
+    margin: 0 1.5vw;
+    color: white;
+    font-family: raleway;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.hat {
+    position: absolute;
+    width: 750px;
+    top: 50px;
+    left: 35%;
+}
+
+.about {
+    font-family: nunito;
+    font-size: 16pt;
+    font-weight: 500;
+    height: 100px;
+    width: 550px;
+    margin: 30% 0% 0% 53%;
+}
+
+b {
+    color: rgb(1, 197, 132);
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.partners {
+    font-size: 16pt;
+    font-family: raleway;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.partners__title {
+    display: inline;
+    margin: 10px 20px;
+}
+
+.img-partner {
+    margin: 0 2%;
+}
+
+.fb {
+    font-family: nunito;
+    color: white;
+}
+
+.f-text {
+    font-weight: 300;
+    color: white;
+    font-family: nunito;
+}
+
+.text {
+    margin: 5px 0;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    background-color: rgb(33, 153, 113);
+    width: 100%;
+    height: 200px;
+}
+
+.events {
+    margin: 40% 5% 5% 5%;
+    text-align: center;
+}
+
+.img {
+    margin: 0 5% 0 5%;
+}
