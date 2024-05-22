@@ -94,6 +94,14 @@ b {
     text-align: center;
 }
 
-.img {
+.block {
+    display: inline-flex;
+}
+.block2 {
+    display: inline-flex;
+}
+
+.block-img {
     margin: 0 5% 0 5%;
+    text-align: center;
 }
