@@ -12,7 +12,7 @@ body {
 
 ul {
 list-style-type: none;
-padding: 0 0 0 150px;
+text-align: center;
 }
 
 a {
@@ -28,19 +28,17 @@ a {
 .hat {
     position: absolute;
     width: 750px;
-    top: 30px;
-    left: 400px;
+    top: 50px;
+    left: 35%;
 }
 
 .about {
     font-family: nunito;
     font-size: 16pt;
     font-weight: 500;
-    position: absolute;
     height: 100px;
     width: 550px;
-    left: 53%;
-    top: 75%;
+    margin: 30% 0% 0% 53%;
 }
 
 b {
@@ -56,12 +54,16 @@ b {
     font-family: raleway;
     font-weight: 700;
     text-align: center;
-    margin-top: 40%;
+    margin-top: 3%;
 }
 
 .partners__title {
     display: inline;
     margin: 10px 20px;
+}
+
+.img-partner {
+    margin: 0 2%;
 }
 
 .fb {
@@ -85,4 +87,13 @@ b {
     background-color: rgb(33, 153, 113);
     width: 100%;
     height: 200px;
+}
+
+.events {
+    margin: 40% 5% 5% 5%;
+    text-align: center;
+}
+
+.img {
+    margin: 0 5% 0 5%;
 }
