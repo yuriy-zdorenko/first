@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>Прості числа від 0 до 100</h2>
+    <div id="prime-numbers"></div>
+
+    <h2>Числа від 0 до 10</h2>
+    <div id="number-pattern"></div>
+
+    <h2>Ділення числа 10000</h2>
+    <div id="division-result"></div>
+
+    <h2>Пора року і назва місяця</h2>
+    <button onclick="checkSeason()">Перевірити пору року</button>
+
+    <h2>Температура в Фаренгейтах</h2>
+    <button onclick="convertTemperature()">Конвертувати температуру</button>
+
+    <h2>День тижня</h2>
+    <button onclick="getDayOfWeek()">Дізнатись день тижня</button>
+
+    <script>
+        // 1. Прості числа від 0 до 100
+        const primeContainer = document.getElementById('prime-numbers');
+        let primes = [];
+        let num = 2;
+
+        while (num <= 100) {
+            let isPrime = true;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) primes.push(num);
+            num++;
+        }
+
+        primeContainer.textContent = primes.join(', ');
+
+        // 2. Числа від 0 до 10 з описом
+        const numberPatternContainer = document.getElementById('number-pattern');
+        let output = '';
+        let i = 0;
+
+        do {
+            if (i === 0) {
+                output += `${i} – це нуль\n`;
+            } else if (i % 2 === 0) {
+                output += `${i} – парне число\n`;
+            } else {
+                output += `${i} – непарне число\n`;
+            }
+            i++;
+        } while (i <= 10);
+
+        numberPatternContainer.textContent = output;
+
+        // 3. Ділення числа 10000 поки результат більше 50
+        const divisionResultContainer = document.getElementById('division-result');
+        let numb = 10000;
+        let result = numb;
+        let counter = 0;
+
+        while (result >= 50) {
+            result /= 2;
+            counter++;
+        }
+
+        divisionResultContainer.textContent = `Result: ${result}, Iterations: ${counter}`;
+        console.log(`Result: ${result}, Iterations: ${counter}`);
+
+        // 4. Визначення пори року і назви місяця
+        function checkSeason() {
+            const month = parseInt(prompt('Введіть номер місяця (1-12):'));
+            let season = '';
+            let monthName = '';
+
+            switch (month) {
+                case 12:
+                case 1:
+                case 2:
+                    season = 'зима';
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    season = 'весна';
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    season = 'літо';
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    season = 'осінь';
+                    break;
+                default:
+                    alert('Некоректне значення місяця');
+                    return;
+            }
+
+            monthName = new Intl.DateTimeFormat('uk-UA', { month: 'long' }).format(new Date(2020, month - 1));
+            alert(`Місяць: ${monthName}, Пора року: ${season}`);
+        }
+
+        // 5. Конвертація температури з Цельсія в Фаренгейт
+        function convertTemperature() {
+            const celsius = parseFloat(prompt('Введіть температуру в градусах Цельсія:'));
+            const fahrenheit = (9/5) * celsius + 32;
+            alert(`Температура в Фаренгейтах: ${fahrenheit.toFixed(2)} °F`);
+        }
+
+        // 6. Визначення дня тижня
+        function getDayOfWeek() {
+            const dayNumber = parseInt(prompt('Введіть число від 1 до 7:'));
+            const daysOfWeek = ['Неділя', 'Понеділок', 'Вівторок', 'Середа', 'Четвер', 'П\'ятниця', 'Субота'];
+
+            if (dayNumber >= 1 && dayNumber <= 7) {
+                alert(`День тижня: ${daysOfWeek[dayNumber - 1]}`);
+            } else {
+                alert('Некоректне значення');
+            }
+        }
+    </script>
+</body>
+</html>
