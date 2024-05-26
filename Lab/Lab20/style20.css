@@ -37,7 +37,7 @@ button {
 .btn {
     width: 75px;
     height: 75px;
-    border: 1px solid #000;
+    border: 1px solid #00000000;
     font-size: 1.5em;
     outline: none;
 }
@@ -52,7 +52,7 @@ button {
 }
 
 .black {
-    background-color: #333;
+    background-color: #474747;
     color: white;
 }
 
