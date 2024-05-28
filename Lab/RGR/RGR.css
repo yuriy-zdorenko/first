@@ -4,6 +4,7 @@ body {
     url(./img/Untitled2.png);
     background-repeat: no-repeat;
     background-size: 100vw;
+    font-family: nunito;
 }
 .header {
     margin: 0.5% 0.5%;
@@ -72,6 +73,7 @@ b {
 }
 
 .f-text {
+    text-align: center;
     font-weight: 300;
     color: white;
     font-family: nunito;
@@ -91,17 +93,136 @@ b {
 
 .events {
     margin: 40% 5% 5% 5%;
-    text-align: center;
 }
 
 .block {
     display: inline-flex;
 }
+
+
+
+
 .block2 {
     display: inline-flex;
+    margin-top: 1%;
 }
 
-.block-img {
-    margin: 0 5% 0 5%;
-    text-align: center;
+.img1 {
+    height: 285px;
+    width: 370px;
 }
+
+.p1 {
+    width: 370px;
+    margin: 0;
+}
+
+
+
+.block-img2 {
+    margin-left: 2%;
+}
+
+.img2 {
+    height: 285px;
+    width: 370px;
+}
+
+.p2 {
+    width: 370px;
+    margin: 0;
+}
+
+
+
+.block-img3 {
+    margin-left: 2%;
+}
+
+.img3 {
+    height: 285px;
+    width: 370px;
+}
+
+.p3 {
+    width: 370px;
+    margin: 0;
+}
+
+
+
+.block-img4 {
+    margin-left: 2%;
+}
+
+.img4 {
+    height: 285px;
+    width: 370px;
+}
+
+.p4 {
+    width: 370px;
+    margin: 0;
+}
+
+
+
+
+.img5 {
+    height: 285px;
+    width: 370px;
+}
+
+.p5 {
+    width: 370px;
+    margin: 0;
+}
+
+
+
+.block-img6 {
+    margin-left: 2%;
+}
+
+.img6 {
+    height: 285px;
+    width: 370px;
+}
+
+.p6 {
+    width: 370px;
+    margin: 0;
+}
+
+
+
+.block-img7 {
+    margin-left: 2%;
+}
+
+.img7 {
+    height: 285px;
+    width: 370px;
+}
+
+.p7 {
+    width: 370px;
+    margin: 0;
+}
+
+
+
+.block-img8 {
+    margin-left: 2%;
+}
+
+.img8 {
+    height: 285px;
+    width: 370px;
+}
+
+.p8 {
+    width: 370px;
+    margin: 0;
+}
+
