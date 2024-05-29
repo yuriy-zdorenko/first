@@ -118,7 +118,7 @@ b {
     margin: 0;
 }
 
-.block-img {
+.block-img, .block-img2, .block-img3, .block-img4, .block-img5, .block-img6, .block-img7, .block-img8  {
     margin-left: 4%;
 }
 
@@ -162,6 +162,10 @@ a {
     width: 400px;
     top: 50px;
     left: 25%;
+}
+
+.block, .block2 {
+   display: inline;
 }
 
 }
