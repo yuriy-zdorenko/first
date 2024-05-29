@@ -27,6 +27,26 @@ a {
     text-decoration: none;
 }
 
+.nav-list-link {
+    position: relative;
+}
+
+.nav-list-link::after {
+    content: "";
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .25s ease;
+}
+
+.nav-list-link:hover::after {
+    transform: scaleX(1);
+}
+
 .hat {
     position: absolute;
     width: 750px;
@@ -73,7 +93,7 @@ b {
     color: white;
 }
 
-.f-text {
+.f-text1, .f-text2, .f-text3 {
     text-align: center;
     font-weight: 300;
     color: white;
@@ -85,7 +105,9 @@ b {
 }
 
 .footer {
+    text-align: center;
     display: grid;
+    color: white;
     grid-template-columns: 33% 33% 33%;
     background-color: rgb(33, 153, 113);
     width: 100%;
@@ -165,7 +187,21 @@ a {
 }
 
 .block, .block2 {
-   display: inline;
+    text-align: center;
+   display: grid;
+   grid-template-columns: 46% 54%;
+}
+
+.about {
+    display: inline;
+    height: 100px;
+    width: 550px;
+    margin-top: 60%;
+}
+
+.container {
+    text-align: center;
+    display: block;
 }
 
 }
@@ -175,6 +211,24 @@ a {
      display: none;
        }
 
+       .block, .block2 {
+        display: inline;
+     }
 
+     .hat {
+        display: none;
+     }
+
+     .footer {
+        text-align: center;
+        display: grid;
+        height: 600px;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 33% 33% 33%;
+        grid-template-areas:
+        "f1-text"
+        "f2-text"
+        "f3-text"
+     }
 }
 
