@@ -14,12 +14,13 @@ body {
 ul {
 list-style-type: none;
 text-align: center;
+margin-left: 10%;
 }
 
 a {
     
     font-size: 16pt;
-    margin: 0 1.5vw;
+    margin: 0 2vw;
     color: white;
     font-family: raleway;
     font-weight: 700;
@@ -92,7 +93,7 @@ b {
 }
 
 .events {
-    margin: 40% 5% 5% 5%;
+    margin: 44% 5% 5% 5%;
 }
 
 .block {
@@ -107,122 +108,69 @@ b {
     margin-top: 1%;
 }
 
-.img1 {
+.img {
     height: 285px;
     width: 370px;
 }
 
-.p1 {
+.p {
     width: 370px;
     margin: 0;
 }
 
+.block-img {
+    margin-left: 4%;
+}
 
+@media (min-width: 1199px) and (max-width: 1350px) {
+ul {
+    margin-left: 5%;
+}
+    
+}
 
-.block-img2 {
+@media (min-width: 900px) and (max-width: 1200px) {
+ul {
     margin-left: 2%;
 }
 
-.img2 {
-    height: 285px;
-    width: 370px;
-}
-
-.p2 {
-    width: 370px;
-    margin: 0;
+    a {
+    font-size: 13pt;
 }
 
 
-
-.block-img3 {
-    margin-left: 2%;
 }
 
-.img3 {
-    height: 285px;
-    width: 370px;
+@media (min-width: 650px) and (max-width: 900px) {
+ul {
+ list-style-type: none;
+ text-align: center;
+ margin-left: 1%;
+}
+        
+a {       
+    font-size: 10pt;
+    margin: 0 1vw;
+    color: white;
+    font-family: raleway;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-.p3 {
-    width: 370px;
-    margin: 0;
+.hat {
+    position: absolute;
+    width: 400px;
+    top: 50px;
+    left: 25%;
 }
 
-
-
-.block-img4 {
-    margin-left: 2%;
 }
 
-.img4 {
-    height: 285px;
-    width: 370px;
-}
-
-.p4 {
-    width: 370px;
-    margin: 0;
-}
+@media (min-width: 1px) and (max-width: 650px) {
+    ul {
+     display: none;
+       }
 
 
-
-
-.img5 {
-    height: 285px;
-    width: 370px;
-}
-
-.p5 {
-    width: 370px;
-    margin: 0;
-}
-
-
-
-.block-img6 {
-    margin-left: 2%;
-}
-
-.img6 {
-    height: 285px;
-    width: 370px;
-}
-
-.p6 {
-    width: 370px;
-    margin: 0;
-}
-
-
-
-.block-img7 {
-    margin-left: 2%;
-}
-
-.img7 {
-    height: 285px;
-    width: 370px;
-}
-
-.p7 {
-    width: 370px;
-    margin: 0;
-}
-
-
-
-.block-img8 {
-    margin-left: 2%;
-}
-
-.img8 {
-    height: 285px;
-    width: 370px;
-}
-
-.p8 {
-    width: 370px;
-    margin: 0;
 }
 
