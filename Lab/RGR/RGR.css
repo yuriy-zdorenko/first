@@ -189,19 +189,41 @@ a {
 .block, .block2 {
     text-align: center;
    display: grid;
-   grid-template-columns: 46% 54%;
+   grid-template-columns: 50% 50%;
 }
 
 .about {
-    display: inline;
+    font-family: nunito;
+    font-size: 16pt;
+    font-weight: 500;
     height: 100px;
-    width: 550px;
-    margin-top: 60%;
+    width: 650px;
+    margin: 30% 0% 0% 5%;
+}
+
+.img {
+    height: 215px;
+    width: 300px;
+}
+
+.p {
+    width: 300px;
+    margin: 0;
+    text-align: left;
+}
+
+.block-img, .block-img2, .block-img3, .block-img4, .block-img5, .block-img6, .block-img7, .block-img8  {
+    text-align: left;
 }
 
 .container {
     text-align: center;
     display: block;
+}
+
+.footer {
+    width: 100%;
+    height: 230px;
 }
 
 }
@@ -218,6 +240,15 @@ a {
      .hat {
         display: none;
      }
+
+     .about {
+        font-family: nunito;
+        font-size: 7pt;
+        font-weight: 500;
+        height: 100px;
+        width: 280px;
+        margin: 30% 0% 0% 1%;
+    }
 
      .footer {
         text-align: center;
