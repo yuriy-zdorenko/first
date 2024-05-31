@@ -151,8 +151,17 @@ b {
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
-ul {
+ ul {
     margin-left: 5%;
+}
+
+.about {
+    font-family: nunito;
+    font-size: 18pt;
+    font-weight: 500;
+    height: 100px;
+    width: 560px;
+    margin: 30% 0% 0% 53%;
 }
 
 .img {
@@ -163,9 +172,7 @@ ul {
 .p {
     width: 270px;
     margin: 0;
-}
-
-  
+}   
 }
 
 @media (min-width: 900px) and (max-width: 1024px) {
@@ -175,6 +182,22 @@ ul {
 
 a {
 font-size: 13pt;
+}
+
+.hat {
+    position: absolute;
+    width: 430px;
+    top: 50px;
+    left: 35%;
+}
+
+.about {
+    font-family: nunito;
+    font-size: 16pt;
+    font-weight: 500;
+    height: 100px;
+    width: 550px;
+    margin: 30% 0% 0% 45%;
 }
 
 .block, .block2 {
@@ -224,9 +247,9 @@ a {
 
 .hat {
     position: absolute;
-    width: 400px;
+    width: 380px;
     top: 50px;
-    left: 25%;
+    left: 35%;
 }
 
 .block, .block2 {
@@ -240,8 +263,8 @@ a {
     font-size: 16pt;
     font-weight: 500;
     height: 100px;
-    width: 650px;
-    margin: 30% 0% 0% 5%;
+    width: 700px;
+    margin: 40% 0% 0% 5%;
 }
 
 .img {
@@ -312,11 +335,11 @@ a {
 
      .about {
         font-family: nunito;
-        font-size: 7pt;
+        font-size: 12pt;
         font-weight: 500;
         height: 100px;
-        width: 280px;
-        margin: 30% 0% 0% 1%;
+        width: 365px;
+        margin: 32% 0% 0% 3%;
     }
 
      .footer {
@@ -364,11 +387,11 @@ a {
 
      .about {
         font-family: nunito;
-        font-size: 7pt;
+        font-size: 10pt;
         font-weight: 500;
         height: 100px;
-        width: 280px;
-        margin: 30% 0% 0% 1%;
+        width: 345px;
+        margin: 30% 0% 0% 3%;
     }
 
      .footer {
@@ -414,11 +437,19 @@ a {
 
      .about {
         font-family: nunito;
-        font-size: 7pt;
+        font-size: 9pt;
         font-weight: 500;
         height: 100px;
-        width: 280px;
-        margin: 30% 0% 0% 1%;
+        width: 300px;
+        margin: 30% 0% 0% 3%;
+    }
+
+    .partners {
+        font-size: 13pt;
+        font-family: raleway;
+        font-weight: 700;
+        text-align: center;
+        margin-top: -3%;
     }
 
      .footer {
@@ -433,4 +464,3 @@ a {
         "f3-text"
      }
 }
-
