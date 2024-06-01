@@ -5,6 +5,21 @@ body {
     background-repeat: no-repeat;
     background-size: 100vw;
     font-family: nunito;
+    z-index: 999;
+    .background{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgb(68, 218, 130); z-index: 1;}
+    .loader{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100px;height: 100px;background:#fff;border-radius: 10px;
+        animation: animate 2s linear infinite; z-index: 2; }
+        @keyframes animate { 
+            0%
+           { transform: translate(-50%,-50%) perspective(200px) rotateX(0deg) rotateY(0deg);
+        }
+        50%
+           { transform: translate(-50%,-50%) perspective(200px) rotateX(-180deg) rotateY(0deg);
+        }   
+        100%
+           { transform: translate(-50%,-50%) perspective(200px) rotateX(-180deg) rotateY(-180deg);
+        }   
+    }
 }
 .header {
     margin: 0.5% 0.5%;
@@ -16,6 +31,44 @@ body {
     width: 100px;
 }
 
+svg {
+    width: 1em;
+}
+
+.nav-toggle {
+    font-size: 2rem;
+    color: #fff;
+
+}
+
+.burger-icon {
+        display: inline-block;
+        font-size: inherit;
+        height: 1em;
+        vertical-align: -.125em
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 35vh;
+    width: 220px;
+    z-index: 999;
+    background-color: rgb(40, 138, 105);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.336);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+.sidebar.active {
+    display: block;
+}
 
 ul {
 list-style-type: none;
@@ -36,6 +89,13 @@ a {
 .nav-list-link {
     position: relative;
 }
+
+.nav-list-link2 {
+    display: block;
+    margin-top: 15px;
+    font-size: 10pt;
+}
+
 
 .nav-list-link::after {
     content: "";
@@ -155,6 +215,10 @@ b {
     margin-left: 5%;
 }
 
+.nav-toggle {
+    display: none;
+}
+
 .about {
     font-family: nunito;
     font-size: 18pt;
@@ -182,6 +246,10 @@ ul {
 
 a {
 font-size: 13pt;
+}
+
+.nav-toggle {
+    display: none;
 }
 
 .hat {
@@ -245,6 +313,10 @@ a {
 
 }
 
+.nav-toggle {
+    display: none;
+}
+
 .hat {
     position: absolute;
     width: 380px;
@@ -302,7 +374,10 @@ a {
        .icon { 
         width: 50px;
         height: 50px;
-    
+    }
+
+    .nav-toggle {
+        margin: 1% 0 0 75%;
     }
 
        .block, .block2 {
@@ -367,8 +442,12 @@ a {
      .icon { 
         width: 50px;
         height: 50px;
-    
     }
+
+    .nav-toggle {
+        margin: 1% 0 0 70%;
+    }
+    
 
      .hat {
         display: none;
@@ -418,7 +497,10 @@ a {
      .icon { 
         width: 50px;
         height: 50px;
-    
+    }
+
+    .nav-toggle {
+        margin: 1% 0 0 65%;
     }
 
      .hat {
