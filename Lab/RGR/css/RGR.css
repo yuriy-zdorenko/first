@@ -50,7 +50,7 @@ svg {
 
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 25px;
     right: 0;
     height: 35vh;
     width: 220px;
@@ -187,6 +187,14 @@ b {
     background-color: rgb(33, 153, 113);
     width: 100%;
     height: 200px;
+}
+
+.page-text {
+    margin: 38% 0 5px 10px;
+}
+
+.page-text2 {
+    margin: 0 0 0 10px;    
 }
 
 .events {
@@ -392,6 +400,12 @@ ul {
         display: inline;
      }
 
+     .page-img {
+        margin-left: 10px;
+        height: 250px;
+        width: 360px;
+    }
+
      .hat {
         display: none;
      }
@@ -472,6 +486,12 @@ ul {
         margin: 0 11%;
     }
 
+    .page-img {
+        margin-left: 10px;
+        height: 250px;
+        width: 360px;
+    }
+
      .about {
         font-family: nunito;
         font-size: 10pt;
@@ -518,6 +538,13 @@ ul {
      .img {
         height: 185px;
         width: 250px;
+    }
+
+
+    .page-img {
+        margin-left: 10px;
+        height: 190px;
+        width: 300px;
     }
     
     .p {
