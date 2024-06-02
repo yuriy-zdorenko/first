@@ -1,0 +1,17 @@
+.wrap{
+    height: 100vh;
+}
+.row{
+    height: 100%;
+    font-size: 100px;
+    color: white;
+}
+#blue{
+    background-color: rgb(40, 123, 248);
+}
+#yellow{
+    background-color: yellow;
+}
+#red{
+    background-color: red;
+}
