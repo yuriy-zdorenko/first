@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BereznyakLab17-1</title>
+</head>
+<body>
+    
+
+    <script>
+        function DateAtTheMoment() {
+            const  currentDate= new Date();
+
+            let hours = currentDate.getHours().toString();
+            let minutes = currentDate.getMinutes().toString();
+            let seconds = currentDate.getSeconds().toString();
+
+            let daysOfWeek = ['неділя', 'понеділок', 'вівторок', 'середа', 'четвер', 'пʼятниця', 'субота'];
+            let dayOfWeek = daysOfWeek[currentDate.getDay()];
+            let dayOfMonth = currentDate.getDate().toString();
+
+            let month = currentDate.getMonth() + 1;
+            let monthsName = ['січня', 'лютого', 'березня', 'квітня', 'травня', 'червня', 'липня', 'серпня', 'вересня', 'жовтня', 'листопада', 'грудня'];
+            let currentMounth = monthsName[month-1];
+            
+            let year = currentDate.getFullYear();
+
+            let currentTime = hours + ':' + minutes + ':' + seconds + ', ' + dayOfWeek + ', ' + dayOfMonth + ' ' + currentMounth + ' ' + year + ' року';
+
+            console.log(currentTime)
+        }
+
+        DateAtTheMoment()
+    </script>
+</body>
+</html>

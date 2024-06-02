@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BereznyakLab17-2</title>
+</head>
+<body>
+    
+
+
+    <script>
+        function guessTheNumber() {
+            let randomNumber = Math.floor(Math.random() * 101);
+            let attempts = 0;
+
+            while (true) {
+                let userGuess = prompt("Введіть число від нуля(0) до ста(100): ");
+                userGuess = parseInt(userGuess);
+
+                if (isNaN(userGuess) || userGuess < 0 || userGuess > 100) {
+                    alert("Будь ласка, введіть число від 0 до 100");
+                    continue;
+                }
+
+                attempts++;
+
+                if (userGuess === randomNumber) {
+                    alert(`За ${attempts} спроб Ви вгадали число ${randomNumber}`);
+                    let playAgain = confirm("Бажаєте зіграти ще раз?");
+                    if (playAgain) {
+                        guessTheNumberGame();
+                    }
+                } 
+                else {
+                    let message = "";
+                    if (Math.abs(randomNumber - userGuess) > 10) {
+                        message = "дуже холодно";
+                        } else if (Math.abs(randomNumber - userGuess) > 5) {
+                        message = "холодно";
+                    } else if (Math.abs(randomNumber - userGuess) > 2) {
+                        message = "тепло";
+                    } else {
+                        message = "дуже гаряче";
+                    }
+                    console.log(`${new Date().toLocaleString()} Спроба ${attempts}: число ${userGuess} – не вірно (${message})`);
+                }
+            }
+        }
+        guessTheNumber();
+
+    </script>
+</body>
+</html>
