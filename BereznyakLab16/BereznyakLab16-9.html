@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BereznyakLab16-9</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+        function paintRed() {
+            this.style.backgroundColor = 'red';
+            this.addEventListener('click', paintGreen);
+            this.removeEventListener('click', paintRed)
+        };
+        function paintGreen() {
+            this.style.backgroundColor = 'green';
+            this.addEventListener('click', paintRed);
+            this.removeEventListener('click', paintGreen)
+        };
+
+
+        let divs = document.querySelectorAll('div');
+
+        divs.forEach(function(div) {
+            div.addEventListener('click', paintRed);
+        });
+    </script>
+</body>
+</html>

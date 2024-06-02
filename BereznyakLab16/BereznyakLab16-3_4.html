@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BereznyakLab16-3_4</title>
+</head>
+<body>
+    <a href="https://www.reddit.com/" id="link1">Посилання 1</a>
+    <a href="https://www.reddit.com/" id="link2">Посилання 2</a>
+    <a href="https://www.reddit.com/" id="link3">Посилання 3</a>
+
+    <script>
+        function changeText() {
+            this.textContent += "(" + this.href + ")";
+            this.removeEventListener('mousemove', changeText);
+        }
+
+        document.getElementById('link1').addEventListener('mousemove',changeText);
+        
+        document.getElementById('link2').addEventListener('mousemove',changeText);
+        
+        document.getElementById('link3').addEventListener('mousemove',changeText);
+        
+    </script>
+
+</body>
+</html>

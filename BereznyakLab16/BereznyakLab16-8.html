@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BereznyakLab16-8</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <input type="text" data-length="1">
+    <input type="text" data-length="2">
+    <input type="text" data-length="3">
+
+
+    <script>
+        function checkLength() {
+  
+            let inputValue = this.value;
+            let inputLength = inputValue.length;
+  
+
+            let expectedLength = parseInt(this.getAttribute('data-length'));
+  
+            if (inputLength === expectedLength) {
+                this.style.borderColor = 'green';
+            } 
+            else {
+                this.style.borderColor = 'red';
+            };
+        };
+
+            let inputs = document.querySelectorAll('input[data-length]');
+
+            inputs.forEach(function(input) {
+                input.addEventListener('blur', checkLength);
+            });
+    </script>
+</body>
+</html>
