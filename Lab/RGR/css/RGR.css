@@ -97,6 +97,7 @@ margin-left: 10%;
     font-weight: 700;
     text-decoration: none;
     text-align: left;
+    margin-top: 25px;
 }
 
 
@@ -124,6 +125,7 @@ margin-left: 10%;
 }
 
 .about {
+    
     font-family: nunito;
     font-size: 16pt;
     font-weight: 500;
@@ -228,12 +230,63 @@ b {
 
 }
 
+@media (min-width: 1440px) and (max-width: 2560px) {
+
+.nav-list-link {
+    position: relative;
+    font-size: 22pt;
+    margin: 0 2vw;
+    color: white;
+    font-family: raleway;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.hat {
+    position: absolute;
+    width: 800px;
+    top: 60px;
+    left: 40%;
+}
+
+.about {
+    font-family: nunito;
+    font-size: 20pt;
+    font-weight: 500;
+    height: 100px;
+    width: 650px;
+    margin: 32% 0% 0% 53%;   
+}
+
+.page-text {
+    margin: 40% 0 5px 10px; 
+    font-size: 25pt;
+}
+
+.page-text2 {
+    font-size: 18pt;
+}
+
+.page-img {
+    margin-left: 10px;
+}
+
+}
+
 @media (min-width: 1024px) and (max-width: 1440px) {
  ul {
     margin-left: 5%;
 }
 
 .nav-toggle {
+    display: none;
+}
+
+.burger-icon {
     display: none;
 }
 
