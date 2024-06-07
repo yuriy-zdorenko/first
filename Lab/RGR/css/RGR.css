@@ -136,6 +136,13 @@ b {
     color: rgb(1, 197, 132);
 }
 
+h3 {
+    margin-top: 40%;
+    font-size: 28pt;
+    font-family: raleway;
+    text-align: center;
+}
+
 .block-link {
     color: black;
     text-decoration: none;
@@ -177,6 +184,11 @@ b {
 
 .text {
     margin: 5px 0;
+}
+
+.text-site {
+    margin-left: 15px;
+    font-size: 16pt;
 }
 
 .footer {
@@ -252,6 +264,16 @@ b {
         top: 80px;
         left: 40%;
     }
+
+    h3 {
+        font-size: 40pt;
+    }
+
+    .text-site {
+        margin-left: 2%;
+        font-size: 30pt;
+        margin-right: 1%;
+    }
     
     .about {
         font-family: nunito;
@@ -289,6 +311,12 @@ b {
 
 .nav-toggle {
     display: none;
+}
+
+.text-site {
+    margin-left: 10px;
+    font-size: 16pt;
+    margin-right: 1%;
 }
 
 .about {
@@ -334,6 +362,11 @@ font-size: 13pt;
     width: 430px;
     top: 50px;
     left: 35%;
+}
+
+.text-site {
+    margin-left: 10px;
+    margin-right: 1%;
 }
 
 .about {
@@ -500,6 +533,12 @@ ul {
         margin-left: 4%;
     }
 
+    .text-site {
+        margin-left: 10px;
+        font-size: 10pt;
+        margin-right: 1%;
+    }
+
      .about {
         font-family: nunito;
         font-size: 12pt;
@@ -544,7 +583,12 @@ ul {
     .nav-toggle {
         margin: 1% 0 0 70%;
     }
-    
+
+    .text-site {
+        margin-left: 10px;
+        font-size: 10pt;
+        margin-right: 1%;
+    }
 
      .hat {
         display: none;
@@ -629,6 +673,11 @@ ul {
     .p {
         text-align: left;
         width: 250px;
+    }
+
+    .text-site {
+        margin-left: 15px;
+        font-size: 10pt;
     }
 
      .about {
