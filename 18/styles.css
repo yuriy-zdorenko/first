@@ -1,0 +1,100 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.game-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#timer {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#gameField {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.selected {
+    background-color: yellow; /* Колір для вибраних чисел */
+}
+/* Стилі для таблиці статистики */
+#statsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#statsTable th,
+#statsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#statsTable th {
+    background-color: #f2f2f2;
+}
+
+#statsTable th[colspan="6"] {
+    background-color: #eaeaea;
+}
+
+#statsTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#statsTable tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Стилі для вікна гри та кнопки "Почати з початку" */
+#gamePage {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#gameField {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#gameField div {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#restartBtn {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#restartBtn:hover {
+    background-color: #45a049;
+}

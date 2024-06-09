@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+input[type="text"], button {
+    margin-bottom: 10px;
+}
+
+#result {
+    font-weight: bold;
+}

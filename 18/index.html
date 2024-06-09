@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Моя гра</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Моя Гра</h1>
+    <button id="startBtn">Почати гру</button>
+</div>
+
+<div id="gamePage" style="display: none;">
+    <div class="game-container">
+        <div id="timer">60</div>
+        <div id="gameField"></div>
+        <button id="restartBtn">Почати з початку</button>
+    </div>
+</div>
+<div id="gamePage" style="display: none;">
+    <div class="game-container">
+        <div id="timer">60</div>
+        <div id="gameField"></div>
+        <button id="restartBtn">Почати з початку</button>
+    </div>
+    <table id="statsTable">
+        <thead>
+            <tr>
+                <th colspan="6">Статистика гри</th>
+            </tr>
+            <tr>
+                <th>Метрика</th>
+                <th>Загальна кількість спроб</th>
+                <th>Успішні спроби</th>
+                <th>Найкращий результат</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Тут буде динамічно додаватися рядок зі статистикою -->
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

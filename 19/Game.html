@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 35%;
+            height: 400px;
+            margin: 0 auto;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;           
+            text-align: center;
+            border: 4px solid black;
+            border-radius: 15px;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .box{
+            height: 240px;
+            width: 240px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .border{
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .item{
+            width: 40px;
+            height: 40px;
+            text-align: center;
+        }
+        p{
+            line-height: 39px;
+            font-weight: 600;
+        }
+        button{
+            font-size: 20px;
+            color: rgb(226, 255, 245);
+            width: 35%;
+            height: 40px;
+            margin: 0 auto;
+            background-color: rgb(100, 100, 210);
+            border-radius: 5px;
+        }
+        table{
+            width: 35%;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        th, td{
+            border: 1px solid white;
+            height: 40px;
+            font-size: 20px;
+            background-color: rgb(209, 219, 14);
+            padding-left: 5px;
+        }
+
+        th{
+            background-color: rgb(89, 89, 249);
+            color: aliceblue;
+            padding-left: 0;
+        }
+        .win{
+            background-color: rgb(122, 253, 137);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Гра ще не почалась</h2>
+        <div class="box border"></div>
+        <button onclick="restartGame()">Почати знову</button>
+    </div>
+    <table>
+        <tr>
+            <th>Назва гри</th>
+            <th>Час</th>
+        </tr>
+    </table>
+
+    <script>
+        var Timer;
+        let num = 0;
+        startGame();
+        function startGame(){
+            let start = new Date;
+            let time = 0;
+            let arr = [];
+            let counter = 1;
+            let best = 100;
+            
+            //Таймер
+            function fncTimer(){
+                time =  parseInt(60 - (new Date - start) / 1000)
+                $('h2').text("Залишилось: " + time);
+                if(time == 0){
+                    stop();
+                    alert("Час закінчився!")
+                }
+            }
+            Timer = setInterval(fncTimer, 990);
+
+            function stop(){
+                clearInterval(Timer);
+            }
+            
+            //Значення
+            for(let i = 1; i<=25; i++){
+                arr.push(i);
+            }
+
+            //Перемішування
+            function arrayRand (array) {
+                let m = array.length, t, i;
+
+                while (m) {
+                    i = Math.floor(Math.random() * m--);
+
+                    t = array[m];
+                    array[m] = array[i];
+                    array[i] = t;
+                }
+            }
+            arrayRand(arr)
+
+            //Вивід значень
+            for(let i = 0; i < 25; i++){
+                $(".box").append( `<div class="item border"><p>${arr[i]}</p></div>`);
+            }
+
+            //Стилізація значень
+            $(".item").each(function() {
+                    let colorR = Math.floor((Math.random() * 256));
+                    let colorG = Math.floor((Math.random() * 256));
+                    let colorB = Math.floor((Math.random() * 256));
+                    $(this).css("color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+                    
+                    let size = Math.floor((15 + Math.random() * 10));
+                    $(this).css("font-size", `${size}px`);
+            });
+
+            //Перевірка чисел
+            $(".item").click(function(){
+                if(counter == $(this).text()){
+                    counter++;
+                    $(this).css("background-color", "green");
+
+                    //Привітання
+                    if($(this).text() == 25){
+                        stop();
+                        time = 60 - time;
+                        num++;
+                        alert(`Вітаю! Ви перемогли за ${time}с.`)
+                        createTable();
+                    }
+                }
+                else if(counter >= $(this).text()){}
+                else{
+                    alert("Не вірна цифра")
+                    $(this).css("background-color", "red");
+                }
+            });
+
+            //Наповнення таблиці
+            function createTable(){
+                $("table").append( `<tr><td>Гра ${num}</td><td>${time} c.</td></tr>`);
+                $('td').removeClass("win");
+                $("tr").each(function(){
+                    let timeInSeconds =  parseInt($(this).find('td:nth-child(2)').text().replace(' с.', ''));
+
+                    if (timeInSeconds < best) {
+                        $('td.win').removeClass("win");
+                        $(this).find('td').addClass("win");
+                        best = timeInSeconds;
+                    }
+                });
+            };
+        }
+
+        function restartGame(){
+            clearInterval(Timer);
+            $( ".box" ).empty();
+            startGame()
+        }
+    </script>
+</body>
+</html>
