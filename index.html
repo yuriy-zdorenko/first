@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17</title>
+</head>
+
+<body>
+    <script>
+        function getCurrentTime() {
+            const months = ["січня", "лютого", "березня", "квітня", "травня", "червня", "липня", "серпня", "вересня", "жовтня", "листопада", "грудня"];
+            const days = ["неділя", "понеділок", "вівторок", "середа", "четвер", "п'ятниця", "субота"];
+
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const dayOfWeek = days[now.getDay()];
+            const dayOfMonth = now.getDate();
+            const month = months[now.getMonth()];
+            const year = now.getFullYear();
+
+            const currentTimeString = `${hours}:${minutes}:${seconds}, ${dayOfWeek}, ${dayOfMonth} ${month} ${year} року`;
+
+            alert(currentTimeString);
+            return currentTimeString;
+        }
+
+        function guessNumberGame() {
+            let randomNumber = Math.floor(Math.random() * 101);
+            let attempts = 0;
+
+            while (true) {
+                let guess = parseInt(prompt("Спробуйте вгадати число від 0 до 100:"));
+
+                if (isNaN(guess)) {
+                    alert("Будь ласка, введіть число!");
+                    continue;
+                }
+
+                attempts++;
+
+                if (guess === randomNumber) {
+                    alert(`${getCurrentTime()} Спроба ${attempts}: число ${guess} – вірно!`);
+                    alert(`Ви вгадали число ${randomNumber} за ${attempts} спроб(и)!`);
+                    break;
+                }
+                else if (guess > 100) {
+                    alert("Будь ласка, введіть число від 0 до 100");
+                }
+
+                else if (guess < 0) {
+                    alert("Будь ласка, введіть число від 0 до 100");
+                } else {
+                    let feedback = getFeedback(guess, randomNumber);
+                    alert(`${getCurrentTime()} Спроба ${attempts}: число ${guess} – ${feedback}`);
+                }
+            }
+
+            function playAgain() {
+                let message = prompt('Продовжити гру? Введіть y або n: ');
+
+                if (message === 'y') {
+                    guessNumberGame();
+                }
+
+                else if (message === 'n') {
+                    return;
+                }
+
+                else {
+                    alert('Введено неправильне значення');
+                    playAgain();
+                }
+            }
+
+            playAgain()
+        }
+
+        function getFeedback(guess, randomNumber) {
+            const difference = Math.abs(randomNumber - guess);
+
+            if (difference === 0) {
+                return "вірно";
+            } else if (difference <= 5) {
+                return "дуже гаряче";
+            } else if (difference <= 10) {
+                return "гаряче";
+            } else if (difference <= 20) {
+                return "тепло";
+            } else if (difference <= 30) {
+                return "прохолодно";
+            } else {
+                return "дуже прохолодно";
+            }
+        }
+
+        function getCurrentTime() {
+            const now = new Date();
+            const timestamp = `${now.getDate()}.${now.getMonth() + 1}.${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+            return timestamp;
+        }
+
+        guessNumberGame();
+        getCurrentTime();
+    </script>
+</body>
+
+</html>
