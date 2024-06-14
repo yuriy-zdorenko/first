@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        // Create container
+        const container = document.createElement('div');
+        container.style.width = '100%';
+        container.style.maxWidth = '400px';
+        container.style.margin = '0 auto';
+        container.style.padding = '20px';
+        container.style.backgroundColor = 'black';
+        container.style.borderRadius = '20px';
+
+        // Create display
+        const display = document.createElement('div');
+        display.id = 'display';
+        display.style.height = '100px';
+        display.style.fontSize = '2.5em';
+        display.style.color = 'white';
+        display.style.textAlign = 'right';
+        display.style.padding = '20px';
+        display.style.boxSizing = 'border-box';
+        display.style.borderRadius = '20px';
+        display.style.backgroundColor = '#333';
+        display.innerText = '0';
+        container.appendChild(display);
+
+        // Create button container
+        const buttonContainer = document.createElement('div');
+        buttonContainer.style.display = 'grid';
+        buttonContainer.style.gridTemplateColumns = 'repeat(4, 1fr)';
+        buttonContainer.style.gridGap = '10px';
+        buttonContainer.style.marginTop = '20px';
+
+        // Buttons data
+        const buttons = [
+            'AC', '+/-', '%', '÷',
+            '7', '8', '9', '×',
+            '4', '5', '6', '−',
+            '1', '2', '3', '+',
+            '0', '.', '='
+        ];
+
+        // Create buttons
+        buttons.forEach(symbol => {
+            const button = document.createElement('button');
+            button.innerText = symbol;
+            button.style.fontSize = '1.5em';
+            button.style.padding = '20px';
+            button.style.border = 'none';
+            button.style.borderRadius = '50%';
+            button.style.backgroundColor = symbol.match(/[0-9.]/) ? '#333' : '#FFA500';
+            button.style.color = 'white';
+            button.style.boxShadow = '0 4px #999';
+            button.style.outline = 'none';
+            button.style.transition = 'background-color 0.2s';
+
+            // Extra wide zero button
+            if (symbol === '0') {
+                button.style.gridColumn = 'span 2';
+                button.style.borderRadius = '25px';
+            }
+
+            // Add button to container
+            buttonContainer.appendChild(button);
+        });
+
+        container.appendChild(buttonContainer);
+        document.body.appendChild(container);
+
+        // Implement the calculator logic
+        let currentInput = '0';
+        let operator = null;
+        let previousInput = null;
+
+        buttonContainer.addEventListener('click', event => {
+            const target = event.target;
+            if (target.tagName !== 'BUTTON') return;
+
+            const value = target.innerText;
+
+            if (value >= '0' && value <= '9') {
+                if (currentInput === '0') {
+                    currentInput = value;
+                } else {
+                    currentInput += value;
+                }
+            } else if (value === '.') {
+                if (!currentInput.includes('.')) {
+                    currentInput += '.';
+                }
+            } else if (value === 'AC') {
+                currentInput = '0';
+                operator = null;
+                previousInput = null;
+            } else if (value === '+/-') {
+                currentInput = (parseFloat(currentInput) * -1).toString();
+            } else if (value === '%') {
+                currentInput = (parseFloat(currentInput) / 100).toString();
+            } else if (value === '=') {
+                if (operator && previousInput !== null) {
+                    currentInput = evaluate(previousInput, currentInput, operator);
+                    operator = null;
+                    previousInput = null;
+                }
+            } else {
+                if (operator && previousInput !== null) {
+                    currentInput = evaluate(previousInput, currentInput, operator);
+                }
+                operator = value;
+                previousInput = currentInput;
+                currentInput = '0';
+            }
+
+            display.innerText = currentInput;
+        });
+
+        function evaluate(a, b, operator) {
+            a = parseFloat(a);
+            b = parseFloat(b);
+            switch (operator) {
+                case '+':
+                    return (a + b).toString();
+                case '−':
+                    return (a - b).toString();
+                case '×':
+                    return (a * b).toString();
+                case '÷':
+                    return (a / b).toString();
+                default:
+                    return b;
+            }
+        }
+    </script>
+</body>
+</html>
