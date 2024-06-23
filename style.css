@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  padding: 10px;
+  margin-top: 30px;
+  background: #4697f4;
+  border: 1px solid #0076fd;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* main page */
+
+.box {
+  width: 750px;
+  height: 750px;
+  border: 3px solid black;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+/* game page */
+
+.game {
+  width: 750px;
+  height: 750px;
+  border: 3px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 500px;
+  height: 500px;
+  gap: 5px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+/* results */
+
+.results {
+  visibility: hidden;
+  margin-top: 15px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 2px;
+  color: #fff;
+
+  p {
+    background-color: #0076fd;
+    padding: 5px;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 2px;
+}
