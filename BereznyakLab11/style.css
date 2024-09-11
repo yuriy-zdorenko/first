@@ -1,0 +1,40 @@
+.background-img{
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.main{
+    text-indent: 20px;
+    display: flex;
+    flex-direction: row;
+}
+p{
+    text-align: justify;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-style: italic;
+    font-size: medium;
+    color: black;
+}
+img{
+    height: 200px;
+}
+h1{
+    font-weight: bold;
+    text-align: center;
+    color: blueviolet;
+    font-style:normal;
+}
+a:link{
+    color: blue;
+    text-decoration: dashed;
+}
+a:active{
+    color:green;
+    text-decoration: overline;
+}
+a:visited{
+    color:red;
+    text-decoration: double;
+}

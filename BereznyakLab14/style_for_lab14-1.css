@@ -1,0 +1,47 @@
+.wrap{
+    height: 100vh;
+}
+.header{
+    height: 15%;
+}
+.main{
+    height: 70%;
+}
+.footer{
+    height: 15%;
+}
+@media screen and (min-width: 1200px){
+    .header-left, .footer-right{
+        background-color: rgb(247, 247, 156);
+    }
+    .footer-left{
+        color: blue;
+        font-weight: bolder;
+    }
+    .header-right{
+        color: red;
+        font-weight: bolder;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    .header-right, .content, .footer-left{
+        background-color: pink;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .menu-left, .menu-right{
+        background-color: rgb(244, 123, 255);
+    }
+    .content{
+        font-size: xx-large;
+    }
+    .header-right{
+        font-size: larger;
+    }
+}
+@media screen and (max-width: 767px){
+    .header, .main, .footer{
+        color: green;
+        font-size: larger;
+    }
+}

@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+				<title>BereznyakLab07-03</title>
+                <style>
+                    table {
+                        font-family: consolas;
+                        font-size: 15;
+                        border-color: grey;
+                        background-color:rgb(226, 255, 255);
+                        padding: 5 5 5 5px;
+                    }
+                    td {
+                        vertical-align: top;
+                        
+                    }
+                    #but1 {
+                        margin: 15 15 7 12px;
+                    }
+                    #but2 {
+                        margin: 0 15 15 12px;
+                    }
+                    .inp {
+                        margin-left: 15px;
+                    
+                    }
+                   #anketa {
+                    font-size: 30px;
+                    font-family: 'Times New Roman', Times, serif;
+                    color: red;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                   }
+                </style>
+	</head>
+	<body>
+        <form>
+            <pre>
+                <table border="3">
+                    <tr>
+                        <th colspan="3" id="anketa">Анкета</th>
+                      </tr>
+                      <tr>
+                        <td>1.
+                        <td>Прізвище</td>
+                        <td><input class="inp" name="surname" value="" type="text" maxlength="40"></td>
+                      </tr>
+                      <tr>
+                        <td>2.</td>
+                        <td>Ім'я, по-батькові</td>
+                        <td><input required class="inp" name="name" value="" type="text" maxlength="60"></td>
+                      </tr>
+                      <tr>
+                        <td>3.</td>
+                        <td>Число і рік народження</td>
+                        <td><input required class="inp" name="year" value="" type="text" maxlength="10" placeholder="01.01.1999"></td>
+                      </tr>
+                      <tr>
+                        <td>4.</td>
+                        <td>Домашня адреса</td>
+                        <td><input required class="inp" name="adres" value="" type="text" maxlength="60"></td>
+                      </tr>
+                      <tr>
+                        <td>5.</td>
+                        <td>Місце навчання (роботи)</td>
+                        <td><input required  class="inp"name="learn" value="" type="text" maxlength="60"></td>
+                      </tr>
+                      <tr>
+                        <td>6.</td>
+                        <td>Домашній (робочий) телефон</td>
+                        <td><input required class="inp" name="numb" value="" type="email" maxlength="15" placeholder="+380(99)999 9999"></td>
+                      </tr>
+                      <tr>
+                        <td>7.</td>
+                        <td>E-mail</td>
+                        <td><input required class="inp" name="email" value="" type="text" maxlength="60" placeholder="example@gmail.com"></td>
+                      </tr>
+                      <tr>
+                        <td>8.</td>
+                        <td>Область наукових інтересів</td>
+                        <td>
+                            <ol>
+                            <li><input name="inter" value="" type="text" maxlength="40"></li>
+                            <li><input name="inter" value="" type="text" maxlength="40"></li>
+                            <li><input name="inter" value="" type="text" maxlength="40"></li>
+                            <li><input name="inter" value="" type="text" maxlength="40"></li>
+                            <li><input name="inter" value="" type="text" maxlength="40"></li>
+                            <li><input name="inter" value="" type="text" maxlength="40"></li>
+                            </ol>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3" height="70px"> <input id="but1" type="reset" value="Відмінити введення"> <br>
+                            <input id="but2" type="submit" value="Надіслати дані та перейти до 2 етапу реєстрації">  
+                            </td>
+                      </tr>
+                </table>
+            </pre>
+        </form>
+    </body>
+</html>

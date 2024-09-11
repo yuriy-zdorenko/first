@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BereznyakLab16-2</title>
+</head>
+<body>
+    <a href="#" id="link1">Посилання 1</a>
+    <a href="#" id="link2">Посилання 2</a>
+    <a href="#" id="link3">Посилання 3</a>
+
+    <script>
+        document.getElementById('link1').addEventListener('mouseover',changeTitle);
+
+        document.getElementById('link2').addEventListener('mouseover',changeTitle);
+
+        document.getElementById('link3').addEventListener('mouseover',changeTitle);
+        
+        
+        function changeTitle() {
+            this.title = this.textContent;
+        }
+    </script>
+
+</body>
+</html>

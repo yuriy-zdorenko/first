@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>BereanyakLab7-3</title>
+</head>
+<body>
+    <h1 align=center>Форма замовлення</h1>
+
+    <form action="your_order_processing_script.php" method="post">
+        <label for="bank_account_number">Номер банківського рахунку:</label>
+        <input type="text" id="bank_account_number" name="bank_account_number" required><br>
+
+        <label for="user_id">Особистий номер користувача:</label>
+        <input type="text" id="user_id" name="user_id" required><br>
+
+        <h2>Виберіть товар(и):</h2>
+        <select name="products[]" multiple required>
+            <option value="product1">Товар 1</option>
+            <option value="product2">Товар 2</option>
+            <option value="product3">Товар 3</option>
+        </select><br>
+
+        <label for="comments">Коментар до замовлення:</label>
+        <textarea id="comments" name="comments"></textarea><br>
+
+        <h2>Спосіб оплати:</h2>
+        <label for="cash_payment">Готівковий розрахунок:</label>
+        <input type="radio" id="cash_payment" name="payment_method" value="cash" checked>
+        <label for="cashless_payment">Безготівковий розрахунок:</label>
+        <input type="radio" id="cashless_payment" name="payment_method" value="cashless"><br>
+
+        <h2>Додаткова інформація:</h2>
+        <label for="account_balance">Інформація про залишок на рахунку:</label>
+        <input type="checkbox" id="account_balance" name="additional_info[]" value="balance">
+        <label for="last_payments">Список останніх виплат:</label>
+        <input type="checkbox" id="last_payments" name="additional_info[]" value="payments"><br>
+
+        <button type="submit">Відправити замовлення</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+				<title>BereznyakLab07-02</title>
+	</head>
+	<body>
+		<h2 align=center>Завдання №1</h2>
+        <form>
+            <pre>
+                Введіть ваше ім'я: <input name="nickname" type="text" maxlength="40" size="40px" value="">
+               
+                Ваша стать: <input name="sex" type="radio" value="w"> Жіноча
+                            <input name="sex" type="radio" value="m"> Чоловіча
+
+                На якому курсі Ви навчаєтесь? <select name="course" size="1">
+                                              <option value="1">Перший</option>
+                                              <option value="2">Другий</option>
+                                              <option value="3">Третій</option>
+                                              <option value="4">Четвертий</option>
+                                              <option value="5">П'ятий</option>
+                                              </select>
+
+                Які дисципліни ви виваєте на курсі?
+				     <input name="inter" type="checkbox" value="car">Комп'ютерна логіка
+                                     <input name="inter" type="checkbox" value="fam">WEB-програмування
+                                     <input name="inter" type="checkbox" value="self">Комп'ютерна електроніка
+                                     <input name="inter" type="text" value="" placeholder="Інше">
+                
+                Напишіть декілька слів про себе:<textarea name="about" rows="2" cols="45" wrap="off"></textarea>
+
+                <label>Чи погоджуєтесь ви на <a href="https://www.kmu.gov.ua/npas/32791826" target="_blank">обробку інформації?</a></label><input required name="info" value="yes" type="radio">так
+                                                         <input required name="info" value="no" type="radio">ні
+                <input type="submit">  <input type="reset" value="Очистити форму">
+            </pre>
+        </form>
+    </body>
+</html>
