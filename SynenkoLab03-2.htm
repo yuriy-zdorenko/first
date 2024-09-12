@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Складна таблиця з використанням тегу caption</title>
+  <style>
+    table {
+      border: 1px solid #000;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: center;
+    }
+    caption {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <caption>Таблиця характеристик за статтю</caption>
+  <tr>
+    <td colspan="2" rowspan="2">&nbsp;</td>
+    <td colspan="2">Характеристики</td>
+  </tr>
+  <tr>
+    <td>Середній зріст, см</td>
+    <td>Середня вага, кг</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Стать</td>
+    <td>Чоловіча</td>
+    <td>177</td>
+    <td>73</td>
+  </tr>
+  <tr>
+    <td>Жіноча</td>
+    <td>166</td>
+    <td>65</td>
+  </tr>
+</table>
+
+</body>
+</html>
