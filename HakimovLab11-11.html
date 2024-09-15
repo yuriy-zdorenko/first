@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11</title>
+</head>
+<SCRIPT>
+    var al=0;function podmen(){
+        var w=document.images[0].src;
+        var ch=w.lastIndexOf("/");
+        var path=w.substring(0,ch+1);
+        if(parent.al==0)
+            {document.images[0].src=path+"https://img.freepik.com/free-photo/lovely-sunset_1361-3.jpg"; parent.al=1;}
+        else
+            {document.images[0].src=path+"https://img.freepik.com/free-photo/breathtaking-view-seascape-rocks-scenic-dramatic-sunset_181624-38386.jpg"; parent.al=0;}
+            setTimeout("podmen()","600");
+        } 
+    setTimeout("podmen()","600"); 
+
+</SCRIPT>
+<body background="Wall.jpg">
+    <CENTER>
+        <H1><FONT color=Blue> Зміна зображення через задані проміжки часу </FONT></H1>
+        <IMG height=142 src="https://img.freepik.com/free-photo/breathtaking-view-seascape-rocks-scenic-dramatic-sunset_181624-38386.jpg" width=150 border=1></CENTER>
+</body>
+</html>
