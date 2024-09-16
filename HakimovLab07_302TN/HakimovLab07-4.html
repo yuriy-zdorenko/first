@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Замовлення на товар</h1>
+	<form action="#" method="post">
+		<label for="bank-account">Номер банківського рахунку:</label>
+		<input type="text" id="bank-account" name="bank-account"><br><br>
+		<label for="personal-id">Особистий номер користувача:</label>
+		<input type="text" id="personal-id" name="personal-id"><br><br>
+		<label for="product-list">Список товарів:</label>
+		<select id="product-list" name="product-list[]" multiple>
+			<option value="product1">Товар 1</option>
+			<option value="product2">Товар 2</option>
+			<option value="product3">Товар 3</option>
+		</select><br><br>
+		<label for="comments">Коментарі користувача:</label>
+		<textarea id="comments" name="comments"></textarea><br><br>
+		<label for="payment-type">Вид оплати:</label>
+		<input type="radio" id="cash" name="payment-type" value="cash">
+		<label for="cash">Готівковий розрахунок</label>
+		<input type="radio" id="non-cash" name="payment-type" value="non-cash">
+		<label for="non-cash">Безготівковий розрахунок</label><br><br>
+		<label>Додаткова інформація:</label><br>
+		<input type="checkbox" id="balance" name="balance" value="yes">
+		<label for="balance">Залишки на рахунку</label><br>
+		<input type="checkbox" id="payments" name="payments" value="yes">
+		<label for="payments">Список останніх виплат по рахунку</label><br><br>
+		<input type="submit" value="Надіслати">
+		<input type="reset" value="Скасувати">
+	</form>
+</body>
+</html>
