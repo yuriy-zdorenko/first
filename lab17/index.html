@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17_1</title>
+</head>
+<body>
+    <script>
+    function getCurrentTime() {
+        const months = ["січня", "лютого", "березня", "квітня", "травня", "червня", "липня", "серпня", "вересня", "жовтня", "листопада", "грудня"];
+        const days = ["неділя", "понеділок", "вівторок", "середа", "четвер", "п'ятниця", "субота"];
+    
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        const dayOfWeek = days[now.getDay()];
+        const dayOfMonth = now.getDate();
+        const month = months[now.getMonth()];
+        const year = now.getFullYear();
+    
+        const currentTimeString = `${hours}:${minutes}:${seconds}, ${dayOfWeek}, ${dayOfMonth} ${month} ${year} року`;
+        
+        console.log(currentTimeString);
+        return currentTimeString;
+    }
+    
+    getCurrentTime();
+    </script>
+</body>
+</html>
