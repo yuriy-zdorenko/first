@@ -1,7 +1,7 @@
 ###############################################################################
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
-* text=auto
+* working-tree-encoding = CP1251 eol = CRLF
 
 ###############################################################################
 # Set default behavior for command prompt diff.
@@ -61,5 +61,3 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
-
-#* working-tree-encoding = CP1251 eol = CRLF
