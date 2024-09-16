@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Завдання 4</title>
+    <meta charset=UTF-8>
+</head>
+<body>
+<form>
+    <h2 align="center">Форма замовлення на товар</h2>
+    Введіть номер банківського рахунку<br>
+    <input type="text" name="bank_account" value="" size="25" maxlength="50"><br><br>
+    Введіть особистий номер користувача<br>
+    <input type="text" name="user_number" value="" size="25" maxlength="50"><br><br>
+    Товари:<br>
+    <select name="goods" size="5" multiple>
+        <option value="1">Крісло</option>
+        <option value="2">Стіл</option>
+        <option value="3">Диван</option>
+        <option value="4">Шафа</option>
+        <option value="5">Стілець</option>
+    </select><br><br>
+    Коментарі:<br>
+    <textarea name="comments" wrap="virtual" cols="35" rows="6"></textarea><br><br>
+    Спосіб оплати:<br>
+    <input type="radio" name="w1" value="cash"> Готівкою
+    <input type="radio" name="w1" value="card"> Карткою
+    <br><br>
+    Дотаткова інформація при відповіді:<br>
+    <input type="checkbox" name="m_i" value="yes"> Дані про залишок на рахунку
+    <input type="checkbox" name="m_i" value="yes"> Список останніх виплат по рахунку
+    <br><br>
+    <input type="reset" value="Очистити форму">
+    <input type="submit" value="Підтвердити замовлення">
+</form>
+</body>
+</html>
