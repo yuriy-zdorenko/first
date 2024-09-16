@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Приклад 9: Час завантаження сторінки</title>
+    <script>
+        function showPageLoadTime() {
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+            alert('Час завантаження сторінки: ' + hours + ':' + minutes + ':' + seconds);
+        }
+    </script>
+</head>
+<body onload="showPageLoadTime()">
+    <h1>Приклад 9: Час завантаження сторінки</h1>
+</body>
+</html>

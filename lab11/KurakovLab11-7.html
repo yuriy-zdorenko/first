@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Приклад 7: Анімація зміни зображень</title>
+    <script>
+        var images = ['lab7.1.jpg', 'lab7.2.jpg', 'lab7.3.jpg'];
+        var currentIndex = 0;
+
+        function changeImage() {
+            var image = document.getElementById('animation');
+            image.src = images[currentIndex];
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        setInterval(changeImage, 600);
+    </script>
+</head>
+<body>
+    <h1>Приклад 7: Анімація зміни зображень</h1>
+    <img id="animation" src="lab7.1.jpg" width="100%" height="100%" alt="Зображення">
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Приклад 6: Зміна розміру зображення</title>
+    <style>
+        img {
+            border: 1px solid #999999;
+        }
+    </style>
+    <script>
+        function enlargeImage() {
+            var image = document.getElementById('image');
+            image.style.width = '250px';
+            image.style.height = '250px';
+            image.style.border = '4px solid #ff9900';
+            image.alt = 'Ні, це РООООК';
+        }
+    </script>
+</head>
+<body>
+    <h1>Приклад 6: Зміна розміру зображення</h1>
+    <img id="image" src="lab6.jpg" width="150" height="160" alt="Рок">
+    <br><br>
+    <button onclick="enlargeImage()">Збільшити зображення</button>
+</body>
+</html>

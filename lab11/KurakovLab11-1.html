@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Приклад 1: Відкриття та закриття вікна</title>
+    <script>
+        function openWindow() {
+            var win = window.open('greeting.html', 'greeting', 'width=350, height=200');
+        }
+
+        function closeWindow() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h1>Приклад 1: Відкриття та закриття вікна</h1>
+    <button onclick="openWindow()">Відкрити вікно</button>
+    <br><br>
+    <button onclick="closeWindow()">Закрити вікно</button>
+</body>
+</html>
