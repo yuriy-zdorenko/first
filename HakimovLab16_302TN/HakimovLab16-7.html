@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squares</title>
+    <style>
+        li {
+          cursor: pointer;
+        }
+      </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li class="numberOne">15</li>
+        <li class="numberTwo">24</li>
+        <li class="numberThree">21</li>
+    </ul>
+</div>
+<script>
+    const numberOne = document.querySelector(".numberOne");
+    const numberTwo = document.querySelector(".numberTwo");
+    const numberThree =document.querySelector(".numberThree");
+    function getSquare(event){
+        const squareValue = parseInt(event.target.textContent);
+        event.target.textContent = squareValue * squareValue;
+    }
+    numberOne.addEventListener("click", getSquare);
+    numberTwo.addEventListener("click", getSquare);
+    numberThree.addEventListener("click", getSquare);
+</script>
+</body>
+</html>

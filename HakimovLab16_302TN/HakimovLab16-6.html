@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs-2</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><input class ="input-one" type="text"></li>
+            <li><input class ="input-two" type="text"></li>
+            <li><input class ="input-three" type="text"></li>
+        </ul>
+    </div>
+    <script>
+        const inputs = document.getElementsByTagName("input");
+    function handleInputClick(event) {
+      const inputValue = event.target.value;
+      alert(inputValue);
+      event.target.removeEventListener("click", handleInputClick);
+    }
+
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener("click", handleInputClick);
+    }
+    </script>
+</body>
+</html>

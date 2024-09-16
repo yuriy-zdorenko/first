@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs-3</title>
+    <style>
+        .valid {
+          border: 1px solid green;
+        }
+    
+        .invalid {
+          border: 1px solid red;
+        }
+      </style>
+</head>
+<body>
+    <input type="text" data-length="5">
+    <input type="text" data-length="8">
+    <input type="text" data-length="10">
+  
+    <script>
+     const inputs = document.getElementsByTagName("input");
+  
+      for (let i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener("blur", checkInputLength);
+      }
+  
+      function checkInputLength(event) {
+        const input = event.target;
+        const expectedLength = input.getAttribute("data-length");
+        const actualLength = input.value.length;
+  
+        if (actualLength == expectedLength) {
+          input.classList.remove("invalid");
+          input.classList.add("valid");
+        } else {
+          input.classList.remove("valid");
+          input.classList.add("invalid");
+        }
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><input class ="input-one" type="text"></li>
+            <li><input class ="input-two" type="text"></li>
+            <li><input class ="input-three" type="text"></li>
+        </ul>
+    </div>
+    <p id = "demo"></p>
+    <script>
+        
+        const inputOne = document.querySelector(".input-one");
+        const inputTwo = document.querySelector(".input-two");
+        const inputThree = document.querySelector(".input-three");
+        const demo = document.getElementById("demo");
+    function handleBlur(event) {
+        var inputValue = event.target.value;
+        demo.textContent += inputValue + " ";
+    }
+    inputOne.addEventListener("blur", handleBlur);
+    inputTwo.addEventListener("blur", handleBlur);
+    inputThree.addEventListener("blur", handleBlur);
+ 
+    
+    </script>
+</body>
+</html>

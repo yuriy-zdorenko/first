@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Посилання</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li> <a class ="first-link" href ="https://nupp.edu.ua/">Полтавська Політехніка</a></li>
+            <li> <a class = "second-link" href ="https://twitter.com/">Твіттер</a></li>
+            <li><a class = "third-link"href ="https://www.youtube.com/"> Youtube</a></li>
+        </ul>
+    </div>
+    <script>
+        const firstLink = document.querySelector(".first-link");
+        const secondLink = document.querySelector(".second-link");
+        const thirdLink = document.querySelector(".third-link");
+        function hoverInHandler(evt){
+            const link = evt.target;
+            link.title = link.textContent;
+        }
+        function hoverOutHandler(evt){
+            const link = evt.target;
+            link.title = "";
+        }
+        firstLink.addEventListener("mouseover", hoverInHandler);
+        secondLink.addEventListener("mouseover",hoverInHandler);
+        thirdLink.addEventListener("mouseover",hoverInHandler);
+        firstLink.addEventListener("mouseout", hoverOutHandler);
+        secondLink.addEventListener("mouseout",hoverOutHandler);
+        thirdLink.addEventListener("mouseout",hoverOutHandler);
+    </script>
+</body>
+</html>
