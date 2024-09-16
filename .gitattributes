@@ -1,8 +1,7 @@
 ###############################################################################
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
-#* text=auto
-#* working-tree-encoding = CP1251 eol = CRLF
+
 
 ###############################################################################
 # Set default behavior for command prompt diff.
