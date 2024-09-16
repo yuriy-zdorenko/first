@@ -62,4 +62,4 @@
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
 
-* working-tree-encoding = CP1251 eol = CRLF
+#* working-tree-encoding = CP1251 eol = CRLF
