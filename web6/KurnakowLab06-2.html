@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Сторінка з картою і спливаючими заголовками</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 500px; 
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .popup {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #000;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        area {
+            cursor: pointer;
+        }
+
+        area:hover + .popup {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Сторінка з картою і спливаючими заголовками</h1>
+    </header>
+
+    <div class="container">
+        <map name="map2">
+            <area shape="rect" coords="0, 0, 500, 84" href="#" title="Блакитне небо">
+            <area shape="poly" coords="188, 315, 331, 315, 250, 260" href="#" title="Човен">
+            <area shape="poly" coords="0, 42, 84, 42, 50, 280, 0, 240, 0, 42" href="#" title="Скеля">
+            <area shape="circle" coords="84, 392, 42" href="#" title="Камінь">
+        </map>
+
+        <img src="vodopad.jpg" width="500" height="434" border="1" usemap="#map2"> 
+
+        <div class="popup">Блакитне небо</div>
+        <div class="popup">Човен</div>
+        <div class="popup">Скеля</div>
+        <div class="popup">Камінь</div>
+    </div>
+</body>
+</html>
+

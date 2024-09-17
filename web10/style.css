@@ -1,0 +1,260 @@
+body {
+  background-image:url(img/Rovaniemi.jpg);
+  background-attachment:fixed;
+  background-size:cover;
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 20px;
+  }
+  em {
+    font-style: italic;
+}
+p {
+  font-size: 16px; 
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+  color: #FF0000; 
+  font-style: normal;
+}
+
+header{
+    background-color: rgb(46, 192, 30);
+    color: rgb(220, 147, 20);
+    height: 60px;
+    
+}
+main{
+  margin:2%;
+  margin-right: 5%;
+margin-left: 5%;
+
+/*position:relative;*/
+  min-height: 100%;
+  padding-bottom: 170px;
+  background: rgba(0, 0, 0, 0.3); /* Полупрозрачный фон */
+   padding: 1rem;
+}
+section{
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+
+  width: 1200px;
+ background-color: aqua;
+  text-align: justify;
+  width:100%;
+
+}
+a {
+    text-decoration: none;
+  }
+  
+  nav {
+    font-family: monospace;
+  
+    
+  }
+  
+  ul {
+    background: rgb(225, 130, 15);
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  
+  li {
+    color: #fff;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+  }
+    
+  li a {
+    color: rgb(15, 113, 124);
+  }
+  
+  li:hover,
+  li:focus-within {
+    background: rgb(175, 13, 13);
+    cursor: pointer;
+  }
+  
+  li:focus-within a {
+    outline: none;
+  }
+  
+  ul li ul {
+    background: orange;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+  }
+  
+  ul li:hover > ul,
+  ul li:focus-within > ul,
+  ul li ul:hover,
+  ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block
+  }
+  
+  ul li ul li {
+    clear: both;
+    width: 100%;
+  }
+  .title{
+    padding-left: 700px;
+    font-size: 40px;
+    font-family: monospace;
+font-style:italic;
+    font-weight: bold;
+    
+  }
+  .article{
+  font-style: normal;
+	font-weight: bold;
+	
+	color: whitesmoke;
+	
+    padding-left: 50px;
+    padding-right: 30px;
+    text-align: justify;
+   
+    font-family: Arial, Helvetica, sans-serif;
+    color:#000;
+    width:100%;
+}
+.photo {
+    width: 370px;
+    margin-bottom: 50px;
+    margin-left: 40px;
+    margin-top: 50px;
+    border-color: #4CAF50;
+    border-radius: 3px;
+   
+    }
+.l{
+    background-color: blue;
+   
+}
+* {box-sizing: border-box}
+
+
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.f {
+  padding-left: 162px;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 46px;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 80px;
+}
+
+.flex-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-wrapper {
+  max-width: 800px;
+  width: 100%;
+  height: 490px;
+  position: relative;
+  box-shadow: 10px 10px 44px -10px rgba(0,0,0,0.75);
+}
+
+
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.dots-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dot.active {
+  background-color: #000000;
+}
+
+span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray; 
+  margin-right: 10px;
+  cursor: pointer;
+}
+span:last-child{
+  margin-right: 0;
+}
+.forms{float:right;}
+form{
+    width:100%
+  
+}
+a:visited{
+  color: #4CAF50;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+a:link{
+  color: #4f4caf;
+font-family: Arial, Helvetica, sans-serif;
+}
+a:active{
+  color:aqua;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a:hover {
+  color: red; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+footer {
+  margin:0 auto;
+  background: rgb(10, 184, 211);
+  color: hwb(0 100% 0%);
+ overflow: visible;
+   padding: 1rem;
+   font-size: 20px;;
+   height: 400px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>11</title>
+</head>
+<body background="wall.jpg">
+    <center>
+        <h1><font color="khaki">Зміна зображення через задані проміжки часу</font></h1>
+        <img height="142" src="forest.jpg" width="150" border="1">
+    </center>
+
+    <script>
+        var al = 0;
+        
+        function podmen() {
+            var w = document.images[0].src;
+            var ch = w.lastIndexOf("/");
+            var path = w.substring(0, ch + 1);
+
+            if (parent.al == 0) {
+                document.images[0].src = path + "tit.jpg";
+                parent.al = 1;
+            } else {
+                document.images[0].src = path + "forest.jpg";
+                parent.al = 0;
+            }
+
+            setTimeout(podmen, 600);
+        }
+
+        setTimeout(podmen, 600);
+    </script>
+</body>
+</html>
