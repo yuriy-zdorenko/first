@@ -1,0 +1,60 @@
+$header-color: #000000;
+
+.wrapper{
+    background-color: $header-color;
+    height: 80px;
+    width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    background-color: $header-color;
+    height: 80px;
+    max-width: 100%;
+    align-items: center;
+
+    .header_container{
+        display: flex;
+        width: 95%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header_menu{
+        display: flex;
+
+        .item a{
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font: {
+                weight: 500;
+                family: 'Roboto', sans-serif;
+            }
+
+            &:hover{
+                color: rgb(184, 44, 44);
+                transition: 0.3s;
+            }
+        }
+    }
+
+    .header_img{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .header_login{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        a{
+            color: white;
+            text-decoration: dotted;
+        }
+    }
+
+}
+
