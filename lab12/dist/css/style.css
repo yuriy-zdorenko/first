@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+body .header {
+  width: 100%;
+  background-color: #0d141a;
+  height: 50px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .header .list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+body .header .list .list-item {
+  display: inline-block;
+  margin-right: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+body .header .list a {
+  text-decoration: none;
+  color: white;
+}
+body .films-block {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #1f2123;
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .films-block .title {
+  color: white;
+}
+body .films-block .subtitle {
+  color: white;
+}
+body .films-posters {
+  background-color: #131415;
+  display: flex;
+  width: 100%;
+}
+body .films-posters .image-block {
+  display: block;
+  text-align: center;
+}
+body .films-posters .image-block img {
+  width: 178px;
+  margin: 20px 20px 0 20px;
+}
+body .films-posters .image-block a {
+  text-decoration: none;
+  color: #aeacac;
+}
+body .cartoons-block {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #2d2e30;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .cartoons-block .title {
+  color: white;
+}
+body .cartoons-block .subtitle {
+  color: white;
+}
+body .cartoons-posters {
+  background-color: #243544;
+  display: flex;
+  width: 100%;
+}
+body .cartoons-posters .image-block {
+  display: block;
+  text-align: center;
+}
+body .cartoons-posters .image-block img {
+  width: 178px;
+  margin: 20px 20px 0 20px;
+}
+body .cartoons-posters .image-block a {
+  text-decoration: none;
+  color: #aeacac;
+}
