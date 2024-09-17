@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-4</title>
+</head>
+<body>
+    
+
+    <script>
+        let numberOfMonth = prompt("Введіть число з діапазон 1...12 ")
+        let nameOfMonth = ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень']
+        numberOfMonth = parseInt(numberOfMonth)
+
+        if (numberOfMonth >= 1 && numberOfMonth <= 12) {
+            if (numberOfMonth >= 3 && numberOfMonth <= 5) {
+                alert("Весна")
+            }
+            else if (numberOfMonth >= 6 && numberOfMonth <= 8) {
+                alert("Літо")
+            }
+            else if (numberOfMonth >= 9 && numberOfMonth <= 11) {
+                alert("Осінь")
+            }
+            else{
+                alert("Зима")
+            }
+
+            alert(nameOfMonth[numberOfMonth-1])
+        } 
+        else {
+            alert("Число не відповідає місяцю")    
+        }
+        
+
+    </script>
+</body>
+</html>

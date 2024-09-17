@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-6</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let dayOfWeek = prompt("Введіть число від 1 до 7")
+        let nameOfDay = ["Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"]
+        dayOfWeek = parseInt(dayOfWeek)
+
+        if (dayOfWeek >= 1 && dayOfWeek <= 7) {
+
+            alert(nameOfDay[dayOfWeek-1])
+        } else {
+            alert("Число не відповідає дню тижня")
+        }
+    </script>
+</body>
+</html>
