@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея фотографій</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .photo-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .photo-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+            width: 300px;
+        }
+
+        .photo-item img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #333;
+        }
+
+        .photo-caption {
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Галерея фотографій</h1>
+
+    <div class="photo-gallery">
+        <!-- Фото 1 -->
+        <div class="photo-item">
+            <img src="Image/photo1.jpg" alt="Фотографія природи" width="300" height="200" border="2">
+            <div class="photo-caption">Чудовий краєвид на озеро</div>
+        </div>
+
+        <!-- Фото 2 -->
+        <div class="photo-item">
+            <img src="Image/photo2.jpg" alt="Фотографія міста" width="300" height="200" border="2">
+            <div class="photo-caption">Нічне місто</div>
+        </div>
+
+        <!-- Фото 3 -->
+        <div class="photo-item">
+            <img src="Image/photo3.jpeg" alt="Фотографія тварини" width="300" height="200" border="2">
+            <div class="photo-caption">Чихуаху</div>
+        </div>
+
+        <!-- Фото 4 -->
+        <div class="photo-item">
+            <img src="Image/photo4.jpg" alt="Фотографія гори" width="300" height="200" border="2">
+            <div class="photo-caption">Величні гори на заході сонця</div>
+        </div>
+    </div>
+
+</body>
+</html>

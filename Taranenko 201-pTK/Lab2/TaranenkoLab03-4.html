@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя група</title>
+    <style>
+        /* Встановлюємо фонове зображення для всієї сторінки */
+        body {
+            background-image: url('Image/group.jpg'); /* шлях до зображення */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center; /* Центруємо зображення */
+            font-family: Arial, sans-serif;
+            color: #330066;
+            margin: 0;
+            min-height: 100vh; /* Мінімальна висота сторінки - висота екрану */
+            padding: 20px;
+        }
+        
+        /* Оформлення заголовку */
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            color: #008080; /* Колір заголовка */
+            font-size: 3em;
+        }
+
+        /* Стиль для секції з інформацією про групу */
+        .group-info {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: rgba(0, 0, 0, 0.6); /* Напівпрозоре тло */
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            color: #ffffff; /* Колір тексту */
+        }
+
+        h2 {
+            color: #00ced1;
+        }
+
+        /* Оформлення списку друзів */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            color: black;
+        }
+
+        /* Оформлення кожного члена групи */
+        .friend {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Моя група</h1>
+
+    <div class="group-info">
+        <h2>Інформація про групу</h2>
+        <p>Ми – студенти групи <strong>201-пТК</strong>. Нижче наведено інформацію про деяких членів нашої групи:</p>
+
+        <ul>
+            <li class="friend">
+                <strong>Прокудін Андрій:</strong> Староста групи, відповідає за організацію та зв'язок з викладачами.
+            </li>
+            <li class="friend">
+                <strong>Зубченко Артем:</strong> Один із друзів старости, завжди підтримує у вирішенні складних питань.
+            </li>
+            <li class="friend">
+                <strong>Тараненко Олександр:</strong> Автор сторінки, допомагає з технічними аспектами навчання.
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
