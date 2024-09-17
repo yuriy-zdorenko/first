@@ -1,0 +1,41 @@
+body {
+    background: url("background.jpg") center center / cover no-repeat fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 75px;
+    }
+
+    p {
+        font-size: 50px;
+    }
+}
+
+h1,
+p {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 45px;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    margin-top: 35px;
+
+}
+
+p {
+    text-align: justify;
+}
