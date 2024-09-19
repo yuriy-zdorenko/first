@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LesnikovaValeria01_9</title>
+    <style>
+        body 
+        {
+            background-color: rgb(250, 216, 124);
+        }
+        h1
+        {
+            color: rgb(255, 255, 255); 
+        }
+        h2
+        {
+            color: rgb(255, 255, 255); 
+        }
+        .element1
+        {
+            color: rgb(0, 161, 8); 
+        }
+        .element2
+        {
+            color: rgb(0, 161, 8); 
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Про себе</h1>
+    <style>
+    .element1
+    {
+    	margin-left:50px;
+    }
+    </style>
+    <div class="element1"> Привіт! Мене звати <b>Валерія</b>. Я студентка 3го курсу <b><em>122</em></b> спеціальності "Комп'ютерні науки". Навчаюсь у найкращому навчальному закладі України, Національному університеті "Полтавська політехніка імені Юрія Кондратюка". Проживаю разом з моїми друзями, <mark>тарганами</mark>, у гуртожитку номер 3.</div>
+    
+    <h1>Мої хоббі</h1>
+    <style>
+    .element2
+    {
+    	margin-left:50px;
+    }
+    </style>
+    <div class="element2"> В мене майже немає хоббі, але я полюбляю грати в різні комп'ютерні ігри, такі як Minecraft, <del>Legue Of Legends</del>, <span style="color:darkgreen;font-weight:bold;">Graunded</span>, Phasmaphobia, <ins>Lethal Company</ins> або Content Warning.</div>
+    
+    <h2>Програмування</h2>
+    <pre><code>
+using System;
+using System.Windows.Forms;
+
+namespace KourseOOP
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void Start_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+        }
+
+        private void exit1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+    }
+}
+    </code></pre>
+
+    <style>
+        .pidpis
+        {
+            text-align: right;
+            color: rgb(26, 26, 26);
+        }
+        </style>
+        <div class="pidpis"><em><ins>Студент групи 301-ТН Лєснікова В.А.</ins></em></div>
+      
+</body>
+</html>
