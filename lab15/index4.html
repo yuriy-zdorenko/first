@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    <script>
+        /*В змінній month лежить якесь число з діапазону від 1 до 12. Визначте 
+        в яку пору року потрапляє цей місяць (зима, літо, весна, осінь) і яку 
+        цей місяць має назву. Число з діапазону отримувати з допомогою модального 
+        вікна prompt, результат роботи виводити в модальному вікні alert.*/
+        
+        let month = parseInt(prompt("Введіть номер місяця (від 1 до 12):"));
+
+        let season, monthName;
+
+        switch (month) {
+            case 1:
+            case 2:
+            case 12:
+                season = "зима";
+                break;
+            case 3:
+            case 4:
+            case 5:
+                season = "весна";
+                break;
+            case 6:
+            case 7:
+            case 8:
+                season = "літо";
+                break;
+            case 9:
+            case 10:
+            case 11:
+                season = "осінь";
+                break;
+            default:
+                season = "невідома пора року";
+        }
+
+        switch (month) {
+            case 1:
+                monthName = "Січень";
+                break;
+            case 2:
+                monthName = "Лютий";
+                break;
+            case 3:
+                monthName = "Березень";
+                break;
+            case 4:
+                monthName = "Квітень";
+                break;
+            case 5:
+                monthName = "Травень";
+                break;
+            case 6:
+                monthName = "Червень";
+                break;
+            case 7:
+                monthName = "Липень";
+                break;
+            case 8:
+                monthName = "Серпень";
+                break;
+            case 9:
+                monthName = "Вересень";
+                break;
+            case 10:
+                monthName = "Жовтень";
+                break;
+            case 11:
+                monthName = "Листопад";
+                break;
+            case 12:
+                monthName = "Грудень";
+                break;
+            default:
+                monthName = "невідомий місяць";
+        }
+
+        alert(`Місяць ${monthName} належить до пори року ${season}.`);
+
+    </script>
+</body>
+</html>
