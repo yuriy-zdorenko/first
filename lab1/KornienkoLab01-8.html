@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Навчальний файл HTML</title>
+    <meta name="description" content="Це сторінка про Юрія Корнієна та його хобі">
+    <meta name="keywords" content="Корнієнко, університет, 201-пТК, пєнні борд, зал, Програмування, хобі, навчання"
+        </head>
+
+<body bgcolor="#ff5500" text="#002299">
+    <font size="5">
+        <h3 align="center">Про себе</h3>
+        <p align="justify">Корнієнко Юрій, <u>201-пТК</u><br>
+            Поступив в університет <b>Юрія Кондратюка</b> на спеціальність "Комп'ютерна інженерія"<br>
+            Закінчів <i>ППФК НТУ "ХПІ"</i><br>
+        </p>
+        <h3 align="center">Моє хобі</h3>
+        <p align="justify">Полюбляю кататись на <b>пєнні борді</b> - це скей-круїзер довжиною <i>22 дюйми</i><br>
+            Дуже давно граю в <u>комп'ютерні ігри</u><br>
+            Також регулярно ходжу до <u>спортивного залу</u>, для підтримки <i>фізичного здоров'я</i>
+        </p>
+        <h2 align="center">Програмування</h2>
+        <pre><!-- піддивився -->
+namespace Lab2
+    {
+        public partial class Form1 : Form
+        {
+            private Tmatr myMatrix;
+    
+            public Form1()
+            {
+                InitializeComponent();
+    
+                // передача кількість рядків та стовпців
+                myMatrix = new Tmatr((Convert.ToInt32(tbX.Text), Convert.ToInt32(tbY.Text), dGV));
+            }
+    
+            private void btnDisplayMatrix_Click(object sender, EventArgs e)
+            {
+                myMatrix.DisplayMatrix();
+            }
+    
+            private void btnDisplaySubmatrix_Click(object sender, EventArgs e)
+            {
+                myMatrix.DisplaySubmatrix(1, 2, 2, 2);
+            }
+    
+            private void dGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+            {
+    
+            }
+    
+            private void button_Click(object sender, EventArgs e)
+            {
+                //InitializeComponent();
+    
+                // // передача кількість рядків та стовпців
+                // myMatrix = new Tmatr(Convert.ToInt32(tbX.Text), Convert.ToInt32(tbY.Text), dGV);
+            }
+        }
+    }</pre>
+
+        <p align="right"><i><u>Студент групи 201-пТК Корнієнко Ю.С.</u></i></p>
+
+    </font>
+</body>
+
+</html>
