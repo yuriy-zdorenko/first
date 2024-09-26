@@ -1,0 +1,65 @@
+body{
+  margin: 0%;}
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 30% 20%; /* Визначаємо розмір колонки */
+  grid-template-rows: 1fr 20% 1fr 20%; /* Визначаємо розмір рядка */
+  grid-template-areas:
+    "header header header block2" /* Визначаємо області сітки */
+    "sidebar main next block2"
+    "block1 block1 next block2"
+    "footer footer footer footer";
+  grid-gap: 3px; /* Відстань між колонками */
+  height: 100vh; /* Задаємо висоту обгортки на весь висоту видимої області */}
+header, sidebar, main, next, jojo1, jojo2, jojo3{
+    padding: 20px;
+    border: 1px solid white;}
+header {
+  grid-area: header; /* Розміщуємо заголовок у визначеній області сітки */
+  background-color: #5b9bd5;}
+sidebar {
+  grid-area: sidebar; /* Розміщуємо бічну панель у визначеній області сітки */
+  background-color: #5bd1d1;}
+main {
+  grid-area: main; /* Розміщуємо головний вміст у визначеній області сітки */
+  background-color: #e16b6b;     }
+next {
+  grid-area: next; /* Розміщуємо наступне у визначеній області сітки */
+  background-color: #ffc000;     }
+  block1 {
+  grid-area: block1; /* Розміщуємо jojo1 у визначеній області сітки */
+  background-color: #31a475;      }
+  block2 {
+  grid-area: block2; /* Розміщуємо jojo2 у визначеній області сітки */
+  background-color: #6e7d82;      }
+  footer {
+  grid-area: footer; /* Розміщуємо jojo3 у визначеній області сітки */
+  background-color: #c55a11;}
+@media (min-width: 1200px){
+    .wrapper{
+      grid-template-columns: 1fr 1fr 30% 20%;
+      grid-template-rows: 1fr 20% 1fr 20%;
+      grid-template-areas:
+      "header header header block2"
+      "sidebar main next block2"
+      "block1 block1 next block2"
+  "footer footer footer footer";}}
+  @media (min-width: 500px) and (max-width: 1199px){
+   .wrapper{
+    grid-template-columns: 1fr 1fr 30% 20%;
+    grid-template-rows: 1fr 25% 25% 20%;
+    grid-template-areas:
+    "header header header block2"
+    "sidebar block1 block1 block2" 
+    "main next next block2" 
+    "footer footer footer footer"}}/*  @media правило що  дозволяє стилізувати елементи сторінки залежно від розміру екрану*/
+  @media (min-width: 1px) and (max-width: 499px){
+    .wrapper{     /*клас .wrapper використовує грідовий макет для організації елементів сторінки у відповідні області та розмір стовпців і рядків*/
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 20% 30% 15% 15%;
+      grid-template-areas: 
+      "header block2"
+      "sidebar block2" 
+      "main block1" 
+      "next next"  
+      "footer footer";}}
