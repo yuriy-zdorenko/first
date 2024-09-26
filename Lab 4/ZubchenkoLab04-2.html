@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рядок, що біжить</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Довільний фон сторінки */
+            margin: 0;
+            padding: 0;
+        }
+        .marquee-container {
+            height: 50px; /* Висота полоси */
+            width: 80%; /* Ширина полоси */
+            margin: 20px auto; /* Вирівнювання по центру сторінки */
+            overflow: hidden; /* Ховаємо все, що виходить за межі контейнера */
+            border-radius: 10px; /* Округлені кути */
+            display: flex; /* Використовуємо флекс для вертикального вирівнювання */
+            align-items: center; /* Вирівнюємо текст по вертикалі */
+            position: relative;
+        }
+        .marquee-content {
+            display: flex; /* Використовуємо флекс для створення безперервного потоку тексту */
+            white-space: nowrap;
+            position: absolute; /* Абсолютне позиціонування для руху */
+            padding: 0 20px; /* Внутрішні відступи зліва та справа */
+        }
+        .marquee {
+            color: #000000; /* Колір тексту */
+            font-family: Verdana, sans-serif; /* Тип шрифту */
+            font-size: 24px; /* Розмір шрифту */
+            font-weight: bold;
+            padding-right: 200px; /* Збільшена відстань між текстом */
+        }
+
+        /* Правила анімацій */
+        .marquee1 {
+            background-color: #31acd1; /* Колір першого рядка */
+            animation: sway 2s ease-in-out infinite; /* Коливання */
+        }
+        .marquee2 {
+            background-color: #f39c12; /* Колір другого рядка */
+            animation: marquee 11s linear infinite; /* Правило 1: Пробігає справа наліво */
+            left: 100%; /* Початок за межами контейнера */
+        }
+        .marquee3 {
+            background-color: #2ecc71; /* Колір третього рядка */
+            animation: marqueeReverse 7s linear infinite; /* Правило 2: Зліва направо */
+            left: -100%; /* Початок за межами контейнера */
+        }
+        .marquee4 {
+            background-color: #e74c3c; /* Колір четвертого рядка */
+            animation: marquee 11s linear infinite; /* Правило 3: Запізнення */
+            left: 100%;
+            animation-delay: 2s; /* Запізнення анімації */
+        }
+        .marquee5 {
+            background-color: #9b59b6; /* Колір п’ятого рядка */
+            animation: marquee 11s linear infinite; /* Правило 4: Запізнення */
+            left: 100%;
+            animation-delay: 4s; /* Запізнення анімації */
+        }
+
+        /* Анімації */
+        @keyframes sway {
+            0%, 100% { transform: translateX(0); } /* Статичне положення */
+            50% { transform: translateX(-10px); } /* Коливання вліво */
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); } /* Початок з правого краю */
+            100% { transform: translateX(-320%); } /* Текст зникає за лівим краєм */
+        }
+        @keyframes marqueeReverse {
+            0% { transform: translateX(0); } /* Початок з лівого краю */
+            100% { transform: translateX(320%); } /* Текст зникає за правим краєм */
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container marquee1">
+        <div class="marquee-content">
+            <div class="marquee">ПРИКЛАД РЯДКА, ЩО БІЖИТЬ - КОЛИВАННЯ</div>
+        </div>
+    </div>
+    <div class="marquee-container marquee2">
+        <div class="marquee-content">
+            <div class="marquee">ПРИКЛАД РЯДКА, ЩО БІЖИТЬ - СПРАВА НАЛІВО</div>
+        </div>
+    </div>
+    <div class="marquee-container marquee3">
+        <div class="marquee-content">
+            <div class="marquee">ПРИКЛАД РЯДКА, ЩО БІЖИТЬ - ЗЛІВА НАПРАВО</div>
+        </div>
+    </div>
+    <div class="marquee-container marquee4">
+        <div class="marquee-content">
+            <div class="marquee">ПРИКЛАД РЯДКА, ЩО БІЖИТЬ - ЗАПІЗНЕННЯ 1</div>
+        </div>
+    </div>
+    <div class="marquee-container marquee5">
+        <div class="marquee-content">
+            <div class="marquee">ПРИКЛАД РЯДКА, ЩО БІЖИТЬ - ЗАПІЗНЕННЯ 2</div>
+        </div>
+    </div>
+</body>
+</html>
