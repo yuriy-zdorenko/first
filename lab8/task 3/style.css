@@ -1,0 +1,39 @@
+* {
+  list-style: none;
+  text-decoration: none;
+}
+a {
+  color: blue;
+}
+body {
+  background-color: rgb(196, 255, 242);
+}
+.title {
+  color: rgb(106, 188, 0);
+  font-size: 35pt;
+  text-align: center;
+}
+.flowers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.card {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: justify;
+}
+.card > h2 {
+  font-size: 20pt;
+  font-weight: bold;
+  color: rgb(255, 126, 255);
+}
+.card > p {
+  font-size: 14pt;
+  font-style: italic;
+  color: black;
+  text-indent: 2%;
+  text-align: justify;
+}
