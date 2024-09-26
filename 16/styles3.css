@@ -1,0 +1,27 @@
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+input {
+    display: block;
+    margin: 10px;
+}
+
+.green-border {
+    border: 2px solid green;
+}
+
+.red-border {
+    border: 2px solid red;
+}
