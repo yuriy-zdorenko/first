@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        overflow: hidden;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: 3fr 3fr 3fr 2fr;
+        grid-template-rows: 2fr 1.5fr 2fr 1.5fr;
+        grid-template-areas: "blue blue blue gray"
+            "azure red yellow gray"
+            "green green yellow gray"
+            "orange orange orange orange";
+        height: 100vh;
+    }
+
+    .block {
+        border: 1px solid white;
+        padding: 3px;
+    }
+
+    .blue {
+        background-color: #5b9bd5;
+        grid-area: blue;
+
+    }
+
+    .gray {
+        background-color: #6e7d82;
+        grid-area: gray;
+    }
+
+    .azure {
+        background-color: #5bd1d1;
+        grid-area: azure;
+    }
+
+    .red {
+        background-color: #e16b6b;
+        grid-area: red;
+    }
+
+    .yellow {
+        background-color: #ffc000;
+        grid-area: yellow;
+    }
+
+    .green {
+        background-color: #31a475;
+        grid-area: green;
+    }
+
+    .orange {
+        background-color: #c55a11;
+        grid-area: orange;
+    }
+
+    @media screen and (max-width: 500px) {
+        .wrapper {
+            grid-template-columns: 3fr 3fr 4fr 3.5fr;
+            grid-template-rows: 2.5fr 2.5fr 3fr 1fr;
+            grid-template-areas: "blue blue blue gray"
+                "azure red yellow gray"
+                "green green yellow gray"
+                "orange orange orange orange";
+        }
+    }
+
+    @media screen and (min-width: 500px) {
+        .wrapper {
+            grid-template-columns: 4fr 4fr 5fr 4.5fr;
+            grid-template-rows: 3.5fr 3.5fr 4fr 2fr;
+            grid-template-areas: "blue blue blue gray"
+                "azure red yellow gray"
+                "green green yellow gray"
+                "orange orange orange orange";
+        }
+    }
+
+    @media screen and (min-width: 750px) {
+        .wrapper {
+            grid-template-columns: 3fr 3fr 4fr 3fr;
+            grid-template-rows: 1.5fr 1.5fr 2fr 1fr;
+            grid-template-areas: "blue blue blue gray"
+                "azure red yellow gray"
+                "green green yellow gray"
+                "orange orange orange orange";
+        }
+    }
+
+    @media screen and (min-width: 950px) {
+        .wrapper {
+            grid-template-columns: 5fr 5fr 6fr 4fr;
+            grid-template-rows: 4.5fr 4.5fr 6fr 4fr;
+            grid-template-areas: "blue blue blue gray"
+                "azure red yellow gray"
+                "green green yellow gray"
+                "orange orange orange orange";
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .wrapper {
+            grid-template-columns: 7fr 7fr 8fr 6fr;
+            grid-template-rows: 6fr 6fr 8fr 6fr;
+            grid-template-areas: "blue blue blue gray"
+                "azure red yellow gray"
+                "green green yellow gray"
+                "orange orange orange orange";
+            height: 100vh;
+        }
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="block blue"></div>
+        <div class="block gray"></div>
+        <div class="block azure"></div>
+        <div class="block red"></div>
+        <div class="block yellow"></div>
+        <div class="block green"></div>
+        <div class="block orange"></div>
+    </div>
+</body>
+
+</html>
