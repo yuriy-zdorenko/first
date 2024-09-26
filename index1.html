@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap</title>
+  <!-- Підключення файлів Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .items{
+        background-color:white;
+        border: 1px solid gray;
+        height:33.33vh;
+        display:flex;
+        align-items:start;
+        justify-content:center;
+        font-size:20px;
+      }
+
+    @media screen and (min-width: 1200px) {
+      .item1{
+        background-color:orange;
+      }
+      .item2{
+        color:red;
+        font-weight: bold;
+      }
+      .item6{
+        color:blue;
+        font-weight: bold;
+      }
+      .item7{
+        background-color:orange;
+      }
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1199px){
+      .item2{
+        background-color:pink;
+      }
+      .item4{
+        background-color:pink;
+      }
+      .item6{
+        background-color:pink;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 991px){
+      .items{
+        height:20vh;
+      }
+      .item2{
+        font-size:30px;
+      }
+      .item3{
+        background-color:rgb(255, 147, 255)
+      }
+      .item4{
+        font-size:30px;
+      }
+      .item5{
+        background-color:rgb(255, 147, 255)
+      }
+    }
+
+    @media screen and (max-width: 767px){
+      .items{
+        height:14.28vh;
+        color:green;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-xl-8 col-lg-4 col-md-6 col-md-6 col-sm-12 items item1">
+            Ліва частина шапки
+        </div>
+        <div class="col-xl-4 col-lg-8 col-md-6 col-sm-12 items item2">
+            Права частина шапки
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 items item3">
+            Ліве меню
+        </div>
+        <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 items item4">
+            Контент
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 items item5">
+            Праве меню
+        </div>
+        <div class="col-xl-3 col-lg-8 col-md-6 col-sm-12 items item6">
+            Ліва частина підвалу
+        </div>
+        <div class="col-xl-9 col-lg-4 col-md-6 col-sm-12 items item7">
+            Права частина підвалу
+        </div>
+    </div>
+</div>
+
+  <!-- Підключення файлів Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
