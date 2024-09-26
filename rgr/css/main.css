@@ -1,0 +1,277 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    padding-top: 30px;
+    background-image: url("../img/bg\ color.png");
+    background-size: cover;
+    font-family: 'PT Serif', sans-serif;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+.page{
+    height: 1hv;
+}
+h1, h2, h3 ,h4 ,h5 ,h6{
+    margin: 0;
+}
+
+/* container*/
+.container{
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.intro{
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+}
+.intro_title{
+    color: #fff;
+    font-size: 150px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 0.9;
+}
+.intro_iner{
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+}
+   
+/*Header*/
+.header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+.centerer
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.whiteblock
+{
+    height: 100px;
+    background-color: #ffffff;
+}
+.emptyspot
+{
+    height: 20px;
+}
+.header_iner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/*nav*/
+.nav{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'PT Serif', sans-serif;
+}
+.nav__link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 25px;
+    position: relative;
+
+    color: #159AD5;
+    
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+.nav__link:hover{
+    color: #115728
+}
+
+.img_logo{
+    width: 300px;
+    height:100px;
+}
+
+.prostor1{
+    width: 100%;
+    height: 500px;
+}
+.befSlider{
+    width: 100%;
+    text-align: center;
+    font-family: 'PT Serif' sans-serif;
+    font-size: 20pt;
+    color: #fff ;
+}
+
+.photo_div{
+    width: 100%;
+    text-align: center;
+}
+.photo{
+    width: 700px;
+    height: 400px;
+}
+
+
+/*page2*/
+.table{
+    border: 1px;
+    width: 90%;
+    height: 90%;
+    padding-left: 10%;
+}
+td{
+    width: 50%;
+    height: 50%;
+}
+.text_table{
+    font-family: 'PT Serif', sans-serif;
+    font-size: 11pt;
+    color: #ffffff;
+    text-indent : 5%;
+}
+
+/*фото тренеров*/
+.menu1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 700px;
+    height: 500px;
+
+  }
+  
+
+.prostor{
+    width: 100%;
+    height: 200px;
+}
+
+.menu1:hover .menu__wrap1{
+    height: 100%;
+}
+
+.P_footer{
+    font-size: medium;
+    color: #fff;
+    text-align: center  ;
+    font-size:16pt;
+}
+
+.nav__link_f{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 25px;
+    position: relative;
+
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+.nav__link_f:hover{
+    color: #115728
+}
+
+/*2 частина*/
+.TaBle{
+    font-size: 16pt;
+    border: #fff;
+}
+.wapper{
+    display: grid;
+    grid-template-areas: 
+        " Header-r Header-r Header-l";
+    height: 100%;
+    padding: 15px;
+}
+
+.Header-l{
+    grid-area: Header-l;
+    color: #ffffff;
+    padding-left: 7%;
+    width: 40%;
+}
+.Header-r{
+    grid-area: Header-r;
+    color: #ffffff;
+    width: 60%;
+    padding-left: 10%;
+    font-size: 15pt;
+}
+
+.v1{
+    width: 80%;
+    text-align: center;
+    color: #ffffff
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+<table class="TaBle">
+    <p >Заняття по пн/пт</p>
+    <tr>
+            <td>заняття 3-6 років</td>
+            <td>16:00-16:45</td>
+    </tr>
+    <tr>
+        <td>заняття 7-9 років</td>
+        <td>17:00-17:45</td>
+    </tr>
+    <tr>
+        <td>заняття 10-12 років</td>
+        <td>18:00-18:45</td>
+    </tr>
+    <tr>
+        <td>заняття 13+ років</td>
+        <td>19:00-19:45</td>
+    </tr>
+</table>
+
+
+500грн
+650грн
+*/

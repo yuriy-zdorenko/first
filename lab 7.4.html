@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-holder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form {
+            height: 350px;
+            width: 300px;
+            border-radius: 5px;
+            border: 3px solid black;
+            box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.2);
+            padding: 5px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 14px;
+            font-family: 'Lucida Sans Unicode';
+        }
+
+        .form .form-input {
+            margin-bottom: 5px;
+            width: 90%;
+            height: 30px;
+            border: 1px dashed black;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: 'Lucida Sans Unicode';
+        }
+
+        .horizontal-input-group {
+            display: flex;
+            margin-bottom: 5px;
+        }
+
+        .vertical-input-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5px;
+        }
+
+        .form-input-radio {
+            font-size: 14px;
+            font-family: 'Lucida Sans Unicode';
+        }
+
+        .form .form-input[type=file] {
+            padding-top: 10px;
+            padding-left: 5px;
+        }
+
+        .submit-button {
+            width: 90%;
+            height: 40px;
+            background-color: lightskyblue;
+            border: 3px dashed black;
+            border-radius: 5px;
+            font-family: 'Lucida Sans Unicode';
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-holder">
+        <form action="formSuccess.html" class="form">
+            <div class="form-header">
+                <h2>Order Confirmation</h2>
+            </div>
+            <input type="text" class="form-input" name="bank-number" placeholder="Bank Number">
+            <input type="text" class="form-input" name="personal-name" placeholder="Personal Number">
+            <div class="vertical-input-group">
+                <span>List: </span>
+                <div><input type="checkbox" name="order-food"> Food</div>
+                <div><input type="checkbox" name="order-water"> Water</div>
+                
+            </div>
+            <select class="form-input" name="purchase-type">
+                <option value="CARD">Card</option>
+                <option value="CASH">Cash</option>
+            </select>
+            <input type="file" class="form-input" name="file">
+            <textarea name="comment" class="form-input" placeholder="Your comment"></textarea>
+            <button type="submit" class="submit-button">Save</button>
+        </form>
+    </div>
+</body>
+</html>

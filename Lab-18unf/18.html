@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Гра</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .game-number {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div id="main-page">
+    <h1>Гра</h1>
+    <button id="start-button">Почати гру</button>
+</div>
+
+<div id="game-page" style="display: none;">
+    <h2>Гра</h2>
+    <div>Таймер: <span id="timer">60</span> секунд</div>
+    <div id="game-field"></div>
+    <button id="restart-button">Почати з початку</button>
+</div>
+
+<div id="congrats-modal" style="display: none;">
+    <h2>Вітаємо!</h2>
+    <p>Ви успішно завершили гру!</p>
+    <button id="play-again-button">Грати знову</button>
+</div>
+
+
+<div id="statistics">
+    <h3>Статистика</h3>
+    <table id="results-table">
+        <tr>
+            <th>Спроба</th>
+            <th>Результат</th>
+        </tr>
+    </table>
+</div>
+
+<script>
+    // Змінні гри
+    var gameNumbers = [];
+    var selectedNumbers = [];
+    var currentAttempt = 1;
+    var bestResult = 0;
+    var gameInterval;
+
+    // Функція для генерації випадкового кольору
+    function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    // Функція для створення поля гри
+    function createGameField() {
+        var $gameField = $("#game-field");
+        $gameField.empty();
+
+        for (var i = 1; i <= 20; i++) {
+            var $number = $("<div></div>")
+                .addClass("game-number")
+                .text(i)
+                .css("font-size", (Math.floor(Math.random() * 5) + 8) + "px")
+                .css("color", getRandomColor());
+
+            $number.click(function() {
+                var selectedNumber = parseInt($(this).text());
+
+                if (selectedNumber === selectedNumbers.length + 1) {
+                    selectedNumbers.push(selectedNumber);
+                    $(this).css("background-color", "yellow");
+                } else {
+                    alert("Не вірна цифра");
+                }
+            });
+
+            $gameField.append($number);
+        }
+    }
+
+    // Функція для початку гри
+    function startGame() {
+        $("#main-page").hide();
+        $("#game-page").show();
+
+        selectedNumbers = [];
+        currentAttempt = 1;
+        $("#results-table").empty();
+
+        createGameField();
+
+        gameInterval = setInterval(function() {
+            var timer = parseInt($("#timer").text());
+            if (timer > 0) {
+                $("#timer").text(timer - 1);
+            } else {
+                endGame();
+            }
+        }, 1000);
+    }
+
+    // Функція для завершення гри
+    function endGame() {
+        clearInterval(gameInterval);
+
+        if (selectedNumbers.length === 20) {
+            // Гравець успішно завершив гру
+            $("#congrats-modal").show();
+        } else {
+            // Гравець не завершив гру
+            alert("Гра завершена. Спробуйте ще раз!");
+            $("#main-page").show();
+            $("#game-page").hide();
+        }
+
+        if (selectedNumbers.length > bestResult) {
+            bestResult = selectedNumbers.length;
+        }
+
+        $("#results-table").append(
+            "<tr><td>" + currentAttempt + "</td><td>" + selectedNumbers.length + "</td></tr>"
+        );
+
+        currentAttempt++;
+    }
+
+    // Функція для перезапуску гри
+    function restartGame() {
+        clearInterval(gameInterval);
+        startGame();
+    }
+
+    // Ініціалізація гри
+    $(document).ready(function() {
+        $("#start-button").click(startGame);
+        $("#restart-button").click(restartGame);
+        $("#play-again-button").click(function() {
+            $("#congrats-modal").hide();
+            restartGame();
+        });
+    });
+</script>
+</body>
+</html>

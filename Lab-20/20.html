@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Калькулятор</title>
+    <style>
+        /* Стилізація елементів */
+        .calculator {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #e7a644;
+            border: 1px solid #bd2424;
+            border-radius: 5px;
+        }
+
+        .calculator input {
+            background-color: #ebe988;
+            border: 1px solid #bd2424;
+            width: 93%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .calculator button {
+            background-color: #ecca57;
+            border: 1px solid #bd2424;
+            width: 24%;
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="calculator">
+    <input type="text" id="result" disabled>
+
+    <button onclick="appendNumber('7')">7</button>
+    <button onclick="appendNumber('8')">8</button>
+    <button onclick="appendNumber('9')">9</button>
+    <button onclick="appendOperator('+')">+</button>
+
+    <button onclick="appendNumber('4')">4</button>
+    <button onclick="appendNumber('5')">5</button>
+    <button onclick="appendNumber('6')">6</button>
+    <button onclick="appendOperator('-')">-</button>
+
+    <button onclick="appendNumber('1')">1</button>
+    <button onclick="appendNumber('2')">2</button>
+    <button onclick="appendNumber('3')">3</button>
+    <button onclick="appendOperator('*')">*</button>
+
+    <button onclick="appendNumber('0')">0</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="clearResult()">C</button>
+    <button onclick="appendOperator('/')">/</button>
+</div>
+
+<script>
+    // Функції для калькулятора
+    function appendNumber(number) {
+        document.getElementById('result').value += number;
+    }
+
+    function appendOperator(operator) {
+        document.getElementById('result').value += operator;
+    }
+
+    function calculate() {
+        const expression = document.getElementById('result').value;
+        const result = eval(expression); // ВИРАЖЕННЯ eval ФУНКЦІЇ НЕ РЕКОМЕНДУЄТЬСЯ ВИКОРИСТОВУВАТИ В БЕЗПЕКІ
+        document.getElementById('result').value = result;
+    }
+
+    function clearResult() {
+        document.getElementById('result').value = '';
+    }
+</script>
+</body>
+</html>
