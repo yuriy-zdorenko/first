@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KurakovLab07-2</title>
+</head>
+<body>
+    <h2>Форма з використанням елементів</h2>
+    <form action="result.html" method="post">
+        <pre>Ваше ім'я: <input name="name" type="text" maxlength="40" size="40" value=""></pre>
+        <pre>Ваша стать:
+            <input type="radio" name="gender" value="male">Чоловіча
+            <input type="radio" name="gender" value="female">Жіноча
+        </pre>
+        <pre>На якому курсі Ви навчаєтесь?
+            <select name="course" size="1">
+                <option value="1" selected>Перший</option>
+                <option value="2">Другий</option>
+                <option value="3">Третій</option>
+                <option value="4">Четвертий</option>
+                <option value="5">П'ятий</option>
+            </select>
+        </pre>
+        <pre>Які дисципліни ви вивчаєте на курсі?
+            <input type="checkbox" name="subject" value="web" checked>WEB-програмування
+            <input type="checkbox" name="subject" value="eldinam">Технічна електродинаміка
+        </pre>
+        <pre>Напишіть декілька слів про себе:</pre>
+        <textarea name="about" rows="6" cols="60" wrap="off"></textarea>
+        <p>
+            <input type="submit" value="Відіслати дані">
+            <input type="reset" value="Очистити форму">
+            <input type="file" name="friend" size="50" accept="image/*">
+        </p>
+    </form>
+</body>
+</html>
+
+<!-- 
+<input type="text"> для введення імені
+<input type="radio"> для вибору статі
+<select> для вибору курсу
+<input type="checkbox"> для вибору дисциплін11:15 PM 5/19/2023
+<textarea> для написання деяких слів про себе
+<input type="submit"> для відправки форми
+<input type="reset"> для очищення форми
+<input type="file"> для прикріплення файлу 
+-->

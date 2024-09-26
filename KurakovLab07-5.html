@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KurakovLab07-4</title>
+</head>
+<body>
+    <h2>Форма для заповнення замовлення на товар</h2>
+    <form action="order.php" method="post">
+        <pre>Номер банківського рахунку: <input type="text" name="bank_account" maxlength="20"></pre>
+        <pre>Особистий номер користувача: <input type="text" name="personal_id" maxlength="10"></pre>
+        <pre>Список товарів:
+            <select name="products[]" multiple>
+                <option value="item1">Товар 1</option>
+                <option value="item2">Товар 2</option>
+                <option value="item3">Товар 3</option>
+                <option value="item4">Товар 4</option>
+            </select>
+        </pre>
+        <pre>Коментарі: </pre>
+        <textarea name="comments" rows="6" cols="60"></textarea>
+        <pre>Вид оплати:
+            <input type="radio" name="payment" value="cash"> Готівковий
+            <input type="radio" name="payment" value="non-cash"> Безготівковий
+        </pre>
+        <pre>Додаткова інформація:
+            <input type="checkbox" name="additional_info[]" value="balance"> Залишки на рахунку
+            <input type="checkbox" name="additional_info[]" value="payments"> Список останніх виплат
+        </pre>
+        <p>
+            <input type="submit" value="Замовити">
+            <input type="reset" value="Очистити форму">
+        </p>
+    </form>
+</body>
+</html>
