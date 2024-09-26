@@ -1,0 +1,74 @@
+/* Загальний стиль для всіх рядків */
+.row {
+    width: 100%;
+    overflow: hidden; /* Приховуємо текст за межами контейнера */
+    white-space: nowrap;
+    font-size: 24px;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+}
+
+/* Стиль для тексту всередині рядка */
+.text {
+    display: inline-block;
+    position: relative;
+}
+
+/* 1. Коливання тексту з боку в бік */
+.swinging-text .text {
+    background-color: lightcoral;
+    animation: swing 3s infinite alternate;
+}
+
+@keyframes swing {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(30px); }
+    100% { transform: translateX(-30px); }
+}
+
+/* 2. Текст пробігає справа наліво та з'являється знову */
+.right-to-left .text {
+    background-color: lightblue;
+    animation: marqueeRightToLeft 10s linear infinite;
+}
+
+@keyframes marqueeRightToLeft {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* 3. Текст пробігає зліва направо та зупиняється */
+.left-to-right .text {
+    background-color: lightgreen;
+    animation: marqueeLeftToRight 5s linear forwards;
+}
+
+@keyframes marqueeLeftToRight {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+/* 4. Перший рядок із запізненням */
+.delay1 .text {
+    background-color: lightgoldenrodyellow;
+    animation: delayMove1 6s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes delayMove1 {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* 5. Другий рядок із іншим режимом запізнення */
+.delay2 .text {
+    background-color: lightpink;
+    animation: delayMove2 8s linear infinite;
+    animation-delay: 4s;
+}
+
+@keyframes delayMove2 {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
