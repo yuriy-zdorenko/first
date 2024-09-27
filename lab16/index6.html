@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>16_6</title>
+</head>
+<body>
+
+<input type="text" id="input1" value="67"><br>
+<input type="text" id="input2" value="90"><br>
+<input type="text" id="input3" value="23"><br>
+
+<script>
+var inputs = document.querySelectorAll('input');
+
+function showAlertAndDisable(event) {
+  var inputValue = event.target.value; 
+  alert("Значення input: " + inputValue);
+  event.target.removeEventListener('click', showAlertAndDisable); 
+}
+
+inputs.forEach(function(input) {
+  input.addEventListener('click', showAlertAndDisable); 
+});
+</script>
+
+</body>
+</html>

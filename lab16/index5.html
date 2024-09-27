@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>16_5</title>
+</head>
+<body>
+
+
+<input type="text" id="input1"><br>
+<input type="text" id="input2"><br>
+<input type="text" id="input3"><br>
+
+
+<p id="demo"></p>
+
+<script>
+var demoParagraph = document.getElementById('demo');
+
+function displayInputValue(event) {
+  var inputValue = event.target.value;
+  demoParagraph.textContent = "Значення input: " + inputValue; 
+}
+
+var inputs = document.querySelectorAll('input');
+
+
+inputs.forEach(function(input) {
+  input.addEventListener('blur', displayInputValue); // Подія blur відбувається коли поле втрачає фокус
+});
+</script>
+
+</body>
+</html>

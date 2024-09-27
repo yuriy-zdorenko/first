@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>16_9</title>
+<style>
+  .red { background-color: red; }
+  .green { background-color: green; }
+</style>
+</head>
+<body>
+
+<div id="div1">Div 1</div>
+<div id="div2">Div 2</div>
+<div id="div3">Div 3</div>
+
+<script>
+  function paintRed(event) {
+    event.target.classList.add('red');
+    event.target.classList.remove('green');
+    event.target.removeEventListener('click', paintRed);
+    event.target.addEventListener('click', paintGreen);
+  }
+
+  function paintGreen(event) {
+    event.target.classList.add('green');
+    event.target.classList.remove('red');
+    event.target.removeEventListener('click', paintGreen);
+    event.target.addEventListener('click', paintRed);
+  }
+
+  document.getElementById('div1').addEventListener('click', paintRed);
+  document.getElementById('div2').addEventListener('click', paintRed);
+  document.getElementById('div3').addEventListener('click', paintRed);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>16_8</title>
+<style>
+  .valid {
+    border: 2px solid green;
+  }
+  .invalid {
+    border: 2px solid red;
+  }
+</style>
+</head>
+<body>
+
+<input type="text" id="input1" data-length="5"><br>
+<input type="text" id="input2" data-length="8"><br>
+<input type="text" id="input3" data-length="10"><br>
+
+<script>
+// Функція для перевірки довжини вмісту input
+function validateInputLength(event) {
+  var input = event.target;
+  var inputLength = input.value.length;
+  var requiredLength = parseInt(input.getAttribute('data-length'));
+
+  if (inputLength === requiredLength) {
+    input.classList.remove('invalid');
+    input.classList.add('valid');
+  } else {
+    input.classList.remove('valid');
+    input.classList.add('invalid');
+  }
+}
+
+var inputs = document.querySelectorAll('input');
+
+inputs.forEach(function(input) {
+  input.addEventListener('blur', validateInputLength); // Подія blur відбувається коли поле втрачає фокус
+});
+</script>
+
+</body>
+</html>

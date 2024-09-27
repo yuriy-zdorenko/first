@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>16_3</title>
+<style>
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<a href="https://example.com" id="link1">Посилання 1</a><br>
+<a href="https://example.org" id="link2">Посилання 2</a><br>
+<a href="https://example.net" id="link3">Посилання 3</a><br>
+
+<script>
+
+function addHrefText(event) {
+  var href = event.target.getAttribute('href'); 
+  event.target.textContent += ' (' + href + ')'; 
+}
+
+function removeHrefText(event) {
+  var href = event.target.getAttribute('href'); 
+  event.target.textContent = event.target.textContent.replace(' (' + href + ')', '');
+}
+
+document.getElementById('link1').addEventListener('mouseover', addHrefText);
+document.getElementById('link1').addEventListener('mouseout', removeHrefText);
+document.getElementById('link2').addEventListener('mouseover', addHrefText);
+document.getElementById('link2').addEventListener('mouseout', removeHrefText);
+document.getElementById('link3').addEventListener('mouseover', addHrefText);
+document.getElementById('link3').addEventListener('mouseout', removeHrefText);
+</script>
+
+</body>
+</html>
