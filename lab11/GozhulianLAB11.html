@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GozhulianLAB11</title>
+</head>
+<style>
+
+* {
+margin: 0;
+padding: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  background: #000;
+  display: grid;
+  grid-gap: 3px;
+}
+
+.block {
+  border: 1px solid lightgray;
+}
+
+@media (min-width: 576px) {
+  .wrapper {
+  grid-template-columns: 1fr 1fr 650px 1fr;
+  grid-template-rows: 1fr 1fr 1fr 200px;
+}
+
+  .blue {
+    grid-row: 1;
+    grid-column: 1/ 4;
+  }
+
+  .orange {
+    grid-column: 1 / 5;
+  }
+
+  .green {
+    grid-column: 1 / 3;
+  }
+
+  .yellow {
+    grid-column: 3;
+    grid-row: 4/ 2;
+  }
+
+  .red {
+    grid-column: 2;
+  }
+
+  .light-blue {
+    grid-column: 1;
+  }
+
+  .grey {
+    grid-column: 4;
+    grid-row: 4/ 1;
+  }
+}
+</style>
+<body>
+  <div class="wrapper">
+      <div class="block blue" style="background-color: #4998ff;"></div>
+      <div class="block light-blue" style="background-color: #2bb5be;"></div>
+      <div class="block grey" style="background-color: #535353;"></div>
+      <div class="block red" style="background-color: #af3f3f;"></div>
+      <div class="block green" style="background-color: #419e4d;"></div>
+      <div class="block yellow" style="background-color: #e0d100;"></div>
+      <div class="block orange" style="background-color: #7a4a00;"></div>
+  </div>
+</body>
+</html>
