@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta content="description" content="My web page">
+		<meta content="keywords" content="Frontend, Shiray Dan">
+		<title>Ширай Данило</title>
+	</head>
+	<body bgcolor="#FFFFCC" text="#330066">
+		<main>
+			<header>
+				<img src="./i/logo.jpg" alt="logo" width="70px">
+				<h1>
+					
+					<font face="sans-serif" color="#0000ff">
+						Ширай Данило
+					</font>
+				</h1>
+
+			</header>
+			
+			<section>
+				<h2>
+					<font face="sans-serif" color="#0000ff">
+						Про себе
+					</font>
+				</h2>
+				<font color="#008080">
+				<p align="justify">
+						Привіт, мене звати <b><i><u>Данило Ширай</u></i></b>. Я студент групи 301-ТН. Я людина з великою жагою до веб розробки. Я маю
+						глибокі знання з мови гіпертекстової розмітнки HTML, мови розробок стилів CSS, мов програмування JavaScript
+						та TypeScript, а також знання фреймворку React та його екосистеми.
+				</p>
+				<p align="justify">
+						У мене є кілька проектів на GitHub, один із яких <b><i><u>LynadSkins</u></i></b>. Це адаптивний React-додаток для Counter Strike
+						скінів, де ви можете створити власний профіль, додати кілька скінів і продати або змінити їх. Додаток має
+						кілька сторінок, таких як: головна сторінка, торгівля, ринок, профіль тощо. Я використовую бібліотеку i18,
+						щоб створити можливість змінити мову.Під час розробки серверної частини програми я використовував такі
+						технології, як: Node.js і Express для сервера, JWT і BCrypt для авторизації та захисту паролів, MongoDB для
+						зберігання даних користувача.
+				</p>
+				</font>
+			</section>
+      <br/>
+			<section>
+				<h2>
+          <font color="#0000ff" face="sans-serif">Моє хобі</font>
+        </h2>
+				<p align="justify">
+          <h3>
+            <font color="#0000ff" face="sans-serif">Програмування</font>
+          </h3>
+					<font color="#008080">
+            <b><i><u>Програмування</u></i></b> - це моє вікно в світ майбутнього, де код стає живим виразом ідеї. Кожен рядок коду - це крок
+						до створення чогось нового, неймовірного та корисного. Коли я сідаю за комп'ютер, то відчуваю себе справжнім
+						майстром цифрового мистецтва. Ця незвичайна здатність трансформувати ідеї у віртуальну реальність завжди
+						залишає мене в захваті. Мова програмування - це мій пензель, а комп'ютер - моя полотно, на якому я творю.
+					</font>
+				</p>
+				<p align="justify">
+					<font color="#008080">
+						Кожен проект для мене - це виклик, що дарує найбільше задоволення. Чи то розробка веб-сайту, додатку для
+						смартфону чи вирішення складних алгоритмічних завдань, кожен крок в цьому шляху принесе велике задоволення
+						та надихає на нові досягнення.
+					</font>
+				</p>
+				<p align="justify">
+					<font color="#008080">
+						А ще програмування - це спільнота розумних і творчих людей, які завжди готові допомогти та поділитися своїми
+						знаннями. Вивчення нових мов програмування та технологій - це завжди цікава подорож у світ інновацій та
+						можливостей.
+					</font>
+				</p>
+        <code>
+          <pre>
+import { FC, useEffect } from 'react'
+import { useAppSelector } from '../redux/hook'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+import { ErrorPage } from '../pages/ErrorPage'
+import { Layout } from '../pages/Layout'
+import { FilmPage } from '../pages/FilmsPage'
+import { MainPage } from '../pages/MainPage'
+import { SingleFilm } from '../pages/SingleFilm'
+import { SingleStar } from '../pages/SingleStar'
+import { StarPage } from '../pages/StarPage'
+import { NewsPage } from '../pages/NewsPage'
+import { SingleNews } from '../pages/SingleNews'
+import { ScrollToTop } from '../components/ScrollToTop'
+import { ProfilePage } from '../pages/ProfilePage'
+
+export const MainLayout: FC = () => {
+  const theme = useAppSelector((store) => store.theme)
+  const element = document.documentElement
+
+  const darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+  function onWindowMatch() {
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && darkQuery.matches)) {
+      element.classList.add('dark')
+    } else {
+      element.classList.remove('dark')
+    }
+  }
+
+  onWindowMatch()
+
+  useEffect(() => {
+    switch (theme.theme) {
+      case 'Темна':
+      case 'Dark':
+        element.classList.add('dark')
+        localStorage.setItem('theme', 'dark')
+        break
+      case 'Світла':
+      case 'Light':
+        element.classList.remove('dark')
+        localStorage.setItem('theme', 'light')
+        break
+      default:
+        localStorage.removeItem('theme')
+        onWindowMatch()
+        break
+    }
+  }, [theme])
+          </pre>
+        </code>
+				<p align="right"><i><u>Студент групи 301-ТН  Ширай Д.О.</u></i></p>
+			</section>
+		</main>
+	</body>
+</html>
