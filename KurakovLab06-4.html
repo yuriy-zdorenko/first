@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>KurakovLab06-4</title>
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .image-map {
+      position: relative;
+    }
+    
+    .image-map img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .image-map .shape {
+      position: absolute;
+      cursor: pointer;
+    }
+    
+    .image-map .shape.circle {
+      border-radius: 50%;
+      background-color: rgba(255, 0, 0, 0.5);
+    }
+    
+    .image-map .shape.rectangle {
+      background-color: rgba(0, 255, 0, 0.5);
+    }
+    
+    .image-map .shape.polygon {
+      background-color: rgba(0, 0, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-map">
+      <img src="image-map.jpg" width="1058" height="687" alt="Image Map" usemap="#map">
+      <map name="map">
+        <area shape="polygon" coords="200,25,40,335,350,150" href="KurakovLab01-9.html" alt="Трикутник">
+        <area shape="rectangle" coords="250,406,790,300" href="KurakovLab05-3.html" alt="Прямокутник">
+        <area shape="circle" coords="655,150,120" href="KurakovLab06-3.html" alt="Коло">
+      </map>
+    </div>
+  </div>
+</body>
+</html>
+
+<!--В елементі img вказується шлях до зображення, його ширина і висота, а також використовується атрибут usemap, що вказує на використання карти зображень з ім'ям "map".
+В елементі map встановлюється ім'я карти зображень.
+Елементи area визначають окремі області зображення з різними формами (трикутник, прямокутник, коло) за допомогою атрибута shape. Координати кожної області вказуються в атрибуті coords. Також вказується посилання (href) та альтернативний текст (alt) для кожної області.-->
