@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Батьківщина</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        #container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Моя Батьківщина</h1>
+    </header>
+
+    <div id="container">
+        <h2>Зображення місцевості</h2>
+        <img src="/img/Ivan_Mazepa_Poltava.jpg" alt="Map of Your Homeland" usemap="#homelandmap">
+
+        <map name="homelandmap">
+            <!-- x1,y1,x2,y2-->
+            <area shape="rect" coords="50,50,150,150" href="location1.html" alt="Location 1">
+        </map>
+
+        <img src="/img/Корпусний_сад_у_Полтаві.jpeg" alt="Map of Your Homeland" usemap="#homelandmap1">
+
+        <map name="homelandmap1">
+            <!-- x1,y1,x2,y2-->
+            <area shape="circle" coords="200,200,50" href="location2.html" alt="Location 2">
+        </map>
+    </div>
+
+</body>
+</html>
