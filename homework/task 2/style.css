@@ -1,0 +1,26 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3366cc;
+}
+
+.card__content {
+  font-size: 16px;
+  color: #333;
+}
