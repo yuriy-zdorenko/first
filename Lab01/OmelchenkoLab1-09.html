@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, omnis optio. Quidem suscipit blanditiis cupiditate beatae, rem fugit laudantium doloribus minus quibusdam amet veritatis similique, ea culpa reprehenderit quis error."
+        />
+        <meta
+            name="keywords"
+            content="Computer Games, JavaScript, C++, DeadByDaylight, Payday 2 "
+        />
+        <title>Головна сторінка</title>
+    </head>
+    <body id="index" bgcolor="#AD6E60">
+        <h1>Про себе</h1>
+        <p align="left">
+            <font color="green" size="6" face="sans-serif">
+                <b>Привіт!</b> Я Влад, мені 19. Наразі проживаю в Україні місто
+                Полтава. Полюбляю прогулянки на <em>природі</em>!
+            </font>
+        </p>
+        <h1>Моє хобі</h1>
+        <p align="left">
+            <font color="pink" size="4" face="Helvetica">
+                <p>
+                    Взагалі я маю декілька хобі,а саме:
+                    <em>комп'ютерні ігри</em>, програмування і 3D-моделювання в
+                    <b>Blender</b>. Остананнє найскладнішe,але воно того
+                    <big>варте</big>.
+                </p></font
+            >
+        </p>
+        <h2>Програмування</h2>
+        <h3 align="center">
+            Код створення простого бінарного дерева з базовими функціями,як
+            додавання,віднімання та переміщення по дереву
+        </h3>
+        <pre>
+                    <font color="white">
+                        <code>
+                            class Node {
+                                constructor(value) {
+                                  this.value = value;
+                                  this.leftChild = null;
+                                  this.rightChild = null;
+                                }
+                              }
+                              class Tree {
+                                constructor(data) {
+                                  this.root = this.buildTree(data);
+                                }
+                                getRoot() {
+                                  return this.root;
+                                }
+                                buildTree(arr) {
+                                  if (arr.length <= 1) return null;
+                                  const mid = Math.floor(arr.length / 2);
+                                  const node = new Node(arr[mid]);
+                                  node.leftChild = this.buildTree(arr.slice(0, mid));
+                                  node.rightChild = this.buildTree(arr.slice(mid));
+                                  return node;
+                                }
+                                insert(value, root = this.root) {
+                                    if (root === null) {
+                                      root = new Node(value);
+                                      return root;
+                                    }
+                                    if (value < root.value) {
+                                      root.leftChild = this.insert(value, root.leftChild);
+                                    }
+                                    if (value > root.value) {
+                                      root.rightChild = this.insert(value, root.rightChild);
+                                    }
+                                    return root;
+                                  }
+                                  delete(value, root = this.root) {
+                                    if (root === null) {
+                                      return root;
+                                    }
+                                    if (value < root.value) {
+                                      root.leftChild = this.delete(value, root.leftChild);
+                                      return root;
+                                    }
+                                    if (value > root.value) {
+                                      root.rightChild = this.delete(value, root.rightChild);
+                                      return root;
+                                    }
+                                    if (root.leftChild === null || root.rightChild === null) {
+                                      let temp = root.leftChild === null ? root.rightChild : root.leftChild;
+                                      root = temp;
+                                      return root;
+                                    } else {
+                                      let succParent = root;
+                                      let succ = root.rightChild;
+                                      while (succ.leftChild !== null) {
+                                        succParent = succ;
+                                        succ = succ.leftChild;
+                                      }
+                                      if (succParent !== root) {
+                                        succParent.leftChild = succ.rightChild;
+                                      } else {
+                                        succParent.rightChild = succ.rightChild;
+                                      }
+                                
+                                      root.value = succ.value;
+                                      succ.value = null;
+                                      return root;
+                                    }
+                                  }
+                                  levelOrder(root = this.root, values = []) {
+                                    if (root === null) return;
+                                    const queue = [];
+                                    queue.push(root);
+                                    while (queue.length !== 0) {
+                                      const current = queue[0];
+                                      values.push(current.value);
+                                      if (current.leftChild !== null) queue.push(current.leftChild);
+                                      if (current.rightChild !== null) queue.push(current.rightChild);
+                                      queue.shift();
+                                    }
+                                    console.log(values);
+                                  }
+                        </code>
+                    </font>
+                </pre>
+
+        <p align="right">
+            <u><em>Студент групи 301ТН Омельченко В.О</em></u>
+        </p>
+    </body>
+</html>
