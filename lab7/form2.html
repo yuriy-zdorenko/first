@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        table {
+            background-color: #AFEEEE;
+            width: 560px;
+            border: 2px solid #000000;
+            margin: 0 auto;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 7px;
+            text-align: left;
+        }
+
+        th {
+            font-size: 18px;
+            color: red;
+            text-align: center;
+        }
+
+        input, ol {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 14px);
+            margin: 0;
+        }
+
+        input[type="reset"],
+        input[type="submit"] {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="form2.html" target="_blank">
+        <table cellspacing="4" cellpadding="7" bordercolorlight="#00CED1" bordercolordark="#000000">
+            <tr>
+                <th colspan="3">Анкета</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Прізвище</td>
+                <td><input type="text" name="surname" maxlength="50"></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Ім'я, по батькові</td>
+                <td><input type="text" name="name" maxlength="50"></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Число і рік народження</td>
+                <td><input type="text" name="date_of_birth" maxlength="50"></td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Домашня адреса</td>
+                <td><input type="text" name="addresses" maxlength="50"></td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Місце навчання (роботи)</td>
+                <td><input type="text" name="study_or_work" maxlength="50"></td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Домашній (робочій) телефон</td>
+                <td><input type="text" name="phone_number" maxlength="50"></td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td>E-mail</td>
+                <td><input type="text" name="mail" maxlength="50"></td>
+            </tr>
+            <tr valign="top">
+                <td>8.</td>
+                <td>Область наукових інтересів</td>
+                <td>
+                    <ol>
+                        <li><input type="text" name="in1" maxlength="50"></li>
+                        <li><input type="text" name="in2" maxlength="50"></li>
+                        <li><input type="text" name="in3" maxlength="50"></li>
+                        <li><input type="text" name="in4" maxlength="50"></li>
+                        <li><input type="text" name="in5" maxlength="50"></li>
+                        <li><input type="text" name="in6" maxlength="50"></li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button type="reset">Відмінити введення</button><br><br>
+                    <button type="submit">Надіслати дані та перейти до 2 етапу реєстрації</button><br><br>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
