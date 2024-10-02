@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- React CDN links -->
+    <script src="https://cdn.jsdelivr.net/npm/react@17/umd/react.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Babel for JSX -->
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+
+    <!-- Your React component -->
+    <script type="text/babel">
+        // Function component
+        function HobbyComponent() {
+            return (
+                <div>
+                    <h1>My Hobby</h1>
+                    <p>I enjoy cycling in my free time.</p>
+                </div>
+            );
+        }
+
+        // Render the component
+        ReactDOM.render(<HobbyComponent />, document.getElementById('root'));
+    </script>
+</body>
+</html>

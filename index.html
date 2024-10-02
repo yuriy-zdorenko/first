@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React CDN Example</title>
+    <!-- Підключення React і ReactDOM через CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Підключення Babel через CDN для трансляції JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        #root {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class HobbyClassComponent extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <h1>Моє хоббі</h1>
+                        <p>Я люблю займатися риболовлею.</p>
+                    </div>
+                );
+            }
+        }
+
+        function HobbyFunctionComponent() {
+            return (
+                <div>
+                    <h1>Моє хоббі</h1>
+                    <p>Я люблю займатися риболовлею.</p>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<HobbyClassComponent />, document.getElementById('root'));
+    </script>
+</body>
+</html>
