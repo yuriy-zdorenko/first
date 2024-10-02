@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Веб сторінка лабораторної роботи №1">
+    <meta name="keywords" content="Про себе, Моє хобі, Веб-Програмування">
+    <title>Лабораторна робота №1</title>
+</head>
+
+<body bgcolor="#f0f0f0" text="#333333">
+
+    <!-- Розділ "Про себе" -->
+    <h1 align="center">
+        <font color="#008080" size="7">Про себе</font>
+    </h1>
+    <p align="justify">
+        Вітаю! Мене звати Олександр, я студент групи <b>101-пТК</b>. Люблю <u>програмувати</u> та заробляю цим на
+        <i>життя</i>.
+    <p align="justify">
+        Обожнюю <b><u>ходити в гори</u></b>. Щороку з друзями проходимо <i><u>наві маршрути</u></i>, піднімаючись в гори
+        на декілька ночей з палатками.
+    </p>
+
+    <!-- Розділ "Моє хобі" -->
+    <h1 align="center">
+        <font color="#008080" size="7">Моє хобі</font>
+    </h1>
+    <h2 align="center">
+        <font color="#004080" size="5">Програмування</font>
+    </h2>
+    <p align="justify">
+        Моя улюблена мова програмування - <b><u>C#</u></b>. Приклад реалізації класу Retry та його статичних методів для <i>синхронного</i>
+        та <u>асинхронного</u> виконання, мовою <i><u>C#</u></i>:
+    </p>
+    <hr>
+    <pre>
+namespace MyProgram.Common.Utilities
+{ 
+    public static class Retry
+    {
+        public static void Do(Action action, TimeSpan retryInterval, int maxAttemptCount = 3)
+        {
+            var exceptions = new List<Exception>();
+            for (int attempted = 0; attempted < maxAttemptCount; attempted++)
+            {
+                try
+                {
+                    if (attempted > 0)
+                    {
+                        Thread.Sleep(retryInterval);
+                    }
+                    action();
+                    return;
+                }
+                catch (Exception ex)
+                {
+                    exceptions.Add(ex);
+                }
+            }
+            throw new AggregateException(exceptions);
+        }
+
+        public static async Task DoAsync(Func<Task> action, TimeSpan retryInterval, int maxAttemptCount = 3)
+        {
+            var exceptions = new List<Exception>();
+            for (int attempted = 0; attempted < maxAttemptCount; attempted++)
+            {
+                try
+                {
+                    if (attempted > 0)
+                    {
+                        Thread.Sleep(retryInterval);
+                    }
+                    await action();
+                    return;
+                }
+                catch (Exception ex)
+                {
+                    exceptions.Add(ex);
+                }
+            }
+            throw new AggregateException(exceptions);
+        }
+
+        public static async Task<T> DoAsync<T>(Func<Task<T>> action, TimeSpan retryInterval, int maxAttemptCount = 3)
+        {
+            var exceptions = new List<Exception>();
+            for (int attempted = 0; attempted < maxAttemptCount; attempted++)
+            {
+                try
+                {
+                    if (attempted > 0)
+                    {
+                        Thread.Sleep(retryInterval);
+                    }
+                    return await action();
+                }
+                catch (Exception ex)
+                {
+                    exceptions.Add(ex);
+                }
+            }
+            throw new AggregateException(exceptions);
+        }
+    }
+}
+
+        </pre>
+        <hr>
+
+    <!-- Підпис -->
+    <p align="right">
+        <u><i><b>Студент групи 101-пТК Клімач О.П.</b></i></u>
+    </p>
+
+</body>
+
+</html>
