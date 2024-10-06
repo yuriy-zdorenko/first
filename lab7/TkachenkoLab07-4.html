@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Замовлення на товар</title>
+</head>
+<!-- Додавання таблиці -->
+<body>
+    <h2>Форма замовлення на товар</h2>
+
+<!-- <form> – тег для створення форми, з атрибутами action (URL для обробки даних)
+та method="POST" (вказує метод відправки) -->
+    <form action="submit_order.php" method="POST">
+        <!-- Поле вводу номера банківського рахунку -->
+        <label for="account-number">Номер банківського рахунку:</label>
+        <input type="text" id="account-number" name="account-number" required><br><br>
+<!-- <label> – тег для опису поля форми, пов'язаний з відповідним полем за допомогою атрибута for. -->
+        <!-- Поле вводу особистого номера користувача -->
+        <label for="user-id">Особистий номер користувача:</label>
+        <input type="text" id="user-id" name="user-id" required><br><br>
+
+        <!-- Список товарів -->
+        <label for="products">Виберіть товар(и):</label><br>
+        <select id="products" name="products[]" multiple>
+<!-- <option> – елементи списку товарів. -->
+            <option value="product1">Товар 1</option>
+            <option value="product2">Товар 2</option>
+            <option value="product3">Товар 3</option>
+            <option value="product4">Товар 4</option>
+        </select><br><br>
+<!-- <select> – створює випадаючий список, атрибут multiple дозволяє вибрати кілька варіантів -->
+
+        <!-- Поле вводу коментарів -->
+        <label for="comments">Ваші коментарі:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+<!-- <textarea> – поле для введення довільних текстових коментарів -->
+
+        <!-- Вибір способу оплати -->
+        <label for="payment-method">Виберіть вид оплати:</label><br>
+        <input type="radio" id="cash" name="payment-method" value="cash">
+        <label for="cash">Готівковий розрахунок</label><br>
+        <input type="radio" id="non-cash" name="payment-method" value="non-cash">
+        <label for="non-cash">Безготівковий розрахунок</label><br><br>
+<!-- <input type="radio"> – створює радіокнопки для вибору одного варіанту. -->
+<!-- <input type="checkbox"> – прапорці для вибору кількох додаткових опцій.-->
+<!-- <input type="submit"> – кнопка для відправки форми. -->
+
+        <!-- Додаткова інформація -->
+        <label>Яку додаткову інформацію ви хочете отримати:</label><br>
+        <input type="checkbox" id="balance" name="additional-info" value="balance">
+        <label for="balance">Дані про залишки на рахунку</label><br>
+        <input type="checkbox" id="payments" name="additional-info" value="payments">
+        <label for="payments">Список останніх виплат по рахунку</label><br><br>
+
+        <!-- Кнопка відправки форми -->
+        <input type="submit" value="Надіслати замовлення">
+    </form>
+</body>
+</html>

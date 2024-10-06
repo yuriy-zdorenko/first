@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Сенсорне зображення</title>
+    <!-- tooltip - це id в джаве (в даному випадку індифікує спливаючий текст) -->
+    <style>
+        .tooltip {
+            position: absolute;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Курсор на область зображення</h1>
+
+    <img src="image/vodopad.jpg" alt="Зображення" usemap="#image-map" style="max-width:100%;">
+    <!-- alt альтернативний текст для області, який описує її -->
+
+    <map name="image-map">
+        <area shape="rect" coords="34,44,270,350"
+              alt="Область зображення" onmouseover="showTooltip
+                (event, 'Текст для області зображення')" onmouseout="hideTooltip()">
+    </map>
+    <!-- onmouseover: JavaScript-функція, яка викликається, коли курсор наводиться на область -->
+    <!-- onmouseout: JavaScript-функція, яка викликається, коли курсор виходить з області -->
+
+    <div id="tooltip" class="tooltip"></div>
+
+    <script>const tooltip = document.getElementById('tooltip');
+
+        function showTooltip(event, text) {
+            tooltip.textContent = text;
+            tooltip.style.top = event.pageY + 'px';
+            tooltip.style.left = event.pageX + 'px';
+            tooltip.style.visibility = 'visible';
+        }
+
+        function hideTooltip() {
+            tooltip.style.visibility = 'hidden';
+        }</script>
+    <!-- showTooltip: Викликається, коли курсор наводиться на область, показує спливаючий текст -->
+    <!-- hideTooltip: Викликається, коли курсор виходить з області, приховує спливаючий текст -->
+
+</body>
+</html>

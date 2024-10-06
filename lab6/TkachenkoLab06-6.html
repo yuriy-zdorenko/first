@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Мої друзі</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .friend {
+            margin: 20px 0;
+        }
+
+            .friend img {
+                width: 150px;
+                height: 150px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Мої друзі - Мої одногрупники</h1>
+
+    <!-- onmouseover: JavaScript-функція, яка викликається, коли курсор наводиться на область -->
+    <!-- onmouseout: JavaScript-функція, яка викликається, коли курсор виходить з області -->
+    <div class="friend" onmouseover="showTooltip(event, 'Це Роман. Він любить індивідуальний графік.')" onmouseout="hideTooltip()">
+        <img src="image/rom.jpg" alt="Роман">
+        <p>Роман</p>
+    </div>
+
+    <!-- friend: CSS-клас для стилізації блоків з інформацією про друзів -->
+    <!-- .tooltip: CSS-клас для спливаючого вікна, яке показує додаткову інформацію про друга.
+          Стиль display: none ховає його за замовчуванням. -->
+
+    <div class="friend" onmouseover="showTooltip(event, 'Це Артем. Він захоплюється спортом.')" onmouseout="hideTooltip()">
+        <img src="image/art.jpg" alt="Артем">
+        <p>Артем</p>
+    </div>
+
+    <div class="friend" onmouseover="showTooltip(event, 'Це Дмитро. Він полюбляє керувати.')" onmouseout="hideTooltip()">
+        <img src="image/vod.jpg" alt="Дмитро">
+        <p>Дмитро</p>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>function showTooltip(event, text) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.innerText = text;
+            tooltip.style.display = 'block';
+            tooltip.style.left = event.pageX + 'px';
+            tooltip.style.top = event.pageY + 'px';
+        }
+
+        function hideTooltip() {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.style.display = 'none';
+        }</script>
+    <!-- showTooltip: Викликається, коли курсор наводиться на область, показує спливаючий текст -->
+    <!-- hideTooltip: Викликається, коли курсор виходить з області, приховує спливаючий текст -->
+
+</body>
+</html>
