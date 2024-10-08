@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мої одногрупники</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            display: inline-block;
+            margin: 20px;
+        }
+        img {
+            width: 60%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .tooltip {
+            position: absolute;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий фон */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+        .hotspot {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.0);
+        }
+        .hotspot:hover + .tooltip {
+            display: block;
+        }
+
+        /* Гарячі області для кожної людини */
+        #andriy {
+            top: 51%;
+            left: 26%;
+            width: 12%;
+            height: 39%;
+        }
+        #oleksandr {
+            top: 51%;
+            left: 35%;
+            width: 12%;
+            height: 40%;
+        }
+        #artem {
+            top: 51%;
+            left: 45%;
+            width: 13%;
+            height: 39%;
+        }
+        #yurii {
+            top: 51%;
+            left: 55%;
+            width: 12%;
+            height: 39%;
+        }
+
+        /* Позиціонування для кожної підказки — знизу */
+        #tooltip-andriy {
+            top: 45%;
+            left: 15%;
+        }
+        #tooltip-oleksandr {
+            top: 45%;
+            left: 35%;
+        }
+        #tooltip-artem {
+            top: 45%;
+            left: 55%;
+        }
+        #tooltip-yurii {
+            top: 45%;
+            left: 75%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Мої одногрупники</h1>
+
+    <div class="container">
+        <!-- Групове фото -->
+        <img src="group-photo.jpg" alt="Групове фото">
+
+        <!-- Гарячі області для кожної людини -->
+        <div id="andriy" class="hotspot"></div>
+        <div id="tooltip-andriy" class="tooltip">Андрій Прокудін<br>Штрихкод</div>
+
+        <div id="oleksandr" class="hotspot"></div>
+        <div id="tooltip-oleksandr" class="tooltip">Олександр Тараненко<br>Вивчає Linux та займається пайкою</div>
+
+        <div id="artem" class="hotspot"></div>
+        <div id="tooltip-artem" class="tooltip">Артем Зубченко<br>Вивчає архітектуру комп'ютерів </div>
+
+        <div id="yurii" class="hotspot"></div>
+        <div id="tooltip-yurii" class="tooltip">Юрій Корнієнко<br>Виготовляє речі з дерева та металу</div>
+    </div>
+
+</body>
+</html>

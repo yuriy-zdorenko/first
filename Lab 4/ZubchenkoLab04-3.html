@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вертикальний рух тексту</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: space-evenly;
+            background-color: #f0f0f0;
+        }
+
+        .row {
+            position: relative;
+            height: 50px;
+            overflow: hidden;
+            font-size: 24px;
+            color: rgb(0, 0, 0);
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Фонові кольори для кожного рядка */
+        .row:nth-child(1) { background-color: #4CAF50; }
+        .row:nth-child(2) { background-color: #2196F3; }
+        .row:nth-child(3) { background-color: #FF5722; }
+        .row:nth-child(4) { background-color: #FFC107; }
+        .row:nth-child(5) { background-color: #9C27B0; }
+
+        /* Анімація коливання */
+        @keyframes oscillate {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Анімація знизу догори */
+        @keyframes bottomToTop {
+            0% { top: 100%; }
+            100% { top: -50px; }
+        }
+
+        /* Анімація згори донизу з зупинкою */
+        @keyframes topToBottomStop {
+            0% { top: -50px; }
+            90% { top: 100%; }
+            100% { top: 100%; }
+        }
+
+        /* Анімація для затримки */
+        @keyframes delayed1 {
+            0% { top: 100%; }
+            100% { top: -50px; }
+        }
+
+        @keyframes delayed2 {
+            0% { top: 100%; }
+            50% { top: 50%; }
+            100% { top: -50px; }
+        }
+
+        /* Застосування анімації до кожного рядка */
+        .row:nth-child(1) .text {
+            animation: oscillate 1s infinite;
+        }
+
+        .row:nth-child(2) img {
+            position: absolute;
+            animation: bottomToTop 5s linear infinite;
+            width: auto; /* Адаптуйте ширину за потреби */
+            height: 50px; /* Висота, що відповідає рядку */
+        }
+
+        .row:nth-child(3) img {
+            position: absolute;
+            animation: topToBottomStop 5s linear infinite;
+            width: auto; /* Адаптуйте ширину за потреби */
+            height: 50px; /* Висота, що відповідає рядку */
+        }
+
+        .row:nth-child(4) .text {
+            position: absolute;
+            animation: delayed1 6s linear infinite;
+        }
+
+        .row:nth-child(5) .text {
+            position: absolute;
+            animation: delayed2 6s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="row"><div class="text">Коливання тексту</div></div>
+    <div class="row"><img src="Photo1.jpg" alt="Photo 1"></div>
+    <div class="row"><img src="Photo2.jpg" alt="Photo 2"></div>
+    <div class="row"><div class="text">Затримка 1</div></div>
+    <div class="row"><div class="text">Затримка 2</div></div>
+</body>
+</html>
