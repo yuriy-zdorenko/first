@@ -1,0 +1,90 @@
+/* Загальний стиль для всіх рядків */
+.row {
+    width: 100%;
+    height: 100px; /* Висота кожного рядка */
+    overflow: hidden;
+    position: relative;
+    font-size: 24px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Стиль для тексту та зображень всередині рядка */
+.text, .images {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+}
+
+/* 1. Коливання тексту та зображень у рядку */
+.swinging {
+    background-color: lightcoral;
+}
+
+.swinging .text, .swinging .images {
+    animation: swingVertically 3s infinite alternate;
+}
+
+@keyframes swingVertically {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(-10px); }
+}
+
+/* 2. Послідовність рисунків пробігає знизу вгору */
+.bottom-to-top {
+    background-color: lightblue;
+}
+
+.bottom-to-top .images {
+    animation: moveBottomToTop 10s linear infinite;
+}
+
+@keyframes moveBottomToTop {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+}
+
+/* 3. Послідовність рисунків пробігає згори до низу із зупинкою */
+.top-to-bottom {
+    background-color: lightgreen;
+}
+
+.top-to-bottom .images {
+    animation: moveTopToBottom 5s linear forwards;
+}
+
+@keyframes moveTopToBottom {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+/* 4. Перший рядок із запізненням */
+.delay1 {
+    background-color: lightgoldenrodyellow;
+}
+
+.delay1 .text {
+    animation: delayedMove1 6s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes delayedMove1 {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+}
+
+/* 5. Другий рядок із іншим режимом запізнення */
+.delay2 {
+    background-color: lightpink;
+}
+
+.delay2 .text {
+    animation: delayedMove2 8s linear infinite;
+    animation-delay: 4s;
+}
+
+@keyframes delayedMove2 {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+}
