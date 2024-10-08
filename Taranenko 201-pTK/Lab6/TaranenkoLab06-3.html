@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Батьківщина - Полтава</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2e8b57;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .image-container img {
+            border: 2px solid #2e8b57;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Полтава — перлина України</h1>
+<p>Ласкаво просимо на сторінку, присвячену Полтаві — одному з найкрасивіших міст України, багатому на історичні події та визначні місця.</p>
+
+<!-- Перша картинка з картою -->
+<div class="image-container">
+    <img src="image/monument_slava.jpg" width="400" height="300" usemap="#map-slava" alt="Монумент Слави">
+    <map name="map-slava">
+        <area shape="rect" coords="0,0,400,150" href="#" title="Монумент Слави: символ перемоги у Полтавській битві">
+        <area shape="rect" coords="0,150,400,300" href="#" title="Головний символ міста, розташований у серці Полтави">
+    </map>
+
+    <!-- Друга картинка з картою -->
+    <img src="image/korpusniy_park.jpg" width="400" height="300" usemap="#map-park" alt="Корпусний парк">
+    <map name="map-park">
+        <area shape="rect" coords="0,0,400,150" href="#" title="Корпусний парк: головний парк Полтави">
+        <area shape="rect" coords="0,150,400,300" href="#" title="Місце відпочинку полтавців та гостей міста">
+    </map>
+
+    <!-- Третя картинка з картою -->
+    <img src="image/poltava_theatre.jpg" width="400" height="300" usemap="#map-theatre" alt="Полтавський театр">
+    <map name="map-theatre">
+        <area shape="rect" coords="0,0,400,150" href="#" title="Полтавський академічний театр імені Гоголя">
+        <area shape="rect" coords="0,150,400,300" href="#" title="Театр, де проходять найкращі вистави для всієї родини">
+    </map>
+</div>
+
+</body>
+</html>

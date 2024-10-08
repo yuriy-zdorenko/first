@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мої друзі</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .friend {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .friend img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .friend-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .friend-info h3 {
+            margin: 0;
+            color: #333;
+        }
+        .friend-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .photo img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Мої Друзі</h1>
+</header>
+
+<nav>
+    <a href="#friend1" title="Вивчає Лилункс, в пошуках роботи">Олександр Тараненко</a>
+    <a href="#friend2" title="Любить по малювати, в пошуках роботи">Артем Зубченко</a>
+</nav>
+
+
+<section class="photo">
+    <h2>Фото з друзями</h2>
+    <!-- Інтерактивне фото -->
+    <img src="image/ГРУППА-77.jpg" usemap="#image-map" alt="Фото з друзями">
+
+    <!-- Карта для інтерактивного зображення -->
+    <map name="image-map">
+        <area target="" alt="Олександр" title="Олександр" href="#friend1" coords="1120,1098,1019,1206,997,1307,988,1377,991,1462,1038,1532,1000,1621,889,1684,734,1750,624,1867,529,2032,389,2273,380,2396,462,2548,554,2656,557,2732,662,2814,665,2956,703,3089,750,3270,769,3399,813,3640,788,3846,658,4150,506,4428,408,4764,430,4916,570,4969,741,4776,826,4599,937,4666,1029,4647,1127,4444,1200,4314,1193,3548,1323,3314,1431,2978,1443,2757,1437,2532,1491,2282,1560,2010,1560,1890,1374,1519,1415,1371,1390,1187,1263,1089,1174,1067" shape="poly"></area>
+        <area target="" alt="Артем" title="Артем" href="#" coords="1833,975,1747,1152,1747,1342,1598,1424,1450,1437,1462,1665,1526,1807,1586,1988,1611,2124,1617,2542,1586,2792,1649,3118,1744,3792,1760,4245,1716,4545,1798,4643,2064,4700,2377,4773,2526,4767,2497,4485,2456,4162,2510,3694,2472,3292,2637,3073,2697,2782,2770,2488,2687,1912,2554,1573,2244,1462,2238,1342,2276,1228,2231,1124,2187,1003,2035,915,1921,918" shape="poly"></area>
