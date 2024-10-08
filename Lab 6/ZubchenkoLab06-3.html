@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Батьківщина - Полтава</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .image-container {
+            position: relative;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .image-container .text-overlay {
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .image-container:hover .text-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Моя Батьківщина - Полтава</h1>
+<div class="description">
+    Полтава — одне з найстаріших міст України, відоме своєю багатою історією та культурною спадщиною. 
+    Місто має особливе значення завдяки своїм численним архітектурним пам'яткам та мальовничим краєвидам. 
+    Полтава також є місцем важливих історичних подій, таких як Полтавська битва. Тут можна відвідати 
+    унікальні музеї, красиві парки та пам'ятки, які роблять це місто особливим для кожного мешканця і туриста.
+</div>
+
+<div class="gallery">
+    <div class="image-container">
+        <img src="poltava_photo1.jpg" alt="Краєвид Полтави">
+        <div class="text-overlay">Краєвид Полтави — мальовнича природа</div>
+    </div>
+    <div class="image-container">
+        <img src="poltava_photo2.jpg" alt="Біла Альтанка">
+        <div class="text-overlay">Біла Альтанка — символ Полтави</div>
+    </div>
+    <div class="image-container">
+        <img src="poltava_photo3.jpg" alt="Пам'ятник Слави">
+        <div class="text-overlay">Пам'ятник Слави — історична пам'ятка</div>
+    </div>
+</div>
+
+</body>
+</html>
