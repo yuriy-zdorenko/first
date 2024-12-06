@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Лабораторна робота 4.3 - Вертикальні рядки</title>
+</head>
+<body text="#FFFFFF">
+
+    <!-- Рядок 1: текст та рисунки коливаються -->
+    <marquee direction="up" height="100" behavior="alternate" bgcolor="#FFD700">
+        <font color="#8B0000" face="Verdana" size="4"><b>Рядок 1: Текст коливається</b></font>
+        <br>
+        <img src="dog.jpg">
+    </marquee>
+
+    <!-- Рядок 2: рисунки пробігають знизу до гори -->
+    <marquee direction="up" height="100" bgcolor="#00CED1" scrollamount="5">
+        <img src="dog.jpg">
+        <img src="cookie.jpg">
+    </marquee>
+
+    <!-- Рядок 3: рисунки пробігають згори до низу і зупиняються -->
+    <marquee direction="down" height="100" bgcolor="#7CFC00" scrollamount="5" loop="1">
+        <img src="cookie.jpg">
+        <img src="dog.jpg">
+    </marquee>
+
+    <!-- Рядок 4: текст із запізненням 1 -->
+    <marquee direction="up" height="100" bgcolor="#FF69B4" scrollamount="2">
+        <font color="#2F4F4F" face="Georgia" size="4"><b>Рядок 4: Текст повільно рухається</b></font>
+    </marquee>
+
+    <!-- Рядок 5: текст із запізненням 2 -->
+    <marquee direction="up" height="100" bgcolor="#FFA07A" scrollamount="8">
+        <font color="#DC143C" face="Courier New" size="4"><b>Рядок 5: Текст рухається швидше</b></font>
+    </marquee>
+
+</body>
+</html>
