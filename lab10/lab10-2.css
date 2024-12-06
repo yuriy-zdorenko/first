@@ -1,0 +1,19 @@
+/* Стилі для блоків на основі grid */
+.flex-gray {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3px;
+}
+
+/* Для екранів, де ширина більша ніж 1200px */
+@media (min-width: 1200px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .block2 {
+        width: 100%;
+        height: auto;
+    }
+}

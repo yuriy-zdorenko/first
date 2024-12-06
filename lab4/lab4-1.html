@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Завдання 4.1: Горизонтальний рух тексту">
+    <title>Горизонтальний рух тексту</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .marquee {
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+        }
+        .marquee-text {
+            position: absolute;
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+            line-height: 50px;
+            white-space: nowrap;
+        }
+        /* Рядок 1 - текст коливається */
+        .row1 {
+            background-color: #FFDDC1;
+            animation: oscillate 3s infinite alternate;
+        }
+        @keyframes oscillate {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(30px); }
+        }
+        /* Рядок 2 - текст біжить справа наліво */
+        .row2 {
+            background-color: #C1FFD7;
+            animation: moveLeft 5s linear infinite;
+        }
+        @keyframes moveLeft {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        /* Рядок 3 - текст біжить зліва направо та зупиняється */
+        .row3 {
+            background-color: #C1D4FF;
+            animation: moveRightStop 6s forwards;
+        }
+        @keyframes moveRightStop {
+            0% { transform: translateX(-100%); }
+            80% { transform: translateX(0); }
+            100% { transform: translateX(0); }
+        }
+        /* Рядки 4 і 5 - з різними режимами запізнення */
+        .row4, .row5 {
+            background-color: #FFD1DC;
+        }
+        .row4 {
+            animation: moveWithDelay 8s linear infinite;
+        }
+        .row5 {
+            animation: moveWithDelay 10s linear infinite;
+        }
+        @keyframes moveWithDelay {
+            0% { transform: translateX(100%); }
+            50% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee row1">
+        <div class="marquee-text">Рядок 1: Текст коливається з боку в бік</div>
+    </div>
+    <div class="marquee row2">
+        <div class="marquee-text">Рядок 2: Текст пробігає справа наліво та з'являється знову</div>
+    </div>
+    <div class="marquee row3">
+        <div class="marquee-text">Рядок 3: Текст біжить зліва направо та зупиняється</div>
+    </div>
+    <div class="marquee row4">
+        <div class="marquee-text">Рядок 4: Текст із повільним запізненням</div>
+    </div>
+    <div class="marquee row5">
+        <div class="marquee-text">Рядок 5: Текст із довшим запізненням</div>
+    </div>
+</body>
+</html>

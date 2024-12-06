@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Галерея фотографій студента групи 303-ТН">
+    <title>Галерея фотографій</title>
+    <style>
+        body {
+            background-color: #F8F8FF;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #4682B4;
+            margin-top: 20px;
+            font-family: 'Georgia', serif;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .photo {
+            text-align: center;
+            max-width: 200px;
+        }
+        img {
+            border: 3px solid #4682B4;
+            border-radius: 10px;
+            width: 200px;
+            height: auto;
+        }
+        .caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #4682B4;
+            color: #FFF;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Галерея фотографій</h1>
+    <div class="gallery">
+        <div class="photo">
+            <img src=img\mountain.jpg alt="Пейзаж з горами" border="3">
+            <p class="caption">Пейзаж з горами</p>
+        </div>
+        <div class="photo">
+            <img src=img\sun.jpg alt="Захід сонця над морем" border="3">
+            <p class="caption">Захід сонця над морем</p>
+        </div>
+        <div class="photo">
+            <img src=img\garden.jpg alt="Квітучий сад навесні" border="3">
+            <p class="caption">Квітучий сад навесні</p>
+        </div>
+        <div class="photo">
+            <img src=img\city.jpg alt="Міський пейзаж вночі" border="3">
+            <p class="caption">Міський пейзаж вночі</p>
+        </div>
+        <div class="photo">
+            <img src=img\forest.jpg alt="Осінній ліс у тумані" border="3">
+            <p class="caption">Осінній ліс у тумані</p>
+        </div>
+    </div>
+    <footer>
+        Студент групи 303-ТН – Галбен Р.Р.
+    </footer>
+</body>
+</html>

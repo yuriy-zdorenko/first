@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>Галбен Ростислав Русланович 303-ТН - Лабораторна робота №7</title>
+        <meta name="keywords" content="форма замовлення, HTML">
+        <meta name="description" content="Форма замовлення товарів з різними варіантами оплати та коментарями">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #E6E6FA;
+                margin: 20px;
+            }
+
+            h1 {
+                text-align: center;
+                color: #4B0082;
+            }
+
+            form {
+                max-width: 600px;
+                margin: 0 auto;
+                background: #FFFFFF;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            label {
+                font-weight: bold;
+                display: block;
+                margin-top: 10px;
+                color: #333;
+            }
+
+            input[type="text"], select, textarea {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                margin-bottom: 15px;
+                border: 1px solid #CCCCCC;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+                background-color: #4B0082;
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #6A5ACD;
+            }
+
+            input[type="checkbox"], input[type="radio"] {
+                margin-right: 5px;
+            }
+
+            textarea {
+                resize: vertical;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Форма замовлення на товар</h1>
+
+        <form action="form.php" method="post">
+            <label for="bankAccount">Номер банківського рахунку:</label>
+            <input type="text" id="bankAccount" name="bankAccount" placeholder="Введіть номер рахунку" required>
+
+            <label for="userId">Особистий номер користувача:</label>
+            <input type="text" id="userId" name="userId" placeholder="Введіть номер користувача" required>
+
+            <label for="products">Оберіть товари:</label>
+            <select id="products" name="products" multiple required>
+                <option value="product1">Товар 1</option>
+                <option value="product2">Товар 2</option>
+                <option value="product3">Товар 3</option>
+                <option value="product4">Товар 4</option>
+            </select>
+
+            <label for="comments">Коментарі:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Введіть ваші коментарі"></textarea>
+
+            <label>Вид оплати:</label>
+            <input type="radio" id="cash" name="paymentType" value="cash" required>
+            <label for="cash">Готівковий</label>
+            <br>
+            <input type="radio" id="nonCash" name="paymentType" value="nonCash">
+            <label for="nonCash">Безготівковий</label>
+
+            <label>Додаткова інформація:</label>
+            <input type="checkbox" id="balance" name="additionalInfo" value="balance">
+            <label for="balance">Дані про залишки на рахунку</label>
+            <br>
+            <input type="checkbox" id="lastPayments" name="additionalInfo" value="lastPayments">
+            <label for="lastPayments">Список останніх виплат по рахунку</label>
+
+            <input type="submit" value="Надіслати">
+        </form>
+    </body>
+</html>

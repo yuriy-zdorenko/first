@@ -1,0 +1,111 @@
+/* Загальні стилі для контейнерів */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.flex-gray {
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+}
+
+/* Стилі для блоків */
+.block1 {
+    background-color: cornflowerblue;
+    width: 100%;
+    height: 200px;
+    border: 1px solid lightgray;
+}
+
+.block2 {
+    background-color: gray;
+    width: 20%;
+    height: 700px;
+    border: 1px solid lightgray;
+}
+
+.block3 {
+    background-color: aqua;
+    width: 50%;
+    height: 200px;
+    border: 1px solid lightgray;
+}
+
+.block4 {
+    background-color: indianred;
+    width: 50%;
+    height: 200px;
+    border: 1px solid lightgray;
+}
+
+.block5 {
+    background-color: orange;
+    width: 50%;
+    height: 500px;
+    border: 1px solid lightgray;
+}
+
+.block6 {
+    background-color: green;
+    width: 100%;
+    height: 300px;
+    border: 1px solid lightgray;
+}
+
+.block7 {
+    background-color: brown;
+    width: 100%;
+    height: 290px;
+    border: 1px solid lightgray;
+}
+
+/* Встановлення стилів для екранів різної ширини */
+
+/* <500px */
+@media (max-width: 499px) {
+    .flex-gray {
+        flex-direction: column;
+    }
+
+    .block2, .block5 {
+        width: 100%;
+        height: auto;
+    }
+
+    .block3, .block4 {
+        width: 100%;
+    }
+}
+
+/* ≥500px */
+@media (min-width: 500px) {
+    .flex-red {
+        display: flex;
+        gap: 3px;
+    }
+}
+
+/* ≥750px */
+@media (min-width: 750px) {
+    .flex-yellow {
+        display: flex;
+    }
+}
+
+/* ≥950px */
+@media (min-width: 950px) {
+    .block2 {
+        width: 25%;
+    }
+}
+
+/* ≥1200px */
+@media (min-width: 1200px) {
+    .flex-gray {
+        display: flex;
+    }
+}

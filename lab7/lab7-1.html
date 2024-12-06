@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Галбен Ростислав 303-ТН - Лабораторна №7</title>
+        <meta name="keywords" content="HTML, форми, веб-розробка">
+        <meta name="description" content="Лабораторна робота №7: використання всіх елементів HTML-форми">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #F8F8FF;
+                color: #333;
+                margin: 20px;
+            }
+            h2 {
+                text-align: center;
+                color: #006400;
+            }
+            form {
+                margin: 20px auto;
+                width: 60%;
+                padding: 20px;
+                border: 2px solid #B0C4DE;
+                border-radius: 10px;
+                background-color: #FAFAFA;
+            }
+            p {
+                margin: 10px 0;
+            }
+            input, select, textarea {
+                margin-left: 10px;
+            }
+            input[type="submit"], input[type="reset"] {
+                margin-top: 15px;
+                padding: 10px 20px;
+                font-size: 16px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            input[type="submit"] {
+                background-color: #228B22;
+                color: white;
+            }
+            input[type="reset"] {
+                background-color: #B22222;
+                color: white;
+            }
+            input[type="file"] {
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Розширена форма HTML</h2>
+        <form action="#">
+            <p>
+                <label for="name">Ваше ім'я:</label>
+                <input id="name" name="name" type="text" maxlength="40" size="40" placeholder="Введіть ваше ім'я">
+            </p>
+
+            <p>
+                <label>Ваша стать:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Чоловіча</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Жіноча</label>
+            </p>
+
+            <p>
+                <label for="year">Ваш курс навчання:</label>
+                <select id="year" name="year">
+                    <option value="1">1 курс</option>
+                    <option value="2">2 курс</option>
+                    <option value="3">3 курс</option>
+                    <option value="4">4 курс</option>
+                    <option value="5">5 курс</option>
+                </select>
+            </p>
+
+            <p>Які предмети вас цікавлять?</p>
+            <p><input type="checkbox" id="algorithms" name="subjects" value="algorithms">
+                <label for="algorithms">Алгоритми</label></p>
+            <p><input type="checkbox" id="oop" name="subjects" value="oop">
+                <label for="oop">Об'єктно-орієнтоване програмування</label></p>
+            <p><input type="checkbox" id="web" name="subjects" value="web">
+                <label for="web">Веб-розробка</label></p>
+            <p><input type="checkbox" id="math" name="subjects" value="math">
+                <label for="math">Математика</label></p>
+
+            <p>
+                <label for="about">Розкажіть про себе:</label><br>
+                <textarea id="about" name="about" rows="6" cols="60" placeholder="Напишіть кілька слів про себе..."></textarea>
+            </p>
+
+            <p>
+                Завантажте своє фото: <input type="file" name="photo" accept="image/*">
+            </p>
+
+            <input type="submit" value="Надіслати">
+            <input type="reset" value="Очистити">
+        </form>
+    </body>
+</html>

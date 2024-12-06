@@ -1,0 +1,62 @@
+/* Загальні стилі для всієї сторінки */
+
+/* Встановлюємо фонове зображення для всього body */
+body {
+    background-image: url('background-image.jpg'); /* Замініть на шлях до вашого зображення */
+    background-size: cover; /* Зображення буде покривати весь екран */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стиль для заголовка 1-го рівня */
+h1 {
+    font-weight: bold;
+    text-align: center;
+    color: darkgreen; /* Визначено колір для заголовка */
+    font-style: normal;
+    margin-top: 20px;
+}
+
+/* Стиль для абзаців */
+p {
+    text-align: justify; /* Вирівнювання тексту по ширині */
+    text-indent: 2%; /* Червоний рядок на початку абзаців */
+    padding-left: 5%;
+    padding-right: 5%;
+    font-style: italic; /* Курсив */
+    font-size: 16px; /* Розмір шрифта */
+}
+
+/* Стиль для зображень */
+img {
+    max-width: 100%; /* Зображення не вийде за межі контейнера */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Центруємо зображення */
+}
+
+/* Оформлення посилань */
+a:link {
+    color: blue; /* Колір для не відвіданих посилань */
+    text-decoration: none; /* Без підкреслення */
+}
+
+a:visited {
+    color: purple; /* Колір для відвіданих посилань */
+}
+
+a:hover {
+    color: red; /* Колір для активних посилань при наведенні */
+    text-decoration: underline; /* Підкреслення при наведенні */
+}
+
+a:active {
+    color: green; /* Колір для активних посилань */
+}
+
+/* Відстані ліворуч та праворуч від тексту */
+.container {
+    margin-left: 15%;
+    margin-right: 15%;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню і інформаційні повідомлення</title>
+    <style>
+        /* Клас для меню */
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            display: flex;
+        }
+
+        .menu li {
+            margin: 0;
+        }
+
+        .menu a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+        }
+
+        /* Клас для невеликих інформаційних повідомлень */
+        .small {
+            font-size: 12px;
+            color: gray;
+            font-style: italic;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li><a href="#home">Головна</a></li>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#services">Послуги</a></li>
+            <li><a href="#contact">Контакти</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <h1>Ласкаво просимо до нашого сайту!</h1>
+        <p>Це приклад сторінки з меню та невеликими інформаційними повідомленнями, оформленими за допомогою CSS-класів.</p>
+    </main>
+
+    <footer>
+        <p class="small">Адреса сторінки: <a href="#">www.halbenrrr@gmail.com</a></p>
+        <p class="small">Автор: Галбен Ростислав, група 303-ТН</p>
+    </footer>
+</body>
+</html>
