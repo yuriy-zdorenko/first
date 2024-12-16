@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Мої фігурні гіперпосилання</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .alt-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <h1>Картирування зображення</h1>
+
+    <!-- Перше зображення (трикутник) -->
+    <div class="image-container">
+        <img src="try.jpg" alt="Про мене" usemap="#triangle-map" />
+        <div class="alt-text">Про мене</div>
+    </div>
+    <map name="triangle-map">
+        <!-- Трикутник -->
+        <area shape="poly" coords="50,50,200,200,50,200" alt="Про мене" href="OkhrimenkoLab06-1.html">
+    </map>
+    <!-- shape визначає форму області -->
+
+    <!-- Друге зображення (коло) -->
+    <div class="image-container">
+        <img src="kolo.jpg" alt="Посилання" usemap="#circle-map" />
+        <div class="alt-text">Посилання</div>
+    </div>
+    <map name="circle-map">
+        <!-- Коло -->
+        <area shape="circle" coords="150,150,100" alt="Посилання" href="OkhrimenkoLab06-1.html">
+    </map>
+    <!-- area - клікабельну область на зображенні -->
+    <!-- Третє зображення (прямокутник) -->
+    <div class="image-container">
+        <img src="pry.jpg" alt="Моя Батьківщина" usemap="#rectangle-map" />
+        <div class="alt-text">Моя Батьківщина</div>
+    </div>
+    <map name="rectangle-map">
+        <!-- Прямокутник -->
+        <area shape="rect" coords="50,50,250,150" alt="Моя Батьківщина" href="OkhrimenkoLab06-3.html">
+    </map>
+    <!-- alt text визначає стиль текст -->
+
+</body>
+</html>

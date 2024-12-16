@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            width: 60%;
+            margin: auto;
+            background-color: #e6f7ff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th {
+            text-align: center;
+            font-size: 24px;
+            padding-bottom: 20px;
+            color: red;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .submit-btns {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+            .submit-btns input {
+                margin: 5px;
+                padding: 10px 20px;
+            }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+    </style>
+<!-- form-container - Це клас для контейнера форми, використовується для стилізації блоку, що містить форму. -->
+<!-- th - Стилі для заголовка форми; td - Стилі для комірок таблиці -->
+<!-- submit-btns - Клас для вирівнювання кнопок (очищення і надсилання); Стилі для самих кнопок у блоці -->
+</head>
+<body>
+    <div class="form-container">
+        <form action="submit.php" method="post">
+<!-- <form action="submit.php" method="post"> - тег, що визначає форму.
+Атрибути action та method визначають куди будуть надіслані дані та яким методом (POST для передачі даних на сервер). -->
+            <table>
+                <tr>
+                    <th colspan="2">Анкета</th>
+                </tr>
+<!-- olspan використовується для об'єднання кількох стовпців -->
+                <tr>
+                    <td>1. Прізвище</td>
+                    <td><input type="text" name="lastname" required></td>
+                </tr>
+<!-- required - вказує, що це поле є обов'язковим для заповнення -->
+                <tr>
+                    <td>2. Ім'я, по батькові</td>
+                    <td><input type="text" name="fullname" required></td>
+                </tr>
+                <tr>
+                    <td>3. Число і рік народження</td>
+                    <td><input type="text" name="birthdate" required></td>
+                </tr>
+                <tr>
+                    <td>4. Домашня адреса</td>
+                    <td><input type="text" name="address" required></td>
+                </tr>
+                <tr>
+                    <td>5. Місце навчання (роботи)</td>
+                    <td><input type="text" name="education_workplace" required></td>
+                </tr>
+                <tr>
+                    <td>6. Домашній (робочий) телефон</td>
+                    <td><input type="text" name="phone" required></td>
+                </tr>
+                <tr>
+                    <td>7. E-mail</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td>8. Область наукових інтересів</td>
+                    <td>
+                        <textarea name="interests" required></textarea>
+                    </td>
+<!-- <textarea> — поле для багаторядкового введення тексту -->
+                </tr>
+                <tr class="submit-btns">
+                    <td colspan="2">
+                        <input type="reset" value="Відмінити введення">
+                        <input type="submit" value="Надіслати дані та перейти до 2 етапу реєстрації">
+                    </td>
+<!-- value визначає початкове значення для елементів форми -->
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

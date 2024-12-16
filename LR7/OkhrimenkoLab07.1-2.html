@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Форма студента</title>
+</head>
+<body>
+    <h2>Форма для студентів</h2>
+    <form action="submit_form.html" method="post" target="_blank">
+<!-- <form> – форма, через який користувачі можуть відправляти дані -->
+<!-- action="submit_form.html" – визначає, куди відправляти форму -->
+<!-- method="post" – метод передачі даних -->
+<!-- target="_blank" – відкриває результат у новому вікні -->
+        <pre>Ваше ім'я: <input name="name" type="text" maxlength="40" size="40" value=""></pre>
+<!-- <pre> – тег для відображення попередньо форматованого тексту -->
+        <pre>Ваша стать:
+        <input type="radio" name="pol" value="male">Чоловіча
+        <input type="radio" name="pol" value="female">Жіноча
+<!-- <input> – поле введення -->
+        </pre>
+        <pre>На якому курсі Ви навчаєтесь?
+<!-- <select> – випадаючий список -->
+        <select name="curs" size="1">
+        <option value="1" selected> Перший </option>
+        <option value="2">Другий</option>
+        <option value="3">Третій</option>
+        <option value="4">Четвертий</option>
+        <option value="5">П'ятий </option>
+            </select>
+<!-- <option> – варіанти в межах випадаючого списку -->
+        </pre>
+        <pre>Які дисципліни ви вивчаєте на курсі?
+        <input type="checkbox" name="web" value="yes" checked> WEB-програмування
+        <input type="checkbox" name="eldinam" value="yes"> Комп`ютерна логіка
+        <input type="checkbox" name="web" value="yes" checked> Англійська мова
+        <input type="checkbox" name="web" value="yes" checked> Програмування
+        </pre>
+        <pre>Напишіть декілька слів про себе: </pre>
+        <textarea name="about" rows="6" cols="60" wrap="off"></textarea>
+        <p>
+ <!-- <textarea> – поле для введення кількох рядків тексту -->
+            <input type="submit" value=" Відіслати дані ">
+            <input type="reset" value=" Очистити форму ">
+        </p>
+ <!-- <input type="submit"> – кнопка для надсилання даних форми -->
+ <!-- <input type="reset"> – кнопка для очищення форми -->
+ <!-- <input type="file"> – поле для завантаження файлу -->
+        <pre>Завантажити файл друга:
+        <input type="file" name="friend" size="50" accept="припустимий тип файлу">
+        </pre>
+    </form>
+</body>
+</html>

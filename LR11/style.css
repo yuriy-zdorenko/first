@@ -1,0 +1,49 @@
+/* База + фон */
+body {
+    background-image: url('back.png');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Стиль для абзаців */
+p {
+    text-align: justify; /* Вирівнювання по ширині */
+    text-indent: 30px; /* Червоний рядок */
+    margin-left: 20px; 
+    margin-right: 20px;
+    font-style: italic; /* Курсив */
+    font-size: 18px;
+}
+
+/* Стиль для заголовків 1 */
+h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #004080; /* Колір заголовка */
+    font-style: normal; /* Деф стиль */
+}
+
+/* Стилі для посилань */
+a:link {
+    color: blue; /* Синій - не переходив за посил */
+}
+
+a:visited {
+    color: purple; /* Фіол - переходив */
+}
+
+a:hover {
+    color: red; /* Чер - при наведенні */
+}
+
+a:active {
+    color: green; /* Колір при переході */
+}
+
+/* Стиль для зображень */
+img {
+    max-width: 100%; /* Авто - фото/підлаштовується під розмір контейнера */
+    height: auto;
+}
