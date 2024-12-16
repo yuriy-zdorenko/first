@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        marquee{
+            height: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-area">
+        <marquee behavior="alternate" direction="up" style="font-size: 20px; color: blue;">
+            Текст коливається вгору та вниз
+        </marquee>
+    </div>
+
+    <div class="text-area">
+        <marquee direction="up" style="font-size: 20px; color: green;">
+            Текст пробігає знизу до гори та з'являється знову
+        </marquee>
+    </div>
+
+    <div class="text-area">
+        <marquee direction="down" scrollamount="10" loop="1" style="font-size: 20px; color: red;">
+            Текст пробігає згори до низу та зупиняється
+        </marquee>
+    </div>
+
+    <div class="text-area">
+        <marquee behavior="scroll" direction="up" scrollamount="5" style="font-size: 20px; color: purple;">
+            Текст з повільним переміщенням вгору
+        </marquee>
+    </div>
+
+    <div class="text-area">
+        <marquee behavior="scroll" direction="down" scrollamount="20" style="font-size: 20px; color: orange;">
+            Текст з швидким переміщенням вниз
+        </marquee>
+    </div>
+</body>
+</html>

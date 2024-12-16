@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Особиста веб-сторінка Владлена Тимошенка.">
+    <meta name="keywords" content="особистий сайт, хобі, програмування">
+    <title>Про мене</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: justify;
+            margin: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #34495e;
+        }
+        .code-block {
+            background-color: #e8e8e8;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-family: "Courier New", Courier, monospace;
+            white-space: pre-wrap;
+        }
+        .signature {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1><li id="start" style="list-style: none;"><a href="TymoshenkoLab05-3.html">Мої гіперпосилання</a></li></h1>
+    <br>
+    <h1>Про себе</h1>
+    <p>Мене звати Тимошенко Владлен. Мені 18 років. Навчаюсь я в політехніці імені Юрія Кондратюка. Все життя займаюся спортом. Майже все своє життя я прожив у іншому місті, в Кропивницькому і був дуже радий переїхати у Полтаву. На даний момент я працюю, вивчаю мови програмування, займаюсь спортом та й таке інше. Хотів би мати більше часу для усього, але це не можливо. Зараз розповім про своє хобі.</p>
+
+    <h1>Моє хобі</h1>
+    <h2>Програмування</h2>
+    <p>Я вчу мову програмування JavaScript. Додаю невеличкий код до цього документу.</p>
+    <div class="code-block">
+        class CarClass {
+            constructor(nameOfCar, speed){
+                this.nameOfCar = nameOfCar;
+                this.speed = speed;
+            }
+
+            accelerate(){
+                this.speed += 10;
+                console.log(`${this.nameOfCar} is going at ${this.speed}km/h.`);
+                return this;
+            }
+
+            break(){
+                this.speed -= 5;
+                console.log(`${this.nameOfCar} is going at ${this.speed}km/h.`);
+                return this;
+            }
+        };
+    </div>
+
+    <p class="signature">Студент групи 301-ТН, Тимошенко В.О.</p>
+    <p>Контактна інформація: <br>
+    Телефон: 0509519264 <br>
+    Email: <a href="mailto: deliverysmash@gmail.com"> deliverysmash@gmail.com</a></p>
+    <a href="#start">На початок сторінки</a>
+</body>
+</html>

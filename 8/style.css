@@ -1,0 +1,20 @@
+.first{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #eee;
+}
+
+.second{
+    font-style: italic;
+    color: #eee;
+    text-decoration: underline;
+    background-color: blue;
+}
+
+.third{
+    text-align: center;
+    text-indent: 10%;
+    text-transform: capitalize;
+    background-color: yellow;
+}

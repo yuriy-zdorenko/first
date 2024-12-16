@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замовлення на товар</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input[type="text"], input[type="tel"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .payment-options, .additional-info {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form action="">
+        <h2>Замовлення на товар</h2>
+        <label for="account-number">Номер банківського рахунку:</label>
+        <input type="text" id="account-number" required>
+
+        <label for="user-id">Особистий номер користувача:</label>
+        <input type="text" id="user-id" required>
+
+        <label for="products">Список товарів:</label>
+        <select id="products" name="products" multiple required>
+            <option value="товар1">Товар 1</option>
+            <option value="товар2">Товар 2</option>
+            <option value="товар3">Товар 3</option>
+            <option value="товар4">Товар 4</option>
+        </select>
+
+        <label for="comments">Коментарі:</label>
+        <textarea id="comments" rows="4"></textarea>
+
+        <div class="payment-options">
+            <label>Вид оплати:</label>
+            <label><input type="radio" name="payment" value="готівка" required> Готівка</label>
+            <label><input type="radio" name="payment" value="безготівковий"> Безготівковий</label>
+        </div>
+
+        <div class="additional-info">
+            <label><input type="checkbox" name="account-balance"> Дані про залишки на рахунку</label><br>
+            <label><input type="checkbox" name="last-payments"> Список останніх виплат по рахунку</label>
+        </div>
+
+        <button type="submit">Надіслати замовлення</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <style>
+        .form-container {
+            width: 500px;
+            border: 2px solid #000;
+            padding: 15px;
+            margin: 0 auto;
+            background-color: lightblue;
+            border-spacing: 5px;
+            display: table;
+        }
+        h2 {
+            text-align: center;
+            color: red;
+            margin: 0;
+            padding: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate; 
+            border-spacing: 5px; 
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            width: 10%;
+            text-align: center;
+        }
+        td {
+            width: 45%;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        .interest-table {
+            width: 100%;
+            border-collapse: collapse; 
+            margin-top: 5px; 
+        }
+        .interest-table th, .interest-table td {
+            border: none; 
+            padding: 2px;
+        }
+        .interest-table input[type="text"] {
+            padding: 5px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form action="">
+        <table>
+            <tr>
+                <td colspan="3">
+                    <h2>Анкета</h2>
+                </td>
+            </tr>
+            <tr>
+                <th>1.</th>
+                <td>Призвіще</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>2.</th>
+                <td>Ім'я, по батькові</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>3.</th>
+                <td>Число і рік народження</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <th>4.</th>
+                <td>Домашня адреса</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>5.</th>
+                <td>Місце навчання (роботи)</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>6.</th>
+                <td>Домашній (робочий) телефон</td>
+                <td><input type="tel"></td>
+            </tr>
+            <tr>
+                <th>7.</th>
+                <td>E-mail</td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <th>8.</th>
+                <td>Область наукових інтересів</td>
+                <td>
+                    <table class="interest-table">
+                        <tr><th>1.</th><td><input type="text"></td></tr>
+                        <tr><th>2.</th><td><input type="text"></td></tr>
+                        <tr><th>3.</th><td><input type="text"></td></tr>
+                        <tr><th>4.</th><td><input type="text"></td></tr>
+                        <tr><th>5.</th><td><input type="text"></td></tr>
+                        <tr><th>6.</th><td><input type="text"></td></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button>Відмінити введення</button>
+                    <button>Надіслати дані та перейти до 2 етапу реєстрації</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

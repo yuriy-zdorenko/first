@@ -1,0 +1,40 @@
+body {
+    background: url(images/background.png);
+    background-size: cover;
+    margin: 0 50px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    font-style: normal;
+}
+
+p {
+    text-align: justify;
+    text-indent: 30px;
+}
+
+img {
+    float: left;
+    margin: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+a:link {
+    color: red;
+    text-decoration: none;
+}
+
+a:visited {
+    color: green; 
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}

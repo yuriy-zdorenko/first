@@ -1,0 +1,35 @@
+/*first task*/
+
+.first-row, .second-row, .third-row, .fourth-row,.fifth-row, .sixth-row, .seventh-row {
+    padding: 30px;
+}
+
+.first-row {background-color: indianred}
+
+.second-row {background-color: crimson}
+
+.third-row {background-color: lightgreen}
+
+.fourth-row {background-color: forestgreen}
+
+.fifth-row {background-color: darkgreen}
+
+.sixth-row {background-color: lightblue}
+
+.seventh-row {background-color: cornflowerblue}
+
+/*second task*/
+
+.number-one, .number-two, .number-three {
+    height: 300px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-one {background-color: lightblue}
+
+.number-two {background-color: indianred}
+
+.number-three {background-color: lightgoldenrodyellow}
