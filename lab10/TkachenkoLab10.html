@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивність: Float, Flexbox, Grid</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Загалом */
+        .block {
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        /* FLOAT */
+        .float-container {
+            overflow: hidden;
+        }
+
+        .float-block {
+            width: 50%;
+            float: left;
+            height: 100px;
+        }
+
+        .block-float1 {
+            background-color: #6688cc;
+        }
+
+        .block-float2 {
+            background-color: #66cccc;
+        }
+
+        /* FLEXBOX */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex-block {
+            border: 1px solid #fff;
+            box-sizing: border-box;
+        }
+
+        .block-flex1 {
+            background-color: #ff6666;
+            flex: 25%;
+            height: 100px;
+        }
+
+        .block-flex2 {
+            background-color: #ffcc66;
+            flex: 50%;
+            height: 100px;
+        }
+
+        .block-flex3 {
+            background-color: #666666;
+            flex: 25%;
+            height: 100px;
+        }
+
+        /* GRID LAYOUT */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+
+        .block-grid {
+            background-color: #cc7799;
+            height: 100px;
+        }
+
+        .block-grid1 {
+            grid-column: span 3;
+            background-color: #f53399;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Float -->
+    <div class="float-container block">
+        <div class="float-block block-float1"></div>
+        <div class="float-block block-float2"></div>
+    </div>
+
+    <!-- Flexbox -->
+    <div class="flex-container block">
+        <div class="flex-block block-flex1"></div>
+        <div class="flex-block block-flex2"></div>
+        <div class="flex-block block-flex3"></div>
+    </div>
+
+    <!-- Grid Layout -->
+    <div class="grid-container block">
+        <div class="block-grid block-grid1"></div>
+        <div class="block-grid"></div>
+        <div class="block-grid"></div>
+        <div class="block-grid"></div>
+    </div>
+
+</body>
+</html>

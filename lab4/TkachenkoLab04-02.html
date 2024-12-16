@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Вміст рядка, що біжить</title>
+</head>
+<body background="image/background.jpg">
+    <p align="center">
+        <br><br><br>
+ <!-- Рядок 1: Текст коливається з боку в бік -->
+                <marquee width="100%" bgcolor="#ff9999" height="50" behavior="alternate" direction="left">
+
+ <!-- behavior - визначає, як буде рухатися текст. Варіанти:
+    - scroll: рухається циклічно (зникає та з'являється з інш. боку).
+    - alternate: відбивається від країв.
+    - slide: досягає краю та зупиняється (не зникає).
+ -->
+                    <font color="#000080" face="Trattatello" size="5">
+                        <b>Текст у рядку коливається з боку в бік</b>
+                    </font>
+                </marquee>
+        <br><br>
+ <!-- Рядок 2: Текст пробігає справа наліво та з’являється знову -->
+            <marquee width="100%" bgcolor="#99ccff" height="50" direction="right">
+
+ <!-- direction - направлення руху тексту -->
+
+                <font color="#800080" face="Arial Black" size="5">
+                    <b>Текст пробігає справа наліво та з’являється знову</b>
+                </font>
+            </marquee>
+        <br><br>
+ <!-- Рядок 3: Текст пробігає зліва направо та зупиняється -->
+            <marquee width="100%" bgcolor="#ffcc99" height="50" direction="left" loop="1">
+
+ <!-- loop - означає скільки разів текст пробіжить (виконає свою анімацію) -->
+
+                <font color="#008000" face="Ayuthaya" size="5">
+                    <b>Текст у рядку пробігає  зліва направо та зупиняється</b>
+                </font>
+            </marquee>
+        <br><br>
+ <!-- Рядок 4: Текст з різними режимами запізнення -->
+            <marquee width="100%" bgcolor="#ff9966" height="50" scrollamount="5">
+
+ <!-- scrollmaunt - швидкість анімації (більше число - більша швидкість) -->
+
+                <font color="#ff00ff" face="Baghdad" size="6">
+                    <b>Повільний</b>
+                </font>
+            </marquee>
+        <br><br>
+ <!-- Рядок 5: Текст з різними режимами запізнення -->
+        <marquee width="100%" bgcolor="#99ff99" height="50" scrollamount="15">
+            <font color="#0000ff" face="BIPs" size="7">
+                <b>Швидкий</b>
+            </font>
+        </marquee>  <!-- Анімація переміщення -->
+        <br><br>
+    </p>
+</body>
+</html>

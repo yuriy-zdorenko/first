@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Меню</title>
+
+    <!-- .menu – стиль для оформлення меню (колір фону, відступи) -->
+    <!-- .small – стиль для дрібніших елементів, типу інформаційні повідомлення (менший шрифт, інший колір). -->
+
+    <style>
+        .menu {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+            .menu li {
+                margin: 0 10px;
+            }
+
+            .menu a {
+                text-decoration: none;
+                color: #333;
+                font-weight: bold;
+            }
+
+        .small {
+            font-size: 0.8em;
+            color: #777;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- флекс бокс - робить всі елементи простіше (автоматично підбирає їх пид розмир еркану). -->
+    <!-- space-around - видповидає за рівномірність -->
+    <!-- <nav> – розділ для навігації по сторінці (можемо додавати посилання на інші сторінки або розділи) -->
+
+    <nav>
+        <ul class="menu">
+            <li><a href="Glavnay Strava">Головна Страва</a></li>
+            <li><a href="Number one strava">Перша Страва</a></li>
+            <li><a href="#Desert">Десерт</a></li>
+            <li><a href="#Drinken">Напої</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p class="small">Сторінка: www.vkusno.com</p>
+        <p class="small">Автор: Микола Виталийовіч</p>
+    </footer>
+
+    <!-- <ul> – список посилань у меню. -->
+    <!-- <li> – окремі пункти меню (Головна страва, Десерт і т.д.) -->
+    <!-- <footer> – розділ внизу сторінки, де міститься інформація про сайт (автор або посилання). -->
+
+</body>
+</html>

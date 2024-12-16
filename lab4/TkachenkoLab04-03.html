@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Вертикальні рядки</title>
+    <style>
+        /* Стилі для вирівнювання блоків з текстом/зображеннями по центру сторінки */
+        body {
+            display: flex; /*тег вирівнює котейнери, робить візуально краще (приклад: вміщає все в одну сторінку браузера)*/
+            flex-direction: column; /*задає положення контейнерам (замість горизонтального положення робить вертикальним)*/
+            height: 100vh; /*висота браузера (сторінки)*/
+            background-color: #f0f0f0;
+        }
+
+        .marquee-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden; /*все що виходить за межі контейнера не відображається*/
+            position: relative; /*позицінування контейнера для точності анімації*/
+        }
+
+            .marquee-container img {
+                width: 100px;
+            }
+
+        marquee {
+            width: 100%;
+            height: 200px;
+            display: block; /*контейнери-рядки займають все місце сторінки*/
+        }
+    </style>
+</head>
+<body>
+    <!-- Рядок 1: Текст коливається знизу вгору та згори вниз -->
+    <div class="marquee-container" style="background-color: #ff9999;">
+        <marquee width="100%" height="200px" behavior="alternate" direction="up">
+            <font color="#000080" face="Trattatello" size="7">
+                <b>Текст коливається вгору-вниз</b>
+            </font>
+        </marquee>
+    </div>
+
+    <!-- Рядок 2: Зображення біжать вгору та з'являються знову -->
+    <div class="marquee-container" style="background-color: #99ccff;">
+        <marquee width="100%" height="200px" direction="up">
+            <img src="image/present.png" alt="Зображення 1">
+            <img src="image/star.png" alt="Зображення 2">
+            <img src="image/cake.png" alt="Зображення 3">
+        </marquee>
+    </div>
+
+    <!-- Рядок 3: Зображення біжать до низу та зупиняються -->
+    <div class="marquee-container" style="background-color: #ffcc99;">
+        <marquee width="100%" height="200px" direction="down" loop="1">
+            <img src="image/present.png" alt="Зображення 1">
+            <img src="image/star.png" alt="Зображення 2">
+            <img src="image/cake.png" alt="Зображення 3">
+        </marquee>
+    </div>
+
+    <!-- Рядок 4: Повільний текст -->
+    <div class="marquee-container" style="background-color: #ff9966;">
+        <marquee width="100%" height="200px" direction="up" scrollamount="2">
+            <font color="#008000" face="Arial Black" size="5">
+                <b>Повільний текст</b>
+            </font>
+        </marquee>
+    </div>
+
+    <!-- Рядок 5: Швидкий текст -->
+    <div class="marquee-container" style="background-color: #99ff99;">
+        <marquee width="100%" height="200px" direction="down" scrollamount="10">
+            <font color="#ff00ff" face="BIPs" size="5">
+                <b>Швидкий текст</b>
+            </font>
+        </marquee>
+    </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивність: Float, Flexbox, Grid</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Основa */
+        .wrapper {
+            padding: 10px;
+        }
+
+        /* Загал стилі для блоків */
+        .block {
+            border: 1px solid #ccc; /* Св-сіра рамка */
+            margin: 3px; /* Зовнішній відступ між блоками */
+            box-sizing: border-box;
+        }
+
+        /* FLOAT */
+        .float-container {
+            overflow: hidden;
+        }
+
+        .float-block {
+            width: 50%;
+            float: left;
+            height: 100px;
+        }
+
+        .block-float1 {
+            background-color: #6688cc;
+        }
+
+        .block-float2 {
+            background-color: #66cccc;
+        }
+
+        /* FLEXBOX */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex-block {
+            border: 1px solid #fff;
+            box-sizing: border-box;
+        }
+
+        .block-flex1 {
+            background-color: #ff6666;
+            flex: 1 1 25%; /* блок займає 25% */
+            height: 100px;
+        }
+
+        .block-flex2 {
+            background-color: #ffcc66;
+            flex: 1 1 50%; /* блок займає 50% */
+            height: 100px;
+        }
+
+        .block-flex3 {
+            background-color: #666666;
+            flex: 1 1 25%; /* блок займає 25% */
+            height: 100px;
+        }
+
+        /* GRID LAYOUT */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Три стовпці */
+            grid-gap: 10px; /* Відступи між блоками */
+        }
+
+        .block-grid {
+            background-color: #cc7799;
+            height: 100px;
+        }
+
+        .block-grid1 {
+            grid-column: span 3; /* блок займає 3 стовпці */
+            background-color: #f53399;
+        }
+
+        /* Адаптивність (разрешенія) */
+        @media (max-width: 1200px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* Два стовпці для 1200 екрн */
+            }
+        }
+
+        @media (max-width: 950px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* Один стовпець для 950 екрн */
+            }
+
+            .float-block {
+                width: 100%; /* Ширина блоків 100% */
+            }
+        }
+
+        @media (max-width: 750px) {
+            .flex-container {
+                flex-direction: column; /* В колонку для міні 750 */
+            }
+        }
+
+        @media (max-width: 500px) {
+            .block {
+                margin: 2px; /* Менший відступ для смолл 500 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Float -->
+        <div class="float-container block">
+            <div class="float-block block-float1"></div>
+            <div class="float-block block-float2"></div>
+        </div>
+
+        <!-- Flexbox -->
+        <div class="flex-container block">
+            <div class="flex-block block-flex1"></div>
+            <div class="flex-block block-flex2"></div>
+            <div class="flex-block block-flex3"></div>
+        </div>
+
+        <!-- Grid Layout -->
+        <div class="grid-container block">
+            <div class="block-grid block-grid1"></div>
+            <div class="block-grid"></div>
+            <div class="block-grid"></div>
+            <div class="block-grid"></div>
+        </div>
+    </div>
+</body>
+</html>
