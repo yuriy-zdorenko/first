@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      
+        .form-container {
+            width: 600px;
+            margin: 0 auto; 
+            background-color: #e6ffff; 
+            padding: 20px; 
+            border: 1px solid #000;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+   
+        <form action="Dvoretskyii_lab07-result.html" method="get" target="_blank">
+        <table>
+            <tr>
+                <th colspan="2">Анкета</th>
+            </tr>
+     
+            <tr>
+                <td>1. Прізвище</td>
+                <td><input type="text" name="surname"></td>
+            </tr>
+            <tr>
+                <td>2. Ім'я, по батькові</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>3. Число і рік народження</td>
+                <td><input type="date" name="birthdate"></td>
+            </tr>
+            <tr>
+                <td>4. Домашня адреса</td>
+                <td><input type="text" name="address"></td>
+            </tr>
+            <tr>
+                <td>5. Місце навчання (роботи)</td>
+                <td><input type="text" name="place"></td>
+            </tr>
+            <tr>
+                <td>6. Домашній (робочий) телефон</td>
+                <td><input type="tel" name="phone"></td>
+            </tr>
+            <tr>
+                <td>7. E-mail</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>8. Область наукових інтересів</td>
+                <td>
+                    <textarea name="interests" rows="6" cols="40"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Кнопки для відміни та відправки форми -->
+        <input type="reset" value="Відмінити введення">
+
+        <input type="submit" value="Надіслати дані та перейти до 2 етапу реєстрації">
+    </div>
+
+</body>
+</html>
