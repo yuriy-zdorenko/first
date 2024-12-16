@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма замовлення товару</title>
+</head>
+<body>
+<table align="center" border="5px" bgcolor="#bcd4cc">
+    <tr>
+        <th>
+            <h2>Форма замовлення товару</h2>
+        </th>
+    </tr>
+    <tr>
+         <td>
+
+                <form action="#">
+
+                <label>Номер банківського рахунку:</label><br>
+                <input type="text" name="account-number"><br><br>
+
+                <label>Особистий номер користувача:</label><br>
+                <input type="text" name="user-id"><br><br>
+
+                <label>Виберіть товар(и):</label><br>
+                <select name="products" multiple>
+                    <option>Товар 1</option>
+                    <option>Товар 2</option>
+                    <option>Товар 3</option>
+                    <option>Товар 4</option>
+                </select><br><br>
+
+                <label>Коментарі:</label><br>
+                <textarea name="comments" rows="4" cols="50"></textarea><br><br>
+
+                <label>Вид оплати:</label><br>
+                <input type="radio" name="payment-method"> Готівковий<br>
+                <input type="radio" name="payment-method"> Безготівковий<br><br>
+
+                <label>Додаткова інформація:</label><br>
+                <input type="checkbox" name="additional-info"> Дані про залишки на рахунку<br>
+                <input type="checkbox" name="additional-info"> Список останніх виплат по рахунку<br><br>
+
+                <input type="submit" value="Надіслати замовлення">
+                </form>
+
+            </td>
+    </tr>
+</table>
+</body>
+</html>
