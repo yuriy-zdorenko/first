@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SayenkoLab07-4</title>
+</head>
+<body>
+    <h2>3.	Створіть документ HTML, котрий містить форму для заповнення замовлення на товар. Форма передбачає: 
+        -	поле вводу номера банківського рахунку,
+        -	поле вводу особистого номера користувача,
+        -	список товарів (можна вибрати як один, так і декілька товарів),
+        -	поле вводу довільних коментарів користувача.
+        -	вказати  один  із  двох  видів  оплати:  готівковий  чи  безготівковий розрахунок.
+        Користувач повинен мати можливість вказати, яку додаткову інформацію він бажає одержати при відповіді  дані про залишки на рахунку та/або список останніх виплат по рахунку. Будь-яка із цих двох опцій може бути включена або виключена. Надати ім’я файлу IvanennkoLab07-4.htm.
+        </h2>
+    <form>
+        <table border="1" cellpadding="5">
+            <tr>
+                <td colspan="3" align="center">Замовлення товару</td>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Введіть номер банківського рахунку</td>
+                <td><input type="number" name="rahunok"></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Ввеідть особистий номер</td>
+                <td><input type="number" name="nomer"></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Список товарів</td>
+                <td>
+                    <input type="checkbox"> Макарони <br>
+                    <input type="checkbox"> Чай <br>
+                    <input type="checkbox"> Кава <br>
+                    <input type="checkbox"> Морква <br>
+                    <input type="checkbox"> Яблуко <br>
+                    <input type="checkbox"> Груша
+                </td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Коментарі</td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Спосіб оплати</td>
+                <td>
+                    <input type="radio" name="gotivka"> Готівка <br>
+                    <input type="radio" name="karta"> Карта
+                </td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Додаткова інформація</td>
+                <td>
+                    <input type="checkbox"> Дані про залишки на рахунку  <br>
+                    <input type="checkbox"> список останніх виплат по рахунку
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="submit" value="Очистити інформацію"> <br><br>
+                    <input type="submit" value="Відправити замовленя">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

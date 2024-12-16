@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SayenkoLab14-01</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <style>
+    body {
+      height: 100vh;
+    }
+    .container-fluid {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .row {
+      height: 100%;
+    }
+    .row > div {
+      border: solid 1px gainsboro;
+      text-align: center;
+      font-size: 30px;
+    }
+    @media (max-width: 767px){
+      .col-12{
+        color: green;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 991px){
+      .leftMenu,
+      .rightMenu{
+        background-color: #f2b0fa;
+      }
+      .rightHeader,
+      .content:nth-child(2){
+        font-size: 45px;
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px){
+      .col-lg-8{
+        background-color: #ffc0cb;
+      }
+    }
+    @media (min-width: 1200px){
+      .rightHeader{
+        color: red;
+      }
+      .leftBottom{
+        color: blue;
+      }
+      .leftHeader,
+      .rightBottom{
+        background-color: #f5d799;
+      }
+    }
+  </style>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-8 col-lg-4 col-md-6 col-12 leftHeader">Левая часть подвала</div>
+          <div class="col-xl-4 col-lg-8 col-md-6 col-12 rightHeader">Правая часть подвала</div>  
+        </div>
+        <div class="row">
+          <div class="col-xl-2 col-lg-2 col-md-12 col-12 leftMenu">Левое меню</div>
+          <div class="col-xl-8 col-lg-8 col-md-12 col-12 content">Контент</div>  
+          <div class="col-xl-2 col-lg-2 col-md-12 col-12 rightMenu">Правое меню</div>  
+        </div>
+        <div class="row">
+          <div class="col-xl-4 col-lg-8 col-md-6 col-12 leftBottom">Левая часть подвала</div>
+          <div class="col-xl-8 col-lg-4 col-md-6 col-12 rightBottom">Правая часть подвала</div>  
+       </div>
+    </div>
+  </body>
+</html>
