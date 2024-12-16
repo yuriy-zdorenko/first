@@ -1,0 +1,56 @@
+
+body {
+    background-image: url('/images/pro-x-s2-6.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    font-size: 20px; 
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: azure;
+}
+
+/* Абзаци */
+p {
+    text-align: justify; 
+    text-indent: 25px; 
+    margin: 10px 30px; 
+    font-style: italic; 
+}
+
+h1 {
+    text-align: center; 
+    font-weight: bold; 
+    color: #F6F6F6; 
+    font-style: normal; 
+    margin-top: 5px;
+    letter-spacing: 13px;
+    text-shadow: 
+        -1px -1px 0 black,  
+        1px -1px 0 black,   /*  КОНТУР  */
+        -1px 1px 0 black,   
+        1px 1px 0 black;    
+}
+
+
+a {
+    text-decoration: none; 
+}
+a:link {
+    color: rgb(4, 209, 255); 
+}
+a:visited {
+    color: purple; 
+}
+a:hover {
+    color: orange; 
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+    margin: 50px 12%; 
+    max-width: 90%; 
+    height: auto;
+}

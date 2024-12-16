@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title> PetrovLab07-2 </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action="/file.html">
+            <pre>
+                Введіть країну: <input type="text" value="" maxlength="30" size="30" >
+                
+                Введіть адрессу:
+                <textarea name="address" rows="3" cols="45" wrap="hard"></textarea>    
+                
+                Виберіть який у вас поверх:
+
+                <select name="poverx" size="1" >
+                    <option value="1" selected>  1 поверх </option>
+                    <option value="2">  2 поверх </option>   
+                    <option value="3">  3 поверх </option>   
+                    <option value="4">  4 поверх </option>   
+                    <option value="5">  5 поверх </option>   
+                    <option value="6">  6 поверх </option>   
+                    <option value="7">  7 поверх </option>   
+                    <option value="8">  8 поверх </option>   
+                    <option value="9">  9 поверх </option>   
+                    <option value="10"> 10 поверх </option>   
+                    <option value="11"> 11 поверх </option>   
+                    <option value="12"> 12 поверх </option>   
+                    <option value="13"> 13 поверх </option>   
+                    <option value="14"> 14 поверх </option>      
+                </select>
+
+                Телефонувати для підтвердження заказу:
+
+                <input type="radio" name="імя радіокнопки" value="значення" checked> Так 
+                <input type="radio" name="імя радіокнопки" value="значення" > Ні
+
+                Як вам буде зручніше оплатити доставку:
+
+                <input type="checkbox" name="web" value="yes" > Готівкою/карткою курʼєру Під час адресної доставки.
+                <input type="checkbox" name="eldinam" value="yes"> Платіжною карткою Visa/ MasterCard через POS-термінал 
+                <input type="checkbox" name="web" value="yes" > Готівкою у відділенні Оплату оформить оператор відділення.
+
+                Тип доставки:
+
+                <input type="radio" name="skill" value="2">Відділення<BR>
+                <input type="radio" name="skill" value="2">Адреса<BR>
+                <input type="radio" name="skill" value="2">Поштомат<BR>
+
+                Введіть останні 4 цифри вашої картки:
+
+                <input type="password" value="" size="4" maxlength=" 4">
+
+                Потрібно пройти верифікацію аккаунта (Добавте фото паспорта):
+
+                <input type="file" name="friend" size="50" accept="припустимий тип файлу"> 
+
+                <input type="submit" value=" Замовити ">
+
+                <input type="button" name="last" value="Замовити" onclick="alert('Ваше замовлення прийняте');">        
+
+            </pre>  
+        </form>
+           
+    </body>
+</html>
