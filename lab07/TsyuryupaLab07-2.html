@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Опитування про подорожі</title>
+</head>
+<body>
+
+<h2>Форма, що демонструє використання різних елементів HTML</h2>
+<p>Будь ласка, заповніть цю форму, щоб поділитися вашими уподобаннями щодо подорожей, обраних напрямків, способу подорожей та іншу додаткову інформацію.</p>
+
+<form action="response.html" method="post" target="_blank">
+    <!-- Input for Name -->
+    <label for="name">Ваше ім'я:</label>
+    <input name="name" type="text" maxlength="40" size="40" placeholder="Введіть своє ім'я" id="name"><br><br>
+
+    <!-- Radio Buttons for Travel Type Preference -->
+    <label>Який вид подорожей ви віддаєте перевагу?</label><br>
+    <input type="radio" name="travel_type" value="solo" id="solo">
+    <label for="solo">Соло-подорожі</label>
+    <input type="radio" name="travel_type" value="group" id="group">
+    <label for="group">Групові подорожі</label>
+    <input type="radio" name="travel_type" value="family" id="family">
+    <label for="family">Сімейні подорожі</label><br><br>
+
+    <!-- Dropdown for Favorite Season -->
+    <label for="season">Яка ваша улюблена пора року для подорожей?</label>
+    <select name="season" id="season">
+        <option value="summer" selected>Літо</option>
+        <option value="winter">Зима</option>
+        <option value="spring">Весна</option>
+        <option value="autumn">Осінь</option>
+    </select><br><br>
+
+    <!-- Checkboxes for Favorite Destinations -->
+    <label>Які напрямки вас цікавлять найбільше?</label><br>
+    <input type="checkbox" name="destination_beach" value="yes" id="destination_beach">
+    <label for="destination_beach">Пляжний відпочинок</label><br>
+    <input type="checkbox" name="destination_mountains" value="yes" id="destination_mountains">
+    <label for="destination_mountains">Гори</label><br>
+    <input type="checkbox" name="destination_city" value="yes" id="destination_city">
+    <label for="destination_city">Міські подорожі</label><br>
+    <input type="checkbox" name="destination_adventure" value="yes" id="destination_adventure">
+    <label for="destination_adventure">Пригодницький туризм</label><br><br>
+
+    <!-- Textarea for Additional Information -->
+    <label for="experience">Поділіться своїм найкращим досвідом подорожей:</label><br>
+    <textarea name="experience" rows="6" cols="60" wrap="off" id="experience" placeholder="Опишіть свої враження..."></textarea><br><br>
+
+    <!-- Submit and Reset Buttons -->
+    <input type="submit" value="Надіслати анкету">
+    <input type="reset" value="Очистити форму"><br><br>
+
+    <!-- File Upload Field -->
+    <label for="photos">Завантажте фотографії з подорожей:</label>
+    <input type="file" name="photos" id="photos" size="50" accept="image/*">
+</form>
+
+</body>
+</html>

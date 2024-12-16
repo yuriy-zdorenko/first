@@ -1,0 +1,86 @@
+/* Основні стилі */
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url(https://wallpapers-clan.com/wp-content/uploads/2023/11/this-is-fine-house-meme-desktop-wallpaper-preview.jpg);
+}
+/* Заголовок */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px;  /* Обмежує ширину заголовка */
+    margin: 0 auto;     /* Центрує заголовок */
+}
+
+/* Навігація */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFD700; /* Золотий колір для посилань */
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Головний контейнер */
+.main-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;  /* Обмежує ширину основної частини */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Секції */
+h2, h3, h4 {
+    color: #333;
+}
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 1200px;  /* Обмежує ширину футера */
+    margin: 0 auto;     /* Центрує футер */
+}
+footer a {
+    color: #FFD700;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Відступи для списків */
+ol, ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+/* Стилі для коду */
+pre {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Courier New", Courier, monospace;
+    overflow-x: auto;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Картирування з фоном</title>
+  <style>
+    /* Фон для всієї сторінки */
+    body {
+      background-color: #f0f8a9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Центрування зображень */
+    .image-container {
+      padding: 20px;
+      border-radius: 15px;
+      max-height: 90%;
+    }
+
+    /* Стиль для зображень */
+    .image-container img {
+      display: block;
+      margin: 10px auto;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <img src="pro_mene.png" alt="Трикутник" usemap="#proMap"> <!-- Зображення трикутника -->
+    <img src="link.png" alt="Овал" usemap="#linkMap"> <!-- Зображення овала -->
+    <img src="batk.png" alt="Серце" usemap="#batkMap"> <!-- Зображення серця -->
+  </div>
+
+  <!-- Картирування для трикутника -->
+  <map name="proMap">
+    <!-- Збільшена зона картирування для трикутника в 3 рази та зміщена правіше та нижче -->
+    <area shape="poly" coords="270,12, 0,260, 520,260" href="TsyuryupaLab05-3.html" alt="Про мене" target="_blank">
+  </map>
+
+  <!-- Картирування для овала -->
+  <map name="linkMap">
+    <!-- Збільшена зона картирування для овала: розтягнута вправо та нижня межа підтягнута -->
+    <area shape="rect" coords="10,10, 520,270" href="TsyuryupaLab05-3.html#link" alt="Посилання" target="_blank">
+  </map>
+
+  <!-- Картирування для серця -->
+  <map name="batkMap">
+    <!-- Збільшена зона картирування для серця в 3 рази та зміщена правіше та нижче -->
+    <area shape="poly" coords="30,30, 120,0, 370,0, 440,90, 330,240, 120,240, 30,120" href="TsyuryupaLab06-3.html" alt="Моя Батьківщина" target="_blank">
+  </map>
+</body>
+</html>

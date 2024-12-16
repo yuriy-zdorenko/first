@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7f8;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-header {
+            text-align: center;
+            font-size: 24px;
+            color: red;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .form-group input, 
+        .form-group textarea {
+            flex: 2;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            resize: none;
+        }
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .form-buttons button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-buttons button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">Анкета</div>
+        <form>
+            <div class="form-group">
+                <label for="surname">Прізвище</label>
+                <input type="text" id="surname" name="surname">
+            </div>
+            <div class="form-group">
+                <label for="name">Ім’я, по батькові</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Число і рік народження</label>
+                <input type="date" id="birthdate" name="birthdate">
+            </div>
+            <div class="form-group">
+                <label for="address">Домашня адреса</label>
+                <input type="text" id="address" name="address">
+            </div>
+            <div class="form-group">
+                <label for="workplace">Місце навчання (роботи)</label>
+                <input type="text" id="workplace" name="workplace">
+            </div>
+            <div class="form-group">
+                <label for="phone">Домашній (робочий) телефон</label>
+                <input type="text" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="interests">Область наукових інтересів</label>
+                <textarea id="interests" name="interests" rows="6"></textarea>
+            </div>
+            <div class="form-buttons">
+                <button type="reset">Відмінити введення</button>
+                <button type="submit">Надіслати дані та перейти до 2 етапу реєстрації</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

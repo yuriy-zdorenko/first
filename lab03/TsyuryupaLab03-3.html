@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<head>
+    <title>Моя сторінка</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <style>
+        header {
+            margin-right: 5%;
+            margin-left: 5%;
+            background: #000;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+        }
+        body {
+            color: darkpurple; 
+            font-family: 'Comic Sans MS', cursive; /* Змінити шрифт тексту на Comic Sans */
+            background-attachment: fixed;
+            background-size: cover;
+            background-image: url(https://wallpapers-clan.com/wp-content/uploads/2023/11/this-is-fine-house-meme-desktop-wallpaper-preview.jpg);
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px;
+        }
+        .main-container {
+            margin:2%;
+            margin-right: 5%;
+            margin-left: 5%;
+            position:relative;
+            min-height: 100%;
+            padding-bottom: 150px;
+            background: rgba(0, 0, 0, 0.3); /* Полупрозрачный фон */
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .main-up {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+        .main-down {
+            flex: 1;
+            padding: 20px;
+        }
+        footer {
+            margin:2%;
+            margin-right: 5%;
+            margin-left: 5%;
+            position:relative;
+            min-height: 100%;
+            padding-bottom: 150px;
+            background: rgba(0, 0, 0, 0.3); /* Полупрозрачный фон */
+            padding: 1rem;
+            max-width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        nav ul{
+            text-align: justify;
+            border: 1px solid #800571;
+            display: table-cell;
+            color: black;
+            padding: 20px;
+            font-size: 16px;
+            border-style: none;
+            border-inline-style: solid;
+            border-left-style: none;
+            border-right-style: none;
+        }
+        nav a{
+            text-decoration: none;
+            color: black;
+        }
+        .p { 
+            display: table-cell;
+        }
+        .pp {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+        }
+        .pp li {
+            color: black;
+            padding: 12px 16px;
+            display: block;
+        }
+
+        .pp li:hover {
+            background-color: #ddd;
+        }
+
+        ul:hover .pp {
+            display: block;
+        }
+        footer a {
+            color: pink;
+        }
+        footer a:hover {
+            color: orange;
+        }
+        footer a:visited {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="up">Головна сторінка</h1>
+    </header>
+    <div class="main-container">
+        <div class="main-up">
+        
+    </table>
+        <nav>
+            <ul>
+                <li class="p">Розділи</li>
+                    <div class="pp">
+                        <li ><a href = "#about">Про себе</a></li>
+                        <li ><a href = "#hobby">Моє хоббі</a></li>
+                        <li ><a href = "#programmer">Програмування</a></li>
+                        <li ><a href = "#study">Дисципліни які я вивчаю</a></li>
+                        <li ><a href = "#stravi">Мої улюблені стави</a></li>
+                    </div>  
+            </ul>
+        </nav>
+    </div>
+    <div class="main-down">
+            <div style="text-align: center;">
+        <h2 id="about">Про себе</h2>
+    </div>
+    <div style="text-align: justify;">
+        <p> Народився в Полтаві 24 липня 2005 року, навчався в Полтавській загальноосвітній школі І-ІІІ ступенів №26. Після закінчення школи вступив до Національного університету «Полтавська політехніка імені Юрія Кондратюка».</p>
+        <p>Маю високий рівень самомотивації та стійкість до стресу, вмію знайти спільну мову в команді та побудувати позитивні та ефективні відносини з колегами.</p>
+        <p>На данний момент займаюся вивченням таких мов програмування як С++ та С#. В майбутньому збираюсь вивчати також Java та Python.</p>
+    </div>
+    <div style="text-align: center;">
+        <h2 id="hobby">Моє хоббі</h2>
+    </div>
+    <div  style="text-align: justify;">
+        <p>Маю небагато хоббі, а саме: програмування, спілкування у соц. мережах та відеоігри.</p>
+        <p>Більшість вільного часу приділяю відеоіграм. Вони дозволяють мені відпочити після виснажливого дня.</p>
+        <p>Також у вільний від навчання час переглядаю навчальні відео-ролики про різні мови програмування та пробую себе в цих мовах аби віднайти для себе найкращу мову</p>
+    </div>
+    <div style="text-align: center;">
+        <h3 id="programmer">Програмування</h3>
+        <pre><p style="text-align: left;">using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Введення зашифрованого повідомлення
+        Console.Write("Введіть зашифроване повідомлення: ");
+        string encryptedMessage = Console.ReadLine();
+
+        // Розшифрування слов у рядку
+        string decryptedMessage = DecryptMessage(encryptedMessage);
+
+        // Виведення розшифрованого повідомлення
+        Console.WriteLine($"Розшифроване повідомлення: {decryptedMessage}");
+
+        // Зупинка консолі
+        Console.ReadLine();
+    }
+
+    static string DecryptMessage(string encryptedMessage)
+    {
+        string[] words = encryptedMessage.Split(' ');
+
+        for (int i = 0; i < words.Length; i++)
+        {
+            words[i] = ReverseString(words[i]);
+        }
+
+        return string.Join(" ", words);
+    }
+
+    static string ReverseString(string input)
+    {
+        char[] charArray = input.ToCharArray();
+        Array.Reverse(charArray);
+        return new string(charArray);
+    }
+}</p></pre>
+    </div>
+    <div style="text-align: left;">
+        <h4 id="study">Дисципліни які я вивчаю:</h4>
+        <ol>
+            <li>Web-дизайн та Web-програмування</li>
+            <li>Іноземна мова</li>
+            <li>Комп'ютерні мережі</li>
+            <li>Комп'ютерні технології та програмування</li>
+            <li>Кросплатформене програмування</li>
+            <li>Об'єктно-орієнтоване програмування</li>
+            <li>Теорія алгоритмів</li>
+            <li>Фізичне виховання</li>
+        </ol>
+    </div>
+    <div style="text-align: left;">
+        <h4 id="stravi">Мої улюблені страви:</h4>
+        <ul>
+            <li>Салат "Олів'є"</li>
+            <li>Млинці з домашнім сиром</li>
+            <li>Штрудлі з грибами</li>
+            <li>Торт "Наполеон"</li>
+        </ul>
+    </div>
+    </div>
+    </div>
+    <hr style="border: 1px solid black; margin-top: 20px; margin-bottom: 20px;">
+    <footer>
+        <ul>
+            <img src="emblem.png" alt="емблема" align="right">
+        </ul>
+        <h4>Контактні дані:</h4>
+        <p>Номер телефону: +380667809462</p>
+        <p>E-mail: <a href = "mailto:dima.tsyuryupa2407@gmail.com">dima.tsyuryupa2407@gmail.com</a></p>
+        <h4>Соціальні мережі:</h4>
+        <p><ul>
+            <li><img src="C:\Users\dima2\OneDrive\Робочий стіл\Домашка\веб дизайн\Image\discord.png" width="20" height="20"><a href = "https://discord.com/"> Discord </a></li>
+            <li><img src="C:\Users\dima2\OneDrive\Робочий стіл\Домашка\веб дизайн\Image\telegram.png" width="20" height="20"><a href = "https://web.telegram.org/k/"> Telegram </a></li>
+            <li><img src="C:\Users\dima2\OneDrive\Робочий стіл\Домашка\веб дизайн\Image\instagram.png" width="20" height="20"><a href = "https://www.instagram.com/"> Instagram </a></li>
+            <li><img src="C:\Users\dima2\OneDrive\Робочий стіл\Домашка\веб дизайн\Image\tiktok.png" width="20" height="20"><a href = "https://www.tiktok.com/uk-UA/"> Tik tok</a></li>
+        </ul></p>
+        <div>
+            <p align="right"><i><u><font face ="TIMES NEW ROMAN "size="4">Студент групи 201-ТН Цюрюпа Д.І.</font></u></i></p><br>
+        </div>
+        <div style="text-align: left;"><a href = "#up">У початок сторінки</a></div>
+    </footer>
+    </body>
+</html>
