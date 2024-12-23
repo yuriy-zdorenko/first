@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Моя Батьківщина — Україна</title>
+
+    <!-- position: relative; — дає змогу позиціонувати елементи всередині цього контейнера -->
+    <!-- display: inline-block; — дозволяє елементам розташовуватися в один ряд з іншим контентом -->
+    <!-- photo - контейнер; span - для відображення текстового опису фотографії / стилізувати короткі фрагменти тексту -->
+    <!-- display: block; — при наведенні текстовий опис стає видимим -->
+
+    <style>
+        .photo {
+            position: relative;
+            display: inline-block;
+            margin: 20px;
+        }
+
+            .photo img {
+                width: 300px;
+            }
+
+            .photo span {
+                display: none;
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                background-color: black;
+                color: white;
+                padding: 5px;
+            }
+
+            .photo:hover span {
+                display: block;
+            }
+    </style>
+</head>
+<body>
+
+    <h1>Моя Батьківщина — Україна</h1>
+
+    <div class="photo">
+        <img src="kiv.jpg" alt="Київ">
+        <span>Київ</span>
+    </div>
+
+    <div class="photo">
+        <img src="lviv.jpg" alt="Львів">
+        <span>Львів</span>
+    </div>
+
+    <div class="photo">
+        <img src="karpati.jpg" alt="Карпати">
+        <span>Карпати</span>
+    </div>
+
+    <div class="photo">
+        <img src="odesa.jpg" alt="Одеса">
+        <span>Одеса</span>
+    </div>
+
+    <!-- alt надає текстовий опис зображення для доступності (якщо зображення не завантажується або для читачів екрану) -->
+
+</body>
+</html>
