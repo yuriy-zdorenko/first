@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Персональна сторінка студента про себе та хобі">
+    <meta name="keywords" content="Про себе, Моє хобі, Програмування, Студент">
+    <title>KurylenkoLab01-9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        p {
+            text-align: justify;
+        }
+        .signature {
+            margin-top: 30px;
+            font-style: italic;
+            font-weight: bold;
+        }
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Про себе</h1>
+    <p>Мене звати Куриленко Артьом. Я студент університету. Мені подобається вивчати нові технології та програмування. <b><i>Я прагну стати професійним розробником</i></b> та працювати над цікавими проектами.</p>
+    <p>У вільний час я читаю книги, займаюся спортом та вивчаю нові мови програмування. <u>Завжди відкритий до нових знань</u> та готовий до викликів.</p>
+    
+    <h1>Моє хобі</h1>
+    <p>Одне з моїх улюблених захоплень – це програмування. Я вивчаю різні мови та створюю власні проекти.</p>
+    
+    <h2>Програмування</h2>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Простий HTML-документ&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Привіт, світ!&lt;/h1&gt;
+    &lt;p&gt;Це моя перша HTML-сторінка.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+    
+    <p class="signature">Студент групи 102-ТК Куриленко А.О.</p>
+</body>
+</html>
