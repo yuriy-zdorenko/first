@@ -1,0 +1,11 @@
+.color-box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: lightgray;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+}

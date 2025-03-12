@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    <a href="https://google.com" id="link1">Посилання 1</a><br>
+    <a href="https://youtube.com" id="link2">Посилання 2</a><br>
+    <a href="https://gmail.com" id="link3">Посилання 3</a>
+
+    <script>
+    // Отримуємо всі елементи input
+    const inputs = document.querySelectorAll('input');
+        
+    // Прив'язуємо обробник події до кожного input
+    inputs.forEach(input => {
+        input.addEventListener('click', function() {
+            document.getElementById('demo').textContent = input.value;
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    <input type="text" id="input1" placeholder="Введіть текст 1">
+    <input type="text" id="input2" placeholder="Введіть текст 2">
+    <input type="text" id="input3" placeholder="Введіть текст 3">
+    <p id="demo"></p>
+
+    <script>
+    // Функція для обробки натискання на інпут
+    function handleInputClick(event) {
+        const input = event.target;
+
+        if (!input.dataset.clicked) {
+            // Перше натискання, вивести в консоль
+            console.log(input.value);
+            input.dataset.clicked = true;
+        } 
+        else {
+            // Друге натискання, вивести в alert
+            alert(input.value);
+        }
+    }
+
+    // Додаємо обробники подій для всіх інпутів
+    document.querySelectorAll('input').forEach(input => {
+        input.addEventListener('click', handleInputClick);
+    });
+    </script>
+</body>
+</html>

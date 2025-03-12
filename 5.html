@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    <p>Двадцять п'ять</p>
+    <p>Тридцять чотири</p>
+    <p>Двадцять один</p>
+
+    <script>
+    // Об'єкт для перетворення слів у числа
+    const numberWords = {
+        "Двадцять п'ять": 25,
+        "Тридцять чотири": 34,
+        "Двадцять один": 21
+    };
+
+    // Функція для обробки натискання на параграф
+    document.querySelectorAll('p').forEach(paragraph => {
+        paragraph.addEventListener('click', () => {
+            const text = paragraph.textContent.trim();
+            const number = numberWords[text];
+            if (number !== undefined) {
+                const square = number * number;
+                paragraph.textContent = `${text} (Квадрат: ${square})`;
+                paragraph.classList.add('clicked');
+            }
+        });
+    });
+    </script>
+</body>
+</html>
