@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description">
+		<meta name="keywords">
+	</head>
+
+    <body>
+        <ol>
+            <li>
+                <img id="img1" src="image/img1.png">
+                <img id="img2" src="image/img2.png">
+                <img id="img3" src="image/img3.png">
+            </li>
+
+            <li>
+                <a id="google" href="https://google.com">Google</a>
+                <a id="microsoft" href="https://microsoft.com">Microsoft</a>
+                <a id="github" href="https://github.com">Github</a>
+            </li>
+
+            <li>
+                <a id="demo">Абзац</a>
+            </li>
+
+            <li>
+                <input id="inp1" type="text" value="inp1">
+                <input id="inp2" type="text" value="inp2">
+                <input id="inp3" type="text" value="inp3">
+            </li>
+
+            <li>
+                <p id="p_dp">Двадцять п'ять</p>
+                <p id="p_s">Шість</p>
+                <p id="p_d">Дванадцять</p>
+            </li>
+        </ol>
+    </body>
+	
+    <script>
+        //1
+        function logWidth(ev) {
+            console.log(ev.target.width)
+        }
+
+        const imgs = [
+            document.getElementById("img1"),
+            document.getElementById("img2"),
+            document.getElementById("img3")
+        ]
+
+        imgs.forEach((item) => {
+            item.onclick = logWidth
+        })
+
+
+        //2
+        function setTitle(ev) {
+            ev.target.title = ev.target.href
+            ev.target.removeEventListener("mouseover", setTitle)
+        }
+
+        const urls = [
+            document.getElementById("google"),
+            document.getElementById("microsoft"),
+            document.getElementById("github")
+        ]
+
+        urls.forEach((item) => {
+            item.addEventListener("mouseover", setTitle)
+        })
+
+
+        //3-4
+        const demo = document.getElementById("demo")
+        function setDemo(ev) {
+            demo.innerText = ev.target.value
+        }
+
+        function inpLog(ev) {
+            console.log(ev.target.value)
+            ev.target.removeEventListener("click", inpLog)
+            ev.target.addEventListener("click", inpAlert)
+        }
+
+        function inpAlert(ev) {
+            alert(ev.target.value)
+        }
+
+        const inps = [
+            document.getElementById("inp1"),
+            document.getElementById("inp2"),
+            document.getElementById("inp3")
+        ]
+
+        inps.forEach((item) => {
+            item.addEventListener("click", setDemo)
+            item.addEventListener("click", inpLog)
+        })
+
+        //5
+        function dp(ev) { 
+            ev.target.innerText += " (625)"
+            ev.target.removeEventListener("click", dp)
+        }
+
+        function s(ev) { 
+            ev.target.innerText += " (36)"
+            ev.target.removeEventListener("click", s)
+        }
+
+        function d(ev) { 
+            ev.target.innerText += " (144)"
+            ev.target.removeEventListener("click", d)
+        }
+
+        document.getElementById("p_dp").addEventListener("click", dp)
+        document.getElementById("p_s").addEventListener("click", s)
+        document.getElementById("p_d").addEventListener("click", d)
+
+    </script>
+</html>

@@ -1,0 +1,22 @@
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+h1 {
+    font-weight: bold;
+    color: darkred;
+    font-size: 35pt;
+}
+
+h2 {
+    font-weight: bold;
+    color: purple;
+    font-size: 20pt;
+}
+
+p {
+    color: black;
+    font-style: italic;
+    font-size: 14pt;
+    text-indent: 2%;
+}

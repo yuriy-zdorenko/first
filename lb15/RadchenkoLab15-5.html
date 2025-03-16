@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description">
+		<meta name="keywords">
+	</head>
+	
+    <script>
+        let day = prompt("Введіть число від 1 до 31");
+        if (!(day > 0 && day < 32)) {
+            alert("Введено невірне число!")
+        } else {
+            const wdNum = new Date(new Date(Date.now()).setDate(day)).getDay()
+            console.log(wdNum)
+            let weekday = "Неділя";
+            if (wdNum == 1) {
+                weekday = "Понеділок"
+            } else if (wdNum == 2) {
+                weekday = "Вівторок"
+            } else if (wdNum == 3) {
+                weekday = "Середа"
+            } else if (wdNum == 4) {
+                weekday = "Четверг"
+            } else if (wdNum == 5) {
+                weekday = "П'ятниця"
+            } else if (wdNum == 6) {
+                weekday = "Субота"
+            }
+            
+            alert(weekday)
+        }
+    </script>
+</html>

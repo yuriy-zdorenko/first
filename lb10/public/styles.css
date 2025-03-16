@@ -1,0 +1,178 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 24.620% 23.513% 32.273% 1fr;
+    grid-template-rows: 28.846% 22.115% 25.961% 1fr;
+    gap: 3px;
+    width: 100%;
+    height: 100vh;
+}
+
+#blue {
+    background-color: skyblue;
+    grid-column: 1 / 4;
+    grid-row: 1;
+    border: 1px lightgrey;
+}
+
+#gray {
+    background-color: gray;
+    grid-column: 4;
+    grid-row: 1 / 4;
+    border: 1px lightgrey;
+}
+
+#aqua {
+    background-color: aqua;
+    grid-column: 1;
+    grid-row: 2;
+    border: 1px lightgrey;
+}
+
+#red {
+    background-color: lightcoral;
+    grid-column: 2;
+    grid-row: 2;
+    border: 1px lightgrey;
+}
+
+#yellow {
+    background-color: yellow;
+    grid-column: 3;
+    grid-row: 2/4;
+    border: 1px lightgrey;
+}
+
+#green {
+    background-color: lightgreen;
+    grid-column: 1 / 3;
+    grid-row: 3;
+    border: 1px lightgrey;
+}
+
+#orange {
+    background-color: orangered;
+    grid-column: 1 / 5;
+    grid-row: 4;
+    border: 1px lightgrey;
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        grid-template-columns: 24.620% 23.513% 32.273% 1fr;
+        grid-template-rows: 28.846% 22.115% 25.961% 1fr;
+    }
+}
+
+@media (min-width: 950px) and (max-width: 1199px) {
+    .wrapper {
+        height: 120vh;
+        grid-template-columns: 31.151% 30.044% 1fr;
+        grid-template-rows: 23.077% 20.769% 17.692% 20.769% 1fr;
+    }
+
+    #gray {
+        grid-column: 1 / 4;
+        grid-row: 2;
+    }
+
+    #aqua {
+        grid-row: 3;
+    }
+    
+    #red {
+        grid-row: 3;
+    }
+    
+    #yellow {
+        grid-row: 3/5;
+    }
+
+    #green {
+        grid-row: 4;
+    }    
+
+    #orange {
+        grid-column: 1 / 4;
+        grid-row: 5;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 949px) {
+    .wrapper {
+        height: 140vh;
+        grid-template-columns: 50.555% 1fr;
+        grid-template-rows: 19.231% 17.308% 14.743% 17.308% 1fr 1fr;
+    }
+
+    #blue {
+        grid-column: 1 / 3;
+    }
+
+    #gray {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    #aqua {
+        grid-row: 3;
+    }
+    
+    #red {
+        grid-row: 3;
+    }
+    
+    #yellow {
+        grid-column: 1 / 3;
+        grid-row: 5;
+    }
+
+    #green {
+        grid-row: 4;
+    }    
+
+    #orange {
+        grid-column: 1 / 3;
+        grid-row: 6;
+    }
+}
+
+@media (max-width: 749px) {
+    .wrapper {
+        height: 160vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 16.484% 14.835% 14.835% 12.716% 14.835% 1fr 1fr;
+    }
+
+    #blue {
+        grid-column: 1;
+    }
+
+    #gray {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #aqua {
+        grid-row: 3;
+    }
+    
+    #red {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    
+    #yellow {
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    #green {
+        grid-column: 1;
+        grid-row: 5;
+    }    
+
+    #orange {
+        grid-column: 1;
+        grid-row: 7;
+    }
+}

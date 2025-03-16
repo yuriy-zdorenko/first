@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Реєстрація</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body bgcolor="lightcyan">
+        <div class="topbar">Оформлення товару </div>
+        <form>
+            <p>Заповніть дану форму для замовлення товару:</p>
+            <ol>
+                <li>Банківський рахунок: <input type="text" name="ibsn"></li>
+                <li>Номер телефону: <input type="text" name="phonenum"></input></li>
+                <li>Список товарів: 
+                    <input type="checkbox" name="products" value="krislo">Крісло</input>
+                    <input type="checkbox" name="products" value="dyvan">Диван</input>
+                    <input type="checkbox" name="products" value="stil">Стіл</input>
+                    <input type="checkbox" name="products" value="shkaf">Шкаф</input>
+                </li>
+                <li>Коментар (опціонально): <textarea name="comment"></textarea></li>
+                <li>Спосіб оплати: 
+                    <input type="radio" name="payway" value="paper">Готівка</input>
+                    <input type="radio" name="payway" value="card">Карта</input>
+                </li>
+                <li>Додаткова інформація: 
+                    <input type="checkbox" name="additional" value="remain">Залишок на рахунку</input>
+                    <input type="checkbox" name="additional" value="last">Останні виплати по рахунку</input>
+                </li>
+            </ol>
+            <input type="submit" value="Замовити"></button>
+            <input type="reset" value="Відмінити введення"></button>
+        </form>
+    </body>
+</html>

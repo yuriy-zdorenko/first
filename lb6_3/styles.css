@@ -1,0 +1,72 @@
+body {
+    color: white;
+    display: flex;
+    margin: 0%;
+    height: 100vh;
+    justify-content: center;
+    font-family: Verdana;
+    font-size: 12vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vh;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(32, 32, 32);
+}
+
+.output {
+    display: flex;
+    height: 20%;
+    text-align: right;
+    justify-content: end;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.control-container {
+    display: flex;
+    margin: 1vh;
+    flex: 1;
+}
+
+.controls {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 1.5vh;
+    justify-items: center;
+    align-items: center;
+}
+
+.controls > button {
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(96, 96, 96);
+    border: none;
+    outline: none;
+    font-size: 3vh;
+    transition: transform 0.1s ease-in;
+    border-radius: 12.5%;
+}
+
+.controls > button:active {
+    transform: scale(0.9);
+}
+
+.control-fn {
+    background-color: rgb(172, 172, 172) !important;
+}
+
+.control-op {
+    background-color: orange !important;
+}
+
+.control-zero {
+    grid-column: 1/3;
+}

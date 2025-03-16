@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description">
+		<meta name="keywords">
+	</head>
+
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+
+        #first {
+            background-color: gold;
+            flex: 1;
+        }
+
+        #second {
+            background-color: green;
+            flex: 1;
+        }
+
+        #third {
+            background-color: blue;
+            flex: 1;
+        }
+
+        .red {
+            background-color: red !important;
+        }
+    </style>
+
+    <body>
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+    </body>
+	
+    <script>
+        function paintItRed(ev) {
+            ev.target.classList.add("red")
+            ev.target.removeEventListener("click", paintItRed)
+            ev.target.addEventListener("click", paintItBack)
+        }
+
+        function paintItBack(ev) {
+            ev.target.classList.remove("red")
+            ev.target.removeEventListener("click", paintItBack)
+            ev.target.addEventListener("click", paintItRed)
+        }
+
+        const divs = [
+            document.getElementById("first"),
+            document.getElementById("second"),
+            document.getElementById("third"),
+        ]
+
+        divs.forEach((item) => {
+            item.addEventListener("click", paintItRed)
+        })
+    </script>
+</html>

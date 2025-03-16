@@ -1,0 +1,73 @@
+body {
+    background-color: purple;
+    color: gold
+}
+
+
+/* Lab09-1 */
+
+.title-centrale {
+    font-style: oblique;
+    text-align: center;
+}
+
+.title-historic {
+    color: hsl(56, 100%, 87%)
+}
+
+.title-italic {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+/* Lab09-2 */
+
+.title1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.text1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+}
+
+.title2 {
+    font-style: oblique;
+    font-size: larger;
+    font-weight: bold;
+    color: goldenrod;
+    text-align: center;
+}
+
+.text2 {
+    color:goldenrod;
+    text-align: justify;
+}
+
+.title3 {
+    text-align: right;
+    color:chocolate;
+}
+
+.text3 {
+    color: chocolate;
+    text-align: justify;
+    text-decoration: underline;
+}
+
+/* Lab09-3 */
+
+li {
+    margin-bottom: 2%;
+}
+
+.menu {
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.small {
+    font-size: small;
+}

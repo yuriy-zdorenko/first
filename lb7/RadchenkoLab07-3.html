@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Реєстрація</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <form>
+            <table border="1" bgcolor="lightcyan" cellpadding="5">
+                <tr>
+                    <td colspan="3" align="center" valign="middle"><font size="5" color="red"><b>Анкета</b></font></td>
+                </tr>
+                <tr >
+                    <td>1.</td>
+                    <td>Прізвище</td>
+                    <td align="center"><input type="text" name="surname"></td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Ім'я, по-батькові</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Число і рік народження</td>
+                    <td><input type="text" name="bday"></td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Домашня адреса</td>
+                    <td><input type="text" name="home"></textarea></td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Місце навчання(роботи)</td>
+                    <td><input type="text" name="occupation"></td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Домашній (робочий) телефон</td>
+                    <td><input type="text" name="phonenum"></td>
+                </tr> 
+                <tr>
+                    <td>7.</td>
+                    <td>E-mail</td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Область наукових інтересів</td>
+                    <td>
+                        <ol>
+                            <li><input type="text" name="science1"></li>
+                            <li><input type="text" name="science2"></li>
+                            <li><input type="text" name="science3"></li>
+                            <li><input type="text" name="science4"></li>
+                            <li><input type="text" name="science5"></li>
+                            <li><input type="text" name="science6"></li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div class="control">
+                            <input type="reset" name="clear" value="Відмінити введення">
+                            <br><br>
+                            <input type="reset" name="register" value="Надіслати дані та перейти до 2 етапу реєстрації" onclick="alert('Запит на реєстрацію надіслано!');">
+                        </div>        
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

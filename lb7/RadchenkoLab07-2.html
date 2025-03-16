@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Реєстрація</title>
+    </head>
+
+    <body>
+        <h2>1.	Створіть документ HTML, що містить форму в якій використовуються всі перелічені вище елементи (файл під назвою IvanennkoLab07-2.htm).</h2>
+        <form action="abc">
+            <p>Input</p>
+            <INPUT NAME="input" placeholder="Input" ALIGN="CENTER" SIZE="24" MAXLENGTH="30">
+            
+            <p>Textarea</p>
+            <TEXTAREA NAME="textarea" WRAP="virtual" COLS="24" ROWS="3" placeholder="Textarea"></TEXTAREA>
+            
+            <p>Select</p>
+            <select name="week" size="7">
+                <option value="1"> Понеділок </option>
+                <option value="2"> Вівторок </option>
+                <option value="3"> Середа </option>
+                <option value="4"> Четвер </option>
+                <option value="5"> П’ятниця </option>
+                <option value="6"> Субота </option>
+                <option value="7"> Неділя </option>
+            </select>
+            
+            <p>Checkbox</p>
+            <input type="checkbox" name="option1" value="1" checked>Option1<BR>
+            <input type="checkbox" name="option2" value="2">Option2<BR>
+            <input type="checkbox" name="option3" value="3">Option3<BR>
+            <input type="checkbox" name="option4" value="4">Option4<BR>                          
+                
+            <p>Radio</p>
+            <input type="radio" name="option1" value="1" checked>Option1<BR>
+            <input type="radio" name="option2" value="2">Option2<BR>
+            <input type="radio" name="option3" value="3">Option3<BR>
+            <input type="radio" name="option4" value="4">Option4<BR>  
+                 
+            <p>Button</p>
+            <input type="submit" name="subm" value="Надіслати дані">
+            <input type="button" name="btn" value="Звичайна кнопка" onclick="alert(Date());">
+
+            <p>Password</p>
+            <input type="password" size="24" maxlength="24" placeholder="Password">
+
+            <p>File</p>
+            <input type="file" size="24">
+        </form>            
+    </body>
+</html>
