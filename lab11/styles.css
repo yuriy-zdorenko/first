@@ -1,0 +1,47 @@
+body
+{
+    background-color: #e5e5e5;
+    font-family: 'Courier New';
+    font-size: 16pt;
+    font-style: italic;
+}
+
+p
+{
+    text-align: justify;
+    text-indent: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h1
+{
+    font-weight: bold;
+    text-align: center;
+    color: #fca311;
+    font-style: normal;
+}
+
+img
+{
+    border: 10px solid #fca311;
+    border-radius: 5px;
+}
+
+a:link
+{
+    color: #0a2463;
+    text-decoration: none;
+}
+
+a:visited
+{
+    color: #d8315b;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #3e92cc;
+    text-decoration: underline;
+}

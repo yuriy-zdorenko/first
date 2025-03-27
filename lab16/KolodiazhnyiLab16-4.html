@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 4</title>
+</head>
+<body>
+
+    <input type="text" id="input1" placeholder="Введіть текст 1" ><br><br>
+    <input type="text" id="input2" placeholder="Введіть текст 2" >
+
+    <script>
+        let isFirstClick1 = true;
+
+        document.getElementById("input1").addEventListener("click", function() 
+        {
+            if(isFirstClick1)
+            {
+                console.log(this.value);
+                isFirstClick1 = false;
+            }
+            else
+            {
+                alert(this.value);
+            }
+        });
+
+        let isFirstClick2 = true;
+
+        document.getElementById("input2").addEventListener("click", function()
+        {
+            if(isFirstClick2)
+            {
+                console.log(this.value);
+                isFirstClick2 = false;
+            }
+            else
+            {
+                alert(this.value);
+            }
+        });
+    </script>
+</body>
+</html>

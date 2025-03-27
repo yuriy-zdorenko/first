@@ -1,0 +1,39 @@
+@use 'variables';
+
+.movies-list,
+.series-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.movie,
+.series {
+    text-decoration: none;
+    text-align: center;
+    width: 20%;
+
+    img {
+        height: 300px;
+        width: 200px;
+        margin-bottom: 10px;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+        color: variables.$text-color;
+
+        &:hover {
+            color: variables.$primary-color;
+            text-decoration: underline;
+        }
+    }
+}

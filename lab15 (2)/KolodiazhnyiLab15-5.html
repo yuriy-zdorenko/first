@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 5</title>
+</head>
+<body>
+    <script>
+        let dayNumber = parseInt(prompt("Введіть число від 1 до 31:"));
+
+        if (dayNumber < 1 || dayNumber > 31 || isNaN(dayNumber))
+        {
+            alert("Будь ласка, введіть коректне число від 1 до 31.");
+        }
+        else
+        {
+            let currentDate = new Date();
+
+            console.log(currentDate);
+
+            currentDate.setDate(dayNumber);
+
+            console.log(currentDate);
+        
+            let dayOfWeek = currentDate.getDay();
+
+            console.log(dayOfWeek);
+        
+            let daysOfWeek = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"];
+        
+            alert(`Число ${dayNumber} в поточному місяці це ${daysOfWeek[dayOfWeek]}.`);
+        }
+    </script>
+</body>
+</html>

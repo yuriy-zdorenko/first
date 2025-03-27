@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 6</title>
+</head>
+<body>
+    <script>
+        let day = parseInt(prompt("Введіть номер дня тижня (від 1 до 7):"));
+
+        if (day >= 1 && day <= 7)
+        {
+            let dayName = "";
+        
+            switch (day)
+            {
+                case 1: dayName = "понеділок";
+                    break;
+                case 2: dayName = "вівторок";
+                    break;
+                case 3: dayName = "середа";
+                    break;
+                case 4: dayName = "четвер";
+                    break;
+                case 5: dayName = "п'ятниця";
+                    break;
+                case 6: dayName = "субота";
+                    break;
+                case 7: dayName = "неділя";
+                    break;
+            }
+        
+            alert("День тижня: " + dayName);
+        }
+        else
+        {
+            alert("Введене число не входить у діапазон від 1 до 7.");
+        }
+    </script>
+</body>
+</html>

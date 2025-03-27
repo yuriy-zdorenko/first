@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Вертикальний рух тексту та зображень</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <p align="Center">
+            <!--Текст та рисунки у рядку коливаються-->
+            <marquee behavior="alternate" direction="down" height="100" width="850" bgcolor="#314a52" style="text-align: center;">
+                <img src="image/vscode.jpg" alt="Vscode icon" height="50">
+                <font color="#268ed4" face="Arial" size="5"><b><i>Програмування – це не лише код, а й спосіб мислення</i></b></font>
+                <img src="image/github.jpg" alt="Github icon" height="50">
+            </marquee>
+            <br>
+
+            <!--Послідовність рисунків пробігає знизу до гори та з’являється знову-->
+            <marquee behavior="scroll" direction="up" height="150" width="450" bgcolor="#d4aa7d" style="text-align: center;">
+                <img src="image/html.jpg" alt="HTML logo" height="120">
+                <img src="image/css.jpg" alt="CSS logo" height="120">
+                <img src="image/js.jpg" alt="JS logo" height="120">
+            </marquee>
+            <br>
+
+            <!--Послідовність рисунків пробігає згори до низу із зупинкою у границі області-->
+            <marquee behavior="slide" direction="down" height="205" width="450" bgcolor="#b2dcb0" style="text-align: center;">
+                <img src="image/Ukraine.png" alt="Hand with Ukrainian flag" height="200">
+                <img src="image/emblem.png" alt="Coat of arms of Ukraine" height="200">
+            </marquee>
+            <br>
+
+            <!--Текст переміщується з різними режимами запізнення - 1-->
+            <marquee direction="down" scrolldelay="200" height="75" width="850" bgcolor="#fe4a49" style="text-align: center;">
+                <font color="#fed766" face="Arial Black" size="5"><i>Освіта – це ключ до нових можливостей у сучасному світі</i></font>
+            </marquee>
+            <br>
+
+            <!--Текст переміщується з різними режимами запізнення - 2-->
+            <marquee direction="down" scrolldelay="100" height="75" width="850" bgcolor="#e0ff4f" style="text-align: center;">
+                <font color="#00272b" face="Calibri" size="5"><b><u>Технологічний прогрес відкриває шлях до інновацій та розвитку</u></b></font>
+            </marquee>
+            <br>
+        </p>
+    </body>
+</html>

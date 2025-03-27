@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2</title>
+</head>
+<body>
+    <script>
+        function printNumbers()
+        {
+            let number = 0;
+        
+            do
+            {
+                if (number === 0)
+                {
+                    console.log(`${number} – це нуль`);
+                }
+                else if (number % 2 === 0)
+                {
+                    console.log(`${number} – парне число`);
+                }
+                else
+                {
+                    console.log(`${number} – непарне число`);
+                }
+                number++;
+            } while (number <= 10);
+        }
+
+        printNumbers();
+    </script>
+</body>
+</html>

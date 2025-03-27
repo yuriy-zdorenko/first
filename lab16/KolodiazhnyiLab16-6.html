@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 6</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 5px;">
+        <div id="div1" style="background-color: purple; width: 1500px; height: 250px;"></div>
+        <div id="div2" style="background-color: yellow; width: 1500px; height: 250px;"></div>
+        <div id="div3" style="background-color: blue; width: 1500px; height: 250px;"></div>
+    </div>
+
+    <script>
+        document.getElementById("div1").addEventListener("click", toggleRed);
+        document.getElementById("div2").addEventListener("click", toggleRed);
+        document.getElementById("div3").addEventListener("click", toggleRed);
+
+        function toggleRed(event)
+        {
+            let div = event.target;
+            div.style.backgroundColor = "red";
+            div.removeEventListener("click", toggleRed);
+            div.addEventListener("click", toggleGreen);
+        }
+
+        function toggleGreen(event)
+        {
+            let div = event.target;
+            div.style.backgroundColor = "green";
+            div.removeEventListener("click", toggleGreen);
+            div.addEventListener("click", toggleRed);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 5</title>
+</head>
+<body>
+    <p onclick="calculateSquare(this)">Вісім</p>
+    <p onclick="calculateSquare(this)">Дев'ять</p>
+    <p onclick="calculateSquare(this)">Десять</p>
+
+    <script>
+        function wordToNumber(word)
+        {
+            const numbers =
+            {
+                "Один": 1,
+                "Два": 2,
+                "Три": 3,
+                "Чотири": 4,
+                "П'ять": 5,
+                "Шість": 6,
+                "Сім": 7,
+                "Вісім": 8,
+                "Дев'ять": 9,
+                "Десять": 10
+            };
+            return numbers[word] || null;
+        }
+
+        function calculateSquare(paragraph)
+        {
+            const numberWord = paragraph.innerText;
+            const number = wordToNumber(numberWord);
+            
+            if (number !== null)
+            {
+                paragraph.innerHTML = `${numberWord} (квадрат: ${number * number})`;
+            }
+            else
+            {
+                paragraph.innerHTML = "Невідоме число";
+            }
+        }
+    </script>
+</body>
+</html>

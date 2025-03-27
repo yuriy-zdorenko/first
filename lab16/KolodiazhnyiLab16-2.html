@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2</title>
+</head>
+<body>
+    <a id="link1" href="https://www.google.com">Google</a>
+    <a id="link2" href="https://mail.google.com">Gmail</a>
+    <a id="link3" href="https://drive.google.com">Drive</a>
+
+    <script>
+        document.getElementById("link1").addEventListener("mouseover", changeTitle);
+        document.getElementById("link2").addEventListener("mouseover", changeTitle);
+        document.getElementById("link3").addEventListener("mouseover", changeTitle);
+
+        function changeTitle(event)
+        {
+            event.target.setAttribute('title', event.target.getAttribute('href'));
+            event.target.removeEventListener("mouseover", changeTitle);
+        }
+    </script>
+</body>
+</html>

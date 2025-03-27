@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Форма замовлення на товар</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Форма для замовлення на товар</h1>
+        <form>
+            <label for="account-number">Номер банківського рахунку:</label>
+            <input type="text" name="account-number" id="account-number" required><br><br>
+
+            <label for="user-id">Особистий номер користувача:</label>
+            <input type="text" name="user-id" id="user-id" required><br><br>
+
+            <label for="products">Виберіть товар(и):</label><br>
+            <select name="products[]" id="products" multiple size="5">
+                <option value="smartphone">Смартфон</option>
+                <option value="laptop">Ноутбук</option>
+                <option value="tablet">Планшет</option>
+                <option value="headphones">Навушники</option>
+                <option value="smartwatch">Смарт-годинник</option>
+            </select><br><br>
+
+            <label for="comments">Коментарі:</label><br>
+            <textarea name="comments" id="comments" rows="5" cols="50" placeholder="Введіть коментар..."></textarea><br><br>
+
+            <label>Вид оплати:</label><br>
+            <input type="radio" name="payment-type" id="cash" value="cash" required>
+            <label for="cash">Готівковий</label>
+            <input type="radio" name="payment-type" id="non-cash" value="non-cash">
+            <label for="non-cash">Безготівковий</label><br><br>
+
+            <label>Додаткова інформація:</label><br>
+            <input type="checkbox" name="additional-info" id="balance-info" value="balance">
+            <label for="balance-info">Дані про залишки на рахунку</label><br>
+            <input type="checkbox" name="additional-info" id="payments-info" value="payments">
+            <label for="payments-info">Список останніх виплат по рахунку</label><br><br>
+
+            <input type="submit" value="Відправити замовлення">
+        </form>
+    </body>
+</html>

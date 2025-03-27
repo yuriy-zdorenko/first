@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Форма реєстрації</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Форма реєстрації</h1>
+
+        <form>
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+
+            <label for="bio">Про себе:</label>
+            <textarea name="bio" id="bio" rows="5" cols="50"></textarea>
+            <br><br>
+
+            <label for="profilePicture">Завантажити фото профілю:</label>
+            <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+            <br><br>
+
+            <p>Стать:</p>
+            <label>
+                <input type="radio" name="gender" value="male"> Чоловік
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female"> Жінка
+            </label>
+            <br><br>
+
+            <label for="country">Країна:</label>
+            <select name="country" id="country">
+                <option value="ua">Україна</option>
+                <option value="us">США</option>
+                <option value="ca">Канада</option>
+                <option value="de">Німеччина</option>
+            </select>
+            <br><br>
+
+            <label>
+                <input type="checkbox" id="subscribe" name="subscribe"> Підписатися на новини
+            </label>
+            <br><br>
+
+            <input type="submit" value="Зареєструватися">
+            <input type="reset" value="Очистити форму">
+        </form>
+    </body>
+</html>

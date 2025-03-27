@@ -1,0 +1,40 @@
+@use 'variables';
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: variables.$header-bg;
+    padding: 10px 40px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin: 0 15px;
+    }
+
+    a {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: variables.$secondary-color;
+        text-decoration: none;
+
+        &:hover {
+            color: variables.$primary-color;
+        }
+    }
+}
+
+.auth a {
+    color: variables.$secondary-color;
+    text-decoration: none;
+
+    &:hover {
+        color: variables.$primary-color;
+    }
+}

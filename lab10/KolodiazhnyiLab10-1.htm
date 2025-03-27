@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Адаптивна розмітка html-сторінки</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <style>
+            *
+            {
+                box-sizing: border-box;
+            }
+
+            body, html
+            {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .wrapper
+            {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                gap: 3px;
+                height: 100vh;
+            }
+
+            .block { border: 1px solid lightgrey; }
+
+            .block1 { background-color: #5b9bd5; }
+            .block2 { background-color: #6e7d82; }
+            .block3 { background-color: #5bd1d1; }
+            .block4 { background-color: #e16b6b; }
+            .block5 { background-color: #ffc000; }
+            .block6 { background-color: #31a475; }
+            .block7 { background-color: #c55a11; }
+
+            @media (min-width: 1200px)
+            {
+                .block1 { grid-column: 1 / 4; grid-row: 1 / 2; }
+                .block2 { grid-column: 4 / 4; grid-row: 1 / span 3; }
+                .block3 { grid-column: 1 / 2; grid-row: 2 / 3; }
+                .block4 { grid-column: 2 / 3; grid-row: 2 / 3; }
+                .block5 { grid-column: 3 / 4; grid-row: 2 / span 2; }
+                .block6 { grid-column: 1 / 3; grid-row: 3 / 4; }
+                .block7 { grid-column: 1 / 5; grid-row: 4 / 5; }
+            }
+
+            @media (min-width: 950px) and (max-width: 1199px)
+            {
+                .block1 { grid-column: 1 / 4; grid-row: 1 / 2; }
+                .block2 { grid-column: 4 / 4; grid-row: 1 / span 3; }
+                .block3 { grid-column: 1 / 2; grid-row: 2 / 3; }
+                .block4 { grid-column: 2 / 3; grid-row: 2 / 3; }
+                .block5 { grid-column: 3 / 4; grid-row: 2 / span 2; }
+                .block6 { grid-column: 1 / 3; grid-row: 3 / 4; }
+                .block7 { grid-column: 1 / 5; grid-row: 4 / 5; }
+            }
+
+            @media (min-width: 750px) and (max-width: 949px) 
+            {
+                .block1 { grid-column: 1 / 3; grid-row: 1 / 2; }
+                .block2 { grid-column: 1 / 2; grid-row: 2 / 3; }
+                .block3 { grid-column: 2 / 3; grid-row: 2 / 3; }
+                .block4 { grid-column: 1 / 2; grid-row: 3 / 4; }
+                .block5 { grid-column: 2 / 3; grid-row: 3 / 4; }
+                .block6 { grid-column: 1 / 3; grid-row: 4 / 5; }
+                .block7 { grid-column: 1 / 3; grid-row: 5 / 6; }
+            }
+
+            @media (min-width: 500px) and (max-width: 749px)
+            {
+                .block1 { grid-column: 1 / 3; grid-row: 1 / 2; }
+                .block2 { grid-column: 1 / 2; grid-row: 2 / 3; }
+                .block3 { grid-column: 2 / 3; grid-row: 2 / 3; }
+                .block4 { grid-column: 1 / 2; grid-row: 3 / 4; }
+                .block5 { grid-column: 2 / 3; grid-row: 3 / 4; }
+                .block6 { grid-column: 1 / 3; grid-row: 4 / 5; }
+                .block7 { grid-column: 1 / 3; grid-row: 5 / 6; }
+            }
+
+            @media (max-width: 499px)
+            {
+                .block1 { grid-column: 1 / 2; grid-row: 1 / 2 ; }
+                .block2 { grid-column: 1 / 2; grid-row: 2 / 3 ; }
+                .block3 { grid-column: 1 / 2; grid-row: 3 / 4 ; }
+                .block4 { grid-column: 1 / 2; grid-row: 4 / 5 ; }
+                .block5 { grid-column: 1 / 2; grid-row: 5 / 6 ; }
+                .block6 { grid-column: 1 / 2; grid-row: 6 / 7 ; }
+                .block7 { grid-column: 1 / 2; grid-row: 7 / 8 ; }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="block block1"></div>
+            <div class="block block2"></div>
+            <div class="block block3"></div>
+            <div class="block block4"></div>
+            <div class="block block5"></div>
+            <div class="block block6"></div>
+            <div class="block block7"></div>
+        </div>
+    </body>
+</html>

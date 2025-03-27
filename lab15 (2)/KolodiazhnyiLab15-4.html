@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 4</title>
+</head>
+<body>
+    <script>
+        let Cm = parseFloat(prompt("Введіть довжину в сантиметрах:"));
+
+        if (!isNaN(Cm))
+        {
+            let Inch = Cm / 2.54;
+
+            alert("Довжина в дюймах: " + Inch);
+        }
+        else 
+        {
+            alert("Будь ласка, введіть коректне числове значення!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+@use 'variables';
+
+.movies-section {
+    padding: 20px 40px;
+    margin: 0;
+    background-color: variables.$bg-color;
+}
+
+.series-section {
+    padding: 20px 40px;
+    margin: 0;
+    background-color: variables.$section-bg;
+}
+
+h2 {
+    padding: 15px 60px;
+    background-color: variables.$heading-bg;
+    margin: 0;
+    color: variables.$secondary-color;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 5</title>
+</head>
+<body>
+    <script>
+        let Tc = parseFloat(prompt("Введіть температуру в градусах за Цельсієм:"));
+
+        if (!isNaN(Tc))
+        {
+            let Tf = (9 / 5) * Tc + 32;
+
+            alert("Температура в градусах за Фаренгейтом: " + Tf);
+        }
+        else 
+        {
+            alert("Будь ласка, введіть коректне числове значення!");
+        }
+    </script>
+</body>
+</html>

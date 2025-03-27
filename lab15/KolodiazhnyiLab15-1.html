@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1</title>
+</head>
+<body>
+    <script>
+        // Функція для перевірки, чи є число простим
+        function isPrime(num)
+        {
+            if (num < 2)
+            {
+                return false;
+            } 
+            for (let i = 2; i <= Math.sqrt(num); i++)
+            {
+                if (num % i === 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        let i = 0;
+        while (i <= 100)
+        {
+            if (isPrime(i))
+            {
+                console.log(i);
+            }
+            i++;
+        }
+    </script>    
+</body>
+</html>
