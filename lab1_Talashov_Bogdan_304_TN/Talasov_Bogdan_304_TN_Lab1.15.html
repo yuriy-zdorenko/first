@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Лабораторна робота 1</title>
+    </head>
+    <body>
+        <h1>Завдання №1</h1>
+        <script>
+            let i = -100;
+            while(i < 100){
+                i++;
+                if(i < 1)
+                    continue;
+                document.write(i + "; ");
+            }
+        </script>
+        <br>
+        <h1>Завдання №2</h1>
+        <script>
+            function EvenNum(){
+                let num = 0;
+                do{
+                    if(num % 2 == 0 && num != 0)
+                        document.write(num + "; ");
+                    num++;
+                }while(num < 100);
+            }
+            EvenNum();
+        </script>
+        <br>
+        <h1>Завдання №3</h1>
+        <script>
+            let b = 1000;
+            let count = 0;
+            let res = 0;
+            while(b > 5){
+                b = b / 3;
+                count++;
+            }
+            res = b;
+            document.write("Число яке отримали: " + res + " // Кількість ітерацій: " + count);
+        </script>
+        <br>
+        <h1>Завдання №4</h1>
+        <script>
+            let santimeters = prompt('Введіть довжину в сантиметрах: ', '');
+            let inches = 0.3937;
+            alert("Ваша довжина в дюймах: " + santimeters * inches);
+            document.write("Ваша довжина в дюймах: " + santimeters * inches);
+        </script>
+        <br>
+        <h1>Завдання №5</h1>
+        <script>
+            let question = prompt("Введіть число від 1 до 31:", '');
+            let day = ["Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"];
+            if(question < 0 || question > 31){
+                alert("Від 1 до 31!")
+                question = prompt("Введіть число від 1 до 31:", '');
+            }
+            alert("Ваш день: " + day[question % 7 - 1]);
+            document.write("Ваш день: " + day[question % 7 - 1]);
+        </script>
+    </body>
+</html>

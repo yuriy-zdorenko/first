@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalashovLab07-3</title>
+    <style>
+        body {
+            background-color: #E6F7F7;
+            text-align: center;
+        }
+        table {
+            margin: 0 auto;
+            background-color: #E6FFFF;
+            border: 5px double #333;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 5px double #333;
+            padding: 8px;
+        }
+        button{
+            float: left;
+        }
+        th{
+            color: red;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="#" method="post">
+            <table>
+                <th colspan="2">
+                   Анкета
+                </th>
+                <tr>
+                    <td>1. Прізвище</td>
+                    <td><input type="text" id="surname" name="surname"></td>
+                </tr>
+                <tr>
+                    <td>2. Ім'я, по батькові</td>
+                    <td><input type="text" id="name" name="name"></td>
+                </tr>
+                <tr>
+                    <td>3. Число і рік народження</td>
+                    <td><input type="date" id="birth" name="birth"></td>
+                </tr>
+                <tr>
+                    <td>4. Домашня адреса</td>
+                    <td><input type="text" id="address" name="address"></td>
+                </tr>
+                <tr>
+                    <td>5. Місце навчання (роботи)</td>
+                    <td><input type="text" id="place" name="place"></td>
+                </tr>
+                <tr>
+                    <td>6. Домашній (робочий) телефон</td>
+                    <td><input type="tel" id="phone" name="phone"></td>
+                </tr>
+                <tr>
+                    <td>7. E-mail</td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>8. Область наукових інтересів</td>
+                    <td>
+                        <input type="text" id="interest1" name="interest1" placeholder="1. Науковий інтерес"><br>
+                        <input type="text" id="interest2" name="interest2" placeholder="2. Науковий інтерес"><br>
+                        <input type="text" id="interest3" name="interest3" placeholder="3. Науковий інтерес"><br>
+                        <input type="text" id="interest4" name="interest4" placeholder="4. Науковий інтерес"><br>
+                        <input type="text" id="interest5" name="interest5" placeholder="5. Науковий інтерес"><br>
+                        <input type="text" id="interest6" name="interest6" placeholder="6. Науковий інтерес"><br>
+                    </td>
+                </tr>
+            <tr>
+            <td>
+            <button type="reset">Відмінити введення</button>     
+            <br>
+            <button type="submit">Надіслати дані та перейти до 2 етапу реєстрації</button>
+            </td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</body>
+</html>

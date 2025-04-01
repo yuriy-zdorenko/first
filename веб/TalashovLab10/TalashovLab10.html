@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalashovLab10</title>
+</head>
+<style>
+    .wrapper{
+        grid-template-columns: repeat(4, 1fr);
+        display: grid;
+        gap: 3px;
+        width: 100%;
+        height: 100vh;
+    }
+    .block{
+        border: 1px solid white;
+    }
+    .block:nth-child(1) {background-color: #5a9bd6; } /* blue */
+    .block:nth-child(2) {background-color: #6e797f;} /* gray */
+    .block:nth-child(3) {background-color: #5bcdd6;} /* blue */
+    .block:nth-child(4) {background-color: #e65f65;} /* red */
+    .block:nth-child(5) {background-color: #fdb62f;} /* Жовтий */
+    .block:nth-child(6) {background-color: #4fa976;} /* green */
+    .block:nth-child(7) {background-color: #d9732f;} /* orange */
+    
+    @media screen and (min-width:1200px){
+        .block:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 4;
+        }
+        /* blue */
+    
+    
+    .block:nth-child(2){
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    /* gray */
+
+ 
+
+    .block:nth-child(5){
+        grid-column-start:3 ;
+        grid-column-end:4 ;
+        grid-row-start:2;
+        grid-row-end: 4;
+    }
+    /* yellow */
+
+    .block:nth-child(6){
+        grid-column-start: 1;
+        grid-column-end: 3;
+    
+    }
+    /* green */
+
+    .block:nth-child(7){
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    /* orange */
+}
+
+    @media screen and (min-width:950px) and (max-width:1200px) {
+        .block:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 4;
+        }
+        /* blue */
+    
+    
+    .block:nth-child(2){
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 6;
+    }
+    /* gray */
+
+    .block:nth-child(3){
+        grid-column-start:1 ;
+        grid-column-end: 3;
+    }
+    /* blue */
+
+    .block:nth-child(4){
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    /* red */
+
+    .block:nth-child(5){
+        grid-column-start:3 ;
+        grid-column-end:3 ;
+        grid-row-start:2;
+        grid-row-end: 5;
+    }
+     /* yellow */
+
+    .block:nth-child(6){
+        grid-column-start: 1;
+        grid-column-end: 3;
+    
+    }
+    /* green */
+
+    .block:nth-child(7){
+        grid-column-start:1;
+        grid-column-end: 4;
+    }
+    /* orange */
+    }
+
+    @media screen and (min-width:750px) and (max-width:950px){
+
+    .block:nth-child(1) { 
+
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+    } /* blue */
+
+    .block:nth-child(2) { 
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    } /* gray */
+
+    .block:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+    } /* red */
+
+    .block:nth-child(3) { 
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+
+    } /* blue */
+
+    .block:nth-child(5) { 
+
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    } /* Жовтий */
+
+    .block:nth-child(6) {
+ 
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    } /* green */
+
+
+    .block:nth-child(7) { 
+
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    } /* orange */
+}
+
+@media screen and (max-width:750px){
+
+    .wrapper {
+    grid-template-columns: 1fr;
+    display: grid;
+    gap: 3px;
+    width: 100%;
+    height: 100vh;
+    }
+}
+</style>
+<body>
+        <div class="wrapper">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+    
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalashovLab07-2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: darkslateblue;
+        }
+
+        p {
+            text-align: center;
+            margin: 10px 0;
+            color: #666;
+        }
+
+        form {
+            background-color: #B7B7B7;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #444;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="file"],
+        select,
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            background-color:lightgray ;
+            margin-bottom: 15px;
+            border: 1px solid #B7B7B7;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="color"]{
+            border: 1px solid #B7B7B7;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #0066cc;
+            color: #333;
+            border: none;
+            padding: 10px 15px;
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #004999;
+        }
+
+        input[type="reset"] {
+            background-color: #999;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .radioT{
+            display: flex;
+            justify-content: space-between;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Завдання до лабораторної роботи №7 для самостійного виконання №1</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Ваш вік:</label>
+            <input type="number" id="age" name="age" min="1" max="120" required>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Дата народження:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="color">Оберіть улюблений колір:</label>
+            <input type="color" id="color" name="color">
+        </div>
+
+        <div class="form-group">
+            <label>Вашa cтать</label>
+            <div class="radioT">
+                <input type="radio" id="football" name="sport" value="football">
+                <label for="football">Чоловік</label>
+                <input type="radio" id="basketball" name="sport" value="basketball">
+                <label for="basketball">Жінка</label>
+                <input type="radio" id="tennis" name="sport" value="tennis">
+                <label for="tennis">Інша</label>
+            </div>
+            
+        </div>
+
+        <div class="form-group">
+            <label for="hobbies">Ваш рід діяльності:</label>
+            <div class="radioT">
+
+                    <input type="checkbox" id="reading" name="hobbies" value="reading">
+                    <label for="reading">Працюю</label>
+                    <input type="checkbox" id="traveling" name="hobbies" value="traveling">
+                    <label for="traveling">Навчаюсь</label>
+                    <input type="checkbox" id="cooking" name="hobbies" value="cooking">
+                    <label for="cooking">Відпочиваю</label>
+
+                
+            </div>
+            
+        </div>
+
+        <div class="form-group">
+            <label for="country">Оберіть країну:</label>
+            <select id="country" name="country" required>
+                <option value="ukraine">Україна</option>
+                <option value="poland">Польща</option>
+                <option value="germany">Німеччина</option>
+                <option value="usa">США</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Ваші коментарі:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Введіть ваші коментарі"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="file">Завантажте файл:</label>
+            <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png, .pdf">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Відправити">
+            <input type="reset" value="Скинути">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>TalashovLab07-1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            background-color: #B7B7B7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+            max-width: 600px;
+            margin: auto;
+        }
+        input[type="text"],
+        select,
+        textarea,
+        input[type="file"] {
+            background-color: lightgray;
+            width: 95%;
+            color: #333;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #3B4D77;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #384564;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Форма для завдання</h2>
+    <form action="response.html" method="get">
+        <div class="form-group">
+            <label for="name">Ваше ім'я:</label>
+            <input id="name" name="name" type="text" maxlength="40" placeholder="Введіть ваше ім'я">
+        </div>
+        <div class="form-group">
+            <label>Ваша стать:</label>
+            <label><input type="radio" name="pol" value="male"> Чоловіча</label>
+            <label><input type="radio" name="pol" value="female"> Жіноча</label>
+            <label><input type="radio" name="pol" value="female"> Інша</label>
+        </div>
+        <div class="form-group">
+            <label for="curs">На якому курсі Ви навчаєтесь?</label>
+            <select id="curs" name="curs">
+                <option value="1" selected>Перший</option>
+                <option value="2">Другий</option>
+                <option value="3">Третій</option>
+                <option value="4">Четвертий</option>
+                <option value="5">П'ятий</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Які дисципліни ви вивчаєте на курсі?</label>
+            <label><input type="checkbox" name="web" value="yes" checked> WEB-програмування</label>
+            <label><input type="checkbox" name="database" value="yes"> Бази даних</label>
+            <label><input type="checkbox" name="intelligence" value="yes"> Методи та системи штучного інтелекту</label>
+            <label><input type="checkbox" name="theory" value="yes"> Теорія прийняття рішень</label>
+        </div>
+        <div class="form-group">
+            <label for="about">Напишіть декілька слів про себе:</label>
+            <textarea id="about" name="about" rows="6" placeholder="Розкажіть трохи про себе..."></textarea>
+        </div>
+        <div class="form-group">
+            <label for="friend">Завантажте файл:</label>
+            <input type="file" id="friend" name="friend" accept=".txt,.doc,.docx,.pdf">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Відіслати дані">
+            <input type="reset" value="Очистити форму">
+        </div>
+    </form>
+</body>
+</html>

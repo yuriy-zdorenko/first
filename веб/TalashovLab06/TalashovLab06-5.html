@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сенсорне зображення</title>
+    <style>
+        .map {
+            position: relative;
+            display: inline-block;
+        }
+        .area {
+            position: absolute;
+            cursor: pointer;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            transition: display 0.2s;
+        }
+        .area:hover .tooltip {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Сенсорна карта</h1>
+<div  position="relative" cursor="pointer" class="map">
+    <img src="images/shapes2.png" alt="Сенсорна карта" usemap="#image-map">   
+    <!-- Область 1 -->
+    <div class="area" style="top: 80px; left: 20px; width: 120px; height: 100px;">
+        <div class="tooltip">Це область 1</div>
+    </div>
+
+    <!-- Область 2 -->
+    <div class="area" style="top: 120px; left: 180px; width: 120px; height: 120px;">
+        <div class="tooltip">Це область 2</div>
+    </div>
+
+    <!-- Область 3 -->
+    <div class="area" style="top: 80px; left: 400px; width: 120px; height: 100px;">
+        <div class="tooltip">Це область 3</div>
+    </div>
+</div>
+</body>
+</html>

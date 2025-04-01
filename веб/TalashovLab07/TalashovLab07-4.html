@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замовлення товару</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: lightgray;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            color: darkslateblue;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #B7B7B7;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus, select:focus, textarea:focus {
+            border-color: darkslateblue;
+            outline: none;
+        }
+        select {
+            height: 100px; /* висота для списку товарів */
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-top: 10px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #00695c;
+            transform: scale(1.05);
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Замовлення товару</h1>
+        <form action="#" method="post">
+            <label for="bankAccount">Номер банківського рахунку:</label>
+            <input type="text" id="bankAccount" name="bankAccount" required>
+
+            <label for="personalNumber">Особистий номер користувача:</label>
+            <input type="text" id="personalNumber" name="personalNumber" required>
+
+            <label for="products">Виберіть товари:</label>
+            <select id="products" name="products[]" multiple required>
+                <option value="product1">Товар 1</option>
+                <option value="product2">Товар 2</option>
+                <option value="product3">Товар 3</option>
+                <option value="product4">Товар 4</option>
+            </select>
+
+            <label for="comments">Коментарі:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Ваші коментарі..."></textarea>
+
+            <label>Спосіб оплати:</label>
+            <label><input type="radio" name="paymentMethod" value="cash" required> Готівковий</label>
+            <label><input type="radio" name="paymentMethod" value="cashless"> Безготівковий</label>
+
+            <label>Додаткова інформація:</label>
+            <label><input type="checkbox" name="balanceInfo" value="yes"> Дані про залишки на рахунку</label>
+            <label><input type="checkbox" name="paymentHistory" value="yes"> Список останніх виплат по рахунку</label>
+
+            <input type="submit" value="Відправити замовлення">
+        </form>
+
+    </div>
+</body>
+</html>
