@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Завданя №1</title>
+</head>
+<body>
+	<img src="img/slonik.jpg" alt="Slonik" width="200" height="300">
+    <img src="img/rujiy.jpg" alt="Rujiy" width="200" height="300">
+    <img src="img/lik.jpg" alt="Lik" width="200" height="300">
+
+    <script>
+        const photo = document.querySelectorAll('img');
+        photo.forEach(function(img) {
+            img.onclick = function() {
+                alert(img.src);
+            };
+        });
+    </script>
+
+</body>
+</html>

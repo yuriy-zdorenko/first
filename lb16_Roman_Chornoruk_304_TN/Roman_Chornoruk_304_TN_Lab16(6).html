@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Завдання №6</title>
+</head>
+<body>
+    Input 1: <input type="first" id="input1"><br>
+    Input 2: <input type="second" id="input2"><br>
+    Input 3: <input type="third" id="input3">
+
+    <script>
+        const vod = document.querySelectorAll('input');
+
+        function Alert(event) {
+            if (event.target.value !== '') {
+                alert(event.target.value);
+                    event.target.removeEventListener('click', Alert);
+                }
+            }
+           
+        vod.forEach(function(input) {
+            input.addEventListener('click', Alert);
+        });
+    </script>
+</body>
+</html>

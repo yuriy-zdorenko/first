@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Grid</title>
+	<style type="text/css">
+		body{
+			margin: 0px;
+		}
+
+		.container{
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 2px;
+			width: 100%;
+            height: 100vh;
+		}
+		@media screen and (min-width:1200px){
+			.block1{
+				background-color: #2facfa;
+				grid-column-start: 1;
+				grid-column-end: 4;
+			}
+			.block2{
+				background-color: #878483;
+				grid-column-start: 4;
+	            grid-column-end: 4;
+	            grid-row-start: 1;
+	            grid-row-end: 4;
+			}
+			.block3{
+				background-color: #40d9f7;
+			}
+			.block4{
+				background-color: #fa725a;
+			}
+			.block5{
+				background-color: #fdb62f;
+				grid-column-start: 3;
+				grid-column-end: 4;
+				grid-row-start: 2;
+				grid-row-end: 4;
+			}
+			.block6{
+				background-color: #499940;
+				grid-column-start: 1;
+				grid-column-end: 3;
+				grid-row-start: 3;
+				grid-row-end: 3;
+			}
+			.block7{
+				background-color: #d16e04;
+				grid-column-start: 1;
+				grid-column-end: 5;
+				grid-row-start: 4;
+				grid-row-end: 4;
+			}
+		}
+		@media screen and (min-width:950px) and (max-width:1200px){
+			.block1{
+				background-color: #2facfa;
+				grid-column-start: 1;
+				grid-column-end: 4;
+			}
+			.block2{
+				background-color: #878483;
+				grid-column-start: 4;
+	            grid-column-end: 4;
+	            grid-row-start: 1;
+	            grid-row-end: 5;
+			}
+			.block3{
+				background-color: #40d9f7;
+				grid-column-start: 1;
+            	grid-column-end: 3;
+			}
+			.block4{
+				background-color: #fa725a;
+	            grid-column-start: 1;
+	            grid-column-end: 3;
+	            grid-row-start: 3;
+	            grid-row-end: 4;
+			}
+			.block5{
+				background-color: #fdb62f;
+				grid-column-start: 3;
+	            grid-column-end: 4;
+	            grid-row-start: 2;
+	            grid-row-end: 5;
+			}
+			.block6{
+				background-color: #499940;
+				grid-column-start: 1;
+	            grid-column-end: 3;
+	            grid-row-start: 4;
+	            grid-row-end: 5;
+			}
+			.block7{
+				background-color: #d16e04;
+				grid-column-start: 1;
+	            grid-column-end: 5;
+	            grid-row-start: 5;
+	            grid-row-end: 6;
+			}
+		}
+		@media screen and (min-width: 750px) and (max-width: 950px){
+			.block1{
+				background-color: #2facfa;
+				grid-column-start: 1;
+				grid-column-end: 4;
+			}
+			.block2{
+				background-color: #878483;
+				grid-column-start: 4;
+	            grid-column-end: 4;
+	            grid-row-start: 1;
+	            grid-row-end: 5;
+			}
+			.block3{
+				background-color: #40d9f7;
+				grid-column-start: 1;
+           	 	grid-column-end: 4;
+			}
+			.block4{
+				background-color: #fa725a;
+	            grid-column-start: 1;
+	            grid-column-end: 4;
+	            grid-row-start: 3;
+	            grid-row-end: 4;
+			}
+			.block5{
+				background-color: #fdb62f;
+				grid-column-start: 1;
+	            grid-column-end: 5;
+	            grid-row-start: 5;
+	            grid-row-end: 5;
+			}
+			.block6{
+				background-color: #499940;
+				grid-column-start: 1;
+	            grid-column-end: 4;
+	            grid-row-start: 4;
+	            grid-row-end: 5;
+			}
+			.block7{
+				background-color: #d16e04;
+				grid-column-start: 1;
+	            grid-column-end: 5;
+	            grid-row-start: 6;
+	            grid-row-end: 7;
+			}
+		}
+		@media screen and (max-width: 750px){
+			.container {
+	            grid-template-columns: 1fr;
+	            grid-template-rows: repeat(7,1fr);
+	            display: grid;
+	            gap: 2px;
+	            width: 100%;
+	            height: 100vh;
+        	}
+        	.block1{
+				background-color: #2facfa;
+			}
+			.block2{
+				background-color: #878483;
+			}
+			.block3{
+				background-color: #40d9f7;	
+			}
+			.block4{
+				background-color: #fa725a;
+			}
+			.block5{
+				background-color: #fdb62f;
+			}
+			.block6{
+				background-color: #499940;
+			}
+			.block7{
+				background-color: #d16e04;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+        <div class="block1"></div>
+        <div class="block2"></div>
+        <div class="block3"></div>
+        <div class="block4"></div>
+        <div class="block5"></div>
+        <div class="block6"></div>
+        <div class="block7"></div>
+    </div>
+</body>
+</html>

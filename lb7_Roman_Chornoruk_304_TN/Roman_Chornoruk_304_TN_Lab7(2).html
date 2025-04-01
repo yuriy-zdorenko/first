@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Форма для заповнення_2 
+	</title>
+</head>
+<body bgcolor="#fade93">
+	<font face="courier" color="#26798c" size="4">
+		<h2 align="center">Форма для заповнення</h2>
+		<form>
+			<pre>
+				Ваше ім'я: 
+				<input name="name" type="text" maxlength="40" size="40" value="" placeholder="Введіть ім'я">
+				Введіть вашу електронну адресу: 
+				<input name="mail" type="text" maxlength="40" size="40" value="" placeholder="Введіть електронну адресу">
+				Ваш вік:
+				<input name="age" type="number" maxlength="40" size="40" value="">
+				Дата народження:
+				<input type="date" name="date">
+				Стать:
+				<input type="radio" name="pol" value="male">Чоловіча
+            			<input type="radio" name="pol" value="female">Жіноча
+		            	Ваше хобі:
+		            	<input type="checkbox" name="football" value="yes"> Футбол
+		        	<input type="checkbox" name="fishing" value="yes"> Риболовля
+		        	<input type="checkbox" name="volleybal" value="yes"> Волейбол
+		        	Скільки років займаєтесь цим хобі?
+		        	<select name="curs" size="1">
+		                    <option value="1" selected>Перший</option>
+		                    <option value="2">Другий</option>
+		                    <option value="3">Третій</option>
+		                    <option value="4">Четвертий</option>
+		                    <option value="5">П'ятий</option>
+		                    <option value="6">Більше</option>
+		            </select>
+		        	Про себе:
+		        	<textarea name="about" rows="6" cols="60" wrap="off" placeholder="Про себе"></textarea>	
+				<input type="submit" value="Відіслати дані"><br>
+		           	<input type="reset" value="Очистити форму"><br>
+		           	<input type="file" name="friend" size="50" accept="image/*">
+			</pre>
+			
+		</form>
+	</font>
+</body>
+</html>

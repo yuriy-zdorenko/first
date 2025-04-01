@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Форма для замовлення</title>
+</head>
+<body bgcolor="#f7f2ab">
+	<form>
+		<font size="4" face="courier" color="#5fb2b8">
+			<h1 align="center">Замовлення товару</h1>
+			<p><b>Введіть номер банківського рахунку:</b></p>
+			<input type="text" name="bankId" placeholder="Банківський рахунок" size="35">
+			<p><b>Особистий номер користувача:</b></p>
+			<input type="text" name="personId" placeholder="Номер користувача" size="35">
+			<p><b>Оберіть товар:</b></p>
+			<select name="products">
+				<option value="firstProd"> Продукт 1</option>
+				<option value="secondProd"> Продукт 2</option>
+				<option value="thirdProd"> Продукт 3</option>
+				<option value="fourthProd"> Продукт 4</option>
+			</select>
+			<p><b>Особливі примітки:</b></p>
+			<textarea name="comments" rows="6" cols="60" wrap="off" placeholder="Добавте примітку..."></textarea>
+			<p><b>Оберіть спосіб оплати:</b></p>
+			<input type="radio" name="pay">Готівковий<br><br>
+			<input type="radio" name="pay">Безготівковий<br>
+			<p><b>Додаткова інформація</b></p>
+			<input type="checkbox" name="other" value="yes">Дані про залишки на рахунку<br><br>
+			<input type="checkbox" name="other2" value="yes">Список останніх виплат по рахунку<br><br>
+		</font>
+	</form>
+</body>
+</html>

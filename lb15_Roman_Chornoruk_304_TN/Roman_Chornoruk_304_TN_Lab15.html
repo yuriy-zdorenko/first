@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Чорнорук Роман</title>
+</head>
+<body>
+	<h1>Завдання №1</h1>
+	<script type="text/javascript">
+		let i = 0;
+		while (i<100){
+			i++;
+			document.write(i + " ");
+		}
+	</script>
+	<br>
+	<h1>Завдання №2</h1>
+	<script type="text/javascript">
+		let num = 0;
+		do{
+			if (num === 0) {
+                document.write("0 - це нуль<br>");
+            } else if (num % 2 === 0) {
+                document.write(num + " - парне число<br>");
+            } else {
+                document.write(num + " - непарне число<br>");
+            }
+            num++;
+		} while(num<=10);
+	</script>
+	<br>
+	<h1>Завдання №3</h1>
+	<script type="text/javascript">
+		let numb = 10000;
+        let counter = 0;
+        let result;
+
+        while (numb > 50) {
+            numb = numb / 2;
+            result = numb;
+            ++counter;
+        }
+
+        document.write("Підрахунок: " + counter + "<br>" + " Результат: " + result + "<br>");
+	</script>
+	<br>
+	<h1>Завдання №4</h1>
+	<script type="text/javascript">
+		let month = prompt("Введіть число місяця", '');
+        const numOfMonth = {
+            1: "Січень",
+            2: "Лютий",
+            3: "Березень",
+            4: "Квітень",
+            5: "Травень",
+            6: "Червень",
+            7: "Липень",
+            8: "Серпень",
+            9: "Вересень",
+            10: "Жовтень",
+            11: "Листопад",
+            12: "Грудень"
+        };
+		if(month <=2 || month == 12) {
+            alert("Зима/" + numOfMonth[month]);
+        }
+        if(month >=3 && month <=5) {
+            alert("Весна/" + numOfMonth[month]);
+        }
+        if(month >=6 && month <=8) {
+            alert("Літо/" + numOfMonth[month]);
+        }
+        if(month >=9 && month <=11) {
+            alert("Осінь/" + numOfMonth[month]);
+        }
+	</script>
+	<br>
+	<h1>Завдання №5</h1>
+	<script type="text/javascript">
+        let tc = prompt("Введіть температуру в градусах за цельсієм", '');
+        let tf;
+        tf = (9/5)*tc + 32;
+        document.write("Температура за цельсієм дорівнює " + tc + " градусів" + ". Це - " + tf + " градусів за фаренгейтом<br>");
+	</script>
+	<br>
+	<h1>Завдання №6</h1>
+	<script type="text/javascript">
+		let day = prompt("Введіть будь яке число від 1 до 7, яке буде виведене, як день неділі", '');
+			const numOfDay = {
+            	1: "Понеділок",
+            	2: "Вівторок",
+           	 	3: "Середа",
+            	4: "Четвер",
+            	5: "П'ятница",
+            	6: "Субота",
+            	7: "Неділя",
+        	};    
+    	document.write("День неділі: " + numOfDay[day] + "<br>");
+	</script>
+</body>
+</html>

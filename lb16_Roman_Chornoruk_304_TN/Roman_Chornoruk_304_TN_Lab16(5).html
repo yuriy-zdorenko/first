@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Завдання №5</title>
+</head>
+<body>
+    Input 1: <input type="first" id="1"><br>
+    Input 2: <input type="second" id="2"><br>
+    Input 3: <input type="third" id="3">
+
+    <p id="lamp"></p>
+
+    <script>
+        const vod = document.querySelectorAll('input');
+
+        vod.forEach(function(input) {
+            input.addEventListener('blur', function() {
+                document.getElementById('lamp').textContent = input.value;
+        	});
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Задвання №8</title>
+</head>
+<body>
+	Input 1: <input type="first" id="input1" data-length="10"><br>
+    Input 2: <input type="second" id="input2" data-length="1"><br>
+    Input 3: <input type="third" id="input3" data-length="0">
+
+    <script>
+        const inputs = document.querySelectorAll('input');
+
+        function Lenght(event) {
+            const correctLength = parseInt(event.target.dataset.length);
+            const inputLength = event.target.value.length;
+            if (correctLength === inputLength) {
+                event.target.style.borderColor = 'green';
+            } else {
+                event.target.style.borderColor = 'red';
+            }
+        }
+
+        inputs.forEach(function(input) {
+            input.addEventListener('blur', Lenght);
+        });
+    </script>
+</body>
+</html>

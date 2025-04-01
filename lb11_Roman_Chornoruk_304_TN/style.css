@@ -1,0 +1,46 @@
+body{
+	background-image: url('img/bckg.jpg');
+}
+
+h1{
+	text-align: center;
+	font-weight: bold;
+	color: green;
+	font-style: normal;
+}
+
+span{
+	color: red;
+}
+
+p{
+	text-align: justify;
+	margin: 0px 20px 0px 20px;
+	font-style: italic;
+	font-size: 20px;
+}
+
+img{
+	display: block;
+	margin: 20px auto;
+	border: 2px solid;
+	border-color: red;
+}
+
+a:link{
+	color: #1dc468;
+}
+
+a:active{
+	color: #cbde1f;
+}
+
+a:visited{
+	color:green;
+	text-decoration: none;
+}
+
+a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}

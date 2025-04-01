@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Завдання №7</title>
+</head>
+<body>
+    <p>2</p>
+    <p>0</p>
+    <p>20</p>
+    <script>
+        const p = document.querySelectorAll('p');
+
+        function NumParagraph(event){
+            const text = event.target.textContent;
+            const number = parseFloat(text);
+            const sqrt = number * number;
+            event.target.textContent = sqrt;
+        }
+
+        p.forEach(function(p){
+            p.addEventListener('click', NumParagraph);
+        })
+    </script>
+</body>
+</html>

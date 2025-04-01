@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Завдання №9</title>
+</head>
+<body>
+    <div class="first">Перший div</div>
+    <div class="second">Другий div</div>
+    <div class="third">Третій div</div>
+    <script>
+        const colors = document.querySelectorAll("div");
+
+        function Red(event) {
+            event.target.style.backgroundColor = 'red';
+            event.target.removeEventListener('click', Red);
+            event.target.addEventListener('click', Green);
+        }
+
+        function Green(event) {
+            event.target.style.backgroundColor = 'green';
+            event.target.removeEventListener('click', Green);
+            event.target.addEventListener('click', Red);
+        }
+
+        colors.forEach(function(div) {
+            div.addEventListener('click', Green);
+        });
+    </script>
+</body>
+</html>

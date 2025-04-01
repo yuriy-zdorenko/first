@@ -1,0 +1,33 @@
+html, body{
+	height: 100%;
+	margin: 0;
+}
+
+.container-fluid{
+	height: 100%;
+}
+
+.row{
+	height: 100%;
+}
+
+.block{
+	text-align: center;
+	color: white;
+	font-size: 65px;
+}
+
+.firstBlock{
+	background-color: blue;
+	border: 1px solid gray;
+}
+
+.secondBlock{
+	background-color: yellow;
+	border: 1px solid gray;
+}
+
+.thirdBlock{
+	background-color: red;
+	border: 1px solid gray;
+}

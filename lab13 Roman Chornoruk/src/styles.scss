@@ -1,0 +1,85 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222831; // Темний фон
+    color: #eeeeee; // Світлий текст
+}
+
+.menu {
+    background-color: #393e46; // Темно-сірий фон
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+
+    .logo {
+        margin-right: auto;
+
+        a img {
+            height: 40px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 0 20px;
+
+            a {
+                font-size: 16px;
+                font-weight: bold;
+                color: #eeeeee; // Світлий текст
+
+                &:hover {
+                    color: #00adb5; // Акцентний колір
+                }
+            }
+        }
+    }
+}
+
+.section {
+    padding: 50px 20px;
+
+    h2 {
+        font-size: 24px;
+        color: #00adb5; // Акцентний колір
+        margin-bottom: 20px;
+    }
+
+    .movies {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+
+        .movie {
+            width: 180px;
+            text-align: center;
+            background-color: #393e46; // Темний фон блоків
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 10px;
+
+            img {
+                width: 100%;
+                border-radius: 8px;
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: scale(1.05); // Легка анімація збільшення
+                }
+            }
+
+            p {
+                margin-top: 10px;
+                font-size: 14px;
+                color: #eeeeee; // Світлий текст
+            }
+        }
+    }
+}
