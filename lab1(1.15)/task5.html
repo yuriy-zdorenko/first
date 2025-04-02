@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 5</title>
+</head>
+<body>
+    <h2><b>Завдання:</b></h2>
+    <p>Отримати з модального вікна <font color="green">prompt</font> число від 1 до 31, і вивести в вікні браузера день тижня, якому відповідає задане число в поточному місяці.</p>
+    <h2>День тижня для вибраного числа місяця</h2>
+    <p id="output"></p>
+    <button onclick="getDayOfWeek()">Дізнатися день тижня</button>
+
+    <script>
+        function getDayOfWeek() {
+            let day = prompt("Введіть число місяця (від 1 до 31):", "1");
+
+            if (day !== null) { // Перевірка, чи не натиснута кнопка "Скасувати"
+                day = parseInt(day); // Перетворюємо введене значення у число
+
+                if (isNaN(day) || day < 1 || day > 31) {
+                    alert("Будь ласка, введіть число від 1 до 31!");
+                    return;
+                }
+
+                let currentYear = new Date().getFullYear(); // Отримуємо поточний рік
+                let currentMonth = new Date().getMonth();  // Отримуємо поточний місяць (0 - січень, 11 - грудень)
+                
+                let date = new Date(currentYear, currentMonth, day); // Створюємо дату з введеним числом
+                
+                let daysOfWeek = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П’ятниця", "Субота"];
+                let dayOfWeek = daysOfWeek[date.getDay()]; // Отримуємо назву дня тижня
+                
+                document.getElementById("output").innerHTML = 
+                    `Число ${day} у цьому місяці випадає на: <b>${dayOfWeek}</b>`;
+            }
+        }
+    </script>
+</body>
+</html>
+

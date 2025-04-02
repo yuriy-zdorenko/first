@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 4</title>
+</head>
+<body>
+    <h2><b>Завдання:</b></h2>
+    <p>Задати довжину в сантиметрах. Вивести в alert відповідну довжину в дюймах</p>
+    <h2>Конвертація довжини з сантиметрів у дюйми</h2>
+    <button onclick="convertToInches()">Перевести</button>
+
+    <script>
+        function convertToInches() {
+            let cm = prompt("Введіть довжину в сантиметрах:", "10"); // Запитуємо у користувача
+            if (cm !== null) { // Перевіряємо, чи користувач не натиснув "Скасувати"
+                let inches = cm / 2.54; // Формула конвертації
+                alert(`${cm} см = ${inches.toFixed(2)} дюймів`); // Виводимо результат
+            }
+        }
+    </script>
+</body>
+</html>

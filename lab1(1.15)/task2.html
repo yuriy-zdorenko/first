@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2</title>
+</head>
+<body>
+    <h2><b>Завдання:</b></h2>
+    <p>З допомогою циклу <font color="green">do…while</font> написати функцію для виведення парних чисел від 0 до 100 в консоль.</p>
+
+    <h2>Виведення парних чисел від 0 до 100 в консоль</h2>
+    <p>Щоб побачити парні числа від 0 до 100 треба перейти в консоль. Для цього слід натиснути F12 → Console</p>
+    <script>
+        function printEvenNumbers() {
+            let num = 0; // Початкове значення
+
+            do {
+                console.log(num); // Виводимо число в консоль
+                num += 2; // Збільшуємо на 2, щоб залишатися в межах парних чисел
+            } while (num <= 100); // Виконуємо, поки num не перевищить 100
+        }
+
+        // Викликаємо функцію для виведення парних чисел
+        printEvenNumbers();
+    </script>
+</body>
+</html>

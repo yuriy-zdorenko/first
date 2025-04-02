@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1</title>
+</head>
+<body>
+    <h2><b>Завдання:</b></h2>
+    <p>З допомогою циклу <font color="green">while</font> вивести всі натуральні числа в проміжку від -100 до 100.</p>
+
+    <h2>Виведення натуральних чисел в проміжку від -100 до 100</h2>
+    <p id="output"></p>
+
+    <script>
+        let num = -100;     // Початкове значення змінної num (починаємо з -100)
+        let result = "";    // Змінна для збереження рядка з числами
+
+        while (num <= 100) {    // Цикл працює, поки num не перевищить 100
+            if (num > 0) {      // Перевіряємо, чи число є натуральним (тобто більше 0)
+                result += num + ", ";   // Додаємо число в рядок з комою
+            }
+            num++;      // Збільшуємо num на 1 в кожній ітерації
+        }
+
+        // Видаляємо останню кому та пробіл
+        result = result.slice(0, -2);
+
+        // Виводимо результат у <p id="output"></p>
+        document.getElementById("output").textContent = result;
+    </script>
+</body>
+</html>
