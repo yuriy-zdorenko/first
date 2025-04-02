@@ -1,0 +1,15 @@
+.exercizeBlock {
+  width: 500px;
+  margin: auto auto;
+}
+.ButtonsBlock {
+  width: 700px;
+  margin: 0 auto;
+}
+.exercizeButton {
+  width: 75px;
+  height: 55px;
+  border-radius: 5px;
+  margin: 50px 25px;
+  cursor: pointer;
+}

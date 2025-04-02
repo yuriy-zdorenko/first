@@ -1,0 +1,70 @@
+.root {
+  width: 100%;
+  height: 100%;
+}
+.ButtonsBlock {
+  width: 75%;
+  height: 60%;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+}
+.ExerciseButton {
+  margin: 0 20px;
+  width: 75px;
+  height: 45px;
+}
+.AnswerBlock {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.imageType1 {
+  width: 300px;
+  height: 200px;
+  margin: 0 20px;
+}
+.link {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+input {
+  margin-bottom: 5px;
+}
+.ExerciseSrc {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.ExerciseBlock {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.numberText {
+  font-size: 25px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+.numberText:hover {
+  font-weight: 900;
+}
+.blocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.block {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  margin: 15px;
+}

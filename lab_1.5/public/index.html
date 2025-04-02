@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX Квадрат числа</title>
+  </head>
+  <body>
+    <h2>Введите число:</h2>
+    <input type="number" id="numberInput" />
+    <button onclick="sendNumber()">Отправить</button>
+    <p>Результат: <span id="result"></span></p>
+
+    <script>
+      function sendNumber() {
+        let num = document.getElementById('numberInput').value
+
+        // Проверка на корректность ввода
+        if (num === '') {
+          alert('Пожалуйста, введите число.')
+          return
+        }
+
+        let xhr = new XMLHttpRequest()
+        xhr.open('GET', '/calculate-square?number=' + num, true)
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            let response = JSON.parse(xhr.responseText)
+            document.getElementById('result').innerText = response.square
+          }
+        }
+        xhr.send()
+      }
+    </script>
+  </body>
+</html>
