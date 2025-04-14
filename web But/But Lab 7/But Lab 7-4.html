@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>But Lab 7-4</title>
+</head>
+<body>
+    <h2>Форма замовлення</h2>
+    <form>
+        <p>Номер рахунку: <input type="text" name="account" size="30"></p>
+        <p>Особистий номер: <input type="password" name="personal_number" size="30"></p>
+        
+        <p>Обрати товари:</p>
+        <select name="products" multiple>
+            <option value="item1">Товар 1</option>
+            <option value="item2">Товар 2</option>
+            <option value="item3">Товар 3</option>
+            <option value="item3">Товар 4</option>
+            <option value="item3">Товар 5</option>
+        </select>
+
+        <p>Оплата:</p>
+        <input type="radio" name="payment" value="cash"> Готівковий
+        <input type="radio" name="payment" value="non-cash" checked> Безготівковий
+
+        <p>Додаткова інформація:</p>
+        <input type="checkbox" name="info1" value="balance"> Залишок на рахунку
+        <input type="checkbox" name="info2" value="payments"> Останні виплати
+
+        <p>Коментарі:</p>
+        <textarea name="comments" rows="5" cols="50"></textarea>
+
+        <p>
+            <input type="submit" value="Надіслати">
+            <input type="reset" value="Очистити">
+        </p>
+    </form>
+</body>
+</html>

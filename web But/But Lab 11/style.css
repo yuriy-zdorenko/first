@@ -1,0 +1,45 @@
+body{
+	background-image: url(bg.jpg);
+}
+span{
+	color: red;
+}
+p{
+	text-align: justify;
+	margin-left:40px;
+	margin-right:40px;
+	font-style: italic;
+	font-size: 26px;
+}
+h1{
+	font-weight: bold;
+	color: #2e2e2e;
+	text-align: center;
+	font-style: normal;
+}
+img {
+
+    display: block;
+    margin: 10px auto;
+    max-width: 50%;
+    height: auto;
+}
+a:link {
+    color: #1abc9c; 
+    text-decoration: none;
+}
+
+a:visited {
+    color: #9b59b6; 
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #e74c3c; 
+    text-decoration: underline;
+}
+
+a:active {
+    color: #2ecc71; 
+    text-decoration: none;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>But Lab 7-2</title>
+</head>
+<body>
+    <h2>Лабораторна робота №7. Завдання 2</h2>
+    <form>
+        <p>Ваше ім'я: <input type="text" name="name" value="Ім'я" size="30" maxlength="50"></p>
+
+        <p>Ваша стать:</p>
+        <input type="radio" name="gender" value="male" checked> Чоловіча
+        <input type="radio" name="gender" value="female"> Жіноча
+
+        <p>Ваші навички:</p>
+        <input type="checkbox" name="skill1" value="HTML"> HTML
+        <input type="checkbox" name="skill2" value="CSS"> CSS
+        <input type="checkbox" name="skill3" value="JavaScript"> JavaScript
+
+        <p>Напишіть щось про себе:</p>
+        <textarea name="about" rows="5" cols="50"></textarea>
+
+        <p>Обрати день тижня:</p>
+        <select name="weekdays">
+            <option value="monday">Понеділок</option>
+            <option value="tuesday">Вівторок</option>
+            <option value="wednesday">Середа</option>
+        </select>
+
+        <p>
+            <input type="submit" value="Надіслати">
+            <input type="reset" value="Очистити">
+        </p>
+    </form>
+</body>
+</html>
