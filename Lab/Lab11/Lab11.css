@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    background-color: rgb(13, 53, 53);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(142, 190, 231);
+}
+
+li {
+    display: inline;
+}
+
+a {
+    margin: 10px 15px;
+    font-size: 18pt;
+    color: brown;
+}
+a:hover {
+    color: yellow;
+}
+p, pre {
+    margin: 15px 10px;
+    font-size: 25px;
+    color: rgb(154, 223, 194);
+}

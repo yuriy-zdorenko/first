@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="./style20.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div id="result">0</div>
+        </div>
+        <div class="buttons">
+            <button class="btn gray" onclick="clearDisplay()">AC</button>
+            <button class="btn gray" onclick="changeSign()">+/-</button>
+            <button class="btn gray" onclick="percentage()">%</button>
+            <button class="btn orange" onclick="setOperation('/')">÷</button>
+            <button class="btn black" onclick="appendNumber(7)">7</button>
+            <button class="btn black" onclick="appendNumber(8)">8</button>
+            <button class="btn black" onclick="appendNumber(9)">9</button>
+            <button class="btn orange" onclick="setOperation('*')">×</button>
+            <button class="btn black" onclick="appendNumber(4)">4</button>
+            <button class="btn black" onclick="appendNumber(5)">5</button>
+            <button class="btn black" onclick="appendNumber(6)">6</button>
+            <button class="btn orange" onclick="setOperation('-')">-</button>
+            <button class="btn black" onclick="appendNumber(1)">1</button>
+            <button class="btn black" onclick="appendNumber(2)">2</button>
+            <button class="btn black" onclick="appendNumber(3)">3</button>
+            <button class="btn orange" onclick="setOperation('+')">+</button>
+            <button class="btn black zero" onclick="appendNumber(0)">0</button>
+            <button class="btn black" onclick="appendNumber('.')">.</button>
+            <button class="btn orange" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script>
+let currentInput = '0';
+let previousInput = '';
+let operation = null;
+
+function updateDisplay() {
+    document.getElementById('result').textContent = currentInput;
+}
+
+function clearDisplay() {
+    currentInput = '0';
+    previousInput = '';
+    operation = null;
+    updateDisplay();
+}
+
+function appendNumber(number) {
+    if (currentInput === '0' && number !== '.') {
+        currentInput = number.toString();
+    } else {
+        currentInput += number.toString();
+    }
+    updateDisplay();
+}
+
+function setOperation(op) {
+    if (currentInput === '') return;
+    if (previousInput !== '') {
+        calculate();
+    }
+    operation = op;
+    previousInput = currentInput;
+    currentInput = '';
+}
+
+function calculate() {
+    let result;
+    const prev = parseFloat(previousInput);
+    const curr = parseFloat(currentInput);
+    if (isNaN(prev) || isNaN(curr)) return;
+    switch (operation) {
+        case '+':
+            result = prev + curr;
+            break;
+        case '-':
+            result = prev - curr;
+            break;
+        case '*':
+            result = prev * curr;
+            break;
+        case '/':
+            result = prev / curr;
+            break;
+        default:
+            return;
+    }
+    currentInput = result.toString();
+    operation = null;
+    previousInput = '';
+    updateDisplay();
+}
+
+function changeSign() {
+    currentInput = (parseFloat(currentInput) * -1).toString();
+    updateDisplay();
+}
+
+function percentage() {
+    currentInput = (parseFloat(currentInput) / 100).toString();
+    updateDisplay();
+}
+
+clearDisplay();
+
+    </script>
+</body>
+</html>

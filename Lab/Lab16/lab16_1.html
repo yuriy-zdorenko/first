@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Implementation</title>
+    <style>
+        .image { width: 200px; height: 300px; margin: 10px; }
+        .link { display: block; margin: 10px; }
+        .input { display: block; margin: 10px; }
+        .paragraph { display: block; margin: 10px; }
+        .valid { border: 2px solid green; }
+        .invalid { border: 2px solid red; }
+    </style>
+</head>
+<body>
+    <h2>Images</h2>
+    <img src="image1.jpg" alt="Image 1" class="image">
+    <img src="image2.jpg" alt="Image 2" class="image">
+    <img src="image3.jpg" alt="Image 3" class="image">
+
+    <h2>Links</h2>
+    <a href="https://example1.com" class="link">Link 1</a>
+    <a href="https://example2.com" class="link">Link 2</a>
+    <a href="https://example3.com" class="link">Link 3</a>
+
+    <h2>Inputs</h2>
+    <input type="text" class="input" data-length="5">
+    <input type="text" class="input" data-length="10">
+    <input type="text" class="input" data-length="15">
+
+    <h2>Paragraphs</h2>
+    <p class="paragraph">4</p>
+    <p class="paragraph">9</p>
+    <p class="paragraph">16</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // Task 1:
+document.querySelectorAll('.image').forEach(img => {
+    img.onclick = () => alert(img.src);
+});
+
+// Task 2: 
+document.querySelectorAll('.link').forEach(link => {
+    const mouseOverHandler = (e) => {
+        e.target.title = e.target.textContent;
+    };
+    link.addEventListener('mouseover', mouseOverHandler);
+    
+    // Task 3: 
+    const mouseOverHrefHandler = (e) => {
+        e.target.textContent += ` (${e.target.href})`;
+        e.target.removeEventListener('mouseover', mouseOverHrefHandler);
+    };
+    link.addEventListener('mouseover', mouseOverHrefHandler);
+});
+
+// Task 4: 
+document.querySelectorAll('.input').forEach(input => {
+    input.addEventListener('blur', () => {
+        document.getElementById('demo').textContent = input.value;
+    });
+
+    //
+    const clickHandler = () => {
+        alert(input.value);
+        input.removeEventListener('click', clickHandler);
+    };
+    input.addEventListener('click', clickHandler);
+    
+    //
+    input.addEventListener('blur', () => {
+        if (input.value.length == input.dataset.length) {
+            input.classList.add('valid');
+            input.classList.remove('invalid');
+        } else {
+            input.classList.add('invalid');
+            input.classList.remove('valid');
+        }
+    });
+});
+
+// Task 5: 
+document.querySelectorAll('.paragraph').forEach(p => {
+    p.addEventListener('click', () => {
+        const number = parseInt(p.textContent);
+        p.textContent = number * number;
+    });
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №4</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        .right-align { text-align: right; }
+        .table2 {
+            background-color: lightgray;
+            border: double 5px black;
+            padding: 10px;
+        }
+        .container {
+            display: flex;
+            justify-content: right;
+        }
+        .center-text {
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <h1>Лабораторна робота №4</h1>
+
+    <h2>1 завдання</h2>
+    <table>
+        <tr>
+            <th colspan="2">Заголовок</th>
+        </tr>
+        <tr>
+            <td>Дані, вирівняні по лівому краю комірки</td>
+            <td class="right-align">Дані, вирівняні по правому краю комірки</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">25% ширини таблиці</td>
+            <td style="width: 75%;">75% ширини таблиці</td>
+        </tr>
+    </table>
+
+    <h2>2 завдання</h2>
+    <div class="container">
+        <table class="table2">
+            <tr>
+                <td>Текст 1</td>
+                <td>Текст 2</td>
+            </tr>
+            <tr>
+                <td>Текст 3</td>
+                <td>Текст 4</td>
+            </tr>
+            <tr>
+                <td>Текст 5</td>
+                <td>Текст 6</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>3 завдання</h2>
+    <table>
+        <tr>
+            <td rowspan="2" class="center-text">Об'єднана комірка</td>
+            <td colspan="2" class="center-text">Об'єднана комірка</td>
+            <td>Текст</td>
+        </tr>
+        <tr>
+            <td>Текст</td>
+            <td rowspan="2" class="center-text">Об'єднана комірка</td>
+            <td>Текст</td>
+        </tr>
+        <tr>
+            <td>Текст</td>
+            <td colspan="2" class="center-text">Об'єднана комірка</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="center-text">Об'єднана комірка</td>
+        </tr>
+    </table>
+
+    <h2>4 завдання</h2>
+    <table>
+        <tr>
+            <th rowspan="2">Характеристики</th>
+            <th colspan="2">Кількість студентів</th>
+            <th>Якість успішності</th>
+        </tr>
+        <tr>
+            <th>Економічна кібернетика</th>
+            <th>Прикладна математика</th>
+            <th>Менеджмент</th>
+        </tr>
+        <tr>
+            <td>Кількість</td>
+            <td>250</td>
+            <td>200</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <td>Відсоток</td>
+            <td>80%</td>
+            <td>75%</td>
+            <td>85%</td>
+        </tr>
+    </table>
+
+    <h2>5 завдання</h2>
+    <table>
+        <tr>
+            <td colspan="2" class="center-text">Спільний фрагмент</td>
+        </tr>
+        <tr>
+            <td>Колонка 1</td>
+            <td>Колонка 2</td>
+        </tr>
+    </table>
+</body>
+</html>

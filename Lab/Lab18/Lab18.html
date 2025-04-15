@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя перша гра</title>
+    <link rel="stylesheet" href="./style18.css">
+</head>
+<body>
+    <div id="main-page">
+        <h1>Моя перша гра</h1>
+        <button onclick="startGame()">Почати гру</button>
+    </div>
+
+    <div id="game-page" style="display: none;">
+        <div>
+            <span>Залишилось: <span id="time-left">60</span> с</span>
+        </div>
+        <div id="game-board"></div>
+        <button onclick="restartGame()">Почати з початку</button>
+    </div>
+
+    <div id="result-page" style="display: none;">
+        <h2>Вітаємо! Гру завершено.</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Назва гри</th>
+                    <th>Час</th>
+                </tr>
+            </thead>
+            <tbody id="results"></tbody>
+        </table>
+        <button onclick="startGame()">Почати гру знову</button>
+    </div>
+
+    <script>
+        let currentNumber = 1;
+let timer;
+let timeLeft = 60;
+let results = [];
+
+function startGame() {
+    document.getElementById('main-page').style.display = 'none';
+    document.getElementById('game-page').style.display = 'block';
+    document.getElementById('result-page').style.display = 'none';
+    resetGame();
+    startTimer();
+}
+
+function resetGame() {
+    currentNumber = 1;
+    timeLeft = 60;
+    document.getElementById('time-left').textContent = timeLeft;
+    generateGameBoard();
+}
+
+function generateGameBoard() {
+    const board = document.getElementById('game-board');
+    board.innerHTML = '';
+    let numbers = Array.from({ length: 20 }, (_, i) => i + 1).sort(() => Math.random() - 0.5);
+
+    numbers.forEach(num => {
+        const button = document.createElement('button');
+        button.textContent = num;
+        button.style.color = getRandomColor();
+        button.style.fontSize = `${getRandomFontSize()}px`;
+        button.onclick = () => checkNumber(num);
+        board.appendChild(button);
+    });
+}
+
+function getRandomColor() {
+    const colors = [' #ffa600', '#14d344', '#0051ff', '#ff0000', '#a200ff'];
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+function getRandomFontSize() {
+    return Math.floor(Math.random() * 5) + 16;
+}
+
+function checkNumber(num) {
+    if (num === currentNumber) {
+        currentNumber++;
+        if (currentNumber > 20) {
+            endGame();
+        }
+    } else {
+        alert('Невірна цифра');
+    }
+}
+
+function startTimer() {
+    timer = setInterval(() => {
+        timeLeft--;
+        document.getElementById('time-left').textContent = timeLeft;
+        if (timeLeft <= 0) {
+            endGame();
+        }
+    }, 1000);
+}
+
+function restartGame() {
+    clearInterval(timer);
+    startGame();
+}
+
+function endGame() {
+    clearInterval(timer);
+    document.getElementById('game-page').style.display = 'none';
+    document.getElementById('result-page').style.display = 'block';
+    const timeTaken = 60 - timeLeft;
+    results.push(timeTaken);
+    displayResults();
+}
+
+function displayResults() {
+    const tbody = document.getElementById('results');
+    tbody.innerHTML = '';
+    results.forEach((result, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>Гра ${index + 1}</td><td>${result} с.</td>`;
+        tbody.appendChild(row);
+    });
+}
+
+    </script>
+</body>
+</html>

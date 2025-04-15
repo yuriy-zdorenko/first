@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="про себе, хобі, програмування, студент, контакти">
+    <meta name="description" content="Це моя особиста сторінка.">
+    <title>Особиста сторінка</title>
+    <style>
+        body {
+            background-color: rgb(205, 226, 233);
+        }
+        h1, h2 {
+            color: orangered;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        p, pre {
+            color: rgb(5, 83, 5);
+        }
+        .lastName {
+            color: rgb(5, 83, 5);
+            text-align: right;
+        }
+        .code {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="#top" id="top"></a>
+    <nav>
+        <a href="./Lab2.html">Моє рідне місто</a> |
+        <a href="./Lab2.html#universities">Вузи Полтавщини</a> |
+        <a href="#favorite-foods">Мої улюблені страви</a>
+    </nav>
+
+    <h1>Про себе</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+    
+    <h1>Моє хобі</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+
+    <h2 class="code">Програмування</h2>
+    <pre class="code">
+amount  = int(input('Введіть суму:'))
+period  = int(input('На скільки років:'))
+percent  = int(input('Введіть відсоток:'))
+
+if amount == 0 or period == 0 or percent == 0:
+  print('Error')
+else:
+  balance = amount
+  for i in range(1, period +1):
+    amount  *= (1 + percent / 100)
+    print(f'{i} рік: {amount:.2f} (після {percent}%)')
+  profit = amount - balance
+  print(f"Чистий прибуток за {period} років: {profit:.2f}")
+    </pre>
+
+    <p class="lastName"><i>Студент групи 202-ТК <b>Нестеренко М.С.</b></i></p>
+    <p>Телефон: +380123456789</p>
+    <p>Email: <a href="mailto:m.nesternko@gmail.com">m.nesternko@gmail.com</a></p>
+
+    <h1>Гіперпосилання на соціальні мережі</h1>
+    <a target="_blank" href="https://web.telegram.org/k/#-1813072979">Telegram</a>
+    <br>
+    <a target="_blank" href="https://discord.com/">Discord</a>
+
+    <h2>Нумерований список дисциплін</h2>
+    <ol>
+        <li>Програмування</li>
+        <li>Іноземна мова</li>
+        <li>ООП</li>
+        <li>Архітектура комп'ютера</li>
+        <li>Web-дизайн та Web-програмування</li>
+    </ol>
+
+    <h2 id="favorite-foods">Мої улюблені страви</h2>
+    <ul>
+        <li>Борщ</li>
+        <li>Вареники</li>
+        <li>Піца</li>
+        <li>Окрошка</li>
+        <li>Олів'є</li>
+    </ul>
+
+    <hr>
+    <a href="#top">У початок сторінки</a>
+</body>
+</html>
