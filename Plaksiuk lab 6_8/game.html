@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            height: 600px;
+            width: 800px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: solid 4px black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 150px;
+            box-sizing: border-box;
+        }
+
+        #timer{
+            height: 15%;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #contGame{
+            height: 70%;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .block{
+            width: calc(20% - 4px);
+            height: calc(20% - 4px); 
+            border: solid 2px black;
+            text-align: center;
+            box-sizing: border-box;
+            margin: 2px;
+        }
+
+        #restart{
+            height: 15%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #restart button{
+            height: 65px;
+            width: 250px;
+            border-radius: 10px;
+            border: solid 2px black;
+            background-color: skyblue;
+            color: white;
+            font-size: 26px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 20px;
+            margin: 10px auto;
+        }
+
+        th, td {
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        thead {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1 id="timer"></h1>
+        <div id="contGame"></div>
+        <div id="restart">
+            <button>Почати з початку</button>
+        </div>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Гра</th>
+                    <th>Час</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+    <script>
+        function timer(){
+            let time = 61
+            const timer = document.getElementById('timer')
+
+            function updateTime(){
+                time--
+                timer.innerText = `Залишилося: ${time}`
+
+                if(time === 0){
+                    alert("Програли!")
+                    clearInterval(interval)
+                }
+            }
+            updateTime()
+            const interval = setInterval(updateTime, 1000)
+        }
+
+        function game(){
+            const contGame = document.getElementById("contGame")
+            let arr = Array.from({ length: 25 }, (_, i) => i + 1)
+            arr.sort(() => Math.random() - 0.5)
+            let count = 1
+            
+            arr.forEach((value, index) =>{
+                const div = document.createElement("div")
+                div.classList.add("block")
+                div.addEventListener("click", function(){
+                    if(value === count){
+                        div.style.background = "green"
+                        count++
+                        if(value === 25){
+                            const timeNow = document.getElementById('timer').innerText
+                            localStorage.setItem(`Гра: ${localStorage.length + 1}`, 60 - timeNow.split(":")[1])
+                            if(confirm("Ви перемогли!\n Чи хочете ще раз зіграти?")) location.reload(true)
+                            else location.assign("/")
+                        } 
+                    }else{
+                        alert(`Ви обрали невірне число!\nВам потрібно знайти число ${count}`)
+                    }
+                })
+
+                const p = document.createElement("p")
+                p.innerText = value
+                switch(Math.floor(Math.random() * 5)){
+                    case 0: p.style.fontSize = "23px"; break
+                    case 1: p.style.fontSize = "18px"; break
+                    case 2: p.style.fontSize = "26px"; break
+                    case 3: p.style.fontSize = "33px"; break
+                    case 4: p.style.fontSize = "29px"; break
+                }
+
+                switch(Math.floor(Math.random() * 5)){
+                    case 0: p.style.color = "blue"; break
+                    case 1: p.style.color = "skyblue"; break
+                    case 2: p.style.color = "red"; break
+                    case 3: p.style.color = "brown"; break
+                    case 4: p.style.color = "aqua"; break
+                }
+
+                div.append(p)
+                contGame.append(div)
+            })
+
+            timer()
+        }
+        game()
+
+        document.querySelector("button").addEventListener("click", function(){
+            location.reload(true)
+        })
+
+        const tbody = document.getElementById("tbody")
+        const entries = Object.entries(localStorage).reverse()
+        const minValue = Math.min(...entries.map(([_, value]) => Number(value)))
+
+        entries.forEach(([key, value]) => {
+            const tr = document.createElement("tr")
+
+            if (Number(value) === minValue) {
+                tr.style.backgroundColor = "#d4edda"
+                tr.style.fontWeight = "bold"
+            }
+
+            const tdGame = document.createElement("td")
+            tdGame.innerHTML = key
+            const tdTime = document.createElement("td")
+            tdTime.innerHTML = value
+            tr.append(tdGame, tdTime)
+            tbody.append(tr)
+        })
+
+    </script>
+</body>
+</html>
