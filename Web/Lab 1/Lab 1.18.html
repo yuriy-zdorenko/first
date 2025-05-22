@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гра: Вибери числа</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #2196f3;
+            color: white;
+            padding: 20px 0;
+            margin: 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            margin: 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #game-container {
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(5, 60px);
+            gap: 10px;
+            justify-content: center;
+            margin: 20px auto;
+        }
+
+        .number {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.3s;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .number:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .correct {
+            background-color: #a5d6a7 !important;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 300px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #64b5f6;
+            color: white;
+        }
+
+        .best-score {
+            background-color: #fff59d !important;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            #game-board {
+                grid-template-columns: repeat(4, 60px);
+            }
+
+            table {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Гра: Вибери числа</h1>
+    <button id="start-game">Почати гру</button>
+
+    <div id="game-container" style="display:none;">
+        <h2>⏱ Таймер: <span id="timer">60</span> сек</h2>
+        <div id="game-board"></div>
+        <button id="restart">Почати з початку</button>
+
+        <h3>📊 Статистика спроб:</h3>
+        <table id="stats">
+            <tr><th>Спроба</th><th>Час проходження</th></tr>
+        </table>
+    </div>
+
+    <script>
+        let timeLeft = 60;
+        let timer;
+        let numbers = Array.from({length: 25}, (_, i) => i + 1);
+        let correctOrder = [...numbers].sort((a, b) => a - b);
+        let currentIndex = 0;
+        let attempts = JSON.parse(localStorage.getItem("attempts")) || [];
+
+        function startGame() {
+            $("#start-game").hide();
+            $("#game-container").show();
+            shuffle(numbers);
+            displayNumbers();
+            startTimer();
+        }
+
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function displayNumbers() {
+            $("#game-board").empty();
+            numbers.forEach(num => {
+                let fontSize = Math.floor(Math.random() * 10 + 16) + "px";
+                let color = `hsl(${Math.random() * 360}, 80%, 50%)`;
+                let elem = $(`<div class='number' style='font-size:${fontSize}; color:${color}'>${num}</div>`);
+                elem.click(() => checkNumber(num, elem));
+                $("#game-board").append(elem);
+            });
+        }
+
+        function checkNumber(num, elem) {
+            if (num === correctOrder[currentIndex]) {
+                elem.addClass("correct").css("pointer-events", "none");
+                currentIndex++;
+                if (currentIndex === correctOrder.length) {
+                    endGame();
+                }
+            } else {
+                alert("❌ Не вірна цифра! Спробуй ще раз.");
+            }
+        }
+
+        function startTimer() {
+            timeLeft = 60;
+            currentIndex = 0;
+            $("#timer").text(timeLeft);
+            timer = setInterval(() => {
+                timeLeft--;
+                $("#timer").text(timeLeft);
+                if (timeLeft === 0) {
+                    clearInterval(timer);
+                    alert("⌛ Час вийшов! Спробуй ще раз.");
+                }
+            }, 1000);
+        }
+
+        function endGame() {
+            clearInterval(timer);
+            alert("🎉 Вітаємо! Ви успішно завершили гру!");
+            recordAttempt(60 - timeLeft);
+        }
+
+        function recordAttempt(score) {
+            attempts.push(score);
+            localStorage.setItem("attempts", JSON.stringify(attempts));
+            updateStats();
+        }
+
+        function updateStats() {
+            $("#stats").find("tr:gt(0)").remove();
+            let bestScore = Math.min(...attempts);
+            attempts.forEach((attempt, index) => {
+                let row = `<tr class='${attempt === bestScore ? "best-score" : ""}'><td>Гра ${index + 1}</td><td>${attempt} с.</td></tr>`;
+                $("#stats").append(row);
+            });
+        }
+
+        $("#start-game").click(startGame);
+        $("#restart").click(() => {
+            clearInterval(timer);
+            startGame();
+        });
+
+        updateStats();
+    </script>
+
+</body>
+</html>

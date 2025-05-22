@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторне заняття - JavaScript</title>
+</head>
+<body>
+    <h1>Лабораторне заняття</h1>
+    <p>Практика роботи з умовними конструкціями, циклами в мові програмування JavaScript.</p>
+    
+    <button onclick="printNumbers()">Вивести числа від -100 до 100</button>
+    <button onclick="printEvenNumbers()">Вивести парні числа від 0 до 100</button>
+    <button onclick="task3()">Ділення числа 1000 на 3</button>
+    <button onclick="convertToInches()">Конвертувати см в дюйми</button>
+    <button onclick="getDayOfWeek()">Визначити день тижня</button>
+    <p id="result"></p>
+    <p id="output"></p>
+    
+    <script>
+        function printNumbers() {
+            let num = -100;
+            let output = "";
+            while (num <= 100) {
+                output += num + " ";
+                num++;
+            }
+            document.getElementById("output").innerHTML = output;
+        }
+
+        function printEvenNumbers() {
+            let i = 0;
+            let output = "";
+            do {
+                if (i % 2 === 0) {
+                    output += i + " ";
+                }
+                i++;
+            } while (i <= 100);
+            document.getElementById("output").innerHTML = output;
+        }
+
+        function task3() {
+            let b = 1000;
+            let count = 0;
+            while (b >= 5) {
+                b /= 3;
+                count++;
+            }
+            document.getElementById("output").innerHTML = "";
+            document.getElementById("result").innerText = `Результат: ${b.toFixed(2)}, Кількість ітерацій: ${count}`;
+        }
+
+        function convertToInches() {
+            let cm = parseFloat(prompt("Введіть довжину в сантиметрах:"));
+            if (!isNaN(cm) && cm > 0) {
+                alert(`${cm} см = ${(cm / 2.54).toFixed(2)} дюймів`);
+            } else {
+                alert("Некоректне значення! Введіть число більше 0.");
+            }
+        }
+
+        function getDayOfWeek() {
+            let day = parseInt(prompt("Введіть число від 1 до 31:"));
+            if (!isNaN(day) && day >= 1 && day <= 31) {
+                let date = new Date(new Date().getFullYear(), new Date().getMonth(), day);
+                let days = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"];
+                alert(`Це ${days[date.getDay()]}`);
+            } else {
+                alert("Некоректне значення! Введіть число від 1 до 31.");
+            }
+        }
+    </script>
+</body>
+</html>

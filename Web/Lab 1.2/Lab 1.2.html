@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Динамічна веб-сторінка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .box {
+            padding: 15px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        a {
+            display: block;
+            margin: 10px 0;
+            color: #3498db;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #2980b9;
+        }
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        #demo {
+            font-weight: bold;
+            font-size: 20px;
+            color: #e74c3c;
+        }
+        .colored {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+            background-color: green;
+        }
+        p {
+            cursor: pointer;
+            font-size: 20px;
+            padding: 10px;
+            margin: 5px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
+        }
+        p:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Динамічна веб-сторінка</h1>
+
+    <div class="container">
+        <div class="box">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+        
+        <div class="box">
+            <a href="https://example1.com">Посилання 1</a>
+            <a href="https://example2.com">Посилання 2</a>
+            <a href="https://example3.com">Посилання 3</a>
+        </div>
+
+        <div class="box">
+            <input type="text" id="input1" placeholder="Введіть текст">
+            <input type="text" id="input2" placeholder="Введіть текст">
+            <input type="text" id="input3" placeholder="Введіть текст">
+            <p id="demo"></p>
+        </div>
+
+        <div class="box">
+            <p>Два</p>
+            <p>Три</p>
+            <p>Чотири</p>
+        </div>
+
+        <div class="box">
+            <div class="colored"></div>
+            <div class="colored"></div>
+            <div class="colored"></div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('img').forEach(img => {
+            img.onclick = function() {
+                console.log(img.clientWidth);
+            };
+        });
+
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('mouseover', function() {
+                this.setAttribute('title', this.getAttribute('href'));
+            });
+        });
+
+        document.querySelectorAll('input').forEach(input => {
+            input.onclick = function() {
+                document.getElementById('demo').innerText = this.value;
+            };
+
+            input.addEventListener('click', function handler() {
+                console.log(this.value);
+                this.removeEventListener('click', handler);
+                this.onclick = function() {
+                    alert(this.value);
+                };
+            });
+        });
+
+        document.querySelectorAll('p').forEach(p => {
+            p.onclick = function() {
+                let numMap = { "Два": 2, "Три": 3, "Чотири": 4 };
+                let num = numMap[this.innerText.trim()];
+                if (num) this.innerText = num * num;
+            };
+        });
+
+        document.querySelectorAll('.colored').forEach(div => {
+            function makeRed() { 
+                div.style.backgroundColor = 'red'; 
+                div.removeEventListener('click', makeRed); 
+                div.addEventListener('click', makeGreen); 
+            }
+            function makeGreen() { 
+                div.style.backgroundColor = 'green'; 
+                div.removeEventListener('click', makeGreen); 
+                div.addEventListener('click', makeRed); 
+            }
+
+            div.addEventListener('click', makeRed);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+        }
+        .task {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+        label, button {
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Практика роботи з функціями та масивами</h1>
+    <p>Введіть дані та переглядайте результати в консолі браузера.</p>
+
+    <div class="task"><h2>1. Залишок секунд</h2>
+        <label>Введіть total: <input type="number" id="secondsInput"></label>
+        <button onclick="runSeconds()">Запустити seconds</button>
+    </div>
+
+    <div class="task"><h2>2. Периметр багатокутника</h2>
+        <label>Сторона: <input type="number" id="sideInput"></label>
+        <label>Кількість сторін: <input type="number" id="countInput"></label>
+        <button onclick="runPerimeter()">Запустити perimeter</button>
+    </div>
+
+    <div class="task"><h2>3. FizzBuzz</h2>
+        <label>Число для fizzbuzz: <input type="number" id="fizzbuzzInput"></label>
+        <button onclick="runFizzbuzz()">Запустити fizzbuzz</button>
+    </div>
+
+    <div class="task"><h2>4. Середнє арифметичне</h2>
+        <label>Три числа: <input type="number" id="num1">
+        <input type="number" id="num2"> <input type="number" id="num3"></label>
+        <button onclick="runCalculate()">Запустити Calculate</button>
+    </div>
+
+    <div class="task"><h2>5. Перевірка кратності</h2>
+        <label>Число n: <input type="number" id="divN"></label>
+        <label>x: <input type="number" id="divX"></label>
+        <label>y: <input type="number" id="divY"></label>
+        <button onclick="runIsDivisible()">Перевірити isDivisible</button>
+    </div>
+
+    <div class="task"><h2>6. Робота з масивом</h2>
+        <button onclick="runArrayOperations()">Генерувати масив</button>
+    </div>
+
+    <div class="task"><h2>7. Робота з матрицею</h2>
+        <button onclick="runMatrixOperations()">Генерувати матрицю</button>
+    </div>
+
+    <div class="task"><h2>8. Арифметичні операції</h2>
+        <label>Число 1: <input type="number" id="numA"></label>
+        <label>Число 2: <input type="number" id="numB"></label>
+        <label>Операція: 
+            <select id="operation">
+                <option value="add">Додавання</option>
+                <option value="sub">Віднімання</option>
+                <option value="mul">Множення</option>
+                <option value="div">Ділення</option>
+            </select>
+        </label>
+        <button onclick="runArithmetic()">Запустити арифметичні операції</button>
+    </div>
+
+    <div class="task"><h2>9. Перевірка числа</h2>
+    <label>Введіть число: <input type="number" id="checkNumberInput"></label>
+    <button onclick="runCheckNumber()">Запустити перевірку</button>
+    </div>
+
+    <div class="task"><h2>10. Перевернутий масив</h2>
+    <label>Введіть масив через кому: <input type="text" id="reverseArrayInput" placeholder="1, 2, 3, 4"></label>
+    <button onclick="runReverseArray()">Перевернути масив</button>
+    </div>
+
+    <div class="task"><h2>11. Видалення дублікатів</h2>
+    <button onclick="runRemoveDuplicates()">Видалити дублікати</button>
+    </div>
+
+    <script>
+        function seconds(total) { return total % 60; }
+        function runSeconds() { console.log("seconds:", seconds(Number(document.getElementById('secondsInput').value))); }
+
+        function perimeter(side, count) { return side * count; }
+        function runPerimeter() { console.log("perimeter:", perimeter(Number(document.getElementById('sideInput').value), Number(document.getElementById('countInput').value))); }
+
+        function fizzbuzz(n) {
+            for (let i = 1; i <= n; i++) {
+                console.log(i % 3 === 0 && i % 5 === 0 ? "fizzbuzz" : i % 3 === 0 ? "fizz" : i % 5 === 0 ? "buzz" : i);
+            }
+        }
+        function runFizzbuzz() { fizzbuzz(Number(document.getElementById('fizzbuzzInput').value)); }
+
+        function Calculate(a, b, c) { console.log("Середнє арифметичне:", (a + b + c) / 3); }
+        function runCalculate() { Calculate(Number(document.getElementById('num1').value), Number(document.getElementById('num2').value), Number(document.getElementById('num3').value)); }
+
+        // Функції перевірки кратності
+        function isDivisibleIf(n, x, y) {
+            if (n % x === 0 && n % y === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function isDivisibleTernary(n, x, y) {
+            return (n % x === 0 && n % y === 0) ? true : false;
+        }
+
+        function isDivisibleLogical(n, x, y) {
+            return (n % x === 0 && n % y === 0);
+        }
+
+        function runIsDivisible() {
+            const n = Number(document.getElementById('divN').value);
+            const x = Number(document.getElementById('divX').value);
+            const y = Number(document.getElementById('divY').value);
+
+            console.log("Перевірка через if:", isDivisibleIf(n, x, y));
+            console.log("Перевірка через тернарний оператор:", isDivisibleTernary(n, x, y));
+            console.log("Перевірка логічним виразом:", isDivisibleLogical(n, x, y));
+        }
+
+        function runArrayOperations() {
+            const N = 10; // Розмір масиву, за бажанням можна зробити ввод з інпута
+            let arr = Array.from({ length: N }, () => Math.floor(Math.random() * 100));
+
+            const max = Math.max(...arr);
+            const min = Math.min(...arr);
+            const sum = arr.reduce((acc, val) => acc + val, 0);
+            const average = sum / arr.length;
+            const oddValues = arr.filter(x => x % 2 !== 0);
+
+            console.log("Масив:", arr);
+            console.log("Максимальне:", max);
+            console.log("Мінімальне:", min);
+            console.log("Сума елементів:", sum);
+            console.log("Середнє арифметичне:", average);
+            console.log("Непарні значення:", oddValues);
+                }
+
+        function runMatrixOperations() {
+            let matrix = Array.from({ length: 5 }, () => 
+        Array.from({ length: 5 }, () => Math.floor(Math.random() * 21) - 10)
+            );
+
+            let originalMatrix = matrix.map(row => [...row]);
+
+            for (let i = 0; i < 5; i++) {
+                if (matrix[i][i] < 0) {
+                    matrix[i][i] = 0;
+                } else if (matrix[i][i] > 0) {
+                    matrix[i][i] = 1;
+                }
+            }
+            console.log("Оригінальна матриця:");
+            console.table(originalMatrix);
+            console.log("Модифікована матриця:");
+            console.table(matrix);
+            }
+
+        function Add(a, b) {
+        console.log(`Результат додавання: ${a + b}`);
+        }
+
+        function Sub(a, b) {
+        console.log(`Результат віднімання: ${a - b}`);
+        }
+
+        function Mul(a, b) {
+        console.log(`Результат множення: ${a * b}`);
+        }
+
+        function Div(a, b) {
+        if (b === 0) {
+            console.log("Помилка: Ділення на нуль!");
+        } else {
+            console.log(`Результат ділення: ${a / b}`);
+        }
+        }
+
+        function runArithmetic() {
+            const a = Number(document.getElementById('numA').value);
+            const b = Number(document.getElementById('numB').value);
+            const operation = document.getElementById('operation').value;
+
+            switch (operation) {
+            case 'add': Add(a, b); break;
+            case 'sub': Sub(a, b); break;
+            case 'mul': Mul(a, b); break;
+            case 'div': Div(a, b); break;
+            default: console.log("Оберіть операцію!");
+        }
+        }
+
+        function isPrime(n) {
+            if (n <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) return false;
+        }
+            return true;
+        }
+
+        function runCheckNumber() {
+            const n = Number(document.getElementById('checkNumberInput').value);
+
+            console.log(`Число ${n} є ${n >= 0 ? 'позитивним' : 'негативним'}.`);
+            console.log(`Число ${n} ${isPrime(n) ? 'є простим.' : 'не є простим.'}`);
+    
+            const divisors = [2, 5, 3, 6, 9];
+            divisors.forEach(d => {
+            if (n % d === 0) {
+            console.log(`Число ділиться на ${d} без залишку.`);
+        }   else {
+            console.log(`Число не ділиться на ${d}.`);
+        }
+        });
+        }
+        function runReverseArray() {
+            const input = document.getElementById('reverseArrayInput').value;
+            let array = input.split(',').map(el => el.trim());
+
+            const isNumericArray = array.every(el => !isNaN(el) && el !== '');
+
+            if (!isNumericArray) {
+            console.log("Помилка: Масив повинен містити лише числові значення.");
+            return;
+        }
+            array = array.map(Number);
+
+            const result = array.reverse().map(el => el ** 2);
+
+            console.log("Оригінальний масив:", array.reverse());
+            console.log("Перевернутий масив з квадратами:", result);
+        }
+
+        function runRemoveDuplicates() {
+            const arr = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+            const unique = [...new Set(arr)];
+
+            console.log("Оригінальний масив:", arr);
+            console.log("Без дублікатів:", unique);
+        }
+    </script>
+</body>
+</html>

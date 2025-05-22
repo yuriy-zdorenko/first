@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>iPhone Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1C1C1C;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #000;
+            padding: 20px;
+            border-radius: 25px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+        .display {
+            width: 100%;
+            padding: 10px;
+            font-size: 2rem;
+            text-align: right;
+            border: none;
+            background: #000;
+            color: white;
+            outline: none;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+        button {
+            padding: 18px;
+            font-size: 1.6rem;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .number { background-color: #333; color: white; }
+        .operator { background-color: #ff9500; color: white; }
+        .utility { background-color: #a5a5a5; color: black; }
+        button:active { transform: scale(0.95); }
+
+        @media (min-width: 768px) {
+            .container { max-width: 360px; }
+            button { padding: 20px; font-size: 1.8rem; }
+        }
+        @media (max-width: 480px) {
+            .container { width: 90vw; }
+            button { padding: 14px; font-size: 1.3rem; }
+            .display { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <input type="text" class="display" id="display" oninput="validateInput(event)">
+        <div class="buttons">
+            <button class="utility" onclick="clearDisplay()">C</button>
+            <button class="utility" onclick="appendValue('+/-')">+/-</button>
+            <button class="utility" onclick="appendValue('%')">%</button>
+            <button class="operator" onclick="appendValue('/')">÷</button>
+
+            <button class="number" onclick="appendValue('7')">7</button>
+            <button class="number" onclick="appendValue('8')">8</button>
+            <button class="number" onclick="appendValue('9')">9</button>
+            <button class="operator" onclick="appendValue('*')">×</button>
+
+            <button class="number" onclick="appendValue('4')">4</button>
+            <button class="number" onclick="appendValue('5')">5</button>
+            <button class="number" onclick="appendValue('6')">6</button>
+            <button class="operator" onclick="appendValue('-')">−</button>
+
+            <button class="number" onclick="appendValue('1')">1</button>
+            <button class="number" onclick="appendValue('2')">2</button>
+            <button class="number" onclick="appendValue('3')">3</button>
+            <button class="operator" onclick="appendValue('+')">+</button>
+
+            <button class="number" style="grid-column: span 2; border-radius: 40px;" onclick="appendValue('0')">0</button>
+            <button class="number" onclick="appendValue('.')">.</button>
+            <button class="operator" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        function appendValue(value) {
+            document.getElementById("display").value += value;
+            scrollDisplay();
+        }
+
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+        }
+
+        function calculate() {
+            try {
+                document.getElementById("display").value = eval(document.getElementById("display").value);
+            } catch {
+                document.getElementById("display").value = "Помилка!";
+            }
+        }
+
+        function validateInput(event) {
+            const allowedCharacters = /[\d.+\-*/%]/;
+            const lastChar = event.data;
+            if (lastChar && !allowedCharacters.test(lastChar)) {
+                event.target.value = event.target.value.slice(0, -1);
+            }
+            scrollDisplay();
+        }
+
+        function scrollDisplay() {
+            const display = document.getElementById("display");
+            display.scrollLeft = display.scrollWidth;
+        }
+    </script>
+
+</body>
+</html>

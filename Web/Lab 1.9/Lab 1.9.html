@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Моя друга гра</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #main, #game {
+      display: none;
+    }
+    #main h1 {
+      color: #d66;
+      font-size: 48px;
+    }
+    #main button, #restart {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+    }
+    #gameContainer {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      margin-top: 30px;
+    }
+    #grid {
+      display: grid;
+      grid-template-columns: repeat(5, 80px);
+      gap: 5px;
+    }
+    .grid-item {
+      width: 80px;
+      height: 80px;
+      border: 1px solid #000;
+      background-size: cover;
+      background-position: center;
+    }
+    #rightPanel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    #targetImage {
+      width: 80px;
+      height: 80px;
+      border: 2px solid lightblue;
+      background-size: cover;
+      background-position: center;
+    }
+    select {
+      font-size: 18px;
+      padding: 5px 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="main">
+  <h1>Моя друга гра</h1>
+  <button id="startGame">Почати гру</button>
+</div>
+
+<div id="game">
+  <div id="gameContainer">
+    <div id="grid"></div>
+    <div id="rightPanel">
+      <div id="targetImage"></div>
+      <button id="restart">Почати з початку</button>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function () {
+  let categories = ['animals', 'insects', 'fish'];
+  let images = { animals: [], insects: [], fish: [] };
+  let matchedCount = 0;
+
+  function loadImages() {
+    images = { animals: [], insects: [], fish: [] }; // Очистка
+    categories.forEach(category => {
+      for (let i = 1; i <= 50; i++) {
+        images[category].push(`images/${category}/${i}.png`);
+      }
+    });
+  }
+
+  function shuffleArray(arr) {
+    return arr.sort(() => 0.5 - Math.random());
+  }
+
+  function initGame() {
+    $('#grid').empty();
+    matchedCount = 0;
+    loadImages();
+
+    let selectedImages = [];
+    categories.forEach(category => {
+      selectedImages = selectedImages.concat(shuffleArray(images[category]).slice(0, 50));
+    });
+
+    selectedImages = shuffleArray(selectedImages).slice(0, 25);
+
+    selectedImages.forEach(src => {
+      const item = $(`<div class="grid-item" data-src="${src}"></div>`).css('background-image', `url(${src})`);
+      item.droppable({
+        accept: '#targetImage',
+        drop: function (event, ui) {
+          const targetSrc = $('#targetImage').data('src');
+          if ($(this).data('src') === targetSrc) {
+            $(this).css('border', '2px solid green');
+            matchedCount++;
+            if (matchedCount === 25) {
+              setTimeout(() => {
+                alert('Вітаємо! Ви завершили гру!');
+                initGame(); // Перезапуск після завершення
+              }, 100);
+            } else {
+              setNextImage();
+            }
+          }
+        }
+      });
+      $('#grid').append(item);
+    });
+
+    setNextImage();
+  }
+
+  function setNextImage() {
+    const items = $('.grid-item').not(function () {
+      return $(this).css('border-color') === 'rgb(0, 128, 0)'; // пропускає зелені рамки
+    });
+    const randIndex = Math.floor(Math.random() * items.length);
+    const src = items.eq(randIndex).data('src');
+    $('#targetImage')
+      .data('src', src)
+      .css('background-image', `url(${src})`)
+      .draggable({ revert: 'invalid' });
+  }
+
+  $('#startGame').click(function () {
+    $('#main').hide();
+    $('#game').show();
+    initGame();
+  });
+
+  $('#restart').click(function () {
+    initGame();
+  });
+
+  $('#main').show();
+});
+</script>
+
+</body>
+</html>

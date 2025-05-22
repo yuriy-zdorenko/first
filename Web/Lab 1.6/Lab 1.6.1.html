@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects Practice</title>
+</head>
+<body>
+    <script>
+          const weekData = {
+            ua: ["Понеділок", "Вівторок", "Середа", "Четвер", "П’ятниця", "Субота", "Неділя"],
+            en: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        };
+
+        function askLanguage() {
+            let lang;
+            while (true) {
+                lang = prompt("Виберіть мову 'ua' або 'en'?").toLowerCase();
+                if (lang === "ua" || lang === "en") break;
+                alert("Неправильний ввід. Спробуйте ще раз.");
+            }
+            return lang;
+        }
+
+        function askDay(lang) {
+            let day;
+            while (true) {
+                const question = lang === "ua" ?
+                    "Введіть номер дня тижня від 1 до 7?" :
+                    "Enter the day number of the week (from 1 to 7)?";
+
+                day = parseInt(prompt(question));
+                if (day >= 1 && day <= 7) break;
+                alert(lang === "ua" ? "Невірне число. Спробуйте ще раз." : "Invalid number. Try again.");
+            }
+            alert(weekData[lang][day - 1]);
+        }
+
+        const selectedLang = askLanguage();
+        askDay(selectedLang);
+    </script>
+</body>
+</html>

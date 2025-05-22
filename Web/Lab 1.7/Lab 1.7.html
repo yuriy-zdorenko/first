@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика роботи зі строками в JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Практика роботи зі строками в JavaScript</h1>
+    <div class="container">
+        <button onclick="showCurrentTime()">Поточний час</button>
+        <button onclick="startGame()">Гра "Вгадай число"</button>
+    </div>
+
+    <script>
+        function showCurrentTime() {
+            const now = new Date();
+            const options = { 
+                hour: '2-digit', minute: '2-digit', second: '2-digit', 
+                weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' 
+            };
+            const formattedTime = now.toLocaleString('uk-UA', options);
+            console.log(formattedTime);
+            alert(`Поточний час: ${formattedTime}`);
+        }
+
+        function getBetterRandomNumber() {
+            return Math.floor(Math.pow(Math.random(), 1.5) * 51); 
+        }
+
+        function startGame() {
+            const targetNumber = getBetterRandomNumber(); 
+            let attempts = 0;
+
+            while (true) {
+                const guess = parseInt(prompt("Введіть число від 0 до 50:"), 10);
+                if (isNaN(guess)) {
+                    alert("Будь ласка, введіть число!");
+                    continue;
+                }
+
+                attempts++;
+                const timestamp = new Date().toLocaleString('uk-UA');
+                console.log(`${timestamp} Спроба ${attempts}: число ${guess}`);
+
+                const difference = Math.abs(targetNumber - guess);
+                if (guess === targetNumber) {
+                    alert(`За ${attempts} спроб ви вгадали число ${targetNumber}!`);
+                    if (confirm("Хочете спробувати ще раз?")) {
+                        startGame();
+                    }
+                    break;
+                } else {
+                    let hint = "холодно";
+                    if (difference < 10) hint = "тепло";
+                    if (difference < 5) hint = "гаряче";
+                    alert(`Не вірно! Ви ${hint}. Спробуйте ще раз.`);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

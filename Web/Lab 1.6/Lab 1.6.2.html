@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Енергетичний баланс міста</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: auto; }
+    input, select, button { padding: 5px; margin: 5px; }
+    .section { margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+    ul { list-style-type: none; padding: 0; }
+    li { background: #f0f0f0; padding: 8px; margin-bottom: 5px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Розрахунок енергетичного балансу міста</h1>
+
+  <div class="section">
+    <h2>Додати об'єкт до мережі</h2>
+    <select id="objectType">
+      <option value="powerPlant">Електростанція</option>
+      <option value="solarPanel">Сонячна панель</option>
+      <option value="residential">Житловий будинок</option>
+      <option value="line">Лінія електропередачі</option>
+    </select>
+
+    <div id="inputs"></div>
+    <button onclick="addObject()">Додати</button>
+  </div>
+
+  <div class="section">
+    <h2>Список об'єктів</h2>
+    <ul id="objectList"></ul>
+  </div>
+
+  <div class="section">
+    <h2>Розрахунок</h2>
+    <button onclick="calculate()">Обрахувати баланс</button>
+    <pre id="result"></pre>
+  </div>
+
+  <script>
+    class PowerPlant {
+      constructor(power) {
+        this.type = 'Електростанція';
+        this.power = power;
+      }
+      getProduction(day = true) {
+        return this.power;
+      }
+      toString() {
+        return `${this.type}: Потужність ${this.power} МВт`;
+      }
+    }
+
+    class SolarPanel {
+      constructor(power) {
+        this.type = 'Сонячна панель';
+        this.power = power;
+      }
+      getProduction(day = true) {
+        return day ? this.power : 0;
+      }
+      toString() {
+        return `${this.type}: Потужність ${this.power} МВт вдень, 0 вночі`;
+      }
+    }
+
+    class Residential {
+      constructor(flats) {
+        this.type = 'Житловий будинок';
+        this.flats = flats;
+      }
+      getConsumption(day = true) {
+        return this.flats * (day ? 0.004 : 0.001); // МВт
+      }
+      toString() {
+        return `${this.type}: ${this.flats} квартир`;
+      }
+    }
+
+    class Line {
+      constructor(capacity, pricePerMW) {
+        this.type = 'Лінія електропередачі';
+        this.capacity = capacity;
+        this.pricePerMW = pricePerMW;
+      }
+
+      handleEnergyTransfer(balance) {
+        const transferAmount = Math.min(Math.abs(balance), this.capacity);
+        const cost = transferAmount * this.pricePerMW;
+        const adjustedBalance = balance > 0 ? balance - transferAmount : balance + transferAmount;
+        const profitOrCost = balance > 0 ? cost : -cost;
+
+        return {
+          adjustedBalance,
+          profitOrCost
+        };
+      }
+
+      toString() {
+        return `${this.type}: Макс ${this.capacity} МВт, ціна ${this.pricePerMW} за МВт`;
+      }
+    }
+
+    const network = [];
+
+    function updateInputs() {
+      const container = document.getElementById('inputs');
+      container.innerHTML = '';
+      const type = document.getElementById('objectType').value;
+
+      if (type === 'powerPlant') {
+        container.innerHTML = 'Потужність (1-100 МВт): <input id="power" type="number" min="1" max="100">';
+      } else if (type === 'solarPanel') {
+        container.innerHTML = 'Потужність (1-5 МВт): <input id="power" type="number" min="1" max="5">';
+      } else if (type === 'residential') {
+        container.innerHTML = 'Кількість квартир (1-400): <input id="flats" type="number" min="1" max="400">';
+      } else if (type === 'line') {
+        container.innerHTML = `Макс потужність (МВт): <input id="capacity" type="number"><br>Ціна за МВт: <input id="price" type="number">`;
+      }
+    }
+
+    function addObject() {
+      const type = document.getElementById('objectType').value;
+      let obj;
+      if (type === 'powerPlant') {
+        const power = Number(document.getElementById('power').value);
+        obj = new PowerPlant(power);
+      } else if (type === 'solarPanel') {
+        const power = Number(document.getElementById('power').value);
+        obj = new SolarPanel(power);
+      } else if (type === 'residential') {
+        const flats = Number(document.getElementById('flats').value);
+        obj = new Residential(flats);
+      } else if (type === 'line') {
+        const capacity = Number(document.getElementById('capacity').value);
+        const price = Number(document.getElementById('price').value);
+        obj = new Line(capacity, price);
+      }
+      network.push(obj);
+      renderList();
+    }
+
+    function renderList() {
+      const list = document.getElementById('objectList');
+      list.innerHTML = '';
+      network.forEach((obj) => {
+        const li = document.createElement('li');
+        li.textContent = obj.toString();
+        list.appendChild(li);
+      });
+    }
+
+    function calculate() {
+      let productionDay = 0, productionNight = 0;
+      let consumptionDay = 0, consumptionNight = 0;
+      let lines = [];
+
+      for (const obj of network) {
+        if (typeof obj.getProduction === 'function') {
+          productionDay += obj.getProduction(true);
+          productionNight += obj.getProduction(false);
+        }
+        if (typeof obj.getConsumption === 'function') {
+          consumptionDay += obj.getConsumption(true);
+          consumptionNight += obj.getConsumption(false);
+        }
+        if (obj instanceof Line) {
+          lines.push(obj);
+        }
+      }
+
+      let balanceDay = productionDay - consumptionDay;
+      let balanceNight = productionNight - consumptionNight;
+
+      let moneyDay = 0;
+      let moneyNight = 0;
+
+      for (const line of lines) {
+        const resultDay = line.handleEnergyTransfer(balanceDay);
+        balanceDay = resultDay.adjustedBalance;
+        moneyDay += resultDay.profitOrCost;
+
+        const resultNight = line.handleEnergyTransfer(balanceNight);
+        balanceNight = resultNight.adjustedBalance;
+        moneyNight += resultNight.profitOrCost;
+      }
+
+      document.getElementById('result').textContent =
+        `День:
+  Необхідно ${balanceDay < 0 ? 'закупити' : 'можна продати'} ${Math.abs(balanceDay).toFixed(3)} МВт
+  ${moneyDay >= 0 ? 'Прибуток' : 'Витрати'}: ${Math.abs(moneyDay).toFixed(2)}
+Ніч:
+  Необхідно ${balanceNight < 0 ? 'закупити' : 'можна продати'} ${Math.abs(balanceNight).toFixed(3)} МВт
+  ${moneyNight >= 0 ? 'Прибуток' : 'Витрати'}: ${Math.abs(moneyNight).toFixed(2)}`;
+    }
+
+    updateInputs();
+    document.getElementById('objectType').addEventListener('change', updateInputs);
+  </script>
+</body>
+</html>
