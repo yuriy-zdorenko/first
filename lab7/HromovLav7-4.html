@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма замовлення товару</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Форма замовлення кольору</h1>
+        <form action="submit_order.php" method="post">
+            <!-- Номер банківського рахунку -->
+            <div class="form-group">
+                <label for="bank-account">Номер картки:</label>
+                <input type="text" id="bank-account" name="bank_account" placeholder="Введіть номер картки" required>
+            </div>
+
+            <!-- Особистий номер користувача -->
+            <div class="form-group">
+                <label for="user-id">Номер телефону:</label>
+                <input type="text" id="user-id" name="user_id" placeholder="Введіть ваш номер" required>
+            </div>
+
+            <!-- Список товарів -->
+            <div class="form-group">
+                <label for="products">Оберіть товар(-и):</label>
+                <select id="products" name="products[]" multiple size="4">
+                    <option value="товар1">Коричневий</option>
+                    <option value="товар2">Бузковий</option>
+                    <option value="товар3">Бордовий</option>
+                    <option value="товар4">Білий</option>
+                    <option value="товар5">Чорний</option>
+                    <option value="товар6">Глиняний</option>
+                    <option value="товар7">Тілесний</option> 
+                    <option value="товар8">Небесно-блакитний колір</option> 
+                    <option value="товар9">Чорний</option> 
+                </select>
+            </div>
+
+            <!-- Коментарі -->
+            <div class="form-group">
+                <label for="comments">Ваші побажання до замовлення:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Введіть коментарі за бажанням"></textarea>
+            </div>
+
+            <!-- Вибір способу оплати -->
+            <div class="form-group">
+                <label>Спосіб оплати:</label>
+                <div class="form-options">
+                    <label><input type="radio" name="payment_type" value="картка" required> Картка</label>
+                    <label><input type="radio" name="payment_type" value="готівка"> Готівка</label>
+                </div>
+            </div>
+
+            <!-- Додаткова інформація -->
+            <div class="form-group">
+                <label>Додаткова інформація:</label>
+                <div class="form-options">
+                    <label><input type="checkbox" name="additional_info[]" value="баланс"> Дані про залишок на рахунку</label>
+                    <label><input type="checkbox" name="additional_info[]" value="виплати"> Список останніх купівель</label>
+                </div>
+            </div>
+
+            <!-- Надіслати форму -->
+            <button type="submit">Надіслати замовлення</button>
+        </form>
+    </div>
+</body>
+</html>

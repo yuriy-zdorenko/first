@@ -1,0 +1,48 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #444444;
+    color: #ffffff;
+    padding-left: 30pt;
+    padding-right: 30pt;
+    line-height: 1;
+    font-size: 20px;
+    overflow: hidden;
+  }
+  h2 {
+    color: #ffffff;
+  }
+  pre, .result {
+    background: #000000;
+    padding: 10px;
+    border-left: 3px solid purple;
+    margin-bottom: 10px;
+  }
+  button {
+    font-size: 15px;
+    padding: 15px 20px;
+    border: none;
+    background-color: purple;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: '10px 10px 0px rgba(0,0,0,0.3)';
+  }
+  button:hover {
+    background-color: darkmagenta;
+    transition: background-color 0.2s;
+  }
+  input {
+    margin: 5px;
+    padding: 5px;
+    width: 60px;
+  }
+  #output {
+    width: 100%;
+    height: 300px; /* або іншу потрібну висоту */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #000000;
+  }
+  

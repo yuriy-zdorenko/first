@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Анкета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #5c2e91;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 6px;
+            margin: 4px 0;
+            border: 1px solid #ccc;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 8px 16px;
+            background-color: #5c2e91;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #450e6f;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Анкета</h1>
+
+<form>
+    <table>
+        <tr>
+            <td>1.</td>
+            <td>Прізвище</td>
+            <td><input name="LN" type="text" maxlength="30"></td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Ім'я, По-батькові</td>
+            <td><input name="IP" type="text" maxlength="30"></td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Дата народження</td>
+            <td><input name="dob" type="text" maxlength="30"></td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>Домашня адреса</td>
+            <td><input name="ha" type="text" maxlength="30"></td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>Місце навчання/роботи</td>
+            <td><input name="sa" type="text" maxlength="30"></td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>Телефон</td>
+            <td><input name="hp" type="text" maxlength="30"></td>
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td>E-mail</td>
+            <td><input name="mail" type="text" maxlength="30"></td>
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td>Наукові інтереси</td>
+            <td>
+                <input name="ob1" type="text" placeholder="1.">
+                <input name="ob2" type="text" placeholder="2.">
+                <input name="ob3" type="text" placeholder="3.">
+            </td>
+        </tr>
+    </table>
+    <div class="button-container">
+        <input type="submit" value="Відіслати дані">
+        <input type="reset" value="Очистити форму">
+    </div>
+</form>
+
+</body>
+</html>

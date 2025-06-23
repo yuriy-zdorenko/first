@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Енергетична Мережа</title>
+  <style>
+    body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #000000;
+    color: #000000;
+    padding: 30px;
+    line-height: 1.6;
+    font-size: 20px;
+    overflow: auto;
+  }
+    h1 {
+      color: white;
+      text-align: center;
+    }
+    .form-section, .results, .elements-list {
+      margin: 20px auto;
+      max-width: 700px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    select, input, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+    font-size: 25px;
+    margin-top: 20pt;
+    padding: 15px 20px;
+    border: none;
+    background-color: #4C3B4D;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: '10px 10px 0px rgba(0,0,0,0.3)';
+  }
+  button:hover {
+    background-color: #08C45D;
+    transition: background-color 0.2s;
+  }
+    .results p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+    .element-item {
+      background: #e8f0fe;
+      margin: 6px 0;
+      padding: 10px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .element-item button {
+      background: #e74c3c;
+      font-size: 12px;
+      width: auto;
+      padding: 4px 10px;
+    }
+    .element-item button:hover {
+      background: #c0392b;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Енергетична Мережа Міста</h1>
+
+<div class="form-section">
+  <h3>Додати елемент</h3>
+  <label>Тип елементу:
+    <select id="type">
+      <option value="plant">Електростанція</option>
+      <option value="solar">Сонячна панель</option>
+      <option value="building">Житловий будинок</option>
+      <option value="line">Лінія електропередачі</option>
+    </select>
+  </label>
+  <label id="label1">Потужність (1-100 МВт)</label>
+  <input type="number" id="input1" min="1" value="50">
+  <label id="label2" style="display:none;">Ціна за МВт ($)</label>
+  <input type="number" id="input2" value="100" style="display:none;">
+  <button onclick="addElement()">Додати</button>
+</div>
+
+<div class="elements-list">
+  <h3>Поточні елементи</h3>
+  <div id="elementsContainer"></div>
+</div>
+
+<div class="results">
+  <h3>Результати</h3>
+  <button onclick="calculate()">Обчислити Баланс</button>
+  <div id="output"></div>
+</div>
+
+<script>
+  class GridElement {
+    constructor(type) {
+      this.type = type;
+    }
+    getPower(isDay) { return 0; }
+  }
+
+  class PowerPlant extends GridElement {
+    constructor(power) {
+      super("Електростанція");
+      this.power = power;
+    }
+    getPower(isDay) {
+      return this.power;
+    }
+    toString() {
+      return `${this.type}: ${this.power} МВт`;
+    }
+  }
+
+  class SolarPanel extends GridElement {
+    constructor(power) {
+      super("Сонячна панель");
+      this.power = power;
+    }
+    getPower(isDay) {
+      return isDay ? this.power : 0;
+    }
+    toString() {
+      return `${this.type}: ${this.power} МВт (вдень)`;
+    }
+  }
+
+  class ResidentialBuilding extends GridElement {
+    constructor(apartments) {
+      super("Будинок");
+      this.apartments = apartments;
+    }
+    getPower(isDay) {
+      const kW = isDay ? 4 : 1;
+      return -this.apartments * kW / 1000;
+    }
+    toString() {
+      return `${this.type}: ${this.apartments} квартир`;
+    }
+  }
+
+  class PowerLine extends GridElement {
+    constructor(capacity, price) {
+      super("Лінія електропередачі");
+      this.capacity = capacity;
+      this.pricePerMW = price;
+    }
+    toString() {
+      return `${this.type}: ${this.capacity} МВт, ${this.pricePerMW} $/МВт`;
+    }
+  }
+
+  class Grid {
+    constructor() {
+      this.elements = [];
+    }
+
+    addElement(el) {
+      this.elements.push(el);
+      renderElements();
+    }
+
+    removeElement(index) {
+      this.elements.splice(index, 1);
+      renderElements();
+    }
+
+    calculateCost(isDay) {
+      let production = 0;
+      let powerLines = [];
+
+      this.elements.forEach(el => {
+        if (el instanceof PowerLine) {
+          powerLines.push(el);
+        } else {
+          production += el.getPower(isDay);
+        }
+      });
+
+      let remaining = Math.abs(production);
+      let totalCost = 0;
+
+      const sorted = [...powerLines].sort((a, b) =>
+        production < 0 ? a.pricePerMW - b.pricePerMW : b.pricePerMW - a.pricePerMW
+      );
+
+      for (let line of sorted) {
+        let transfer = Math.min(remaining, line.capacity);
+        if (transfer <= 0) continue;
+
+        totalCost += transfer * line.pricePerMW * (production < 0 ? 1 : -1);
+        remaining -= transfer;
+        if (remaining <= 0) break;
+      }
+
+      return { balance: production, cost: totalCost };
+    }
+  }
+
+  const cityGrid = new Grid();
+
+  function addElement() {
+    const type = document.getElementById('type').value;
+    const val1 = parseFloat(document.getElementById('input1').value);
+    const val2 = parseFloat(document.getElementById('input2').value);
+
+    let element;
+    switch (type) {
+      case 'plant':
+        element = new PowerPlant(val1);
+        break;
+      case 'solar':
+        element = new SolarPanel(val1);
+        break;
+      case 'building':
+        element = new ResidentialBuilding(val1);
+        break;
+      case 'line':
+        element = new PowerLine(val1, val2);
+        break;
+    }
+
+    cityGrid.addElement(element);
+  }
+
+  function renderElements() {
+    const container = document.getElementById('elementsContainer');
+    container.innerHTML = '';
+
+    cityGrid.elements.forEach((el, index) => {
+      const div = document.createElement('div');
+      div.className = 'element-item';
+      div.innerHTML = `
+        <span>${el.toString()}</span>
+        <button onclick="cityGrid.removeElement(${index})">Видалити</button>
+      `;
+      container.appendChild(div);
+    });
+  }
+
+  function calculate() {
+    const day = cityGrid.calculateCost(true);
+    const night = cityGrid.calculateCost(false);
+    const out = document.getElementById('output');
+    out.innerHTML = `
+      <p>🌞 <strong>День</strong> — Баланс: ${day.balance.toFixed(2)} МВт, Вартість: ${day.cost.toFixed(2)} $</p>
+      <p>🌙 <strong>Ніч</strong> — Баланс: ${night.balance.toFixed(2)} МВт, Вартість: ${night.cost.toFixed(2)} $</p>
+    `;
+  }
+
+  document.getElementById('type').addEventListener('change', () => {
+    const type = document.getElementById('type').value;
+    const l1 = document.getElementById('label1');
+    const l2 = document.getElementById('label2');
+    const i2 = document.getElementById('input2');
+
+    if (type === 'plant') {
+      l1.innerText = 'Потужність (1-100 МВт)';
+      l2.style.display = i2.style.display = 'none';
+    } else if (type === 'solar') {
+      l1.innerText = 'Потужність панелі (1-5 МВт вдень)';
+      l2.style.display = i2.style.display = 'none';
+    } else if (type === 'building') {
+      l1.innerText = 'Кількість квартир (1-400)';
+      l2.style.display = i2.style.display = 'none';
+    } else if (type === 'line') {
+      l1.innerText = 'Пропускна здатність лінії (МВт)';
+      l2.style.display = i2.style.display = 'block';
+    }
+  });
+</script>
+
+</body>
+</html>

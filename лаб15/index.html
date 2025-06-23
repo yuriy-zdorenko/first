@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор задания</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <div class="header">Выберите задание:</div>
+    
+    <div class="container">
+        <button onclick="task1()">Задание 1</button>
+        <button onclick="task2()">Задание 2</button>
+        <button onclick="task3()">Задание 3</button>
+        <button onclick="task4()">Задание 4</button>
+        <button onclick="task5()">Задание 5</button>
+    </div>
+
+    <!-- Виртуальная консоль -->
+    <div class="console" id="console-output"></div>
+
+    <script>
+        function logMessage(message) {
+            let consoleDiv = document.getElementById("console-output");
+            consoleDiv.innerHTML += `<p>${message}</p>`;
+        }
+
+        function clearConsole() {
+            document.getElementById("console-output").innerHTML = "";
+        }
+
+        function task1() {
+            clearConsole();
+            let num = -100;
+            while (num <= 100) {
+                if (num >= 0) logMessage(num);
+                num++;
+            }
+        }
+
+        function task2() {
+            clearConsole();
+            let i = 0;
+            do {
+                logMessage(i);
+                i += 2;
+            } while (i <= 100);
+        }
+
+        function task3() {
+            clearConsole();
+            let b = 1000;
+            let count = 0;
+            while (b >= 5) {
+                b /= 3;
+                count++;
+            }
+            logMessage(`res: ${b}`);
+            logMessage(`count: ${count}`);
+        }
+
+        function task4() {
+            let cm = 42069;
+            let inches = cm / 2.54;
+            alert(`${(cm)} см = ${inches.toFixed(2)} дюймов`);
+        }
+
+        function task5() {
+            let dayNumber = prompt("Введите число от 1 до 31:");
+            dayNumber = parseInt(dayNumber, 10);
+
+            if (isNaN(dayNumber) || dayNumber < 1 || dayNumber > 31) {
+                alert("Некорректный ввод");
+            } else {
+                let date = new Date(new Date().getFullYear(), new Date().getMonth(), dayNumber);
+                let daysOfWeek = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+                alert(`Выбранный день недели: ${daysOfWeek[date.getDay()]}`);
+            }
+        }
+    </script>
+</body>
+</html>

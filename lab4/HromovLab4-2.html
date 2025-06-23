@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рядки з анімованим текстом 2</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px;
+            background: linear-gradient(160deg, #fcc688, #e7b8ff);
+        }
+
+        .banner {
+            width: 80%; 
+            height: 150px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin: 5px;
+        }
+
+        h1 {
+            font-size: 24px; 
+            font-family: Arial, sans-serif;
+            color: #000111;
+            margin: 5px;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+	
+	h2 {
+	    font-size: 30px;
+	    font-family: Bahnschrift;
+	    font-weight: bold;
+	    font-style: italic;
+	    color: white;
+	    margin: 5px;
+	    white-space: nowrap;
+	    box-sizing: border-box;
+	}
+	    
+
+        .oscillate {
+            display: inline-block;
+            padding: 0 20px; 
+            animation: oscillate 2s infinite ease-in-out;
+        }
+
+        .scroll-up {
+            animation: scroll-up 5s linear infinite; 
+        }
+
+        .scroll-down {
+            animation: scroll-down 4s linear forwards; 
+        }
+
+        .delay-1 {
+            animation-delay: 1s;
+        }
+
+        .delay-2 {
+            animation-delay: 2s; 
+        }
+
+        @keyframes oscillate {
+            0% { transform: translateY(-20px); }
+            50% { transform: translateY(20px); }
+            100% { transform: translateY(-20px); }
+        }
+
+        @keyframes scroll-up {
+            0% { transform: translateY(250%); }
+            100% { transform: translateY(-250%); }
+        }
+
+        @keyframes scroll-down {
+            0% { transform: translateY(-350%); }
+            100% { transform: translateY(0); }
+        }
+
+       .color-1 { background: linear-gradient(to right, #FFAA00, #FF8800); } 
+       .color-2 { background: linear-gradient(to left, #0088FF, #00FFFF); } 
+       .color-3 { background: linear-gradient(to bottom, #00FF88, #008800); } 
+       .color-4 { background: linear-gradient(to top, #FF00FF, #880088); } 
+       .color-5 { background: linear-gradient(45deg, #000000, #555555); }     
+
+    </style>
+</head>
+<body>
+
+    <div class="banner color-1">
+        <h1><span class="oscillate">Цей текст коливається вгору-вниз</span></h1>
+    </div>
+
+    <div class="banner color-2">
+        <h1 class="scroll-up">Цей текст пробігає знизу вгору</h1>
+    </div>
+
+    <div class="banner color-3">
+        <h1 class="scroll-down">Цей текст пробігає зверху вниз і зупиняється</h1>
+    </div>
+
+    <div class="banner color-4">
+        <h2 class="scroll-up delay-1" style="animation-duration:7s">Текст з затримкою пробігає знизу вгору</h2>
+    </div>
+
+    <div class="banner color-5">
+        <h2 class="scroll-up delay-2" style="animation-duration:12s;">Ще один текст з затримкою пробігає знизу вгору</h2>
+    </div>
+
+</body>
+</html>

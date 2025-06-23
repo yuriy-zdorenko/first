@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.767);
+    color: white;
+}
+
+.task {
+    border: 2px solid #000;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+h2 {
+    margin-top: 0;
+}
+
+.square {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+}
+
+.link {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+    color: white
+}
+
+.input-field {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.number-paragraph {
+    font-size: 20px;
+    cursor: pointer;
+    margin: 5px 0;
+}
