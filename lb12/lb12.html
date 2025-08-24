@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Реєстрація користувача</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #fff;
+        }
+
+        .header {
+            background-color: #3399ff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 2px solid red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .subheader {
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-buttons a {
+            background-color: white;
+            color: #3399ff;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-buttons a:hover {
+            background-color: #e6f2ff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .form-box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 300px;
+        }
+
+        .form-box h2 {
+            background-color: #3399ff;
+            color: white;
+            margin-top: 0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div>
+        Лабораторна робота 12
+        <div class="subheader">Животинський Антон</div>
+    </div>
+    <div class="nav-buttons">
+        <a href="#">Вхід</a>
+        <a href="#">Реєстрація</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="form-box">
+        <h2>Реєстрація користувача</h2>
+        <form>
+            <label for="lastname">Прізвище</label>
+            <input type="text" id="lastname" name="lastname">
+            <label for="firstname">Ім’я</label>
+            <input type="text" id="firstname" name="firstname">
+             <label for="login">Логін</label>
+            <input type="text" id="login" name="login">
+
+            
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

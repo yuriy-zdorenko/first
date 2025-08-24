@@ -1,0 +1,47 @@
+body {
+    background-image: url("https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2655.jpg?semt=ais_hybrid&w=740");
+    background-size: cover;
+    font-style: italic;
+    font-size: 18px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+  }
+  
+  p {
+    text-indent: 30px; 
+  }
+  
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(183, 32, 32);
+    font-style: normal;
+  }
+  
+  img.left {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+  
+  img.right {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+  
+  a:link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-decoration: underline;
+  }
+  
+  a:visited {
+    color: rgb(82, 47, 179);
+  }
+  
+  a:active {
+    color: red;
+  }
+  
