@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hobby App CDN</title>
+  
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+
+    class HobbyClass extends React.Component {
+      render() {
+        return (
+          <div>
+             <h2>Моє хобі – програмування</h2>
+              <p>Я розробляю сайти та ігри, це дає мені змогу реалізовувати свої ідеї в реальному житті.</p>
+          </div>
+        );
+      }
+    }
+
+    function HobbyFunction() {
+      return (
+        <div>
+          <h2>Моє хобі – програмування</h2>
+          <p>Я розробляю сайти та ігри, це дає мені змогу реалізовувати свої ідеї в реальному житті.</p>
+        </div>
+      );
+    }
+    const App = () => (
+      <div style={{ textAlign: 'center' }}>
+        <HobbyClass />
+        <hr />
+        <HobbyFunction />
+      </div>
+    );
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+
+  </script>
+
+</body>
+</html>

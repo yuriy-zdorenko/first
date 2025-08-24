@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+    <style>
+        .color-box {
+          width: 100px;
+          height: 100px;
+          background-color: green;
+          margin: 10px;
+        }
+      </style>
+      
+</head>
+<body>
+    <div class="color-box">Div 1</div>
+    <div class="color-box">Div 2</div>
+    <div class="color-box">Div 3</div>
+
+
+    <script>
+        function paintRed(event) {
+          const div = event.target;
+          div.style.backgroundColor = 'red';
+      
+          div.removeEventListener('click', paintRed);
+          div.addEventListener('click', paintGreen);
+        }
+      
+        function paintGreen(event) {
+          const div = event.target;
+          div.style.backgroundColor = 'green';
+      
+          div.removeEventListener('click', paintGreen);
+          div.addEventListener('click', paintRed);
+        }
+      
+        const divs = document.querySelectorAll('.color-box');
+        divs.forEach(div => {
+          div.addEventListener('click', paintRed);
+        });
+      </script>
+      
+</body>
+</html>

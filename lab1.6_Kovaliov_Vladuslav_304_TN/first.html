@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first</title>
+</head>
+<body>
+    <script>
+        const data = {
+            ua: {
+                question: "Введіть номер дня неділі від 1 до 7?",
+                days: ["Понеділок", "Вівторок", "Середа", "Четвер", "П’ятниця", "Субота", "Неділя"],
+                error: "Неправильний ввід. Спробуйте ще раз.",
+            },
+            en: {
+                question: "Enter the day number of the week (from 1 to 7)?",
+                days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                error: "Invalid input. Please try again.",
+            }
+        };
+
+        let language;
+        while (true) {
+            language = prompt('Виберіть мову "ua" або "en"?').toLowerCase();
+            if (language === "ua" || language === "en") break;
+            alert("Неправильний ввід мови. Спробуйте ще раз.");
+        }
+
+        let dayNumber;
+        while (true) {
+            const input = prompt(data[language].question);
+            dayNumber = parseInt(input, 10);
+            if (dayNumber >= 1 && dayNumber <= 7) break;
+            alert(data[language].error);
+        }
+
+        alert(data[language].days[dayNumber - 1]);
+
+    </script>
+</body>
+</html>

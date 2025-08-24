@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: white;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main-title {
+  font-size: 60px;
+  color: #e26666;
+  margin-bottom: 20px;
+}
+
+.start-btn {
+  font-size: 20px;
+  padding: 10px 30px;
+  background-color: #4d97d3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.game-box {
+  width: fit-content;
+  border: 5px solid black;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  grid-template-rows: repeat(5, 60px);
+  gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.grid div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #999;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  transition: background 0.3s;
+}
+
+.results-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.results-table th, .results-table td {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+}
+
+.results-table .best {
+  background-color: #d0f0c0;
+  font-weight: bold;
+}

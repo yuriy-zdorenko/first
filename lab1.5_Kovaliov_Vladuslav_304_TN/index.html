@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>lab1.5</title>
+</head>
+<body>
+  <h2>Обчислити квадрат числа</h2>
+  <input type="number" id="numberInput" placeholder="Введіть число">
+  <button onclick="calculateSquare()">Обчислити</button>
+  <p id="result"></p>
+
+  <script>
+    function calculateSquare() {
+      const number = document.getElementById('numberInput').value;
+      const xhr = new XMLHttpRequest();
+
+      xhr.open('POST', '/square', true);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) { 
+            document.getElementById('result').innerText = xhr.responseText;
+        }
+      };
+      
+      const requestBody = JSON.stringify({ number: Number(number) });
+      xhr.send(requestBody);
+}
+  </script>
+</body>
+</html>

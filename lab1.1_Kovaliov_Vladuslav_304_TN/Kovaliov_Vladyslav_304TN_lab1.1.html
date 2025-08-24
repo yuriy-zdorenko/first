@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kovaliov_Vladyslav_304TN_lab1.15</title>
+</head>
+<body>
+    <p>Завдання 1</p>
+    <script>
+        let i = -100;
+        while( i < 101){
+            if(i >0)
+                document.write(i + "; ")           
+            i++
+        }
+    </script>
+    <p>Завдання 2</p>
+    <script>
+        function EvenNumbers(){
+            let i = 0
+            do {
+                if (i%2==0 && i!=0 ){
+                    document.write(i + "; ")
+                }               
+                i++
+            } while (i < 101)
+        }
+        EvenNumbers()
+    </script>
+
+    <p>Завдання 3</p>
+    <script>
+        let counter = 0
+        let b = 1000
+        let result = b
+
+        while (result > 5) {
+            result=result/3
+            counter++
+        }
+        document.write(counter + "/" + result)
+    </script>
+
+    <p>Завдання 4</p>
+    <script>
+        sm = prompt("Enter size in centimeter");
+
+        !isNaN(sm) && sm.trim() !== "" ? document.write(sm*0.3937) : document.write("Value not a number")
+    </script>
+
+    <p>Завдання 5</p>
+    <script>
+        let day = prompt("Введіть число від 1 до 31")
+        let days = ["Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"]
+
+        if(!isNaN(day) && day.trim() !== "" && day >= 1 && day <= 31)
+            if(day%7 === 0)
+                document.write(days[6]) 
+            else
+                document.write(days[(day%7)-1])
+        else
+            document.write("Векоректно введені дані!")      
+    </script>
+</body>
+</html>

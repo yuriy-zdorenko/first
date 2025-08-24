@@ -1,0 +1,57 @@
+ body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #main, #game {
+      display: none;
+    }
+    #main h1 {
+      color: #d66;
+      font-size: 48px;
+    }
+    #main button, #restart {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+    }
+    #gameContainer {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      margin-top: 30px;
+    }
+    #grid {
+      display: grid;
+      grid-template-columns: repeat(5, 80px);
+      gap: 5px;
+    }
+    .grid-item {
+      width: 80px;
+      height: 80px;
+      border: 1px solid #000;
+      background-size: cover;
+      background-position: center;
+    }
+    #rightPanel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    #targetImage {
+      width: 80px;
+      height: 80px;
+      border: 2px solid lightblue;
+      background-size: cover;
+      background-position: center;
+    }
+    select {
+      font-size: 18px;
+      padding: 5px 10px;
+      margin-bottom: 20px;
+    }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+<body>
+    <h1>task1</h1>
+    <img src="/image/image1.jpg" width="300" height="300" alt="Image 1">
+    <img src="/image/image2.webp" width="300" height="300" alt="Image 2">
+    <img src="/image/image3.jpeg" width="300" height="300" alt="Image 3">
+    <script>
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            img.onclick = function() {
+                console.log(this.getAttribute('width'));
+            };
+        });
+    </script>
+    <h1>task2</h1>
+    <a href="https://nupp.edu.ua/1" id="link1">nupp 1</a><br>
+    <a href="https://nupp.edu.ua/2" id="link2">nupp 2</a><br>
+    <a href="https://nupp.edu.ua/3" id="link3">nupp 3</a><br>
+
+    <script>
+        function addTitle(event) {
+            event.target.title = event.target.href;
+        }
+
+        function removeTitle(event) {
+            event.target.title = '';
+        }
+
+        const links = document.querySelectorAll('a');
+
+        links.forEach(link => {
+            link.addEventListener('mouseover', addTitle);
+            link.addEventListener('mouseout', removeTitle);
+        });
+    </script>
+    <h1>task3</h1>
+    <input type="text" value="Input 1">
+    <input type="text" value="Input 2">
+    <input type="text" value="Input 3">
+    <p id="demo"></p>
+
+    <script>
+        const inputs = document.querySelectorAll('input');
+        const demo = document.getElementById('demo');
+
+        inputs.forEach(input => {
+            input.addEventListener('click', function() {
+                demo.textContent = this.value;
+            });
+        });''
+    </script>
+
+    <h1>task4</h1>
+    <input type="text" value="First">
+    <input type="text" value="Second">
+    <input type="text" value="Third">
+
+    <script>
+        const Task4 = document.querySelectorAll('input');
+
+        Task4.forEach(input => {
+            let clicked = false;
+            input.addEventListener('click', function() {
+                if (!clicked) {
+                    console.log(this.value);
+                    clicked = true;
+                } else {
+                    alert(this.value);
+                }
+            });
+        });
+    </script>
+
+    <h1>task5</h1>
+    <p>one</p>
+    <p>two</p>
+    <p>three</p>
+
+    <script>
+        const wordToNumber = {
+            one: 1,
+            two: 2,
+            three: 3
+        };
+
+        const paragraphs = document.querySelectorAll('p');
+
+        paragraphs.forEach(paragraph => {
+            paragraph.addEventListener('click', function() {
+                const word = this.textContent;              
+                const number = wordToNumber[word];
+                this.textContent = number * number;
+            }, { once: true });
+        });
+    </script>
+</body>
+</html>
