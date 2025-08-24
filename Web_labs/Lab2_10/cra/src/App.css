@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif, "Helvetica Neue", sans-serif;
+    background-color: #2e2e2e;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: #3a3a3a;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 350px;
+}
+
+.slider-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+    transition: transform 0.1s linear;
+}
+
+.caption {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #cccccc;
+}
