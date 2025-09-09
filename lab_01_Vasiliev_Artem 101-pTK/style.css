@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #0056a3;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #444;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+pre {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: "Courier New", monospace;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 40px;
+    font-style: italic;
+    font-weight: bold;
+}
+.page-description {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-top: -10px;
+}
+
+.page-keywords {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
