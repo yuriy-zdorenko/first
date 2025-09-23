@@ -1,0 +1,125 @@
+/* Загальні стилі для всіх сторінок */
+:root{
+  --bg:#f5f7fb;
+  --accent:#2d6fa6;
+  --muted:#666;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: #123;
+  margin: 0;
+  padding: 20px;
+}
+header{
+  background: var(--accent);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+h1{margin:0 0 8px 0}
+main{max-width:980px;margin:0 auto}
+footer{
+  margin-top:18px;
+  padding:10px;
+  background:var(--accent);
+  color:#fff;
+  text-align:center;
+  border-radius:6px;
+}
+
+/* Галерея фото (для IvanennkoLab06-3.htm) */
+.gallery{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  padding:20px 0;
+}
+.photo{
+  position:relative;
+  width:300px;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+  cursor:pointer;
+}
+.photo img{
+  width:100%;
+  display:block;
+}
+.tooltip{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  background:rgba(0,0,0,0.7);
+  color:#fff;
+  padding:10px;
+  text-align:center;
+  opacity:0;
+  transition:opacity .35s ease, transform .35s ease;
+  transform: translateY(6px);
+}
+.photo:hover .tooltip{opacity:1; transform:translateY(0)}
+
+/* --- СТИЛІ ДЛЯ map_canvas.html (CSS-канва з фігурами) --- */
+.canvas{
+  margin-top:16px;
+  width:700px;
+  height:420px;
+  background: linear-gradient(180deg,#eaf5ff,#ffffff);
+  border-radius:12px;
+  box-shadow: 0 8px 20px rgba(10,20,40,0.06);
+  position:relative;
+  overflow:hidden;
+  border:2px solid rgba(0,0,0,0.06);
+}
+
+/* фігури (візуалізація) */
+.shape{position:absolute; pointer-events:none; transition:transform .25s ease;}
+.shape.rect{
+  top:40px; left:40px; width:220px; height:120px;
+  background:linear-gradient(135deg,#ffd89b,#ff9a9e); border-radius:10px;
+}
+.shape.circle{
+  top:50px; left:350px; width:140px; height:140px;
+  background:radial-gradient(circle at 35% 30%, #b3e5ff,#4aa3e0); border-radius:50%;
+}
+.shape.poly{
+  top:220px; left:80px; width:180px; height:120px;
+  background:linear-gradient(180deg,#c9f7d6,#7bd389);
+  clip-path: polygon(44% 0%, 100% 83%, 0% 83%);
+}
+
+/* "гарячі" зони — посилання */
+.hotspot{
+  position:absolute; display:block; text-indent:-9999px; background:transparent;
+  z-index:10; outline:none; border-radius:6px;
+}
+.hs-rect{top:40px; left:40px; width:220px; height:120px; cursor:pointer}
+.hs-circle{top:50px; left:350px; width:140px; height:140px; border-radius:50%; cursor:pointer}
+.hs-poly{top:220px; left:80px; width:180px; height:120px; cursor:pointer; clip-path: polygon(44% 0%, 100% 83%, 0% 83%)}
+
+/* hover/підсвітка фігур */
+.hs-rect:hover ~ .shape.rect,
+.hs-rect:focus ~ .shape.rect { transform: translateY(-6px) scale(1.02); box-shadow:0 14px 30px rgba(0,0,0,0.18); }
+.hs-circle:hover ~ .shape.circle,
+.hs-circle:focus ~ .shape.circle { transform: translateY(-8px) scale(1.03); box-shadow:0 14px 30px rgba(0,0,0,0.18); }
+.hs-poly:hover ~ .shape.poly,
+.hs-poly:focus ~ .shape.poly { transform: translateY(-6px) scale(1.02); box-shadow:0 14px 30px rgba(0,0,0,0.18); }
+
+/* підказки через ::after (беруть текст з title) */
+.hotspot::after{
+  content: attr(title);
+  position:absolute; left:50%; transform:translateX(-50%) translateY(8px);
+  background:rgba(0,0,0,0.78); color:#fff; padding:6px 10px; border-radius:6px;
+  white-space:nowrap; font-size:13px; opacity:0; pointer-events:none; transition:.18s;
+  z-index:30;
+}
+.hs-rect::after{top:-36px}
+.hs-circle::after{top:-36px}
+.hs-poly::after{top:-46px}
+.hotspot:hover::after, .hotspot:focus::after{opacity:1; transform:translateX(-50%) translateY(0)}
