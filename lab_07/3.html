@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №7 - Завдання 3 (Анкета)</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            background-color: #f0f8ff;
+        }
+        .form-container {
+            background-color: #e0f0f0;
+            border: 2px solid #008080;
+            padding: 20px;
+            max-width: 800px;
+        }
+        .form-title {
+            background-color: #b0e0e6;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+            padding: 10px;
+            margin: -20px -20px 20px -20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 8px;
+            border: 1px solid #008080;
+            vertical-align: top;
+        }
+        .label-cell {
+            background-color: #b0e0e6;
+            width: 200px;
+            font-weight: bold;
+        }
+        .input-cell {
+            background-color: white;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 4px;
+        }
+        .interests-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .interests-list li {
+            margin: 5px 0;
+        }
+        .button-row {
+            text-align: center;
+            padding: 15px;
+        }
+        .button-row input {
+            margin: 0 10px;
+            padding: 8px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Завдання 3 - Анкета</h2>
+    
+    <form action="result.html" method="post">
+        <div class="form-container">
+            <div class="form-title">Анкета</div>
+            
+            <table>
+                <tr>
+                    <td class="label-cell">1. Прізвище</td>
+                    <td class="input-cell">
+                        <input type="text" name="surname" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-cell">2. Ім'я, по батькові</td>
+                    <td class="input-cell">
+                        <input type="text" name="firstname" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-cell">3. Число і рік народження</td>
+                    <td class="input-cell">
+                        <input type="text" name="birthdate" placeholder="дд.мм.рррр">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-cell">4. Домашня адреса</td>
+                    <td class="input-cell">
+                        <input type="text" name="address">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-cell">5. Місце навчання (роботи)</td>
+                    <td class="input-cell">
+                        <input type="text" name="workplace">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-cell">6. Домашній (робочий) телефон</td>
+                    <td class="input-cell">
+                        <input type="text" name="phone">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-cell">7. E-mail</td>
+                    <td class="input-cell">
+                        <input type="email" name="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-cell">8. Область наукових інтересів</td>
+                    <td class="input-cell">
+                        <ul class="interests-list">
+                            <li>1. <input type="text" name="interest1"></li>
+                            <li>2. <input type="text" name="interest2"></li>
+                            <li>3. <input type="text" name="interest3"></li>
+                            <li>4. <input type="text" name="interest4"></li>
+                            <li>5. <input type="text" name="interest5"></li>
+                            <li>6. <input type="text" name="interest6"></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="button-row">
+                <input type="submit" value="Відмінити введення">
+                <input type="button" value="Надіслати дані та перейти до 2 етапу реєстрації" onclick="alert('Перехід до наступного етапу');">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №7 - Завдання 2</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .form-section { margin: 15px 0; }
+        label { display: inline-block; width: 200px; }
+        input, select, textarea { margin: 5px; }
+    </style>
+</head>
+<body>
+    <h2>Завдання 2 - Форма з усіма елементами</h2>
+    
+    <form action="result.html" method="post">
+        <div class="form-section">
+            <h3>Текстові поля</h3>
+            <label>Ім'я:</label>
+            <input type="text" name="name" size="30" maxlength="50" value="Луговий Олександр Сергійович"><br>
+            
+            <label>Пароль:</label>
+            <input type="password" name="password" size="20" maxlength="20"><br>
+        </div>
+
+        <div class="form-section">
+            <h3>Текстова область</h3>
+            <label>Коментарі:</label><br>
+            <textarea name="comments" rows="4" cols="50" wrap="virtual">Ваші коментарі...</textarea>
+        </div>
+
+        <div class="form-section">
+            <h3>Список (SELECT)</h3>
+            <label>Оберіть день тижня:</label>
+            <select name="day" size="1">
+                <option value="1">Понеділок</option>
+                <option value="2">Вівторок</option>
+                <option value="3" selected>Середа</option>
+                <option value="4">Четвер</option>
+                <option value="5">П'ятниця</option>
+                <option value="6">Субота</option>
+                <option value="7">Неділя</option>
+            </select>
+        </div>
+
+        <div class="form-section">
+            <h3>Прапорці (CHECKBOX)</h3>
+            <label>Ваші навички:</label><br>
+            <input type="checkbox" name="skill" value="html" checked> HTML<br>
+            <input type="checkbox" name="skill" value="css"> CSS<br>
+            <input type="checkbox" name="skill" value="js"> JavaScript<br>
+            <input type="checkbox" name="skill" value="php"> PHP<br>
+            <input type="checkbox" name="skill" value="python"> Python<br>
+        </div>
+
+        <div class="form-section">
+            <h3>Радіокнопки (RADIO)</h3>
+            <label>Рівень знань:</label><br>
+            <input type="radio" name="level" value="beginner" checked> Початківець<br>
+            <input type="radio" name="level" value="intermediate"> Середній<br>
+            <input type="radio" name="level" value="advanced"> Просунутий<br>
+        </div>
+
+        <div class="form-section">
+            <h3>Файл</h3>
+            <label>Прикріпити файл:</label>
+            <input type="file" name="attachment" size="40">
+        </div>
+
+        <div class="form-section">
+            <h3>Кнопки</h3>
+            <input type="submit" value="Відправити дані">
+            <input type="reset" value="Скасувати ввід">
+            <input type="button" value="Показати дату" onclick="alert('Сьогодні: ' + new Date());">
+        </div>
+    </form>
+</body>
+</html>

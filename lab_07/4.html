@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №7 - Завдання 4 (Замовлення товару)</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input[type="text"], 
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .form-group textarea {
+            height: 80px;
+            resize: vertical;
+        }
+        .checkbox-group, .radio-group {
+            margin: 10px 0;
+        }
+        .checkbox-group input, .radio-group input {
+            margin-right: 8px;
+        }
+        .checkbox-group label, .radio-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 20px;
+        }
+        .button-group {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .button-group input {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .submit-btn {
+            background-color: #007acc;
+            color: white;
+        }
+        .reset-btn {
+            background-color: #6c757d;
+            color: white;
+        }
+        .submit-btn:hover {
+            background-color: #005a9e;
+        }
+        .reset-btn:hover {
+            background-color: #545b62;
+        }
+        select[multiple] {
+            height: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-title">Замовлення товару</h2>
+        
+        <form action="result.html" method="post">
+            <div class="form-group">
+                <label for="account">Номер банківського рахунку:</label>
+                <input type="text" id="account" name="account" placeholder="Введіть номер рахунку" required>
+            </div>
+
+            <div class="form-group">
+                <label for="personal_id">Особистий номер користувача:</label>
+                <input type="text" id="personal_id" name="personal_id" placeholder="Введіть особистий номер" required>
+            </div>
+
+            <div class="form-group">
+                <label for="products">Список товарів (можна вибрати декілька):</label>
+                <select id="products" name="products" multiple size="6">
+                    <option value="laptop">Ноутбук</option>
+                    <option value="mouse">Комп'ютерна миша</option>
+                    <option value="keyboard">Клавіатура</option>
+                    <option value="monitor">Монітор</option>
+                    <option value="printer">Принтер</option>
+                    <option value="tablet">Планшет</option>
+                    <option value="phone">Смартфон</option>
+                    <option value="headphones">Навушники</option>
+                </select>
+                <small>Утримуйте Ctrl для вибору декількох товарів</small>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Коментарі користувача:</label>
+                <textarea id="comments" name="comments" placeholder="Введіть ваші коментарі або побажання..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Вид оплати:</label>
+                <div class="radio-group">
+                    <input type="radio" id="cash" name="payment_type" value="cash" checked>
+                    <label for="cash">Готівковий розрахунок</label>
+                    
+                    <input type="radio" id="cashless" name="payment_type" value="cashless">
+                    <label for="cashless">Безготівковий розрахунок</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Додаткова інформація при відповіді:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="balance" name="additional_info" value="balance">
+                    <label for="balance">Дані про залишки на рахунку</label>
+                    
+                    <input type="checkbox" id="payments" name="additional_info" value="payments">
+                    <label for="payments">Список останніх виплат по рахунку</label>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <input type="submit" value="Відправити замовлення" class="submit-btn">
+                <input type="reset" value="Очистити форму" class="reset-btn">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
