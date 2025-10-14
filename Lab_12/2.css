@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+header {
+    background-color: #007bff; /* Синій фон для шапки */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #dc3545; /* Червона лінія під шапкою */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header p {
+    margin: 0;
+    font-size: 14px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+.git-commands {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Створення 4-х колонок */
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.git-commands section {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.git-commands section h2 {
+    color: #007bff; /* Сині заголовки секцій */
+    margin-top: 0;
+    font-size: 18px;
+    border-bottom: 1px solid #007bff; /* Лінія під заголовками */
+    padding-bottom: 5px;
+}
+
+.git-commands section h2.yellow-header {
+    color: #ffc107; /* Жовтий заголовок для "Finally!" */
+    border-bottom-color: #ffc107;
+}
+
+.git-commands ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.git-commands ul li {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.git-commands ul li code {
+    background-color: #e9ecef;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #c82333; /* Червоний колір для команд */
+}
+
+.git-commands section p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+footer {
+    background-color: #343a40; /* Темно-сірий фон для футера */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: 20px;
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Layout — float</title>
+<style>
+  *{box-sizing:border-box}
+  body{font-family:Arial, Helvetica, sans-serif; margin:20px; background:#fff}
+  .wrap{max-width:1000px;margin:0 auto}
+  .row{clear:both;overflow:hidden}
+  .top{background:#4f9adf;height:160px;margin-bottom:12px;border:6px solid #fff}
+  .sidebar{float:right;width:220px;background:#66696b;height:360px;margin-left:12px;border:6px solid #fff}
+  .left-col{margin-right:240px} /* залишає місце під сайдбар */
+  .block{float:left;background:#7ad9d0;height:80px;margin:0 12px 12px 0;border:6px solid #fff}
+  .b1{width:48%; background:#5fd7cf; height:88px}
+  .b2{width:24%; background:#e06b6b; height:88px}
+  .b3{width:28%; background:#ffc400; height:188px} /* займає два ряди по висоті */
+  .b4{clear:left; width:60%; background:#1f9b6f; height:120px; margin-top:6px}
+  .footer{clear:both;background:#b35010;height:72px;margin-top:12px;border:6px solid #fff}
+
+  @media (max-width:720px){
+    .sidebar, .b1, .b2, .b3, .b4{float:none;width:100%; margin:0 0 12px 0}
+    .left-col{margin-right:0}
+    .sidebar{height:140px}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="row top"></div>
+
+    <div class="row">
+      <div class="sidebar"></div>
+
+      <div class="left-col">
+        <div class="block b1"></div>
+        <div class="block b2"></div>
+        <div class="block b3"></div>
+
+        <div style="clear:both"></div>
+
+        <div class="block b4"></div>
+      </div>
+    </div>
+
+    <div class="row footer"></div>
+  </div>
+</body>
+</html>

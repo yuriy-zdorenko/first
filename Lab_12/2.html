@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git команди</title>
+    <link rel="stylesheet" href="2.css">
+    </head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Вхід</a>
+            <a href="#">Реєстрація</a>
+        </nav>
+        <h1>Мій особистий блог</h1>
+    </header>
+
+    <main>
+        <h1>Git команди</h1>
+        <div class="git-commands">
+            <section>
+                <h2>Create a Repository</h2>
+                <ul>
+                    <li><code>$ git init [project name]</code><br>From scratch - Create a new local repository</li>
+                    <li><code>$ git clone my_url</code><br>Download from an existing repository</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Working with Branches</h2>
+                <ul>
+                    <li><code>$ git branch</code><br>List all local branches</li>
+                    <li><code>$ git branch -av</code><br>List all branches, local and remote</li>
+                    <li><code>$ git checkout my_branch</code><br>Switch to a branch, my_branch, and update working directory</li>
+                    <li><code>$ git branch new_branch</code><br>Create a new branch called new_branch</li>
+                    <li><code>$ git branch -d my_branch</code><br>Delete the branch called my_branch</li>
+                    <li><code>$ git merge branch_a</code><br>Merge branch_a into branch_b</li>
+                    <li><code>$ git tag my_tag</code><br>Tag the current commit</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Make a change</h2>
+                <ul>
+                    <li><code>$ git add [file]</code><br>Stage the file, ready for commit</li>
+                    <li><code>$ git add .</code><br>Stage all changed files, ready for commit</li>
+                    <li><code>$ git commit -m "commit message"</code><br>Commit all your tracked files to versioned history</li>
+                    <li><code>$ git commit --am "commit message"</code><br>Unstages file, keeping the file changes</li>
+                    <li><code>$ git reset [file]</code><br>Revert everything to the last commit</li>
+                    <li><code>$ git reset --hard</code><br>Revert everything to the last commit</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Synchronize</h2>
+                <ul>
+                    <li><code>$ git fetch</code><br>Get the latest changes from origin (no merge)</li>
+                    <li><code>$ git pull</code><br>Fetch the latest changes from origin and merge</li>
+                    <li><code>$ git pull --rebase</code><br>Fetch the latest changes from origin and rebase</li>
+                    <li><code>$ git push</code><br>Push local changes to the origin</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Observe your Repository</h2>
+                <ul>
+                    <li><code>$ git status</code><br>List new or modified files not yet committed</li>
+                    <li><code>$ git diff</code><br>Show the changes to files not yet staged</li>
+                    <li><code>$ git diff --cached</code><br>Show the changes to staged files</li>
+                    <li><code>$ git diff HEAD</code><br>Show all staged and unstaged file changes</li>
+                    <li><code>$ git diff commit1 commit2</code><br>Show the changes between two commit ids</li>
+                    <li><code>$ git blame [file]</code><br>List the change dates and authors for a file</li>
+                    <li><code>$ git show [commit]:[file]</code><br>Show the file changes for a commit id and/or file</li>
+                    <li><code>$ git log</code><br>Show full change history</li>
+                    <li><code>$ git log -p [file/directory]</code><br>Show change history for file/directory including diffs</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Finally!</h2>
+                <p>When in doubt, use git help</p>
+                <ul>
+                    <li><code>$ git command --help</code></li>
+                </ul>
+                <p>Or visit <a href="https://training.github.com/">https://training.github.com/</a> for official GitHub training.</p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
