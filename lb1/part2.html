@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабороторна робота №1 - Слобода Артем 303ТН</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .marquee-container {
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+            position: relative;
+            margin: 10px 0;
+        }
+        .marquee {
+            position: absolute;
+            font-size: 24px;
+            color: white;
+            text-align: center;
+            width: 100%;
+        }
+        .marquee img {
+            width: 50px;
+            height: 50px;
+        }
+        /* Row 1: Text oscillates vertically */
+        #row1 {
+            background-color: #ff4d4d;
+            animation: oscillate 3s ease-in-out infinite;
+        }
+        @keyframes oscillate {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(50px); }
+            100% { transform: translateY(0); }
+        }
+        /* Row 2: Images move bottom to top and reappear */
+        #row2 {
+            background-color: #4da8ff;
+            animation: moveBottomToTop 5s linear infinite;
+        }
+        @keyframes moveBottomToTop {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-100%); }
+        }
+        /* Row 3: Images move top to bottom and stop */
+        #row3 {
+            background-color: #4dff4d;
+            animation: moveTopToBottom 5s linear forwards;
+        }
+        @keyframes moveTopToBottom {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+        /* Row 4: Text with delay mode 1 */
+        #row4 {
+            background-color: #ffcc4d;
+            animation: moveWithDelay1 6s linear infinite;
+            animation-delay: 1s;
+        }
+        @keyframes moveWithDelay1 {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-100%); }
+        }
+        /* Row 5: Text with delay mode 2 */
+        #row5 {
+            background-color: #cc4dff;
+            animation: moveWithDelay2 7s linear infinite;
+            animation-delay: 2s;
+        }
+        @keyframes moveWithDelay2 {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-100%); }
+        }
+    </style>
+</head>
+<body style="background-color: #3281a8;">
+    <div class="marquee-container" style="background-color: #ff4d4d;">
+        <div class="marquee" id="row1">Текст коливається вертикально</div>
+    </div>
+    <div class="marquee-container" style="background-color: #4da8ff;">
+        <div class="marquee" id="row2">
+            <img src="image/cosmos.jpg" alt="Image 1">
+            <img src="image/fon.jpg" alt="Image 2">
+            <img src="image/shrek.jpg" alt="Image 3">
+        </div>
+    </div>
+    <div class="marquee-container" style="background-color: #4dff4d;">
+        <div class="marquee" id="row3">
+            <img src="image/cosmos.jpg" alt="Image 4">
+            <img src="image/fon.jpg" alt="Image 5">
+            <img src="image/shrek.jpg" alt="Image 6">
+        </div>
+    </div>
+    <div class="marquee-container" style="background-color: #ffcc4d;">
+        <div class="marquee" id="row4">Текст з затримкою 1 секунда</div>
+    </div>
+    <div class="marquee-container" style="background-color: #cc4dff;">
+        <div class="marquee" id="row5">Текст з затримкою 2 секунди</div>
+    </div>
+</body>
+</html>

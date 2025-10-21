@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+     <title>Лабороторна робота №1 - Слобода Артем 303ТН</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .marquee {
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 24px;
+            padding: 10px;
+            color: white;
+        }
+        /* Row 1: Text oscillates side to side */
+        #row1 {
+            background-color: #ff4d4d;
+            animation: oscillate 3s ease-in-out infinite;
+        }
+        @keyframes oscillate {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(100px); }
+            100% { transform: translateX(0); }
+        }
+        /* Row 2: Text moves right to left and reappears */
+        #row2 {
+            background-color: #4da8ff;
+            animation: moveRightToLeft 5s linear infinite;
+        }
+        @keyframes moveRightToLeft {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        /* Row 3: Text moves left to right and stops */
+        #row3 {
+            background-color: #4dff4d;
+            animation: moveLeftToRight 5s linear forwards;
+        }
+        @keyframes moveLeftToRight {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        /* Row 4: Text with delay mode 1 */
+        #row4 {
+            background-color: #ffcc4d;
+            animation: moveWithDelay1 6s linear infinite;
+            animation-delay: 1s;
+        }
+        @keyframes moveWithDelay1 {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        /* Row 5: Text with delay mode 2 */
+        #row5 {
+            background-color: #cc4dff;
+            animation: moveWithDelay2 7s linear infinite;
+            animation-delay: 2s;
+        }
+        @keyframes moveWithDelay2 {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body style="background-image: url(image/fon.jpg); background-repeat: no-repeat; background-size: cover; ">
+
+    <div class="marquee-container" style="background-color: #ff4d4d;">
+        <div class="marquee" id="row1">Текст коливається з боку в бік</div>
+    </div>
+    <div class="marquee-container" style="background-color: #4da8ff;">
+        <div class="marquee" id="row2">Текст пробігає справа наліво та з’являється знову</div>
+    </div>
+    <div class="marquee-container" style="background-color: #4dff4d;">
+        <div class="marquee" id="row3">Текст пробігає зліва направо та зупиняється</div>
+    </div>
+    <div class="marquee-container" style="background-color: #ffcc4d;">
+        <div class="marquee" id="row4">Текст з затримкою 1 секунда</div>
+    </div>
+    <div class="marquee-container" style="background-color: #cc4dff;">
+        <div class="marquee" id="row5">Текст з затримкою 2 секунди</div>
+    </div>
+    <a href="part2.html" target="_blank">(Завдання 4.2)</a>
+</body>
+</html>
