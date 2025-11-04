@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.container.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* --- Game Page --- */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+#restartBtn {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.game-board {
+    display: grid;
+    /*  (на основі зображення 5x5) */
+    grid-template-columns: repeat(5, 1fr); 
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.number-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    height: 80px;
+    cursor: pointer;
+    font-weight: bold;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard */
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.number-cell:hover {
+    transform: scale(1.05);
+}
+
+/*  вибрані цифри підсвічуються відмінним від інших колір */
+.number-cell.selected {
+    background-color: #a0e7a0; 
+    color: #000;
+    border-color: #5cb85c;
+}
+
+/* --- Stats Table --- */
+#stats-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#stats-table th, #stats-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#stats-table th {
+    background-color: #f2f2f2;
+}
+
+/*  кращий результат підсвічується іншим кольором */
+.best-result {
+    background-color: #fffbaf; 
+    font-weight: bold;
+}
