@@ -1,0 +1,230 @@
+<html>
+
+<head>
+    <title>ABOUT ME</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Навчальний документ з прикладами коду HTML та підписом студента групи 205-ТН.">
+    <meta name="keywords" content="HTML, код, приклад, студент, Чебикін, 205-ТН">
+</head>
+
+<body bgcolor="red">
+
+    <h1 style="margin-bottom: 0%;" Align = "center"><B><U><font size="10" face="fantasy">Про себе</font></U></B></h1>
+    <hr>
+
+    <div style="text-align: justify; text-indent: 20px; background: #00FFFF;">
+
+        <p style="margin-bottom: 5px;">
+            <font face="cursive" color="Blue" size="5">
+                Мене звати <b><i>Богдан</i></b>. Я зараз навчаюся на 3 курсі спеціальності <u>"Комп'ютерні науки"</u>  у <u><i>Полтавській політехніці імені Юрія Кондратюка</i></u>.
+                Навчання займає <b>багато часу</b>, 
+                але воно <b><i><u>цікаве</u></i></b> та <b><i><u>перспективне</u></i></b>.
+                Прагну розвиватися у <u>різних напрямках</u>. Навчання дає мені <u>не лише знання з обраної спеціальності</u>,
+                <u>а й можливість формувати ширший світогляд, вчитися працювати з інформацією та застосовувати здобуте на практиці</u>.         
+            </font>            
+        </p>
+
+        <p style="margin-bottom: 5px;" >
+            <font face="cursive" color = "white" size="5">
+            Цікавлюся програмуванням і сучасними технологіями. У вільний час люблю пограти в ігри або подивитися щось цікаве, хоча його зараз обмаль.
+            Також для мене важливо проводити час із друзями та відпочивати, щоб підтримувати баланс між навчанням і особистим життям.
+            </font>
+        </p>
+
+        <p style="margin-bottom: 5px;">        
+            <font face="cursive" color = "green" size="5">
+                У майбутньому хочу працювати у сфері ІТ, розвиватися як фахівець і реалізовувати проєкти, які приносять користь людям. Вірю, що завдяки наполегливості та бажанню вчитися можу досягти поставлених цілей.
+            </font>                
+        </p>                       
+
+    </div>        
+
+    <h2 style="margin-bottom:0%;font-size:xx-large;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" Align = "center"><U>Моє хобі</U></h2> 
+    <hr style="margin-bottom: 0%;">
+    <div style="text-align: justify; text-indent: 20px; background: #A4C639;">
+        <p style="margin-bottom: 5px;">               
+            <font face="monospace" size="5">
+                Серед моїх основних хобі та інтересів – перегляд фільмів і серіалів, гра в комп’ютерні ігри (хоча це буває рідко). 
+                Також я намагаюся приділяти час спорту та підтримувати активний спосіб життя.
+                Крім цього, мені подобається слухати музику, інколи читати статті про нові технології, а також працювати над невеликими власними проєктами, де можу поєднувати навчання з практикою.
+                <p>            
+                    Та якщо почати розбиратися, то ,насправді, <u>часу на свої хобі я немав</u>. На 1 та 2 курсі я ,майже, <u>весь свій вільний час приділяв навчанню та здачі лабораторних робіт</u>.    
+                    <b><u>Зараз ж намагаюся поєднувати роботу і навчання, тож про свої хоббі мені залишається тільки думати...</u></b>
+                </p>                     
+            </font>            
+        </p>
+
+        <h2 style="margin-bottom: 5px;" align="center">Programming</h2> 
+
+            <pre>
+                <code>
+                    <font size="4">
+import os
+import sqlite3
+import tkinter
+
+from tkinter import *
+from tkinter import ttk, messagebox
+from cryptography.fernet import Fernet
+
+class Program:
+        def __init__(self, root):
+            self.root= root
+            self.root.title("Password Manager")
+            self.root.configure(bg="#000000")
+
+            style = ttk.Style()
+            style.theme_use("clam")
+            style.configure("Treeview.Heading", font=("Arial", 10, "bold"), background="#0078D7")
+            style.configure("Treeview", font=("Arial", 10), rowheight=25)
+
+            self.tree = ttk.Treeview(self.root, columns=("№", "Звідки", "Пароль"), show="headings")
+            for col in self.tree["columns"]:
+                self.tree.heading(col, text=col)
+                self.tree.column(col, anchor='center')
+
+             # Встановлення ширини колонок
+            self.tree.column("№", width=30)
+            self.tree.column("Звідки", width=500)
+            self.tree.column("Пароль", width=500)
+
+            self.root.grid_rowconfigure(8, weight=1)
+            self.root.grid_columnconfigure(0, weight=1)
+
+            # Додавання даних (рядки незмінні, бо Treeview не дозволяє редагування напряму)
+            self.db_path = os.path.join(os.getcwd(), "resources", "LocalPD.db")
+            self.dbController = DBCotroller(self.db_path)
+            self.resultSet =self.dbController.load_data()
+            for row in self.resultSet:
+                self.tree.insert('',"end", values=row)
+
+            # кнопочки
+            tkinter.Button(self.root, text="Add", command=self.add_record, activebackground="light blue" ,
+            width=130, relief="ridge", font=("Arial", 10, "bold"), bg="#66FF00").grid(row=0, column=0, rowspan=2)
+            tkinter.Button(self.root, text="Delete", command=self.delete_record, activebackground="light blue",
+            width=130, relief="ridge", font=("Arial", 10, "bold"), bg="#E32636").grid(row=2, column=0, rowspan=2)
+
+            #поля для вводу пароля
+            tkinter.Label(self.root, text="Звідки пароль:" , background="#000000", font=("Arial", 14, "bold"), foreground="#08E8DE").grid(row=4, column=0)
+            tkinter.Label(self.root, text="Пароль:", background="#000000", font=("Arial", 14, "bold"), foreground="#08E8DE").grid(row=6, column=0)
+
+            self.place_of = tkinter.Entry(relief="solid",width=90, font=("Arial", 14))
+            self.value = tkinter.Entry(relief="solid",width=90, font=("Arial", 14))
+            self.place_of.grid(row = 5, column = 0)
+            self.value.grid(row = 7, column = 0)
+
+            self.tree.grid(row=8, column=0, rowspan=4, sticky="nsew", padx=10, pady=10)
+
+        def add_record(self):
+                self.dbController.insert_in_DB(self.place_of.get() ,self.value.get())
+                self.resultSet = self.dbController.load_data()
+                self.tree.delete(*self.tree.get_children())
+                for row in self.resultSet:
+                    self.tree.insert('', "end", values=row)
+                self.place_of.delete(0,END)
+                self.value.delete(0,END)
+
+        def delete_record(self):
+                selected_item = self.tree.selection()
+                if(selected_item.count("value")==0):
+                    messagebox.showwarning("Помилка", 'Для видалення оберіть спочатку рядок в таблиці')
+                    return
+                row = self.tree.item(selected_item)["values"]
+                self.dbController.delete_from_DB(row[1],row[2])
+                self.resultSet = self.dbController.load_data()
+                self.tree.delete(*self.tree.get_children())
+                for row in self.resultSet:
+                    self.tree.insert('', "end", values=row)
+
+class DBCotroller:
+    def __init__(self, dbPath):
+        self.generate_key()
+        self.key = self.load_key()
+        self.cipher = Fernet(self.key)
+        self.connection = sqlite3.connect(dbPath)
+        self.cursor = self.connection.cursor()
+
+    def insert_in_DB(self, place_for, value):
+        try:
+            if place_for and value:
+                if(not self.row_is_exist(place_for,value)):
+                    encrypted_value = self.cipher.encrypt(value.encode()).decode()
+                    self.cursor.execute("INSERT INTO pasTable (place_for,value) VALUES ( ?, ? )",
+                                        (place_for, encrypted_value))
+                    self.connection.commit()
+                    messagebox.showinfo("Успіх", "Рядок вдало записано")
+                else:
+                    messagebox.showwarning("Warning","Такий рядок вже існує, дана таблиця не допускає дублікатів")
+            else:
+                messagebox.showwarning("Warning", "Поля не повинні бути пустими")
+        except:
+            messagebox.showwarning("Warning", "Не вдалося додати значення в бд")
+
+    def delete_from_DB(self, place_for, value):
+        try:
+            self.cursor.execute("DELETE FROM pasTable WHERE place_for = ? AND value = ?",
+                                (place_for, value))
+            self.connection.commit()
+
+            messagebox.showinfo("Успіх","Рядок вдало видалено")
+        except:
+            messagebox.showwarning("Warning","Помилка, не вдалося видалити дане значення")
+
+    def load_data(self):
+        try:
+            sql = "SELECT * FROM pasTable"
+            self.cursor.execute(sql)
+            raw_data = self.cursor.fetchall()
+            decrypted_data = []
+            for row in raw_data:
+                id, place_for, enc_value = row
+                try:
+                    value = self.cipher.decrypt(enc_value.encode()).decode()
+                except:
+                    value = "[Неможливо розшифрувати]"
+                decrypted_data.append((id, place_for, value))
+            return decrypted_data
+        except:
+            return []
+
+    def row_is_exist(self, place_of, value):
+        enc_value = self.cipher.encrypt(value.encode()).decode()
+        self.cursor.execute("""
+            SELECT * FROM pasTable 
+            WHERE place_for = ? AND value = ?
+        """, (place_of, enc_value))
+        result = self.cursor.fetchone()
+        if(result != None):
+            return True
+        else:
+            return False
+
+    def generate_key(self):
+        if not os.path.exists("key.key"):
+            with open("key.key", "wb") as key_file:
+                key_file.write(Fernet.generate_key())
+
+    def load_key(self):
+        with open("key.key", "rb") as key_file:
+            return key_file.read()
+
+if __name__ == "__main__":
+    root = tkinter.Tk()
+    app=Program(root)
+    root.mainloop()
+                    </font> 
+                </code>
+            </pre>            
+        </p>
+    </div>
+
+     <a href="../ChebykinLab05-3.html"><h2 style="margin-bottom: 5px;" align="center">Мої гіперпосилання</h2> </a>
+
+
+    <a href="mailto:vlad.chebykin01@gmail.com"><footer style="margin-top: 10px; text-align: right; font-size: 18px; color: #F0FFFF;font-family: 'Courier New', Courier, monospace; ">
+        Студент групи 205-ТН Чебикін Б.А. 
+    </footer></a>     
+
+</body>
+
+</html>
