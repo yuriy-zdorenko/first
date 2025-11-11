@@ -1,0 +1,103 @@
+/* --- Стилі для film.html --- */
+
+/* 1. Фон сторінки - світло-жовтий [cite: 50] */
+body.film-page {
+  background-color: #FFFFE0; /* Світло-жовтий */
+}
+
+/* 2. Афіша: 300x400, зелена рамка 3px [cite: 47] */
+.film-poster {
+  width: 300px;
+  height: 400px;
+  border: 3px solid green;
+}
+
+/* 3. Заголовки (h2): ліворуч, 20px, темно-сірий [cite: 48] */
+.film-page h2 {
+  text-align: left;
+  font-size: 20px;
+  color: #333333; /* Темно-сірий */
+}
+
+/* 4. Параграфи: абзац 15px, відступ зліва 15px [cite: 51] */
+.film-page p {
+  text-indent: 15px;
+  margin-left: 15px;
+}
+
+/* 5. Галерея фото: обгортка для зручності */
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /* 6. Відстань між фото не менше 40px [cite: 53] */
+  gap: 40px; 
+}
+
+/* 7. Фото в галереї: 320x240, оранжева рамка 3px [cite: 52] */
+.photo-gallery img {
+  width: 320px;
+  height: 240px;
+  border: 3px solid orange;
+}
+
+/* --- Стилі для book.html --- */
+
+/* 1. Фон сторінки - світло-сірий [cite: 84] */
+body.book-page {
+  background-color: #f0f0f0; /* Світло-сірий */
+}
+
+/* 2. Зображення книги та автора: 300x400, коричнева рамка 2px [cite: 81] */
+.book-image,
+.author-image {
+  width: 300px;
+  height: 400px;
+  border: 2px solid brown;
+}
+
+/* 3. Заголовки (h4): праворуч, підкреслені, 14px, зелений [cite: 82] */
+.book-page h4 {
+  text-align: right;
+  text-decoration: underline;
+  font-size: 14px;
+  color: green;
+}
+
+/* 4. Параграфи: абзац 12px, відступ зліва 15px [cite: 85] */
+.book-page p {
+  text-indent: 12px;
+  margin-left: 15px;
+}
+
+/* 5. Жирний шрифт для описів [cite: 89] */
+.description b {
+  font-weight: bold;
+}
+
+/* 6. Курсив для назви та автора [cite: 90] */
+.description i {
+  font-style: italic;
+}
+
+/* 7. Лінія-розділювач: синя, 5px [cite: 91] */
+.divider {
+  border-bottom: 5px solid blue;
+  margin: 20px 0; /* Додамо відступ для краси */
+}
+
+/* 8. Заголовок ЗМІСТ: h2, ВЕРХНІЙ РЕГІСТР, червоний [cite: 92] */
+.book-page h2 {
+  text-transform: uppercase;
+  color: red;
+}
+
+/* 9. Посилання: при наведенні - зміна кольору, без підкреслення [cite: 83] */
+a:hover {
+  color: purple; /* Наприклад, фіолетовий */
+  text-decoration: none;
+}
+
+/* 10. Відступ 15px між параграфами у змісті [cite: 94] */
+.chapter-content p {
+  margin-bottom: 15px;
+}
