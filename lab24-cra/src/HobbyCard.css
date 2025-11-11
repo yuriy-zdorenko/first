@@ -1,0 +1,26 @@
+/* src/HobbyCard.css */
+.hobby-card {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.hobby-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-card h2 {
+  color: #007bff;
+  margin-top: 0;
+}
+
+.hobby-card p {
+  line-height: 1.6;
+}
+
+.hobby-card ul {
+  padding-left: 20px;
+}
