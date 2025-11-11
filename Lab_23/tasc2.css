@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #1a5a96;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.results-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* <pre> використовується для збереження форматування тексту (пробіли, нові рядки) */
+pre {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap; /* Дозволяє переносити довгі рядки */
+    overflow-x: auto;
+}
