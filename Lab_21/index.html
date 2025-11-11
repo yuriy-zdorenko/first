@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна 21 - AJAX</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        h2 { text-align: center; }
+        div { margin-top: 15px; }
+        input { width: calc(100% - 22px); padding: 10px; }
+        button { width: 100%; padding: 10px; margin-top: 10px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        #resultArea { font-size: 1.2em; text-align: center; padding: 10px; background-color: #f4f4f4; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <h2>AJAX: Обчислення квадрату числа</h2>
+    
+    <div>
+        <label for="numberInput">Введіть число:</label>
+        <input type="number" id="numberInput" placeholder="Наприклад, 7">
+    </div>
+
+    <button id="calculateButton">Обчислити</button>
+
+    <div id="resultArea">
+        <p>Результат з'явиться тут...</p>
+    </div>
+
+    <script>
+        document.getElementById('calculateButton').addEventListener('click', function() {
+            const number = document.getElementById('numberInput').value;
+            const resultArea = document.getElementById('resultArea');
+
+            if (number === '') {
+                resultArea.innerHTML = '<p style="color: red;">Будь ласка, введіть число.</p>';
+                return;
+            }
+
+            // 1. Створюємо AJAX запит на сервер
+            fetch(`http://localhost:3000/calculate?number=${number}`)
+                .then(response => {
+                    // Перевіряємо, чи відповідь успішна
+                    if (!response.ok) {
+                        throw new Error('Помилка мережі або сервера');
+                    }
+                    return response.json(); // Парсимо JSON-відповідь
+                })
+                .then(data => {
+                    // 2. Оновлюємо front-end текстом з відповіді 
+                    resultArea.innerHTML = `<p>Квадрат числа ${data.original} дорівнює: <strong>${data.result}</strong></p>`;
+                })
+                .catch(error => {
+                    // Обробка помилок
+                    console.error('Помилка AJAX запиту:', error);
+                    resultArea.innerHTML = '<p style="color: red;">Не вдалося з\'єднатися з сервером.</p>';
+                });
+        });
+    </script>
+
+</body>
+</html>
