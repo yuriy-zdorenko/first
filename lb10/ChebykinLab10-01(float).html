@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Завдання 1 — float</title>
+<style>
+  :root{
+    --gap: 3px;
+    --right-w: 22%; 
+    --border: 1px solid rgba(255,255,255,0.9);
+    box-sizing: border-box;
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html,body { height:100%; margin:0; }
+
+  /* wrapper займає весь екран */
+  #wrapper{
+    height:100vh;
+    padding: calc(var(--gap));
+    background: #fff;
+  }
+
+  
+  .col-right{
+    float: right;
+    width: var(--right-w);
+    height: calc(100% - 2*var(--gap));
+    background: #6f797b;
+    border: var(--border);
+    margin-left: var(--gap);
+  }
+
+  .main{
+    margin-right: calc(var(--right-w) + var(--gap));
+    height:100%;
+  }
+
+  .block{
+    display: block;
+    background: #ccc;
+    border: var(--border);
+    margin-bottom: var(--gap);
+    height: auto;
+    overflow: hidden;
+  }
+
+  .top {
+    background: #5f9ed9; 
+    height: 25%; 
+  }
+
+  .row {
+
+    overflow: hidden;
+  }
+
+  .col {
+    float: left;
+    margin-right: var(--gap);
+    border: var(--border);
+    background: #59d3cf; 
+    height: 180px; 
+  }
+
+  
+  .col.a { width: 30%; background:#62d7cf; }  
+  .col.b { width: 30%; background:#db7171; }  
+  .col.c { width: 40%; background:#f8c200; }  
+
+  .big-green { width: 60%; background:#1f9f73; height:150px; float:left; margin-right:var(--gap); border:var(--border); }
+  .big-yellow { width: 40%; background:#f8c200; height:150px; float:right; border:var(--border); }
+
+
+  .bottom {
+    background:#b84b11; 
+    height: 13%;
+    clear: both;
+  }
+
+
+  .main::after { content:""; display:block; clear:both; }
+
+  @media (min-width:1200px){
+    .top { height: 24%; }
+    .col { height: 160px; }
+    .big-green, .big-yellow { height: 200px; }
+    .bottom { height: 12%; }
+  }
+
+  
+  @media (min-width:950px) and (max-width:1199px){
+    .top { height: 22%; }
+    .col { height:150px; }
+    .big-green, .big-yellow { height:190px; }
+  }
+
+  
+  @media (min-width:750px) and (max-width:949px){
+    :root{ --right-w: 24%; }
+    .top { height: 22%; }
+    .col { height:140px; }
+    .big-green, .big-yellow { height:170px; }
+  }
+
+  
+  @media (min-width:500px) and (max-width:749px){
+    :root{ --right-w: 28%; }
+    .top { height: 20%; }
+    .col { height:120px; }
+    .big-green, .big-yellow { height:150px; }
+  }
+
+  
+  @media (max-width:499px){
+    .col-right{ float:none; width:100%; height:auto; margin-bottom:var(--gap); }
+    .main{ margin-right:0; }
+    .col { float:none; width:100%; margin-right:0; height:140px; }
+    .big-green, .big-yellow { float:none; width:100%; margin-right:0; height:140px; }
+    .top { height:140px; }
+    .bottom { height:100px; }
+  }
+
+  
+  .row .col:last-child { margin-right:0; }
+  .grid-row .col:last-child { margin-right:0; }
+</style>
+</head>
+<body>
+  <ul id="wrapper">
+  
+    <aside class="col-right" aria-hidden="true"></aside>
+
+  
+    <div class="main">
+  
+      <div class="block top"></div>
+  
+      <div class="row">
+        <div class="col a"></div>
+        <div class="col b"></div>
+        <div class="col c"></div>
+      </div>
+
+      <div class="row">
+        <div class="big-green"></div>
+        <div class="big-yellow"></div>
+      </div>
+
+
+      <div class="block bottom"></div>
+    </div> 
+  </div> 
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Form1</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        
+        <h2 align="center">Створення форми(приклад)</h2>
+        <form>
+            <pre>Ваше ім'я: <input type="text" name="name" size="40" maxlength="40" value="">
+            Ваша стать: <input type="radio" name="pol" id="1" value="male">Чоловіча
+            <input type="radio" name="pol" id="2" value="female">Жіноча
+
+            На якому курсі Ви навчаєтесь?
+            <select name="curs" size="1">
+                <option value="1" selected>Перший</option>
+                <option value="2">Другий</option>
+                <option value="3">Третій</option>
+                <option value="4">Четвертий</option>
+                <option value="5">П'ятий</option>
+            </select> 
+        Які дисципліни ви вивчаєте на курсі?
+        <input type="checkbox" name="web" id="1" value="web" checked>WEB-програмування
+        <input type="checkbox" name="eldinam" id="2" value="eldinam">Технічна електродинаміка
+
+
+
+        Напишіть декілька слів про себе:
+        </pre>
+        <textarea name="about" rows="6" cols="60" wrap="off"></textarea>
+        <p><input type="submit" value="Надіслати відповіді"  formaction="ChebykinLab07-1(out).html">
+        <input type="reset" value="Очистити форму">
+        <input type="file" name="friend" size="50" accept="припустимий тип файлу">
+    </p>
+        </form>
+    </body>
+</html>
