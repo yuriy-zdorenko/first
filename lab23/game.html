@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Гра</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body class="center">
+  <div class="controls">
+    <select id="category">
+      <option value="animals50">Тварини</option>
+      <option value="insect50">Комахи</option>
+      <option value="fish50">Риби</option>
+    </select>
+    <button id="restart">Почати з початку</button>
+  </div>
+
+  <div id="current-image-container">
+    <p>Поточна картинка:</p>
+    <div id="current-image"></div>
+  </div>
+
+  <div id="game-grid"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

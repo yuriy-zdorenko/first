@@ -1,0 +1,66 @@
+<HTML>
+<BODY BGCOLOR="#EFF6E0">
+<FONT COLOR="#124559" FACE="Bahnschrift" SIZE=4pt>
+</BODY>
+<HEAD>
+<meta name="description" content="Personal">
+<meta name="keywords" content="Lab1, Personal">
+</HEAD>
+<HEAD>
+<TITLE> Лабораторна робота №1 </TITLE>
+</HEAD>
+<H1>
+<B>Про себе</b>
+</H1>
+<BODY>
+<p align="justify">
+Я, Стефанович Богдан Ігорович, являюся студентом <b>3</b> курсу <b>122</b> спеціальності "Комп'ютерні науки" у <b><i>Національному університеті "Полтавська політехніка імені Юрія Кондратюка"</i></b>.
+Здобув повну середню освіту у <b>2022 році</b>, закінчивши <b><i>Слов'янську ЗОШ №15</i></b>. Досвіда праці <b>не маю</b>.
+</p>
+</BODY>
+<H1>
+<B>Моє хоббі</B>
+</H1>
+<h2>
+<b>Програмування</b>
+</h2>
+<BODY>
+<xmp>
+#pragma once
+#include <string.h>
+#include <iostream>
+using namespace std;
+class complex
+{
+	double real;
+	double imagin;
+public:
+	complex() : real(0.0), imagin(0.0) {};
+	complex(double r) : real(r), imagin(5.0) {};
+	complex(const complex& m) : real(m.real), imagin(m.imagin) {};
+	complex operator+(const complex& m); 
+	complex operator-(const complex& m); 
+	complex operator*(const complex& m); 
+	complex operator/(const complex& m); 
+	void init(double r, double i); 
+	void read();
+	void display(); 
+	bool equ(complex m);
+	complex conj(); 
+	string tostr();
+};
+</xmp>
+<h2>
+<b> Музика </b>
+</h2>
+<p align="justify">
+Я закінчив Школу мистецтв у м. Слов'янськ, опанувавши гру на <u>саксофоні</u> та музичну теорію: <u>сольфеджіо і муз. літературу.</u>
+Протягом 7 років навчання я брав участь у конкурсах з музики, на котрих займав призові місця.
+</p>
+<p align="right">
+<a href="StefanovychLab05-3.html">Мої гіперпосилання</a>
+<a href="mailto:cephalonsam@gmail.com"><i><u>Студент групи 301-ТН Стефанович Б. І.</u></i>
+
+
+</BODY>
+</HTML>

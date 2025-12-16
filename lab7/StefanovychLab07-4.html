@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<head>
+<title> Замовлення</title>
+</head>
+<style>
+body {
+background-color: #000000;
+font-size: 16pt;
+font-family: bahnschrift;
+color: #180029;
+margin: 0pt;
+padding: 0pt;
+}
+
+table {
+width: 100%;
+}
+
+tr, td {
+border: solid 3px #EEE5E9;
+padding: 3pt;
+margin: 0pt;
+background-color: #EEE5E9;
+}
+
+.line {
+background-color: #000000;
+color: #D36D4A;
+padding: 1pt;
+text-align: center;
+border: solid 3px #000000;
+font-weight: bold;
+ text-shadow:
+    2px 2px 0 white,
+    -2px 2px 0 white,
+    -2px -2px 0 white,
+    2px -2px 0 white;
+}
+
+input[type="text"] {
+width: 99%;
+}
+
+.button {
+padding: 15pt;
+}
+</style>
+<body>
+<div class="line">
+<h1>Форма замовлення</h1>
+</div>
+<form>
+<table>
+<tr>
+<td>1.</td>
+<td>Номер банківського рахунку</td>
+<td><input name="br" type="text" value="" maxlength="50"></td>
+</tr>
+<tr>
+<td>2.</td>
+<td>Особистий номер</td>
+<td><input name="pn" type="text" value="" maxlength="15"></td>
+</tr>
+<tr>
+<td>3.</td>
+<td>Список товарів</td>
+<td><pre><input name="crb" type="checkbox" value="1"> Креатин без смаку 300г
+<input name="cra" type="checkbox" value="2"> Креатин зі смаком (Яблуко) 300г
+<input name="crb" type="checkbox" value="3"> Креатин зі смаком (Банан) 300г
+<input name="crbg" type="checkbox" value="4"> Креатин без смаку 600г</pre></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>Коментарі до замовлення (Опціонально)</td>
+<td><textarea name="tarea" rows="4" cols="220" wrap="off"></textarea></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>Спосіб оплати</td>
+<td><pre><input name="pay" type="radio" value="1"> Картка <input name="pay" type="radio" value="2"> Готівка</pre></td>
+</tr>
+<tr>
+<td>6.</td>
+<td>Чи бажаєте отримати додаткову інформацію?</td>
+<td><pre><input name="rest" type="checkbox" value="1"> Залишки на рахунку
+<input name="list" type="checkbox" value="2"> Список останніх витрат</pre></td>
+</tr>
+</table>
+<div class="line">
+<p><input type="submit" value=" Відіслати дані " class="button">
+<input type="reset" value=" Очистити форму " class="button"></p>
+</form>
+</body>
+</html>

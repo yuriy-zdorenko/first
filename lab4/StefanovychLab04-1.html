@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рядок, що біжить</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #FFEBE7;
+        }
+
+        .banner {
+            width: 100%; 
+            height: 50px;
+            background-color: #FFC0BE; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 24px; 
+            font-family: Bahnschrift; 
+            color: black;
+            margin: 0;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .oscillate {
+            display: inline-block;
+            padding: 0 20px; 
+            animation: oscillate 2s infinite ease-in-out;
+        }
+
+        @keyframes oscillate {
+            0% {
+                transform: translateX(-20px);
+            }
+            50% {
+                transform: translateX(20px);
+            }
+            100% {
+                transform: translateX(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1><span class="oscillate">ПРИКЛАД РЯДКА, ЩО БІЖИТЬ (коливання)</span></h1>
+    </div>
+</body>
+</html>

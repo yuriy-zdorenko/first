@@ -1,0 +1,66 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #222222;
+    color: #ffffff;
+    padding: 50px;
+    line-height: 1.6;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #game-field {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  .number {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  .selected {
+    background-color: #08c45d63;
+  }
+  .best-time {
+    background-color: #08C45D;
+  }
+  button {
+    font-size: 25px;
+    margin-right: 10px;
+    padding: 15px 20px;
+    border: none;
+    background-color: #4C3B4D;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: '10px 10px 0px rgba(0,0,0,0.3)';
+  }
+  button:hover {
+    background-color: #08C45D;
+    transition: background-color 0.2s;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.205);
+    border-radius: 25px;
+    padding: 25pt;
+  }
+  div {
+    text-align: center;
+  }
+  table {
+    border-radius: 25pt;
+  }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рядки з біжучим текстом</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            background-color: #FFEBE7;
+        }
+
+        .banner {
+            width: 80%; 
+            height: 50px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        h1 {
+            font-size: 24px; 
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+	
+	h2 {
+	    font-size: 30px;
+	    font-family: Bahnschrift;
+	    font-weight: bold;
+	    font-style: italic;
+	    color: green;
+	    margin: 0;
+	    white-space: nowrap;
+	    box-sizing: border-box;
+	}
+	    
+
+        .oscillate {
+            display: inline-block;
+            padding: 0 20px; 
+            animation: oscillate 2s infinite ease-in-out;
+        }
+
+        .scroll-left {
+            animation: scroll-left 5s linear infinite; 
+        }
+
+        .scroll-right {
+            animation: scroll-right 4s linear forwards; 
+        }
+
+        .delay-1 {
+            animation-delay: 1s;
+        }
+
+        .delay-2 {
+            animation-delay: 2s; 
+        }
+
+        @keyframes oscillate {
+            0% { transform: translateX(-20px); }
+            50% { transform: translateX(20px); }
+            100% { transform: translateX(-20px); }
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(250%); }
+            100% { transform: translateX(-250%); }
+        }
+
+        @keyframes scroll-right {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        .color-1 { background-color: #FC6471; }
+        .color-2 { background-color: #A67F8E; }
+        .color-3 { background-color: #7D5BA6; }
+        .color-4 { background-color: #2C1A1D; }
+        .color-5 { background-color: #55D6BE; }
+    </style>
+</head>
+<body>
+
+    <div class="banner color-1">
+        <h1><span class="oscillate">Цей текст коливається збоку в бік</span></h1>
+    </div>
+
+    <div class="banner color-2">
+        <h1 class="scroll-left">Цей текст пробігає справа наліво</h1>
+    </div>
+
+    <div class="banner color-3">
+        <h1 class="scroll-right">Цей текст пробігає зліва направо і зупиняється</h1>
+    </div>
+
+    <div class="banner color-4">
+        <h2 class="scroll-left delay-1" style="animation-duration:7s">Текст з затримкою пробігає справа наліво</h1>
+    </div>
+
+    <div class="banner color-5">
+        <h2 class="scroll-left delay-2" style="animation-duration:12s;">Ще один текст з затримкою пробігає справа наліво</h1>
+    </div>
+
+</body>
+</html>

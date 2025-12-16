@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title> Приклад використання елементів Form у HTML </title>
+</head>
+<style>
+body {
+background-color: #E3EBC2;
+font-size: 16pt;
+color: #12100E;
+margin: 30pt;
+}
+</style>
+<body>
+<h2 align="center">
+Приклад використання функціоналу елементів Form при роботі з HTML
+</h2>
+<form>
+<pre>Строка для вводу тексту: <input name="text" type="text" maxlength="60" size="60" value="">
+
+Поле для вводу декільких рядів тексту:
+<textarea name="tarea" rows="5" cols="60" wrap="off"></textarea>
+
+Функція вибору варіанту з переліку: <select name="select" size="1">
+<option value="1">Перший варіант</option>
+<option value="2">Другий варіант</option>
+<option value="3">Третій варіант</option>
+</select>
+
+Функція вибору варіанту з переліку: <input name="rad" type="radio" value="1"> Перший варіант <input name="rad" type="radio" value="2"> Другий варіант <input name="rad" type="radio" value="3"> Третій варіант
+
+Поле вводу "так/ні": <input name="yn1" type="checkbox" value="1"> Перший варіант <input name="yn2" type="checkbox" value="2"> Другий варіант
+
+Кнопки-операції над формою:
+<input type="submit" value=" Відіслати дані ">
+<input type="reset" value=" Очистити форму ">
+
+Рядок прихованого тексту: <input name="pas" type="password" value="" maxlength="10" size="12">
+
+Функція прикріплення файлу: <input name="file" type="file" size="20"
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+</head>
+<body>
+<h1>Завдання виконані за допомогою JavaScript</h1>
+<div id="task1">
+<h2>Завдання 1: Прості числа від 0 до 100</h2>
+<p id="primes"></p>
+</div>
+<div id="task2">
+<h2>Завдання 2: Числа від 0 до 10</h2>
+<p id="numbers"></p>
+</div>
+<div id="task3">
+<h2>Завдання 3: Ділення числа 10000</h2>
+<p id="division"></p>
+</div>
+<div id="task4">
+<h2>Завдання 4: Визначення пори року</h2>
+<button onclick="determineSeason()">Визначити пору року</button>
+</div>
+<div id="task5">
+<h2>Завдання 5: Переведення температури</h2>
+<button onclick="convertTemperature()">Перевести температуру</button>
+</div>
+<div id="task6">
+<h2>Завдання 6: День тижня за числом</h2>
+<button onclick="getDayOfWeek()">Дізнатися день тижня</button>
+</div>
+<script>
+let primesText = "Прості числа: ";
+let num = 2;
+while (num <= 100) {
+let isPrime = true;
+for (let i = 2; i < num; i++) {
+if (num % i === 0) {
+isPrime = false;
+break;
+}
+}
+if (isPrime) {
+primesText += `${num}, `;
+}
+num++;
+}
+document.getElementById("primes").innerText = primesText.slice(0, -2);
+let numbersText = "";
+let i = 0;
+do {
+if (i === 0) {
+numbersText += `${i} - це нуль<br>`;
+} else if (i % 2 === 0) {
+numbersText += `${i} - парне число<br>`;
+} else {
+numbersText += `${i} - непарне число<br>`;
+}
+i++;
+} while (i <= 10);
+document.getElementById("numbers").innerHTML = numbersText;
+let numb = 10000;
+let counter = 0;
+while (numb >= 50) {
+numb /= 2;
+counter++;
+}
+document.getElementById("division").innerText = `Результат: ${numb}, Кількість ітерацій: ${counter}`;
+function determineSeason() {
+const month = parseInt(prompt("Введіть номер місяця (1-12):"));
+let season = "";
+switch (month) {       
+case 12:
+case 1:
+case 2:
+season = "зима";
+break;
+case 3:
+case 4:
+case 5:
+season = "весна";
+break;
+case 6:
+case 7:
+case 8:
+season = "літо";
+break;           
+case 9:
+case 10:
+case 11:
+season = "осінь";
+break;
+default:
+season = "не існує";
+}
+alert(`Місяць ${month} відповідає порі року: ${season}`);
+}
+function convertTemperature() {
+const tempC = parseFloat(prompt("Введіть температуру в Цельсіях:"));
+const tempF = (9 / 5) * tempC + 32;
+alert(`Температура за Фаренгейтом: ${tempF.toFixed(2)}`);
+}
+function getDayOfWeek() {
+const dayNumber = parseInt(prompt("Введіть число від 1 до 7:"));
+let dayName = "";
+switch (dayNumber) {
+case 1:
+dayName = "понеділок";
+break;
+case 2:    
+dayName = "вівторок";
+break;
+case 3:
+dayName = "середа";
+break;
+case 4:
+dayName = "четвер";
+break;
+case 5:
+dayName = "п’ятниця";
+break;
+case 6:
+dayName = "субота";
+break;
+case 7:
+dayName = "неділя";
+break;
+default:
+dayName = "не існує";        
+}
+alert(`Числу ${dayNumber} відповідає день тижня: ${dayName}`);
+}
+</script>
+</body>
+</html>

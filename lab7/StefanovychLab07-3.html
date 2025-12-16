@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<head>
+<title> Анкета </title>
+</head>
+<style>
+body {
+background-color: #FAF0F3;
+font-size: 16pt;
+color: #180029;
+margin: 0pt;
+padding: 0pt;
+}
+
+table {
+width: 100%;
+}
+
+tr, td {
+border: solid 3px #180029;
+padding: 3pt;
+margin: 0pt;
+text-align: center;
+}
+
+.line {
+background-color: #5F0A87;
+color: #FAF0F3;
+padding: 1pt;
+text-align: center;
+border: solid 3px #180029;
+}
+
+input[type="text"] {
+width: 95%;
+}
+
+.button {
+padding: 15pt;
+}
+</style>
+<body>
+<div class="line">
+<h1>Анкета</h1>
+</div>
+<form>
+<table>
+<tr>
+<td>1.</td>
+<td>Прізвище</td>
+<td><input name="LN" type="text" value="" maxlength="30"></td>
+</tr>
+<tr>
+<td>2.</td>
+<td>Ім'я, По-батькові</td>
+<td><input name="IP" type="text" value="" maxlength="30"></td>
+</tr>
+<tr>
+<td>3.</td>
+<td>Число і рік народження</td>
+<td><input name="dob" type="text" value="" maxlength="30"></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>Домашня адреса</td>
+<td><input name="ha" type="text" value="" maxlength="30"></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>Місце навчання (роботи)</td>
+<td><input name="sa" type="text" value="" maxlength="30"></td>
+</tr>
+<tr>
+<td>6.</td>
+<td>Домашній (робочий) телефон</td>
+<td><input name="hp" type="text" value="" maxlength="30"></td>
+</tr>
+<tr>
+<td>7.</td>
+<td>E-mail</td>
+<td><input name="mail" type="text" value="" maxlength="30"></td>
+</tr>
+<tr>
+<td>8.</td>
+<td>Область наукових інтересів</td>
+<td><pre>1.<input name="ob1" type="text" value="" maxlength="30">
+2.<input name="ob2" type="text" value="" maxlength="30">
+3.<input name="ob3" type="text" value="" maxlength="30">
+4.<input name="ob4" type="text" value="" maxlength="30">
+5.<input name="ob5" type="text" value="" maxlength="30">
+6.<input name="ob6" type="text" value="" maxlength="30"></pre>
+</td>
+</tr>
+</table>
+<div class="line">
+<p><input type="submit" value=" Відіслати дані " class="button">
+<input type="reset" value=" Очистити форму " class="button"></p>
+</form>
+</body>
+</html>

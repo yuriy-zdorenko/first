@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Арифметичні операції та перевірки</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<h2>Арифметичні операції</h2>
+<p>
+  <input type="number" id="inputNum1" value="0">
+  <input type="number" id="inputNum2" value="0">
+  <button onclick="runAdd()">Додати (+)</button>
+  <button onclick="runSub()">Відняти (-)</button>
+  <button onclick="runMul()">Множити (*)</button>
+  <button onclick="runDiv()">Ділити (/)</button>
+</p>
+
+<h2>Перевірка числа</h2>
+<p>
+  <input type="number" id="inputCheckNum" value="0">
+  <button onclick="checkNumber()">Перевірити число</button>
+</p>
+
+<h2>Масив</h2>
+<p>
+  Введіть елементи масиву через кому (наприклад, 1, 2, 3):
+  <input type="text" id="inputArray" value="1,2,3,4,5">
+  <button onclick="reverseAndSquare()">Перевернути і піднести до квадрату</button>
+  <button onclick="removeDuplicates()">Видалити дублікати</button>
+</p>
+
+<div id="output"></div>
+
+<script src="script8-11.js">
+</script>
+
+</body>
+</html>

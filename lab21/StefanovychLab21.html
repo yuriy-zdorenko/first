@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+  <meta charset="UTF-8">
+  <title>Робота зі строковими даними</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="btn-container">
+    <button onclick="showTask(1)">Завдання 1</button>
+    <button onclick="showTask(2)">Завдання 2</button>
+  </div>
+
+  <div id="task1" class="task">
+    <div class="task-number">1.</div>
+    <p>
+      Використовуючи методи об'єкту <strong>Date</strong>, створити функцію, яка буде повертати і виводити в консолі поточний час у відповідному форматі.
+    </p>
+    <button onclick="showCurrentDateTime()">Вивести поточний час</button>
+    <div class="output" id="datetimeOutput"></div>
+  </div>
+
+  <div id="task2" class="task hidden">
+    <div class="task-number">2.</div>
+    <p>
+      Використовуючи функції для створення модальних вікон 
+      <span class="green">prompt</span>, 
+      <span class="green">alert</span>, 
+      <span class="green">confirm</span> і об'єкт 
+      <span class="green">Math</span>, розробити додаток-гру “Вгадай число”.
+    </p>
+    <button onclick="guessTheNumberGame()">Почати гру</button>
+    <div class="output" id="gameLog"></div>
+  </div>
+
+  <script src="task.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<html>
+<head>
+<title>Адаптивна сторінка</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            grid-template-columns: repeat(4, 1fr);
+            display: grid;
+            gap: 3px;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .section {
+            border: 1px solid gray;
+        }
+     
+
+
+        @media screen and (min-width:1200px){
+
+            .section:nth-child(1) { 
+            background-color: #5a9bd6; 
+            grid-column-start: 1;
+            grid-column-end: 4;
+
+        } 
+
+        .section:nth-child(2) { 
+            background-color: #6e797f;
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        } 
+
+        .section:nth-child(4) {
+         background-color: #e65f65; 
+        } 
+
+        .section:nth-child(3) { background-color: #5bcdd6; } 
+
+        .section:nth-child(5) { 
+            background-color: #fdb62f; 
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        } 
+
+        .section:nth-child(6) {
+         background-color: #4fa976;
+         grid-column-start: 1;
+         grid-column-end: 3;
+         } 
+        
+        .section:nth-child(7) { 
+            background-color: #d9732f;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 4;
+         } 
+
+        }
+
+        @media screen and (min-width:950px) and (max-width:1200px){
+
+            .section:nth-child(1) { 
+            background-color: #5a9bd6; 
+            grid-column-start: 1;
+            grid-column-end: 4;
+
+        } 
+
+        .section:nth-child(2) { 
+            background-color: #6e797f;
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 5;
+        } 
+
+        .section:nth-child(4) {
+            background-color: #e65f65; 
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        } 
+
+        .section:nth-child(3) { 
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: #5bcdd6;
+            
+         } 
+
+        .section:nth-child(5) { 
+            background-color: #fdb62f; 
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 5;
+        } 
+
+        .section:nth-child(6) {
+             background-color: #4fa976;
+             grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 5;
+         } 
+        
+        .section:nth-child(7) { 
+            background-color: #d9732f;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 5;
+            grid-row-end: 6;
+         } 
+
+        }
+
+        @media screen and (min-width:750px) and (max-width:950px){
+
+            .section:nth-child(1) { 
+            background-color: #5a9bd6; 
+            grid-column-start: 1;
+            grid-column-end: 4;
+
+        } 
+
+        .section:nth-child(2) { 
+            background-color: #6e797f;
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 5;
+        } 
+
+        .section:nth-child(4) {
+            background-color: #e65f65; 
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        } 
+
+        .section:nth-child(3) { 
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: #5bcdd6;
+            
+         } 
+
+        .section:nth-child(5) { 
+            background-color: #fdb62f; 
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 5;
+            grid-row-end: 5;
+        } 
+
+        .section:nth-child(6) {
+             background-color: #4fa976;
+             grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 5;
+         } 
+        
+        .section:nth-child(7) { 
+            background-color: #d9732f;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 6;
+            grid-row-end: 7;
+         } 
+
+        }
+        @media screen and (max-width:750px){
+
+            .container {
+            grid-template-columns: 1fr;
+            display: grid;
+            gap: 3px;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .section:nth-child(1) {background-color: #5a9bd6; } 
+        .section:nth-child(2) {background-color: #6e797f;} 
+        .section:nth-child(3) {background-color: #5bcdd6;} 
+        .section:nth-child(4) {background-color: #e65f65;} 
+        .section:nth-child(5) {background-color: #fdb62f;} 
+        .section:nth-child(6) {background-color: #4fa976;} 
+        .section:nth-child(7) {background-color: #d9732f;} 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+    </div>
+</body>
+</html>

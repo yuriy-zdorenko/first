@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="header">Вибір завдання:</div>
+    
+    <div class="container">
+        <button onclick="task1()">Завдання 1</button>
+        <button onclick="task2()">Завдання 2</button>
+        <button onclick="task3()">Завдання 3</button>
+        <button onclick="task4()">Завдання 4</button>
+        <button onclick="task5()">Завдання 5</button>
+    </div>
+
+    <div class="console" id="console-output"></div>
+
+    <script>
+        function logMessage(message) {
+            let consoleDiv = document.getElementById("console-output");
+            consoleDiv.innerHTML += `<p>${message}</p>`;
+        }
+
+        function clearConsole() {
+            document.getElementById("console-output").innerHTML = "";
+        }
+
+        function task1() {
+            clearConsole();
+            let num = -100;
+            while (num <= 100) {
+                if (num >= 0) logMessage(num);
+                num++;
+            }
+        }
+
+        function task2() {
+            clearConsole();
+            let i = 0;
+            do {
+                logMessage(i);
+                i += 2;
+            } while (i <= 100);
+        }
+
+        function task3() {
+            clearConsole();
+            let b = 1000;
+            let count = 0;
+            while (b >= 5) {
+                b /= 3;
+                count++;
+            }
+            logMessage(`res: ${b}`);
+            logMessage(`count: ${count}`);
+        }
+
+        function task4() {
+            let cm = 152;
+            let inches = cm / 2.54;
+            alert(`152 см = ${inches.toFixed(2)} дюймів`);
+        }
+
+        function task5() {
+            let dayNumber = prompt("Введіть число від 1 до 31:");
+            dayNumber = parseInt(dayNumber, 10);
+
+            if (isNaN(dayNumber) || dayNumber < 1 || dayNumber > 31) {
+                alert("Неправильне значення");
+            } else {
+                let date = new Date(new Date().getFullYear(), new Date().getMonth(), dayNumber);
+                let daysOfWeek = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четверг", "П'я'тница", "Субота"];
+                alert(`Обраний день тижню: ${daysOfWeek[date.getDay()]}`);
+            }
+        }
+    </script>
+</body>
+</html>

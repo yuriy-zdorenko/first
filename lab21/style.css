@@ -1,0 +1,45 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F0FAF5;
+    color: #111;
+    padding: 50px;
+    line-height: 1.6;
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .task {
+    margin-bottom: 30px;
+  }
+  .task-number {
+    font-weight: bold;
+    color: #4C3B4D;
+    font-size: 24px;
+  }
+  .btn-container {
+    margin-bottom: 20px;
+  }
+  button {
+    font-size: 25px;
+    margin-right: 10px;
+    padding: 15px 20px;
+    border: none;
+    background-color: #4C3B4D;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: '10px 10px 0px rgba(0,0,0,0.3)';
+  }
+  button:hover {
+    background-color: #08C45D;
+    transition: background-color 0.2s;
+  }
+  .output {
+    color: #08C45D;
+    margin-top: 10px;
+  }
+  .green { color: #08C45D; }
+  .hidden {
+    display: none;
+  }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+  <meta charset="UTF-8">
+  <title>Моє хобі</title>
+  <style>
+    body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F0FAF5;
+    color: #111;
+    padding: 50px;
+    line-height: 1.6;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    #root {
+      text-align: center;
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/babel">
+
+    class HobbyClass extends React.Component {
+      render() {
+        return <p>Я люблю займатися фотографією — це дозволяє мені бачити красу в деталях і зберігати спогади назавжди.</p>;
+      }
+    }
+
+    const HobbyFunction = () => (
+      <p>Також мені подобається грати на гітарі і тим самим проявляти себе.</p>
+    );
+
+    const App = () => (
+      <div>
+        <h2>Моє хобі</h2>
+        <HobbyClass />
+        <HobbyFunction />
+      </div>
+    );
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+
+  </script>
+</body>
+</html>

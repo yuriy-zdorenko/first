@@ -1,0 +1,81 @@
+html, body {
+height: 100vh;
+width: 100vw;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("back.jpg");
+}
+a {
+margin: 20pt;
+}
+img.ico {
+height: auto;
+width: 100%;
+}
+.image-container {
+position: relative;
+width: 100%;
+height: 330px;
+}
+.image-container img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+.image-container .overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+transition: opacity 0.3s ease; 
+opacity: 1; 
+}
+.image-container:hover .overlay {
+opacity: 0;
+}
+.image-container .caption {
+margin-top: 10px;
+font-size: 30px;
+color: white;
+text-align: center;
+opacity: 0;
+transition: opacity 0.3s ease;
+font-family: arial;
+}
+.image-container:hover .caption {
+opacity: 1;
+}
+p {
+margin-left: 60pt;
+margin-right: 60pt;
+text-align: justify;
+font-size: 20pt;
+font-style: italic;
+margin-bottom: 5pt;
+color: white;
+text-indent: 1.5em;
+font-family: Arial;
+}
+p + p {
+margin-top: 0;
+}
+h1 {
+font-size: 30pt;
+font-weight: bold;
+text-align: center;
+font-style: normal;
+font-family: Arial;
+color: white;
+margin: 20pt;
+}
+.link {
+text-align: right;
+font-size: 20pt;
+color: white;
+margin: 50pt;
+font-family: Arial;
+}

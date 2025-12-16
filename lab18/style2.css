@@ -1,0 +1,38 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F0FAF5;
+    color: #111;
+    padding-left: 30pt;
+    padding-right: 30pt;
+    line-height: 1;
+    font-size: 20px;
+    overflow: hidden;
+  }
+  h2 {
+    color: #2c3e50;
+  }
+  .result {
+    background: #f4f4f4;
+    padding: 10px;
+    border-left: 3px solid #3498db;
+    margin-bottom: 10px;
+  }
+  button {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  input {
+    margin: 5px;
+    padding: 5px;
+    width: 60px;
+  }
+  #output {
+    width: 100%;
+    height: 300px; /* або іншу потрібну висоту */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+  }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+  <meta charset="UTF-8">
+  <title>Мова, день тижня</title>
+  <style>
+    body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F0FAF5;
+    color: #111;
+    padding: 50px;
+    line-height: 1.6;
+    font-size: 25px;
+  }
+  button {
+    font-size: 25px;
+    margin-right: 10px;
+    padding: 15px 20px;
+    border: none;
+    background-color: #4C3B4D;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: '10px 10px 0px rgba(0,0,0,0.3)';
+  }
+  button:hover {
+    background-color: #08C45D;
+    transition: background-color 0.2s;
+  }
+  </style>
+</head>
+<body>
+  <h1>Модульне вікно з вибором мови і дня тижня</h1>
+  <button onclick="start()">Почати</button>
+
+  <script>
+    const data = {
+      ua: {
+        question: "Введіть номер дня неділі від 1 до 7?",
+        days: ["Понеділок", "Вівторок", "Середа", "Четвер", "П’ятниця", "Субота", "Неділя"]
+      },
+      en: {
+        question: "Enter the day number of the week (from 1 to 7)?",
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+      }
+    };
+
+    function start() {
+      let lang;
+      while (true) {
+        lang = prompt('Виберіть мову: "ua" або "en"?');
+        if (!lang) return;
+        lang = lang.toLowerCase();
+        if (data[lang]) break;
+        alert('Неправильне значення. Спробуйте ще раз.');
+      }
+
+      let dayNumber;
+      while (true) {
+        dayNumber = prompt(data[lang].question);
+        if (!dayNumber) return;
+        dayNumber = parseInt(dayNumber);
+        if (dayNumber >= 1 && dayNumber <= 7) break;
+        alert(lang === "ua" ? "Невірне число. Спробуйте ще раз." : "Invalid number. Try again.");
+      }
+
+      alert(data[lang].days[dayNumber - 1]);
+    }
+  </script>
+</body>
+</html>
