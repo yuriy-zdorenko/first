@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №7 анкета</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 30px auto;
+            border: 2px solid #000080;
+            background-color: #b3e7ff;
+            padding: 10px;
+        }
+
+        h2 {
+            color: red;
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-top: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .left-col {
+            width: 40%;
+            padding: 8px;
+            border: 1px solid #000;
+            background-color: #e6f7ff;
+            font-weight: bold;
+        }
+
+        .right-col {
+            width: 60%;
+            padding: 8px;
+            border: 1px solid #000;
+        }
+
+        input[type="text"] {
+            width: 95%;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            width: 95%;
+            height: 120px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .buttons input {
+                padding: 10px 15px;
+                margin: 5px;
+                cursor: pointer;
+            }
+
+        .oblast-container {
+            display: flex;
+        }
+
+            .oblast-container .left-col {
+                padding-top: 20px;
+            }
+
+            .oblast-container .right-col {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+            }
+
+                .oblast-container .right-col input[type="text"] {
+                    width: 98%;
+                    margin-bottom: 2px;
+                }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Анкета</h2>
+
+        <form action="обробник_анкети.php" method="post">
+            <table>
+                <tr>
+                    <td class="left-col">1. Прізвище</td>
+                    <td class="right-col"><input type="text" name="surname" value="" required></td>
+                </tr>
+                <tr>
+                    <td class="left-col">2. Ім'я, по батькові</td>
+                    <td class="right-col"><input type="text" name="full_name" value="" required></td>
+                </tr>
+                <tr>
+                    <td class="left-col">3. Число і рік народження</td>
+                    <td class="right-col"><input type="text" name="dob" placeholder="Наприклад: 15.03.1990" required></td>
+                </tr>
+                <tr>
+                    <td class="left-col">4. Домашня адреса</td>
+                    <td class="right-col"><input type="text" name="address" value="" required></td>
+                </tr>
+                <tr>
+                    <td class="left-col">5. Місце навчання (роботи)</td>
+                    <td class="right-col"><input type="text" name="place_study_work" value="" required></td>
+                </tr>
+                <tr>
+                    <td class="left-col">6. Домашній (робочий) телефон</td>
+                    <td class="right-col"><input type="text" name="phone" value=""></td>
+                </tr>
+                <tr>
+                    <td class="left-col">7. E-mail</td>
+                    <td class="right-col"><input type="text" name="email" value="" required></td>
+                </tr>
+            </table>
+
+            <div class="oblast-container">
+                <div class="left-col">8. Область наукових інтересів</div>
+                <div class="right-col">
+                    <input type="text" name="interest_1" placeholder="1. ">
+                    <input type="text" name="interest_2" placeholder="2. ">
+                    <input type="text" name="interest_3" placeholder="3. ">
+                    <input type="text" name="interest_4" placeholder="4. ">
+                    <input type="text" name="interest_5" placeholder="5. ">
+                    <input type="text" name="interest_6" placeholder="6. ">
+                </div>
+            </div>
+
+            <div class="buttons">
+                <input type="reset" value="Відмінити введення" style="background-color: #b0c4de;">
+                <input type="submit" value="Надіслати дані та перейти до 2 етапу реєстрації" style="background-color: #007bff; color: white;">
+            </div>
+        </form>
+
+    </div>
+
+</body>
+</html>

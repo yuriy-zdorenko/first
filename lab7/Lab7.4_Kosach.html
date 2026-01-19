@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №7 завдання 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6ff;
+            padding: 20px;
+        }
+
+        form {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 650px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            border: 1px solid #b3d9ff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #660066;
+            padding: 0 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input[type="text"], input[type="number"], textarea, select {
+            width: 98%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .radio-group, .checkbox-group {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 align="center">Завдання 3: Форма замовлення на товар</h2>
+    <hr>
+
+    <form action="thx.html" target="_self">
+
+        <fieldset>
+            <legend>Дані для оплати</legend>
+            <label for="bank_account">Номер банківського рахунку (20 цифр):</label>
+            <input type="text" id="bank_account" name="bank_account" maxlength="20" placeholder="UA00 0000 0000 0000 0000 0000" required>
+
+            <label for="user_id">Особистий номер користувача:</label>
+            <input type="text" id="user_id" name="user_id" maxlength="15" placeholder="Ідентифікаційний код / ID">
+
+            <div class="radio-group">
+                <p><b>Вид оплати (Виберіть один):</b></p>
+                <input type="radio" id="cash" name="payment_type" value="cash" checked>
+                <label for="cash" style="display: inline;">Готівковий розрахунок</label><br>
+                <input type="radio" id="card" name="payment_type" value="card">
+                <label for="card" style="display: inline;">Безготівковий розрахунок</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Деталі замовлення</legend>
+            <label for="products">Виберіть товари (можна вибрати декілька):</label>
+            <select name="products" id="products" size="5" multiple required>
+                <option value="router">Кепка</option>
+                <option value="laptop">Футболка</option>
+                <option value="monitor" selected>Брюки</option>
+                <option value="mouse">Ремінь</option>
+                <option value="keyboard">Кросівки</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Додаткова інформація</legend>
+            <label for="comments">Довільні коментарі до замовлення:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Вкажіть особливі побажання щодо доставки, кольору тощо."></textarea>
+
+            <div class="checkbox-group">
+                <p><b>Бажаєте одержати додаткову інформацію (можна вибрати обидві):</b></p>
+                <input type="checkbox" id="balance" name="info_balance" value="yes">
+                <label for="balance" style="display: inline;">Дані про залишки на рахунку</label><br>
+                <input type="checkbox" id="payments" name="info_payments" value="yes">
+                <label for="payments" style="display: inline;">Список останніх виплат по рахунку</label>
+            </div>
+        </fieldset>
+
+        <p style="text-align: center; margin-top: 20px;">
+            <input type="submit" value="Надіслати замовлення">
+            <input type="reset" value="Очистити форму">
+        </p>
+
+    </form>
+
+</body>
+</html>

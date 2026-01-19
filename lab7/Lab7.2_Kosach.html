@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №7 завдання 1</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .group {
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="password"], textarea, select {
+            width: 98%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Виконання Завдання 2: Форма з використанням усіх елементів</h2>
+    <hr>
+
+    <form action="thx.html" target="_self">
+        <div class="group">
+            <label for="fio">ПІБ (TEXT):</label>
+            <input type="text" id="fio" name="fio" size="50" maxlength="100" value="Введіть повне ім'я">
+        </div>
+
+        <div class="group">
+            <label for="password">Пароль (PASSWORD):</label>
+            <input type="password" id="password" name="password" size="20" maxlength="20">
+        </div>
+
+        <div class="group">
+            <label>Освіта (RADIOBUTTON):</label>
+            <input type="radio" name="education" value="bachelor" checked> Бакалавр
+            <input type="radio" name="education" value="master"> Магістр
+            <input type="radio" name="education" value="phd"> Аспірант
+        </div>
+
+        <div class="group">
+            <label>Додаткова інформація (CHECKBOX):</label>
+            <input type="checkbox" name="subscribe" value="yes"> Підписатися на новини
+            <input type="checkbox" name="terms" value="yes" checked> Згоден з умовами
+        </div>
+
+        <div class="group">
+            <label for="country">Країна (SELECT/OPTION):</label>
+            <select name="country" id="country" size="3" multiple>
+                <option value="ua" selected>Україна</option>
+                <option value="pl">Польща</option>
+                <option value="de">Німеччина</option>
+                <option value="us">США</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label for="comments">Коментарі (TEXTAREA):</label>
+            <textarea id="comments" name="comments" rows="5" cols="50" wrap="hard">Ваші думки тут...</textarea>
+        </div>
+
+        <div class="group">
+            <label for="doc_file">Прикріпити резюме (FILE):</label>
+            <input type="file" id="doc_file" name="doc_file" size="50" accept=".doc,.pdf">
+        </div>
+
+        <div class="group">
+            <input type="button" value="Показати дату (BUTTON)" onclick="alert('Сьогодні: ' + new Date().toLocaleDateString());">
+        </div>
+
+        <p>
+            <input type="submit" value="Відправити форму (SUBMIT)">
+            <input type="reset" value="Очистити (RESET)">
+        </p>
+    </form>
+
+</body>
+</html>

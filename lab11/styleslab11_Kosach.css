@@ -1,0 +1,122 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-image: url('img/1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #111;
+    background-color: #f5f7fb;
+}
+
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1.5em 0;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    color: #2a5d84;
+    margin-top: 0;
+    padding-top: 0.6em;
+}
+
+p {
+    text-align: justify;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.5;
+    text-indent: 2.2em;
+    margin-bottom: 1em;
+}
+
+.img-left {
+    float: left;
+    margin: 0 1em 1em 0;
+    max-width: 30%;
+    height: auto;
+}
+
+.img-right {
+    float: right;
+    margin: 0 0 1em 1em;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-a {
+    background-image: url('img/text1.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 800px;
+    height: 400px;
+}
+
+.img-b {
+    background-image: url('img/img2.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 883px;
+    height: 588px;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.nav {
+    margin: 0.6em 0 1.2em 0;
+    text-align: center;
+}
+
+    .nav a {
+        margin: 0 0.8em;
+        font-weight: 600;
+        text-decoration: none;
+        color: #2a5d84;
+    }
+
+a:link {
+    color: green;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #0000FF;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 0.8em 0 1.2em 0;
+    font-size: 14px;
+    color: #444;
+}
+
+.active {
+    color: green;
+}

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="title">
+                <h2>Мій особистий блог</h2>
+                <span>Косач Анастасія</span>
+            </div>
+            <nav>
+                <a href="#">Вхід</a>
+                <a href="register.html" class="active">Реєстрація</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="register-box">
+            <h3>Реєстрація користувача</h3>
+
+            <form>
+
+                <label>Прізвище</label>
+                <input type="text" name="lastname" required>
+
+                <label>Ім’я</label>
+                <input type="text" name="firstname" required>
+
+                <label>Логін</label>
+                <input type="text" name="login" required>
+
+                <label>Навчальна група</label>
+                <select name="group">
+                    <option value="281">281</option>
+                    <option value="301">301</option>
+                    <option value="302">302</option>
+                    <option value="303">303</option>
+                    <option value="304">304</option>
+                    <option value="305">305</option>
+                </select>
+
+                <label>Пароль</label>
+                <input type="password" name="password" required>
+
+                <label>Підтвердження паролю</label>
+                <input type="password" name="confirm_password" required>
+
+                <button type="submit">Зареєструватись</button>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        © Всі права захищені.
+    </footer>
+
+</body>
+</html>

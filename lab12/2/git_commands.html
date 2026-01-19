@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Команди</title>
+    <link rel="stylesheet" href="style_commands.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="title">
+                <h2>Мій особистий блог</h2>
+                <span>Косач Анастасія</span>
+            </div>
+            <nav>
+                <a href="git_commands.html" class="active">Головна</a>
+                <a href="C:\Users\Настя\Desktop\first\lab12\1\register.html">Реєстрація</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+
+        <section class="column">
+            <h3>Create a Repository</h3>
+            <p>
+                From scratch — Create a new local repository<br>
+                <code>$ git init [project name]</code>
+            </p>
+
+            <p>
+                Download from an existing repository<br>
+                <code>$ git clone my_url</code>
+            </p>
+
+            <h3>Observe your Repository</h3>
+
+            <p>
+                List new or modified files not yet committed<br>
+                <code>$ git status</code>
+            </p>
+
+            <p>
+                Show changes to files not yet staged<br>
+                <code>$ git diff</code>
+            </p>
+
+            <p>
+                Show changes to staged files<br>
+                <code>$ git diff --cached</code>
+            </p>
+
+            <p>
+                Show all staged and unstaged changes<br>
+                <code>$ git diff HEAD</code>
+            </p>
+
+            <p>
+                Show changes between two commits<br>
+                <code>$ git diff commit1 commit2</code>
+            </p>
+
+            <p>
+                List authors and change dates for a file<br>
+                <code>$ git blame [file]</code>
+            </p>
+
+            <p>
+                Show changes for commit id or file<br>
+                <code>$ git show [commit]:[file]</code>
+            </p>
+
+            <p>
+                Show full history<br>
+                <code>$ git log</code>
+            </p>
+
+            <p>
+                Show history with diffs<br>
+                <code>$ git log -p [file/directory]</code>
+            </p>
+        </section>
+
+        <section class="column">
+            <h3>Working with Branches</h3>
+
+            <p>
+                List all local branches<br>
+                <code>$ git branch</code>
+            </p>
+
+            <p>
+                List all branches (local + remote)<br>
+                <code>$ git branch -av</code>
+            </p>
+
+            <p>
+                Switch to a branch<br>
+                <code>$ git checkout my_branch</code>
+            </p>
+
+            <p>
+                Create a new branch<br>
+                <code>$ git branch new_branch</code>
+            </p>
+
+            <p>
+                Delete a branch<br>
+                <code>$ git branch -d my_branch</code>
+            </p>
+
+            <p>
+                Merge branch_a into branch_b<br>
+                <code>$ git checkout branch_b</code><br>
+                <code>$ git merge branch_a</code>
+            </p>
+
+            <p>
+                Tag current commit<br>
+                <code>$ git tag my_tag</code>
+            </p>
+        </section>
+
+        <section class="column">
+            <h3>Make a Change</h3>
+
+            <p>
+                Stage file for commit<br>
+                <code>$ git add [file]</code>
+            </p>
+
+            <p>
+                Stage all changed files<br>
+                <code>$ git add .</code>
+            </p>
+
+            <p>
+                Commit staged files<br>
+                <code>$ git commit -m "message"</code>
+            </p>
+
+            <p>
+                Commit all tracked files<br>
+                <code>$ git commit -am "message"</code>
+            </p>
+
+            <p>
+                Unstage file<br>
+                <code>$ git reset [file]</code>
+            </p>
+
+            <p>
+                Revert everything to last commit<br>
+                <code>$ git reset --hard</code>
+            </p>
+
+            <h3>Synchronize</h3>
+
+            <p>
+                Get latest changes from origin<br>
+                <code>$ git fetch</code>
+            </p>
+
+            <p>
+                Pull changes from origin<br>
+                <code>$ git pull</code>
+            </p>
+
+            <p>
+                Pull + rebase<br>
+                <code>$ git pull --rebase</code>
+            </p>
+
+            <p>
+                Push to origin<br>
+                <code>$ git push</code>
+            </p>
+
+            <h3>Finally!</h3>
+
+            <p>
+                Help<br>
+                <code>$ git command --help</code>
+            </p>
+
+            <p>
+                Training:<br>
+                <a href="https://training.github.com">https://training.github.com</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        © Всі права захищені.<br>
+        Розробник: студент групи 301-ТН Косач А.Ю.
+    </footer>
+
+</body>
+</html>
