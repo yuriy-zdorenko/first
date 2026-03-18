@@ -1,0 +1,51 @@
+body{
+    background-image: url(images/background.jpg);
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 218, 218);
+    font-size: large;
+}
+
+p{
+    text-indent: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: justify;
+    margin-left: 10pt;
+    margin-right: 10pt;
+    font-style: italic;
+    
+}
+
+h1{
+    font-weight: bolder;
+    text-align: center;
+    color: chartreuse;
+    font-style: normal;
+}
+
+img{
+    float: right;
+    margin-left: 15px;
+    width: 300px;
+}
+
+a:link {
+    color: #007bff; 
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+a:visited {
+    color: #6610f2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #17a2b8; 
+    text-decoration: underline;
+}
+
+a:active {
+    color: #dc3545; 
+}

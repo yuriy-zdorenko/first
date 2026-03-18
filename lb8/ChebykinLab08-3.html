@@ -1,0 +1,219 @@
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: rgb(69, 69, 255);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);        
+            grid-auto-rows: 500px;
+            gap: 10px; 
+            padding: 10px;
+        }
+
+        /* Кожна клітинка — флекс контейнер, щоб верстка картинки+текст була проста */
+        .grid > .card {
+            display: flex;
+            flex-direction: column;       /* картинка зверху, текст під нею */
+            align-items: stretch;         /* картинка може займати всю ширину */
+            background: #fff8dc;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+            scroll-margin-top: 80px; /* або інше значення */
+        }
+
+        .grid > .card:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 12px 30px rgba(255, 0, 0, 0.25); 
+            cursor: pointer; 
+        }
+
+        /* Відсік для картинки: займатиме ~70% висоти, а текст — решту */
+        .grid > .card .media {
+            flex: 1 1 auto; /* росте, щоб зайняти більшу частину */
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Картинка адаптивна, заповнює блок і обрізається за потреби */
+        .grid > .card .media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* обрізає, але зберігає пропорції */
+            display: block;
+        }
+
+        /* Підпис/текст */
+        .grid > .card .caption {
+            padding: 8px;
+            font-size: 14pt;
+            line-height: 1.2;
+            text-align: justify;
+            text-indent: 2%;
+            color: black;
+            font-style: italic;
+            background: rgba(0,0,0,0.02);
+        }
+        
+        /* назви квітів */
+        p{
+            font-weight: bold;
+            color:blueviolet;
+            font-size: 20pt;
+        }
+
+        h1{        
+            font-weight: bold;
+            color: brown;
+            font-size: 35pt;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        ul{
+            list-style-type: disc;
+            margin: 5;
+            
+        }
+        ul>li{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            font-weight: 900;
+            text-decoration: underline;
+        }
+        ul>li>a:link{
+            color: aqua;
+        }
+        ul>li>a:visited{
+            color: rgb(15, 224, 15);
+        }
+        ul>li>a:hover{
+            color: rgb(2, 196, 179);
+            text-decoration: underline;
+            transition: 0.3s;
+        }
+        ul>li>a:active{
+            color: rgb(206, 7, 0);
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1 id="start">багаторічні садові квіти</h1>
+    
+    <p style="font-size: 25px; text-indent: 30px; margin: 0; padding: 0;">Зміст</p>
+    <ul>
+        <li>
+            <a href="#iris" >Іриси</a>
+        </li>
+        <li>
+            <a href="#pivonii">Півонії</a>
+        </li>
+        <li>
+            <a href="#lilii">Лілії</a>
+        </li>
+        <li>
+            <a href="#hostu">Хости</a>
+        </li>
+        <li>
+            <a href="#rudbekiya">Рудбекія</a>
+        </li>
+        <li>
+            <a href="#ehinaceya">Ехінацея</a>
+        </li>
+        <li>
+            <a href="#Troyandu">Троянди</a>
+        </li>
+    </ul>
+
+    <div class="grid">
+        <div class="card" id="iris">
+            <div class="media">
+                <img src="iris.jpg" alt="Опис зображення 1">
+            </div>
+            <div class="caption">
+                <p>Іриси, або народні «півники»</p>
+                 — це багаторічні рослини з родини півникових, назва яких походить від грецького слова «веселка» через різноманіття кольорів.
+            </div>
+        </div>
+
+        <div class="card" id="pivonii">
+            <div class="media">
+                <img src="pivonii.JPG" alt="Опис зображення 2">
+            </div>
+            <div class="caption">
+                <p>Півонії</p> — це багаторічні трави (більшість видів), а також кущі або півкущі (бл. 10 видів).
+            </div>
+        </div>
+
+        <div class="card" id="lilii">
+            <div class="media">
+                <img src="lilii.jpg" alt="Опис зображення 3">
+            </div>
+            <div class="caption">
+                <p>Лі́лія бі́ла (Lilium candidum, ще одна поширена з англ. мови назва Мадонна;)</p>
+                — багаторічна цибулинна рослина, один з видів роду лілія (Lilium) родини лілійних. 
+                Це єдиний вид з середземноморським типом розвитку.
+            </div>
+        </div>
+
+        <div class="card" id="hostu">
+            <div class="media">
+                <img src="hostu.jpg" alt="Опис зображення 4">
+            </div>
+            <div class="caption">
+                <p>Хоста</p> — це багаторічна трав'яниста рослина, яка цінується перш за все за декоративне листя, але також має квіти. Квіти хости з'являються влітку, зазвичай з кінця червня до серпня, мають форму дзвоника і бувають білого, лілового або фіолетового кольору.
+            </div>
+        </div>
+
+        <div class="card" id="rudbekiya">
+            <div class="media">
+                <img src="rudbekiya.jpg" alt="Опис зображення 5">
+            </div>
+            <div class="caption">
+                <p>Рудбе́кія (Rudbeckia)</p> — рід однорічних, дворічних та багаторічних трав'янистих рослин родини айстрові (Asteraceae), включає близько 40 видів.
+                Типовим видом вважається Rudbeckia hirta L.
+            </div>
+        </div>
+
+        <div class="card" id="ehinaceya">
+            <div class="media">
+                <img src="ehinaceya.jpg" alt="Опис зображення 5">
+            </div>
+            <div class="caption">
+                <p>Ехінацея</p> — це багаторічна трав'яниста рослина з великими квітками, схожими на ромашку,
+                 які бувають різних кольорів, найчастіше рожевих, червоних або білих. Ця рослина є популярною як у садівництві, так і в народній медицині завдяки 
+                 своїм декоративним властивостям та імуностимулювальним ефектам. 
+
+            </div>
+        </div>
+
+        <div class="card" id="Troyandu">
+            <div class="media">
+                <img src="troyandu.jpg" alt="Опис зображення 6">
+            </div>
+            <div class="caption">
+                <p>Троя́нда, шипши́на(Rosa L.)</p> — рід і культурна форма рослин родини трояндових (дикорослі — див. Шипшина), листопадні, рідко вічнозелені кущі до 4 метрів заввишки.
+            </div>
+        </div>
+
+    </div>
+
+  <!-- ще елементи -->
+</div>
+
+<center>
+<a style="text-align: center; font-size: large; color: black; font-weight: bold; background-color: bisque;" href="#start">На початок</a>
+</center>
+
+
+</body>
+</html>
