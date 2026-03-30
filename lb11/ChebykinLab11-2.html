@@ -1,0 +1,52 @@
+<html>
+
+    <head>
+        <title>
+            Завдання 1
+        </title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h2 align="center"> 1.	Створіть документ HTML, що містить форму в якій використовуються всі перелічені вище елементи (файл під назвою IvanennkoLab07-2.htm). </h2>
+    
+        <form>
+            <pre>
+            Введіть ваше ім'я:
+                <input type="text" name="name" value="Ввеідть ваше ім'я" size="10" maxlength="15">
+            Введіть ваший пароль:
+            <input type="password" name="pass" size="10" maxlength="15">
+            Опишіть себе:
+                <textarea name="about" rows="10" cols="60" wrap="virtual">
+                    Опишіть себе:
+                </textarea>
+            Оберіть ваший курс:
+            <select name="Curs" size="4">                
+                <option value="1" selected>Перший</option>
+                <option value="2">Другий</option>
+                <option value="3">Третій</option>
+                <option value="4">Четвертий</option>                
+            </select>
+            Оберіть ваші навички:
+            <input type="checkbox" name="skils" value="web">WEB
+            <input type="checkbox" name="skils" value="c++">C++
+            <input type="checkbox" name="skils" value="c#">C# 
+            <input type="checkbox" name="skils" value="python">Python 
+            <input type="checkbox" name="skils" value="kotlin">Kotlin 
+            <input type="checkbox" name="skils" value="java">Java 
+            Оберіть вашу стать:
+            <input type="radio" name="Pol" value="Male" checked>Male
+            <input type="radio" name="Pol" value="Female">Female
+            
+            <input type="button" name="submit" value="Завершити заповнення форми і надіслати ваші відповіді">
+            <input type="button" name="reset" value="Скинути всі відповіді">
+            <input type="button" name="link" value="Перейти за посиланням:" onclick="window.location.href = 'ChebykinLab07-1(out).html';">
+            <input type="file" name="inp_file" accept="All">
+            </pre>
+                                    
+        </form>
+
+    
+    </body>
+
+</html>

@@ -1,0 +1,52 @@
+<html>
+
+    <head>
+        <title>
+            3.	Створіть документ HTML, котрий містить форму для заповнення замовлення на товар. 
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h2 align="center"> 3.	Створіть документ HTML, котрий містить форму для заповнення замовлення на товар.  </h2>
+    
+        <form>
+            <pre style="background-color: antiquewhite; font-size: xx-large;" >
+            Введіть номер Вашого банківського рахунку:
+            <input type="text" name="cardNumb" size="25" maxlength="25">
+            Введіть Ваший особистий номер користувача:
+            <input type="text" name="UPersID" size="25" maxlength="25">
+           
+            Оберіть список товарів:        
+            <input type="checkbox" name="Ковбаса" value="Ковбаса">Ковбаса
+            <input type="checkbox" name="Поідори" value="Поідори++">Помідори
+            <input type="checkbox" name="Перець" value="Перець#">Перець
+            <input type="checkbox" name="Сало" value="Сало">Сало
+            <input type="checkbox" name="Петрушка" value="Петрушка">Петрушка
+            <input type="checkbox" name="Фарш" value="Фарш">Фарш
+            <input type="checkbox" name="Морква" value="Морква">Морква
+                        
+            Ваші коментарі:
+            <textarea name="Comments" cols="50" rows="8" wrap="soft"></textarea>
+            Оберіть ваш спосіб розрахунку:
+            <input type="radio" name="CASH" value="cash"> Готівковий
+            <input type="radio" name="NOCASH" value="NoCash"> Безготівковий
+
+
+            <input type="checkbox" name="HowManyStayInWallet" value="HowManyStayInWallet">Отримати інформацію про залишок коштів на рахунку
+            <input type="checkbox" name="Bills" value="Bills">Отримати список останніх ваших виплат по рахунку
+            
+            
+            <input type="button" name="submit" value="Завершити заповнення форми і надіслати ваші відповіді" style="border-radius: 5%; font-size: large; color: blue;">
+            <input type="button" name="reset" value="Скинути всі відповіді" style="border-radius: 5%; font-size: large; color: rgb(255, 0, 55);>
+            <input type="button" name="link" value="Перейти за посиланням:" style="border-radius: 5%; font-size: large; color: rgb(2, 2, 141)" onclick = "window.location.href = 'ChebykinLab07-1(out).html';">
+            <input type="file" name="inp_file" accept="All">
+            </pre>
+                                    
+        </form>
+
+    
+    </body>
+
+</html>

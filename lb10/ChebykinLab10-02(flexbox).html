@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Flexbox — Коричневий блок на всю ширину</title>
+
+<style>
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; padding: 0; }
+
+  body {
+    background: #f4f4f4;
+    font-family: sans-serif;
+  }
+
+  .layout {
+    display: flex;
+    height: 90vh; 
+    gap: 3px;
+    padding: 3px;
+    padding-bottom: 0; 
+  }
+
+
+  .left {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .right {
+    flex: 1;
+    height: 100%; 
+    background: #8c96a0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+  }
+
+  
+  .top {
+    flex: 0 0 20%;
+    background: #5d9cec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+  }
+
+
+  .middle {
+    flex: 1;
+    display: flex;
+    gap: 3px;
+  }
+
+  .col-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .row-small {
+    display: flex;
+    gap: 3px;
+    flex: 0 0 30%;
+  }
+
+  .box-3 { background: #4dc0b5; flex: 1; display:flex; align-items:center; justify-content:center; color:white; }
+  .box-4 { background: #eb4d55; flex: 1; display:flex; align-items:center; justify-content:center; color:white; }
+  .box-5 { background: #38a169; flex: 1; display:flex; align-items:center; justify-content:center; color:white; }
+
+  .yellow {
+    flex: 1;
+    background: #f6d744;
+    display:flex; align-items:center; justify-content:center;
+  }
+
+
+  .bottom-full-width {
+    width: 100%;
+    height: 10vh; 
+    background: #a0522d;
+    display:flex; align-items:center; justify-content:center;
+    color:white;
+  }
+  
+
+  .bottom {
+    display: none; 
+  }
+
+  @media (max-width: 768px) {
+		
+		
+		.layout {
+			flex-direction: column;
+			height: auto; 
+		}
+		
+		
+		.right {
+			order: -1; 
+			width: 100%;
+			height: 100px; 
+			min-height: 100px;
+		}
+
+		.left {
+			order: 0;
+			width: 100%;
+			flex-direction: column; 
+		}
+		
+		
+		.middle {
+			flex-direction: column; 
+			width: 100%;
+		}
+		
+		
+		.col-left {
+			width: 100%;
+		}
+
+		.row-small {
+			flex-direction: column; 
+			width: 100%;
+			flex: 0 0 auto; 
+		}
+
+		.yellow {
+			width: 100%;
+			height: 150px; 
+		}
+	
+		.box-3, .box-4, .box-5 {
+			width: 100%;
+			height: 100px; 
+		}
+		
+
+		.bottom-full-width {
+			height: 100px; 
+			margin-top: 3px;
+		}
+		
+	}
+
+</style>
+</head>
+
+<body>
+  <div class="layout">
+
+    <div class="left">
+
+      <div class="top">1 (Синій)</div>
+
+      <div class="middle">
+
+        <div class="col-left">
+          <div class="row-small">
+            <div class="box-3">3</div>
+            <div class="box-4">4</div>
+          </div>
+
+          <div class="box-5">5</div>
+        </div>
+
+        <div class="yellow">6</div>
+
+      </div>
+
+      <div class="bottom">7</div> 
+
+    </div>
+
+    <div class="right">2 (Сірий)</div>
+
+  </div>
+
+  <div class="bottom-full-width">7 (Коричневий)</div>
+
+</body>
+</html>

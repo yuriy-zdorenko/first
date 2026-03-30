@@ -1,0 +1,74 @@
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 3 — grid</title>
+
+
+    <style>
+        .grid{
+            display: grid;
+            grid-template-rows: 20vh 10vh 20vh 10vh;
+            grid-template-columns: 20vw 20vw 40vw 20vw;
+            gap: 3px;
+            grid-template-areas: 
+            "blue blue blue grey"
+            "aqua pink yellow grey"
+            "green green yellow grey"
+            "brown brown brown brown";  
+            margin-top: 5%;
+            
+        }
+
+        .grid>div{
+            border-width: 1px;
+            border-color: aliceblue;
+            border-style: solid;
+        }
+        
+        #blueBlock{
+            grid-area: blue;
+            background-color: blue;
+        }
+        #greyBlock{
+            grid-area: grey;
+            background-color: grey;
+        }
+        #aquaBlock{
+            grid-area: aqua;
+            background-color: aqua;
+        }
+        #pinkBlock{
+            grid-area: pink;
+            background-color: pink;
+        }
+        #yellowBlock{
+            grid-area: yellow;
+            background-color: yellow;
+        }
+        #greenBlock{
+            grid-area: green;
+            background-color: green;
+        }
+        #brownBlock{
+            grid-area: brown;
+            background-color: brown;
+        }
+        
+    </style>
+
+
+
+</head>
+<body>
+    
+    <div class="grid">
+        <div id="blueBlock"></div> <div id="greyBlock"></div>
+        <div id="aquaBlock"></div> <div id="pinkBlock"></div> <div id="yellowBlock"></div>
+        <div id="greenBlock"></div>
+        <div id="brownBlock"></div>
+    </div>
+
+
+</body>
+</html>
