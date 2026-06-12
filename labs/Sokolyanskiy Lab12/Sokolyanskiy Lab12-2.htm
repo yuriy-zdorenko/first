@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Git Шпаргалка</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #334155;
+        }
+        header {
+            background-color: #1e293b;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .author-text {
+            font-size: 13px;
+            color: #94a3b8;
+            margin-top: 2px;
+        }
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+        .content-container {
+            flex: 1;
+            padding: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        /* Адаптивність для планшетів та мобільних */
+        @media (max-width: 1100px) {
+            .grid-layout { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 700px) {
+            .grid-layout { grid-template-columns: 1fr; }
+        }
+
+        .column {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+            border: 1px solid #e2e8f0;
+        }
+        .column h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+        
+        /* Оновлені кольори заголовків груп */
+        .col-create h3 { color: #0284c7; border-bottom-color: rgba(2, 132, 199, 0.2); }
+        .col-observe h3 { color: #2563eb; border-bottom-color: rgba(37, 99, 235, 0.2); }
+        .col-branches h3 { color: #16a34a; border-bottom-color: rgba(22, 165, 74, 0.2); }
+        .col-change h3 { color: #ea580c; border-bottom-color: rgba(234, 88, 12, 0.2); }
+        .col-sync h3 { color: #d97706; border-bottom-color: rgba(217, 119, 6, 0.2); }
+        .col-finally h3 { color: #dc2626; border-bottom-color: rgba(220, 38, 38, 0.2); }
+
+        .cmd-block {
+            margin-bottom: 18px;
+        }
+        .cmd-desc {
+            font-size: 13px;
+            color: #64748b;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        .cmd-text {
+            font-family: 'Fira Code', Consolas, Monaco, monospace;
+            font-size: 13px;
+            font-weight: 500;
+            color: #0f172a;
+            background-color: #f1f5f9;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin: 0;
+            border-left: 3px solid #64748b;
+            overflow-x: auto;
+        }
+        
+        /* Специфічні бордери для команд відповідно до розділу */
+        .col-create .cmd-text { border-left-color: #0284c7; }
+        .col-observe .cmd-text { border-left-color: #2563eb; }
+        .col-branches .cmd-text { border-left-color: #16a34a; }
+        .col-change .cmd-text { border-left-color: #ea580c; }
+        .col-sync .cmd-text { border-left-color: #d97706; }
+        .col-finally .cmd-text { border-left-color: #dc2626; }
+
+        .link-training {
+            color: #0284c7;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 4px;
+        }
+        .link-training:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            line-height: 1.6;
+            border-top: 1px solid #1e293b;
+            margin-top: auto;
+        }
+        .sub-column {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px dashed #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <div class="logo-text">Мій особистий блог</div>
+            <div class="author-text">Соколянський Назар</div>
+        </div>
+        <div class="nav-links">
+            <a href="#">Вхід</a>
+            <a href="#">Реєстрація</a>
+        </div>
+    </header>
+
+    <div class="content-container">
+        <div class="grid-layout">
+            
+            <!-- Колонна 1: Створення та Огляд -->
+            <div class="column col-create">
+                <h3>Create a Repository</h3>
+                <div class="cmd-block">
+                    <div class="cmd-desc">From scratch -- Create a new local repository</div>
+                    <p class="cmd-text">$ git init [project name]</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Download from an existing repository</div>
+                    <p class="cmd-text">$ git clone my_url</p>
+                </div>
+
+                <div class="sub-column col-observe">
+                    <h3>Observe your Repository</h3>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">List new or modified files not yet committed</div>
+                        <p class="cmd-text">$ git status</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Show the changes to files not yet staged</div>
+                        <p class="cmd-text">$ git diff</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Show the changes to staged files</div>
+                        <p class="cmd-text">$ git diff --cached</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Show all staged and unstaged file changes</div>
+                        <p class="cmd-text">$ git diff HEAD</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Show the changes between two commit ids</div>
+                        <p class="cmd-text">$ git diff commit1 commit2</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">List the change dates and authors for a file</div>
+                        <p class="cmd-text">$ git blame [file]</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Show the file changes for a commit id and/or file</div>
+                        <p class="cmd-text">$ git show [commit]:[file]</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Show full change history</div>
+                        <p class="cmd-text">$ git log</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Show change history for file/directory including diffs</div>
+                        <p class="cmd-text">$ git log -p [file/directory]</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Колонна 2: Гілки -->
+            <div class="column col-branches">
+                <h3>Working with Branches</h3>
+                <div class="cmd-block">
+                    <div class="cmd-desc">List all local branches</div>
+                    <p class="cmd-text">$ git branch</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">List all branches, local and remote</div>
+                    <p class="cmd-text">$ git branch -av</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Switch to a branch, my_branch, and update working directory</div>
+                    <p class="cmd-text">$ git checkout my_branch</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Create a new branch called new_branch</div>
+                    <p class="cmd-text">$ git branch new_branch</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Delete the branch called my_branch</div>
+                    <p class="cmd-text">$ git branch -d my_branch</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Merge branch_a into branch_b</div>
+                    <p class="cmd-text">$ git checkout branch_b</p>
+                    <p class="cmd-text" style="margin-top: 5px;">$ git merge branch_a</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Tag the current commit</div>
+                    <p class="cmd-text">$ git tag my_tag</p>
+                </div>
+            </div>
+
+            <!-- Колонна 3: Зміни -->
+            <div class="column col-change">
+                <h3>Make a change</h3>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Stages the file, ready for commit</div>
+                    <p class="cmd-text">$ git add [file]</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Stage all changed files, ready for commit</div>
+                    <p class="cmd-text">$ git add .</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Commit all staged files to versioned history</div>
+                    <p class="cmd-text">$ git commit -m "commit message"</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Commit all your tracked files to versioned history</div>
+                    <p class="cmd-text">$ git commit -am "commit message"</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Unstages file, keeping the file changes</div>
+                    <p class="cmd-text">$ git reset [file]</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Revert everything to the last commit</div>
+                    <p class="cmd-text">$ git reset --hard</p>
+                </div>
+            </div>
+
+            <!-- Колонна 4: Синхронізація та Допомога -->
+            <div class="column col-sync">
+                <h3>Synchronize</h3>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Get the latest changes from origin (no merge)</div>
+                    <p class="cmd-text">$ git fetch</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Fetch the latest changes from origin and merge</div>
+                    <p class="cmd-text">$ git pull</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Fetch the latest changes from origin and rebase</div>
+                    <p class="cmd-text">$ git pull --rebase</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Push local changes to the origin</div>
+                    <p class="cmd-text">$ git push</p>
+                </div>
+
+                <div class="sub-column col-finally">
+                    <h3>Finally!</h3>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">When in doubt, use git help</div>
+                        <p class="cmd-text">$ git command --help</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Or visit official GitHub training:</div>
+                        <a class="link-training" href="https://training.github.com/">training.github.com</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        © Всі права захищено.<br>
+        Розробник: Студент групи 102-ТК Соколянський Н.Д.
+    </footer>
+
+</body>
+</html>

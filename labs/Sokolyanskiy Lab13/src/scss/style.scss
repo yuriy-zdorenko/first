@@ -1,0 +1,194 @@
+// Змінні кольорів (згідно шаблону)
+$bg-body: #231b34;
+$bg-header: #151020;
+$bg-section: #2b233f;
+$text-light: #e0e0e0;
+$text-white: #ffffff;
+$text-hover: #f39c12;
+$badge-bg: rgba(220, 80, 50, 0.9);
+
+// Базові налаштування
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $bg-body;
+    color: $text-light;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none; // Прибираємо маркери списку
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+// Шапка сайту
+.header {
+    background-color: $bg-header;
+    padding: 15px 0;
+    border-bottom: 2px solid #33264c;
+
+    .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffcc00;
+        
+        span {
+            font-size: 14px;
+            color: #888;
+        }
+    }
+
+    // Горизонтальне меню через flexbox
+    .main-nav {
+        ul {
+            display: flex;
+            gap: 20px;
+
+            li {
+                a {
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    
+                    &:hover, &.active {
+                        color: $text-white;
+                        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+                    }
+                }
+            }
+        }
+    }
+
+    .user-actions {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+        .login-btn {
+            font-size: 14px;
+            &:hover { color: $text-white; }
+        }
+    }
+}
+
+// Основний контент
+.main-content {
+    padding: 20px 0;
+}
+
+.movie-section {
+    background-color: $bg-section;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+
+        h2 {
+            font-size: 22px;
+            color: $text-white;
+        }
+
+        .view-all {
+            font-size: 14px;
+            color: #aaa;
+            &:hover { color: $text-white; }
+        }
+    }
+
+    // Сітка з картками
+    .movies-grid {
+        display: flex;
+        gap: 15px;
+        overflow-x: auto; // Горизонтальний скрол як на скріншоті
+        padding-bottom: 10px;
+
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #554477;
+            border-radius: 4px;
+        }
+    }
+
+    // Картка мультфільму
+    .movie-card {
+        flex: 0 0 160px; // Фіксована ширина картки
+        display: flex;
+        flex-direction: column;
+
+        .movie-poster {
+            position: relative;
+            display: block;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 10px;
+
+            img {
+                width: 100%;
+                height: 240px;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover img {
+                transform: scale(1.05);
+            }
+
+            // Блок з текстом на картинці (сезони)
+            .season-badge {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: $badge-bg;
+                color: $text-white;
+                font-size: 12px;
+                text-align: center;
+                padding: 4px 0;
+            }
+        }
+
+        // Посилання-назва під картинкою
+        .movie-title {
+            font-size: 14px;
+            color: #ccc;
+            text-align: center;
+            line-height: 1.3;
+
+            &:hover {
+                color: $text-hover;
+            }
+        }
+    }
+}

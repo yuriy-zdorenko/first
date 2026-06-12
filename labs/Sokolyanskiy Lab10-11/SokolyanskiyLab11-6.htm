@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Опитувальний лист користувача</title>
+</head>
+<body>
+    <h2>Анкета (опитувальний лист) користувача</h2>
+    
+    <form action="success.html" target="_self" method="GET">
+        
+        <p>Пароль: <br>
+            <input type="password" name="user_pass" size="20" maxlength="20">
+        </p>
+
+        <p>Прізвище: <input type="text" name="last_name" size="15">
+           Ім'я: <input type="text" name="first_name" size="15">
+           По-батькові: <input type="text" name="patronymic" size="15">
+        </p>
+
+        <p>Держава проживання: <br>
+            <select name="country">
+                <option value="ua" selected>Україна</option>
+                <option value="pl">Польща</option>
+                <option value="de">Німеччина</option>
+                <option value="us">США</option>
+                <option value="ca">Канада</option>
+                <option value="gb">Велика Британія</option>
+                <option value="fr">Франція</option>
+                <option value="it">Італія</option>
+                <option value="es">Іспанія</option>
+                <option value="cz">Чехія</option>
+                <option value="jp">Японія</option>
+            </select>
+        </p>
+
+        <p>Поштовий індекс: <br>
+            <input type="text" name="zip_code" maxlength="5" size="10" placeholder="00000">
+        </p>
+
+        <p>Місце проживання (регіон): <br>
+            <input type="radio" name="region" value="kyiv" checked> Київська область<br>
+            <input type="radio" name="region" value="poltava"> Полтавська область<br>
+            <input type="radio" name="region" value="kharkiv"> Харківська область<br>
+            <input type="radio" name="region" value="dnipro"> Дніпропетровська область<br>
+            <input type="radio" name="region" value="lviv"> Львівська область<br>
+            <input type="radio" name="region" value="odesa"> Одеська область<br>
+            <input type="radio" name="region" value="zaporizhzhia"> Запорізька область<br>
+            <input type="radio" name="region" value="vinnytsia"> Вінницька область<br>
+            <input type="radio" name="region" value="chernihiv"> Чернігівська область<br>
+            <input type="radio" name="region" value="other"> Інше
+        </p>
+
+        <p>Вулиця: <input type="text" name="street" size="30">
+           Будинок: <input type="text" name="house" size="5">
+        </p>
+
+        <p>Електронна адреса: <br>
+            <input type="text" name="email" size="30" placeholder="example@mail.com">
+        </p>
+
+        <p>Ваші захоплення (можна обрати декілька): <br>
+            <input type="checkbox" name="hobby1" value="programming"> Програмування<br>
+            <input type="checkbox" name="hobby2" value="gaming"> Кіберспорт / Ігри<br>
+            <input type="checkbox" name="hobby3" value="hardware"> Збірка ПК (Апаратне забезпечення)<br>
+            <input type="checkbox" name="hobby4" value="music"> Слухати музику<br>
+            <input type="checkbox" name="hobby5" value="movies"> Кінематограф<br>
+            <input type="checkbox" name="hobby6" value="reading"> Читання книг<br>
+            <input type="checkbox" name="hobby7" value="sports"> Спорт<br>
+            <input type="checkbox" name="hobby8" value="travel"> Подорожі<br>
+            <input type="checkbox" name="hobby9" value="photo"> Фотографія<br>
+            <input type="checkbox" name="hobby10" value="cars"> Автомобілі
+        </p>
+
+        <p>Якими мовами володієте: <br>
+            <input type="checkbox" name="lang_uk" value="ukrainian" checked> Українська<br>
+            <input type="checkbox" name="lang_en" value="english"> Англійська<br>
+            <input type="checkbox" name="lang_pl" value="polish"> Польська<br>
+            <input type="checkbox" name="lang_de" value="german"> Німецька<br>
+            <input type="checkbox" name="lang_fr" value="french"> Французька
+        </p>
+
+        <p>Ваші побажання: <br>
+            <textarea name="wishes" rows="4" cols="50" placeholder="Напишіть ваші побажання тут..."></textarea>
+        </p>
+
+        <p>
+            <input type="reset" value="Видалити введені результати у разі помилки">
+            <input type="submit" value="Відправити результати">
+        </p>
+
+    </form>
+</body>
+</html>

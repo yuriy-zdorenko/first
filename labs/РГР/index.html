@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Найвідоміші музеї світу</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <!-- Кастомний CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-ua" data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-offset="70">
+
+    <!-- Кнопка "Вгору" -->
+    <button id="backToTop" title="Повернутися вгору">↑</button>
+
+    <!-- Шапка та Меню -->
+    <header>
+        <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top shadow">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="images/5.png" alt="Лого" width="35" height="35" class="me-2 logo-icon">
+                    <span class="ua">Музеї Світу</span>
+                    <span class="en">World Museums</span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="filter: invert(1);">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about"><span class="ua">Про сайт</span><span class="en">About</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#gallery"><span class="ua">Галерея</span><span class="en">Gallery</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#news"><span class="ua">Новини</span><span class="en">News</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacts"><span class="ua">Контакти</span><span class="en">Contacts</span></a></li>
+                    </ul>
+
+                    <div class="lang-switcher d-flex mt-3 mt-lg-0 align-items-center justify-content-center">
+                        <a href="#" id="btn-ua" class="active">УКР</a>
+                        <span class="text-white mx-2">|</span>
+                        <a href="#" id="btn-en">ENG</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Слайдер (Carousel) -->
+    <section id="home" class="mt-5 pt-3">
+        <div id="museumCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/1.jpg" class="d-block w-100" alt="Лувр">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="ua">1. Лувр (Париж, Франція)</h5>
+                        <h5 class="en">1. Louvre (Paris, France)</h5>
+                        <p class="ua">Один з найбільших художніх музеїв світу, дім для "Мони Лізи".</p>
+                        <p class="en">One of the largest art museums in the world, home to the "Mona Lisa".</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/2.jpg" class="d-block w-100" alt="Музеї Ватикану">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="ua">2. Музеї Ватикану (Рим, Італія)</h5>
+                        <h5 class="en">2. Vatican Museums (Rome, Italy)</h5>
+                        <p class="ua">Комплекс музеїв, що зберігає безцінні колекції мистецтва Римських Пап.</p>
+                        <p class="en">A complex of museums housing priceless art collections of the Popes.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/3.jpg" class="d-block w-100" alt="Британський музей">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="ua">3. Британський музей (Лондон, Велика Британія)</h5>
+                        <h5 class="en">3. British Museum (London, UK)</h5>
+                        <p class="ua">Головний історико-археологічний музей, понад 8 мільйонів об'єктів.</p>
+                        <p class="en">Main historical and archaeological museum with over 8 million objects.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/4.jpg" class="d-block w-100" alt="Метрополітен">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="ua">4. Метрополітен-музей (Нью-Йорк, США)</h5>
+                        <h5 class="en">4. Metropolitan Museum of Art (NY, USA)</h5>
+                        <p class="ua">Найбільший художній музей у Західній півкулі.</p>
+                        <p class="en">The largest art museum in the Western Hemisphere.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#museumCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#museumCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Про сайт -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title"><span class="ua">Про портал</span><span class="en">About Portal</span></h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="lead-text ua">Інформаційний портал <strong>«Найвідоміші музеї світу»</strong> — це ваш віртуальний провідник до найвидатніших скарбниць людства.</p>
+                    <p class="lead-text en">The information portal <strong>"World Museums"</strong> is your virtual guide to humanity's greatest treasures.</p>
+                    
+                    <div id="accordion" class="mt-4">
+                        <h3><span class="ua">Наша місія</span><span class="en">Our Mission</span></h3>
+                        <div>
+                            <p class="ua">Сайт «Музеї світу» створений з глибокою вірою у те, що мистецтво, історія та культура не мають кордонів. Ми прагнемо стерти географічні межі та зробити видатну світову спадщину доступною для кожної людини, незалежно від того, де вона знаходиться.</p>
+                            <p class="en">The Museums of the World website was created with the deep belief that art, history and culture have no borders. We strive to erase geographical boundaries and make the world's outstanding heritage accessible to everyone, regardless of where they are located.</p>
+                        </div>
+                        <h3><span class="ua">Цільова аудиторія</span><span class="en">Target Audience</span></h3>
+                        <div>
+                            <p class="ua">Для кожного, хто прагне пізнавати світ! Наш проєкт — це ідеальний інструмент для туристів, які планують маршрути, естетів, які шукають натхнення, та учнів, які розширюють свій світогляд. Ми робимо культуру доступною для вас.</p>
+                            <p class="en">For everyone who wants to explore the world! Our project is the perfect tool for tourists planning their routes, aesthetes looking for inspiration, and students expanding their worldview. We make culture accessible to you.</p>
+                        </div>
+                        <h3><span class="ua">Освітня цінність</span><span class="en">Educational Value</span></h3>
+                        <div>
+                            <p class="ua">Наш проєкт перетворює світову спадщину на захопливий інтерактивний підручник. Ми робимо вивчення історії, мистецтва та культури доступним, допомагаючи школярам, студентам і всім допитливим легко розширювати свій світогляд.</p>
+                            <p class="en">Our project turns world heritage into an exciting interactive textbook. We make the study of history, art and culture accessible, helping schoolchildren, students and all the curious to easily expand their worldview.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center mt-4 mt-md-0">
+                    <img src="images/1.jpg" alt="Музей" class="img-fluid rounded border-strict shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <h2 class="section-title"><span class="ua">Галерея експозицій</span><span class="en">Exhibition Gallery</span></h2>
+            
+            <div class="custom-grid-gallery">
+                <!-- Змінено data-fancybox на "museum_gallery" -->
+                <a href="images/1.1.jpeg" data-fancybox="museum_gallery" data-caption="Лувр"><img src="images/1.1.jpeg" alt="Лувр 1.1"></a>
+                <a href="images/1.2.jpg" data-fancybox="museum_gallery" data-caption="Лувр"><img src="images/1.2.jpg" alt="Лувр 1.2"></a>
+                <a href="images/1.3.jpg" data-fancybox="museum_gallery" data-caption="Лувр"><img src="images/1.3.jpg" alt="Лувр 1.3"></a>
+                
+                <a href="images/2.1.jpg" data-fancybox="museum_gallery" data-caption="Музей Ватикану"><img src="images/2.1.jpg" alt="Ватикан 2.1"></a>
+                <a href="images/2.2.jpg" data-fancybox="museum_gallery" data-caption="Музей Ватикану"><img src="images/2.2.jpg" alt="Ватикан 2.2"></a>
+                <a href="images/2.3.jpg" data-fancybox="museum_gallery" data-caption="Музей Ватикану"><img src="images/2.3.jpg" alt="Ватикан 2.3"></a>
+                
+                <a href="images/3.1.jpg" data-fancybox="museum_gallery" data-caption="Британський музей"><img src="images/3.1.jpg" alt="Британський музей 3.1"></a>
+                <a href="images/3.2.jpg" data-fancybox="museum_gallery" data-caption="Британський музей"><img src="images/3.2.jpg" alt="Британський музей 3.2"></a>
+                <a href="images/3.3.jpg" data-fancybox="museum_gallery" data-caption="Британський музей"><img src="images/3.3.jpg" alt="Британський музей 3.3"></a>
+                
+                <a href="images/4.1.jpg" data-fancybox="museum_gallery" data-caption="Метрополітен-музей"><img src="images/4.1.jpg" alt="Метрополітен 4.1"></a>
+                <a href="images/4.2.png" data-fancybox="museum_gallery" data-caption="Метрополітен-музей"><img src="images/4.2.png" alt="Метрополітен 4.2"></a>
+                <a href="images/4.3.jpg" data-fancybox="museum_gallery" data-caption="Метрополітен-музей"><img src="images/4.3.jpg" alt="Метрополітен 4.3"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Новини -->
+    <section id="news" class="section-padding">
+        <div class="container">
+            <h2 class="section-title"><span class="ua">Останні гучні новини</span><span class="en">Latest Breaking News</span></h2>
+            
+            <div class="news-slider-wrapper">
+                <button class="slider-btn slider-prev">❮</button>
+                <div class="news-track" id="newsTrack">
+                    <div class="news-card">
+                        <div class="news-content">
+                            <h4 class="ua">Британський музей оцифрує всю колекцію</h4><h4 class="en">British Museum to digitize its collection</h4>
+                            <p class="ua">Керівництво музею оголосило про проєкт: понад 8 млн артефактів будуть оцифровані.</p><p class="en">Management announced a project: over 8 million artifacts will be digitized.</p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-content">
+                            <h4 class="ua">Лувр запроваджує щоденні квоти</h4><h4 class="en">Louvre introduces daily quotas</h4>
+                            <p class="ua">Адміністрація обмежила кількість відвідувачів до 30 000 осіб щодня для безпеки.</p><p class="en">The administration limited daily visitors to 30,000 for safety reasons.</p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-content">
+                            <h4 class="ua">Метрополітен повертає артефакти</h4><h4 class="en">Met Museum returns artifacts</h4>
+                            <p class="ua">Нью-Йоркський музей уклав угоду про повернення стародавніх артефактів на їхню батьківщину.</p><p class="en">The NY museum signed an agreement to return ancient artifacts to their homeland.</p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-content">
+                            <h4 class="ua">Ватикан реставрує Станці Рафаеля</h4><h4 class="en">Vatican restores Raphael Rooms</h4>
+                            <p class="ua">Музеї Ватикану розпочали масштабну реставрацію фресок у знаменитих кімнатах.</p><p class="en">Vatican Museums started massive restoration of frescoes in the famous rooms.</p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-content">
+                            <h4 class="ua">Лувр придбав втрачений шедевр</h4><h4 class="en">Louvre buys lost masterpiece</h4>
+                            <p class="ua">Музей придбав на аукціоні картину Ренесансу, яка вважалася втраченою понад 100 років.</p><p class="en">The museum bought a Renaissance painting at auction, thought lost for over 100 years.</p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-content">
+                            <h4 class="ua">Нове крило Метрополітен-музею</h4><h4 class="en">New wing of the Met Museum</h4>
+                            <p class="ua">Анонсовано відкриття масштабного крила сучасного мистецтва вартістю 500 млн доларів.</p><p class="en">Announced opening of a massive modern art wing worth 500 million dollars.</p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-content">
+                            <h4 class="ua">Британський музей повернув скарби</h4><h4 class="en">British Museum recovers treasures</h4>
+                            <p class="ua">Музей успішно відшукав та повернув частину викрадених минулого року коштовностей.</p><p class="en">The museum successfully located and returned part of the jewels stolen last year.</p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-content">
+                            <h4 class="ua">Відкрито катакомби Ватикану</h4><h4 class="en">Vatican catacombs opened</h4>
+                            <p class="ua">Вперше для публіки відкрили секретні стародавні римські поховання під музеями.</p><p class="en">Secret ancient Roman burials under the museums were opened to the public for the first time.</p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-content">
+                            <h4 class="ua">Рекорд віртуальних турів у Луврі</h4><h4 class="en">Virtual tour record at Louvre</h4>
+                            <p class="ua">Сайт Лувру відвідало понад 10 мільйонів користувачів за один місяць завдяки VR-туру.</p><p class="en">Louvre's site was visited by over 10 million users in a month thanks to a VR tour.</p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-content">
+                            <h4 class="ua">Оголошено тему Met Gala 2026</h4><h4 class="en">Met Gala 2026 theme announced</h4>
+                            <p class="ua">Інститут костюма Метрополітен розкрив тему головної модної події наступного року.</p><p class="en">The Costume Institute of the Met revealed the theme for next year's main fashion event.</p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-content">
+                            <h4 class="ua">Виставка Єгипту в Лондоні</h4><h4 class="en">Egypt exhibition in London</h4>
+                            <p class="ua">Британський музей анонсував найбільшу виставку артефактів фараонів за останні 50 років.</p><p class="en">The British Museum announced the largest pharaohs artifact exhibition in 50 years.</p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-content">
+                            <h4 class="ua">Освітлення Сикстинської капели</h4><h4 class="en">Sistine Chapel lighting</h4>
+                            <p class="ua">Ватикан встановив інноваційну систему LED-світла, що не шкодить стародавнім фарбам.</p><p class="en">The Vatican installed an innovative LED system that doesn't harm ancient paints.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="slider-btn slider-next">❯</button>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Контакти -->
+    <section id="contacts" class="section-padding">
+        <div class="container">
+            <h2 class="section-title"><span class="ua">Контакти</span><span class="en">Contacts</span></h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="contact-box">
+                        <h5 class="ua">Наші дані:</h5><h5 class="en">Our Details:</h5>
+                        <p><strong>Email:</strong> info@museums-world.com</p>
+                        <p><strong><span class="ua">Телефон</span><span class="en">Phone</span>:</strong> +38 (099) 123-45-67</p>
+                        <p><strong><span class="ua">Адреса</span><span class="en">Address</span>:</strong> <span class="ua">Київ, вул. Хрещатик, 1</span><span class="en">Kyiv, Khreshchatyk st., 1</span></p>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="map-responsive shadow">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.540134426574!2d30.5186253157313!3d50.44968397947502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce56b2456d3b%3A0xd062c40260438b40!2z0KXRgNC10YnQsNGC0LjQuiwg0JrQuNGX0LIsIDAyMDAw!5e0!3m2!1suk!2sua!4v1680000000000!5m2!1suk!2sua" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Підвал -->
+    <footer class="footer-strict">
+        <div class="container">
+            <p class="mb-0 ua">© 2026 Інформаційний портал «Найвідоміші музеї світу». Права не захищено.</p>
+            <p class="mb-0 en">© 2026 Information portal "World Museums". All rights not reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

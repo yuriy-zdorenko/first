@@ -1,0 +1,194 @@
+/* Колірна палітра */
+:root {
+    --bg-main: #e8e7e1;
+    --dark-primary: #000000;
+    --dark-secondary: #222222;
+    --accent-yellow: #ffdd00;
+    --text-main: #1a1a1a;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Times New Roman', Georgia, serif;
+}
+
+/* --- СИСТЕМА ПЕРЕКЛАДУ --- */
+body.lang-ua .en { display: none !important; }
+body.lang-en .ua { display: none !important; }
+
+/* СТИЛІЗАЦІЯ НАВІГАЦІЇ */
+#main-navbar {
+    background-color: #000000 !important;
+    border-bottom: 2px solid var(--dark-secondary);
+    padding: 12px 0;
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.15rem;
+    transition: color 0.3s ease;
+}
+
+.logo-icon { filter: brightness(0) invert(1); transition: filter 0.3s ease; }
+
+.navbar-brand:hover { color: var(--accent-yellow) !important; }
+.navbar-brand:hover .logo-icon {
+    filter: brightness(0) invert(81%) sepia(87%) saturate(735%) hue-rotate(352deg) brightness(105%) contrast(105%);
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 8px 20px !important;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.navbar-nav .nav-link:hover { color: var(--accent-yellow) !important; }
+
+.lang-switcher a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    letter-spacing: 1px;
+}
+.lang-switcher a:hover, .lang-switcher a.active { color: var(--accent-yellow); }
+
+/* КНОПКА ПОВЕРНЕННЯ ВГОРУ */
+#backToTop {
+    position: fixed; bottom: 30px; right: 30px; z-index: 999;
+    width: 50px; height: 50px;
+    background-color: var(--dark-primary); color: #ffffff;
+    border: 2px solid #ffffff; font-size: 22px; font-weight: bold;
+    cursor: pointer; display: none; transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+#backToTop:hover {
+    background-color: var(--accent-yellow); color: var(--dark-primary); border-color: var(--dark-primary);
+}
+
+/* ЗАГАЛЬНІ СТИЛІ БЛОКІВ */
+.section-padding { padding: 80px 0; }
+.section-title {
+    text-align: center; text-transform: uppercase; font-weight: bold;
+    letter-spacing: 2px; color: var(--dark-primary); margin-bottom: 40px; position: relative;
+}
+.section-title::after {
+    content: ''; display: block; width: 60px; height: 3px;
+    background-color: var(--dark-primary); margin: 10px auto 0 auto;
+}
+.border-strict { border: 4px solid var(--dark-primary); }
+.lead-text { line-height: 1.8; font-size: 1.1rem; }
+
+/* СЛАЙДЕР */
+.carousel-item img { height: 65vh; object-fit: cover; filter: brightness(75%); }
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.85); border-left: 5px solid var(--accent-yellow);
+    padding: 20px !important; max-width: 600px; margin: 0 auto;
+}
+.carousel-caption h5 { color: var(--accent-yellow); text-transform: uppercase; font-weight: bold; }
+
+/* ГАЛЕРЕЯ (CSS Grid) */
+.custom-grid-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.custom-grid-gallery a { display: block; overflow: hidden; border: 3px solid var(--dark-primary); border-radius: 4px; }
+.custom-grid-gallery img { width: 100%; height: 220px; object-fit: cover; transition: all 0.4s ease; display: block; }
+.custom-grid-gallery a:hover img { transform: scale(1.1); }
+.custom-grid-gallery a:hover { border-color: var(--accent-yellow); }
+
+/* НОВИНИ (Горизонтальний скрол на 12 новин - рівно 3 на екрані) */
+.news-slider-wrapper {
+    position: relative;
+    padding: 0 50px; /* Місце для кнопок */
+}
+
+.news-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Дозволяє скролити свайпом */
+    scroll-snap-type: x mandatory; /* Магнітне прилипання */
+    scroll-behavior: smooth;
+    padding: 10px 0 20px 0;
+    -ms-overflow-style: none; /* Ховаємо скролбар IE */
+    scrollbar-width: none; /* Ховаємо скролбар Firefox */
+}
+.news-track::-webkit-scrollbar { display: none; /* Ховаємо скролбар Chrome/Safari */ }
+
+.news-card {
+    /* Точно 3 новини на екрані (100% / 3 мінус відступи) */
+    flex: 0 0 calc(33.333% - 13.33px);
+    scroll-snap-align: start;
+    background-color: var(--dark-secondary);
+    color: #ffffff;
+    border-top: 4px solid var(--dark-primary);
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.news-card:hover { border-top-color: var(--accent-yellow); }
+.news-card h4 { font-size: 1.15rem; color: var(--accent-yellow); margin-bottom: 15px; text-transform: uppercase; font-weight: bold; }
+
+/* Кнопки перемикання новин */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--dark-primary);
+    color: #fff;
+    border: 2px solid #fff;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider-btn:hover {
+    background: var(--accent-yellow);
+    color: var(--dark-primary);
+    border-color: var(--dark-primary);
+}
+.slider-prev { left: 0; }
+.slider-next { right: 0; }
+
+/* КОНТАКТИ ТА ФУТЕР */
+.contact-box { background-color: var(--dark-secondary); color: #ffffff; padding: 30px; border-left: 5px solid var(--dark-primary); }
+.contact-box h5 { color: var(--accent-yellow); text-transform: uppercase; font-weight: bold; margin-bottom: 20px; }
+.footer-strict { background-color: var(--dark-primary); color: #888888; text-align: center; padding: 25px 0; font-size: 0.9rem; border-top: 2px solid var(--dark-secondary); }
+
+/* jQuery UI Accordion */
+.ui-accordion .ui-accordion-header { background: var(--dark-primary) !important; color: #ffffff !important; border: 1px solid var(--dark-secondary) !important; text-transform: uppercase; font-weight: bold; padding: 12px 20px !important; margin-top: 8px !important; }
+.ui-accordion .ui-accordion-header:hover { color: var(--accent-yellow) !important; }
+.ui-accordion .ui-accordion-header-active { background: var(--dark-secondary) !important; color: var(--accent-yellow) !important; }
+.ui-accordion .ui-accordion-content { background: var(--bg-main) !important; color: var(--dark-primary) !important; border: 1px solid var(--dark-primary) !important; line-height: 1.6; }
+
+/* МЕДІАЗАПИТИ */
+@media (max-width: 992px) {
+    .custom-grid-gallery { grid-template-columns: repeat(2, 1fr); }
+    .news-card { flex: 0 0 calc(50% - 10px); } /* 2 новини на планшеті */
+    #main-navbar { text-align: center; }
+    .lang-switcher { margin-bottom: 10px; }
+}
+@media (max-width: 768px) {
+    .news-card { flex: 0 0 100%; } /* 1 новина на телефоні */
+    .carousel-item img { height: 45vh; }
+    .news-slider-wrapper { padding: 0 45px; }
+}
+@media (max-width: 576px) {
+    .custom-grid-gallery { grid-template-columns: 1fr; }
+    #backToTop { bottom: 15px; right: 15px; width: 45px; height: 45px; }
+}

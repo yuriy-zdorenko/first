@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+    <style>
+        /* Стилізація для максимальної схожості зі зразком */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            width: 650px;
+            margin: 20px auto;
+            border: 2px solid #a0c4c4;
+            background-color: #e0f7fa; /* Світло-блакитний фон */
+            padding: 2px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #e0f7fa;
+        }
+        td, th {
+            border: 1px solid #a0c4c4;
+            padding: 8px;
+            vertical-align: middle;
+        }
+        .header-cell {
+            text-align: center;
+            padding: 15px;
+        }
+        .header-text {
+            color: red;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .num-col {
+            text-align: center;
+            width: 30px;
+        }
+        .label-col {
+            width: 220px;
+            font-size: 14px;
+        }
+        .input-col input[type="text"] {
+            width: 95%;
+            padding: 3px;
+            border: 1px solid #ccc;
+        }
+        .interests-list {
+            margin: 0;
+            padding-left: 20px;
+            list-style-type: decimal;
+        }
+        .interests-list li {
+            margin-bottom: 5px;
+        }
+        .interests-list input[type="text"] {
+            width: 85%;
+        }
+        .buttons-cell {
+            padding: 15px 10px;
+        }
+        .buttons-cell input {
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <form action="success.html" target="_blank" method="GET">
+            <table>
+                <tr>
+                    <td colspan="3" class="header-cell">
+                        <h1 class="header-text">Анкета</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="num-col">1.</td>
+                    <td class="label-col">Прізвище</td>
+                    <td class="input-col"><input type="text" name="surname"></td>
+                </tr>
+                <tr>
+                    <td class="num-col">2.</td>
+                    <td class="label-col">Ім'я, по батькові</td>
+                    <td class="input-col"><input type="text" name="name_patronymic"></td>
+                </tr>
+                <tr>
+                    <td class="num-col">3.</td>
+                    <td class="label-col">Число і рік народження</td>
+                    <td class="input-col"><input type="text" name="birth_date"></td>
+                </tr>
+                <tr>
+                    <td class="num-col">4.</td>
+                    <td class="label-col">Домашня адреса</td>
+                    <td class="input-col"><input type="text" name="address"></td>
+                </tr>
+                <tr>
+                    <td class="num-col">5.</td>
+                    <td class="label-col">Місце навчання (роботи)</td>
+                    <td class="input-col"><input type="text" name="work_study_place"></td>
+                </tr>
+                <tr>
+                    <td class="num-col">6.</td>
+                    <td class="label-col">Домашній (робочий) телефон</td>
+                    <td class="input-col"><input type="text" name="phone"></td>
+                </tr>
+                <tr>
+                    <td class="num-col">7.</td>
+                    <td class="label-col">E-mail</td>
+                    <td class="input-col"><input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td class="num-col" style="vertical-align: top; padding-top: 10px;">8.</td>
+                    <td class="label-col" style="vertical-align: top; padding-top: 10px;">Область наукових інтересів</td>
+                    <td class="input-col">
+                        <ol class="interests-list">
+                            <li><input type="text" name="interest_1"></li>
+                            <li><input type="text" name="interest_2"></li>
+                            <li><input type="text" name="interest_3"></li>
+                            <li><input type="text" name="interest_4"></li>
+                            <li><input type="text" name="interest_5"></li>
+                            <li><input type="text" name="interest_6"></li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="buttons-cell">
+                        <input type="reset" value="Відмінити введення"><br>
+                        <input type="submit" value="Надіслати дані та перейти до 2 етапу реєстрації">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</body>
+</html>

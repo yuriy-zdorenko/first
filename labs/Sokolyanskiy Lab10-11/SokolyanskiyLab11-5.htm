@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета учасника турніру</title>
+</head>
+<body>
+    <h2>Реєстрація на кіберспортивний турнір</h2>
+    
+    <form action="success.html" target="_blank" method="GET">
+        
+        <p>Прізвище: <input type="text" name="last_name" size="20"> 
+           Ім'я: <input type="text" name="first_name" size="20">
+        </p>
+
+        <p>Придумайте пароль для входу в лобі: <br>
+            <input type="password" name="lobby_pass" size="20" maxlength="16">
+        </p>
+
+        <p>Оберіть вашу основну роль у грі: <br>
+            <select name="game_role" size="1">
+                <option value="carry">Carry (Керрі)</option>
+                <option value="mid" selected>Mid (Мід)</option>
+                <option value="offlane">Offlane (Офлейн)</option>
+                <option value="support">Support (Підтримка)</option>
+            </select>
+        </p>
+
+        <p>Умови участі (виберіть необхідне): <br>
+            <label><input type="checkbox" name="condition1" value="rules_agreed"> Я погоджуюсь із правилами турніру</label><br>
+            <label><input type="checkbox" name="condition2" value="mic_ready"> Маю справний мікрофон для зв'язку</label>
+        </p>
+
+        <p>Вкажіть ваш поточний рівень гри: <br>
+            <input type="radio" name="skill_level" value="beginner"> Новачок<br>
+            <input type="radio" name="skill_level" value="amateur" checked> Любитель<br>
+            <input type="radio" name="skill_level" value="pro"> Професіонал
+        </p>
+
+        <p>Опишіть ваш попередній ігровий досвід (досягнення, команди): <br>
+            <textarea name="experience" rows="5" cols="50" placeholder="Ваш текст тут..."></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Відправити анкету">
+            <input type="reset" value="Корегувати дані">
+        </p>
+
+    </form>
+</body>
+</html>

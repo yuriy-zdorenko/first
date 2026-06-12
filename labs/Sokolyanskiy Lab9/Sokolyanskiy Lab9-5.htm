@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Сенсорне зображення - Довільні форми</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <center>
+        <h2>Карта з областями довільної форми</h2>
+        <p>Наведіть курсор на об'єкти на скріншоті, щоб побачити текст-підказку.</p>
+
+        <map name="poly_map">
+            <area shape="circle" coords="395,321,205" href="#" title="Ведмедь">
+            
+            <area shape="poly" coords="207,677,205,724,555,673,554,721" href="#" title="Інвентар">
+        </map>
+
+        <img src="images\gamescreen.png" usemap="#poly_map" alt="Ігровий скріншот Rust" border="1">
+    </center>
+</body>
+</html>

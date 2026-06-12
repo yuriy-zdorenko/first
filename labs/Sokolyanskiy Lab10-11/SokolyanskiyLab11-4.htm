@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма замовлення товару</title>
+</head>
+<body>
+    <h2>Замовлення на товар</h2>
+    
+    <form action="success.html" target="_blank" method="GET">
+        
+        <p>Номер банківського рахунку: <br>
+            <input type="text" name="bank_account" size="30" maxlength="30">
+        </p>
+
+        <p>Особистий номер користувача: <br>
+            <input type="text" name="user_id" size="20" maxlength="20">
+        </p>
+
+        <p>Оберіть товари (утримуйте Ctrl для вибору декількох): <br>
+            <select name="goods" multiple size="5">
+                <option value="item1">Підставка для охолодження ноутбука</option>
+                <option value="item2">Механічна клавіатура з магнітними свічами</option>
+                <option value="item3">Кронштейн для монітора (газліфт)</option>
+                <option value="item4">Ергономічне крісло з сітчастою спинкою</option>
+                <option value="item5">Термопаста з високою теплопровідністю</option>
+            </select>
+        </p>
+
+        <p>Довільні коментарі до замовлення: <br>
+            <textarea name="comments" rows="4" cols="50" placeholder="Вкажіть додаткові побажання..."></textarea>
+        </p>
+
+        <p>Вид оплати: <br>
+            <input type="radio" name="payment_type" value="cash" checked> Готівковий розрахунок<br>
+            <input type="radio" name="payment_type" value="cashless"> Безготівковий розрахунок
+        </p>
+
+        <p>Додаткова інформація: <br>
+            <label>
+                <input type="checkbox" name="extra_info1" value="balance">
+                Одержати дані про залишки на рахунку
+            </label><br>
+            <label>
+                <input type="checkbox" name="extra_info2" value="history">
+                Одержати список останніх виплат по рахунку
+            </label>
+        </p>
+
+        <p>
+            <input type="submit" value="Оформити замовлення">
+            <input type="reset" value="Очистити форму">
+        </p>
+
+    </form>
+</body>
+</html>

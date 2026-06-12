@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Довільна форма</title>
+</head>
+<body>
+    <h2>Заявка на підбір конфігурації ПК</h2>
+    
+    <form action="success.html" target="_blank" method="GET">
+        
+        <p>Ваше ім'я: 
+            <input type="text" name="username" size="30" maxlength="40">
+        </p>
+
+        <p>Придумайте пароль (для доступу до статусу збірки): 
+            <input type="password" name="pwd" size="15" maxlength="20">
+        </p>
+
+        <p>Оберіть бажану платформу:
+            <select name="platform" size="1">
+                <option value="intel">Intel Core</option>
+                <option value="amd" selected>AMD Ryzen</option>
+            </select>
+        </p>
+
+        <p>Тип охолодження процесора:<br>
+            <input type="radio" name="cooling" value="air" checked> Повітряне (Башта)<br>
+            <input type="radio" name="cooling" value="water"> Рідинне (СПО)<br>
+        </p>
+
+        <p>Додаткові послуги при збірці:<br>
+            <input type="checkbox" name="services" value="overclock"> Розгін комплектуючих (Overclocking)<br>
+            <input type="checkbox" name="services" value="cable" checked> Професійний кабель-менеджмент<br>
+            <input type="checkbox" name="services" value="undervolt"> Андервольтинг для зниження температур<br>
+        </p>
+
+        <p>Додаткові побажання щодо дизайну (корпус, підсвітка тощо):<br>
+            <textarea name="details" rows="5" cols="50" wrap="virtual"></textarea>
+        </p>
+
+        <p>Завантажте фото референсу бажаної збірки:
+            <input type="file" name="reference" size="40" accept=".jpg,.png">
+        </p>
+
+        <p>
+            <input type="button" value="Перевірити наявність комплектуючих" onclick="alert('Всі комплектуючі доступні для замовлення!');">
+        </p>
+
+        <p>
+            <input type="submit" value="Відправити запит">
+            <input type="reset" value="Очистити форму">
+        </p>
+        
+    </form>
+</body>
+</html>

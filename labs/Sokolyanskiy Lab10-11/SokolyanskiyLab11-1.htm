@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Віртуальна бібліотека</title>
+</head>
+<body>
+    <h2>Анкета користувача віртуальної бібліотеки</h2>
+    <form action="success.html" target="_self" method="GET">
+        <p>Прізвище: <input type="text" name="lname"></p>
+        <p>Ім'я: <input type="text" name="fname"></p>
+        <p>Пароль: <input type="password" name="pass"></p>
+        <p>Стать: 
+            <input type="radio" name="gender" value="m"> Чоловіча 
+            <input type="radio" name="gender" value="f"> Жіноча
+        </p>
+        <p>Чим займаєтеся: <br>
+            <input type="radio" name="job" value="student"> Студент<br>
+            <input type="radio" name="job" value="employed"> Працюю<br>
+            <input type="radio" name="job" value="freelance"> Фрілансер<br>
+            <input type="radio" name="job" value="unemployed"> Тимчасово не працюю<br>
+            <input type="radio" name="job" value="retired"> Пенсіонер
+        </p>
+        <p>Ваш вік: <br>
+            <input type="radio" name="age" value="u18"> До 18 років<br>
+            <input type="radio" name="age" value="18-25"> 18 - 25 років<br>
+            <input type="radio" name="age" value="26-40"> 26 - 40 років<br>
+            <input type="radio" name="age" value="o40"> Більше 40 років
+        </p>
+        <p>Якою тематикою цікавитеся (Ctrl для множинного вибору): <br>
+            <select name="themes" multiple size="6">
+                <option value="t1">Фантастика</option>
+                <option value="t2">Детективи</option>
+                <option value="t3">Науково-технічна література</option>
+                <option value="t4">Історія</option>
+                <option value="t5">Програмування та інженерія</option>
+                <option value="t6">Психологія</option>
+                <option value="t7">Біографії</option>
+                <option value="t8">Пригодницькі романи</option>
+                <option value="t9">Поезія</option>
+                <option value="t10">Комікси та Манга</option>
+            </select>
+        </p>
+        <p>Що зараз читаєте: <br><textarea name="current_book" rows="3" cols="40"></textarea></p>
+        <p>
+            <input type="submit" value="Відправити результати">
+            <input type="reset" value="Видалити у разі помилки">
+        </p>
+    </form>
+</body>
+</html>

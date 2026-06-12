@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета віртуальної бібліотеки</title>
+</head>
+<body>
+    <h2>Анкета користувача віртуальної бібліотеки</h2>
+    
+    <form action="success.html" target="_self" method="GET">
+        
+        <p>Прізвище: <input type="text" name="last_name" size="20">
+           Ім'я: <input type="text" name="first_name" size="20">
+        </p>
+        
+        <p>Пароль: <input type="password" name="lib_pass" size="20" maxlength="20"></p>
+        
+        <p>Стать: 
+            <input type="radio" name="gender" value="male" checked> Чоловіча
+            <input type="radio" name="gender" value="female"> Жіноча
+        </p>
+        
+        <p>Чим займаєтеся (оберіть один варіант): <br>
+            <input type="radio" name="occupation" value="student" checked> Навчаюсь (Студент/Учень)<br>
+            <input type="radio" name="occupation" value="employed"> Працюю<br>
+            <input type="radio" name="occupation" value="freelance"> Фрілансер<br>
+            <input type="radio" name="occupation" value="unemployed"> Тимчасово не працюю<br>
+            <input type="radio" name="occupation" value="retired"> Пенсіонер
+        </p>
+        
+        <p>Ваш вік: <br>
+            <input type="radio" name="age" value="under_18" checked> До 18 років<br>
+            <input type="radio" name="age" value="18_25"> 18 - 25 років<br>
+            <input type="radio" name="age" value="26_40"> 26 - 40 років<br>
+            <input type="radio" name="age" value="over_40"> Більше 40 років
+        </p>
+        
+        <p>Якою тематикою цікавитеся (утримуйте Ctrl для вибору декількох): <br>
+            <select name="themes" multiple size="7">
+                <option value="scifi">Наукова фантастика</option>
+                <option value="fantasy">Фентезі</option>
+                <option value="detective">Детективи та Трилери</option>
+                <option value="history">Історична література</option>
+                <option value="science">Науково-популярна література</option>
+                <option value="tech">Програмування та Інженерія</option>
+                <option value="psychology">Психологія та Саморозвиток</option>
+                <option value="biography">Біографії та Мемуари</option>
+                <option value="poetry">Поезія</option>
+                <option value="comics">Комікси та Графічні романи</option>
+            </select>
+        </p>
+        
+        <p>Що зараз читаєте: <br>
+            <textarea name="current_book" rows="4" cols="50" placeholder="Напишіть назву книги та автора..."></textarea>
+        </p>
+        
+        <p>
+            <input type="reset" value="Видалити введені результати у разі помилки">
+            <input type="submit" value="Відправити результати">
+        </p>
+
+    </form>
+</body>
+</html>
