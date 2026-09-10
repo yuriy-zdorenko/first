@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="Перша лабораторна робота з HTML Зав'ялова Д.Д.">
+    <meta name="Keywords" content="HTML, лабораторна, про себе, хобі, програмування">
+    <title>Навчальний файл HTML - Лабораторна 1</title>
+</head>
+<body bgcolor="#FFFFCC" text="#000000">
+
+    <p align="center">
+        <font color="#008080" size="7" face="Arial">
+            <b>Лабораторна робота №1</b>
+        </font>
+    </p>
+
+    <h2><font color="#996633">Про себе</font></h2>
+    
+    <p align="justify">
+        Мене звати <b>Денис</b>, я навчаюся на <i>третьому курсі</i> за спеціальністю <u>комп'ютерні науки</u>. З дитинства мені подобалося розбиратися з тим, як влаштовані комп'ютери, програмування та сучасні технології, тому вибір професії був цілком свідомим.
+    </p>
+    
+    <p align="justify">
+        У вільний час я люблю читати технічну літературу, дізнаватися щось нове про розробку програмного забезпечення та просто проводити час за цікавими комп'ютерними іграми з друзями.
+    </p>
+
+    <br>
+
+    <h2><font color="#996633">Моє хобі</font></h2>
+    
+    <p align="justify">
+        Моє головне хобі - це <b><i>IT-технології</i></b> та <u>написання коду</u>. Мені подобається створювати щось своє, вирішувати цікаві задачі та бачити результат власної роботи на екрані.
+    </p>
+
+    <h3><font color="#0000FF">Програмування</font></h3>
+
+    <p>Ось простий приклад створення HTTP-сервера мовою <b>Go</b>, який відповідає на запити у браузері:</p>
+
+    <pre>
+package main
+
+import (
+    "fmt"
+    "net/http"
+)
+
+func main() {
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, "Hello World from Go Server!")
+    })
+
+    fmt.Println("Server is running on port 8080...")
+    http.ListenAndServe(":8080", nil)
+}
+    </pre>
+
+    <br><br>
+
+    <p align="right">
+        Студент групи <i>302-ТН</i> <b>Зав'ялов Д.Д.</b>
+    </p>
+
+</body>
+</html>
