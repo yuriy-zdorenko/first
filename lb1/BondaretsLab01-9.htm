@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+    <TITLE>Лабораторна робота №1 - Бондарець</TITLE>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="Description" content="Персональна сторінка студента: розповідь про себе, захоплення та приклад коду">
+    <meta name="Keywords" content="студент, хобі, програмування, python, лаб1, html">
+</HEAD>
+<BODY BGCOLOR="#181A1B" TEXT="#E0E0E0" LEFTMARGIN="40" RIGHTMARGIN="40" TOPMARGIN="25" BOTTOMMARGIN="25">
+
+    <!-- Загальний заголовок сторінки -->
+    <P ALIGN="CENTER">
+        <FONT FACE="Arial" COLOR="#61AFEF" SIZE="6">
+            <B>ПЕРСОНАЛЬНА СТОРІНКА СТУДЕНТА</B>
+        </FONT>
+    </P>
+    <HR WIDTH="80%" SIZE="2" COLOR="#61AFEF">
+
+    <!-- Розділ 1: Про себе -->
+    <H1><FONT FACE="Arial" COLOR="#4FC1FF">Про себе</FONT></H1>
+
+    <P ALIGN="JUSTIFY">
+        <FONT FACE="Arial" SIZE="3">
+            Мене звати <B><I><U>Данило</U></I></B>, я навчаюся на технічній спеціальності та активно опановую сучасні комп'ютерні технології. 
+            Сфера моїх інтересів охоплює розробку програмного забезпечення, комп'ютерний зір та оптимізацію робочих процесів. 
+            У вільний час я приділяю увагу регулярним фізичним тренуванням та вивченню іноземних мов, що допомагає тримати баланс між розумовою та фізичною активністю.
+        </FONT>
+    </P>
+
+    <P ALIGN="JUSTIFY">
+        <FONT FACE="Arial" SIZE="3">
+            Особливу увагу я звертаю на вивчення системної архітектури та алгоритмів. Вважаю, що розуміння базових принципів — від найпростішої розмітки документів до обробки мультимедійних потоків — є <B>фундаментальною навичкою</B> для будь-якого розробника.
+        </FONT>
+    </P>
+
+    <!-- Розділ 2: Моє хобі -->
+    <H1><FONT FACE="Arial" COLOR="#4FC1FF">Моє хобі</FONT></H1>
+
+    <P ALIGN="JUSTIFY">
+        <FONT FACE="Arial" SIZE="3">
+            Мої захоплення можна розділити на два ключових напрямки: <I>спорт</I> та <I>інженерія</I>. У спорті мене приваблюють єдиноборства за їхню вимогу до високої концентрації, координації та швидкості прийняття рішень. Що стосується цифрового напрямку — це дослідження нових підходів у створенні прикладних інтерфейсів.
+        </FONT>
+    </P>
+
+    <!-- Підрозділ: Програмування -->
+    <H2><FONT FACE="Arial" COLOR="#569CD6">Програмування</FONT></H2>
+
+    <P ALIGN="JUSTIFY">
+        <FONT FACE="Arial" SIZE="3">
+            Серед мов програмування я надаю перевагу <B><FONT COLOR="#98C379">Python</FONT></B> завдяки його гнучкості та багатій екосистемі бібліотек. 
+            Нижче наведено фрагмент коду, який демонструє структуру простої консольної функції для обробки даних із збереженням відступів:
+        </FONT>
+    </P>
+
+    <!-- Відображення коду з контрастним світлим кольором шрифту -->
+    <FONT COLOR="#CE9178">
+<PRE>
+<FONT COLOR="#C586C0">def</FONT> <FONT COLOR="#DCDCAA">process_coordinates</FONT>(points: list[tuple[int, int]]) -> dict:
+    <FONT COLOR="#6A9955">"""Обчислення центру мас набору точок."""</FONT>
+    <FONT COLOR="#C586C0">if not</FONT> points:
+        <FONT COLOR="#C586C0">return</FONT> {"status": "empty", "center": (0, 0)}
+    
+    total_x = sum(pt[0] <FONT COLOR="#C586C0">for</FONT> pt <FONT COLOR="#C586C0">in</FONT> points)
+    total_y = sum(pt[1] <FONT COLOR="#C586C0">for</FONT> pt <FONT COLOR="#C586C0">in</FONT> points)
+    count = len(points)
+    
+    center_x = round(total_x / count, 2)
+    center_y = round(total_y / count, 2)
+    
+    <FONT COLOR="#C586C0">return</FONT> {
+        "status": "success",
+        "count": count,
+        "center": (center_x, center_y)
+    }
+
+<FONT COLOR="#6A9955"># Приклад виклику:</FONT>
+data = [(12, 45), (18, 50), (25, 62)]
+print("Результат:", process_coordinates(data))
+</PRE>
+    </FONT>
+
+    <BR>
+    <HR WIDTH="100%" SIZE="1" COLOR="#333333">
+
+    <!-- Підпис праворуч без зірочки -->
+    <P ALIGN="RIGHT">
+        <FONT FACE="Arial" SIZE="3">
+            <I>Студент групи 301-ТН &nbsp;Бондарець Д.Д.</I>
+        </FONT>
+    </P>
+
+</BODY>
+</HTML>
