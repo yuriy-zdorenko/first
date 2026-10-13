@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+   <META charset="utf-8">
+   <META name="author" content="Крикуненко Марія 301-ТН">
+   <TITLE>Вертикальні рядки - Завдання 4.2</TITLE>
+</HEAD>
+<BODY BGCOLOR="#333333" TEXT="#FFFFFF">
+<H1 ALIGN="CENTER">5 Вертикальних рядків</H1>
+
+<TABLE WIDTH="100%" BORDER="0">
+<TR>
+<TD ALIGN="CENTER">
+    <!-- 1. Текст та рисунки у рядку коливаються -->
+    <MARQUEE DIRECTION="up" BEHAVIOR="alternate" BGCOLOR="#FF9999" HEIGHT="300" WIDTH="150">
+       <CENTER>1. Коливання<BR><IMG SRC="image/pic1.png" WIDTH="100"></CENTER>
+    </MARQUEE>
+</TD>
+
+<TD ALIGN="CENTER">
+    <!-- 2. Послідовність рисунків пробігає знизу до гори та з’являється знову -->
+    <MARQUEE DIRECTION="up" BEHAVIOR="scroll" BGCOLOR="#99FF99" HEIGHT="300" WIDTH="150">
+       <CENTER>2. Знизу вгору<BR><IMG SRC="image/pic1.png" WIDTH="100"><BR><BR><IMG SRC="image/pic2.png" WIDTH="100"></CENTER>
+    </MARQUEE>
+</TD>
+
+<TD ALIGN="CENTER">
+    <!-- 3. Послідовність рисунків пробігає згори до низу із зупинкою у границі області -->
+    <MARQUEE DIRECTION="down" BEHAVIOR="slide" BGCOLOR="#9999FF" HEIGHT="300" WIDTH="150">
+       <CENTER>3. Згори вниз (Стоп)<BR><IMG SRC="image/pic2.png" WIDTH="100"></CENTER>
+    </MARQUEE>
+</TD>
+
+<TD ALIGN="CENTER">
+    <!-- 4. Затримка 1 (текст) -->
+    <MARQUEE DIRECTION="up" SCROLLDELAY="30" BGCOLOR="#FFFF99" HEIGHT="300" WIDTH="150">
+       <FONT COLOR="#000000"><CENTER>4. Швидко вгору<BR>(Затримка 30)</CENTER></FONT>
+    </MARQUEE>
+</TD>
+
+<TD ALIGN="CENTER">
+    <!-- 5. Затримка 2 (текст) -->
+    <MARQUEE DIRECTION="down" SCROLLDELAY="500" BGCOLOR="#FF99FF" HEIGHT="300" WIDTH="150">
+       <FONT COLOR="#000000"><CENTER>5. Повільно вниз<BR>(Затримка 500)</CENTER></FONT>
+    </MARQUEE>
+</TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>
