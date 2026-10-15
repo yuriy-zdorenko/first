@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>SushkoLab02-3.html</title>
+        <meta name="description" content="Сторніка про себе">
+        <meta name="keywords" content="Ключові слова виділено всим">
+    </head>
+    <body bgcolor="ffooff">
+        <P Align="Center">
+            <font size="6" color="0000ff" face="Comic Sans MS">Про себе</font>
+        </P>
+        <P Align="justify">
+            <font size="3" color="ff0000" face="Comic Sans MS">
+            Я народився в сім'ї <b><i><U>вчителів</U></i></b>. Сам ним не хотів стати ніколи, бо вважаю, що не маю терпіння для цього.
+            <b><u><i>Дитинство</i></u></b> було чудовим завдяки <b><u><i>Мамі</i></u></b>. Я веселий хлопець.Все</font>
+        </P>
+        <P Align="justify">
+            <font size="3" color="ffff00" face="Comic Sans MS">
+            В шкільні роки займався суботниками. Активно допомагав прибирати пам'ятки культури і прикрашав моє рідне село. В мене є "нішеві" хоббі. Я хвороблива людина</font>
+        </P>
+        <P Align="justify">
+            <font size="3" color="996633" face="Comic Sans MS">
+            В мене є домашня собака, яка нічого не робить і огризається. Вона доволі дивна може цілими днями лежати і нічого не робити. Може лазити десь цілий день і ввечері прийти</font>
+        </P>
+        <P Align="Center">
+            <font size="6" color="0000ff" face="Comic Sans MS">Моє хоббі</font>
+        </P>
+        <P Align="justify">
+            <font size="3" color="ff0000" face="Comic Sans MS">
+            Як такового хоббі в мене нема. Якщо мен іщось подобається то я цим займаюсь, якщо ні то не займаюсь.
+            Проте я більше за все люблю щось що заставлє задуматись або логічно помислити</font>   
+        </P>
+        <img src="темерия.jpg" Align="right" alt="герб темерії">
+        <h2>Програмування</h2> 
+        <p> def create_project_services(project:ProjectDB,user:UserDB,db:AsyncSession):<br>
+            owner_id = user.id<br>
+            project_db = ProjectDB(<br>
+                name = project.name,<br>
+                description = project.description,<br>
+                owner_id = owner_id<br>
+            )<br>
+            db.add(project_db)<br>
+            await db.commit()<br>
+            await db.refresh(project_db)<br>
+            project_member_db = ProjectMemberDB(project_id=project_db.id, user_id=owner_id, role="owner")<br>
+            db.add(project_member_db)<br>
+            await db.commit()<br>
+            await db.refresh(project_db)<br>
+            return project_db</p>
+        <p Align="right"><i><u>Студент групи 302-ТН Сушко О.Ю.</u></i></p>
+    </body>
+</html>
