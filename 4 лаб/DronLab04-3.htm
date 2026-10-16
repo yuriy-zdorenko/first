@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Лабораторна робота №4 — Вертикальні рядки</title>
+</head>
+<body bgcolor="#EBEDEF" text="#2C3E50">
+
+   <h2 align="center">Лабораторна робота №4 — Вертикальні рухомі рядки та зображення</h2>
+
+   <table border="0" align="center" cellspacing="15" cellpadding="5">
+      <tr valign="top">
+
+         <!-- 1. Коливання тексту та картинок -->
+         <td align="center">
+            <b>1. Коливання</b><br><br>
+            <marquee bgcolor="#FADBD8" width="180" height="220" direction="up" behavior="alternate">
+               <font face="Arial" size="3" color="#78281F"><b>Динамічний показ годинника</b></font><br><br>
+               <img src="image/godynnyk.jpg" width="100%" alt="Годинник">
+            </marquee>
+         </td>
+
+         <!-- 2. Знизу догори з циклом -->
+         <td align="center">
+            <b>2. Знизу догори</b><br><br>
+            <marquee bgcolor="#D4EFDF" width="180" height="220" direction="up" behavior="scroll">
+               <img src="image/godynnyk.jpg" width="100%" alt="Годинник"><br><br>
+               <img src="image/emblema.jpg" width="100%" alt="Емблема університету"><br><br>
+               <font face="Verdana" size="2" color="#117864"><b>Стрічка ілюстрацій</b></font>
+            </marquee>
+         </td>
+
+         <!-- 3. Згори донизу із зупинкою -->
+         <td align="center">
+            <b>3. Згори донизу (зупинка)</b><br><br>
+            <marquee bgcolor="#FCF3CF" width="180" height="220" direction="down" behavior="slide">
+               <img src="image/emblema.jpg" width="100%" alt="Емблема університету"><br><br>
+               <font face="Tahoma" size="2" color="#7D6608"><b>Фіксація кадру</b></font>
+            </marquee>
+         </td>
+
+         <!-- 4. Швидкий вертикальний рядок -->
+         <td align="center">
+            <b>4. Швидкий </b><br><br>
+            <marquee bgcolor="#E8DAEF" width="180" height="220" direction="up" scrolldelay="50">
+               <font face="Arial" size="3" color="#4A235A"><b>Швидкий потік даних</b></font><br><br>
+               <img src="image/godynnyk.jpg" width="100%" alt="Годинник">
+            </marquee>
+         </td>
+
+         <!-- 5. Повільний вертикальний рядок -->
+         <td align="center">
+            <b>5. Повільний </b><br><br>
+            <marquee bgcolor="#D6EAF8" width="180" height="220" direction="down" scrolldelay="250">
+               <font face="Georgia" size="3" color="#1B4F72"><b>Плавний рух донизу</b></font><br><br>
+               <img src="image/emblema.jpg" width="100%" alt="Емблема університету">
+            </marquee>
+         </td>
+
+      </tr>
+   </table>
+
+</body>
+</html>
