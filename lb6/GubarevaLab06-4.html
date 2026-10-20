@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <TITLE>Головна сторінка - Меню</TITLE>
+    </head>
+    <body>
+
+        <center>
+            <h1>Інтерактивне меню</h1>
+            <p>Натисніть на відповідну фігуру, щоб перейти до потрібного розділу.</p>
+
+            <!-- Картування зображення 1000x700 -->
+            <map name="menu_map">
+                <!-- 1. Прямокутник ("Моя батьківщина") -->
+                <area shape="rect" coords="220,50,510,310" href="GubarevaLab06-3.html" title="Моя батьківщина (Кременчук)">
+
+                <!-- 2. Круг ("Посилання") — формат: "центр_x, центр_y, радіус" -->
+                <area shape="circle" coords="300,580,140" href="GubarevaLab05-3.html" title="Мої гіперпосилання">
+
+                <!-- 3. Багатокутник / Трикутник ("Про мене") — координати вершин x,y -->
+                <area shape="poly" coords="510,380,890,380,700,980" href="GubarevaLab01-9.html" title="Про мене (Домашня сторінка)">
+            </map>
+
+            <!-- Основне зображення -->
+            <img src="image/navigation.jpg" alt="Меню" usemap="#menu_map" border="0">
+        </center>
+    </body>
+</html>
