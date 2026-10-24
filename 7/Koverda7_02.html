@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+    <TITLE>Лабораторна робота №7 - Завдання 2</TITLE>
+    <meta charset=UTF-8>
+</HEAD>
+<BODY>
+    <h2 align="center">Завдання 2: Демонстрація всіх елементів форм HTML</h2>
+    
+    <form action="" method="POST">
+        <h3>1. Текстове поле </h3>
+        Прізвище та ім'я: <input type="text" name="fullname" value="Шевченко Тарас" size="30" maxlength="50"><br><br>
+
+        <h3>2. Поле паролю (PASSWORD)</h3>
+        Пароль доступу: <input type="password" name="pwd" size="10" maxlength="15"><br><br>
+
+        <h3>3. Текстова область (TEXTAREA)</h3>
+        Коментар:<br>
+        <textarea name="comments" rows="4" cols="40">Введіть ваші побажання тут...</textarea><br><br>
+
+        <h3>4. Випадаючий список (SELECT)</h3>
+        Оберіть місто:
+        <select name="city">
+            <option value="poltava" selected>Полтава</option>
+            <option value="kyiv">Київ</option>
+            <option value="lviv">Львів</option>
+        </select><br><br>
+
+        <h3>5. Прапорці (CHECKBOX)</h3>
+        Мови програмування:<br>
+        <input type="checkbox" name="lang" value="cpp" checked> C++<br>
+        <input type="checkbox" name="lang" value="python"> Python<br>
+        <input type="checkbox" name="lang" value="js"> JavaScript<br><br>
+
+        <h3>6. Радіокнопки (RADIO)</h3>
+        Форма навчання:<br>
+        <input type="radio" name="study" value="d" checked> Денна<br>
+        <input type="radio" name="study" value="z"> Заочна<br><br>
+
+        <h3>7. Прикріплення файлу (FILE)</h3>
+        Завантажити резюме: <input type="file" name="resume" accept=".pdf,.doc"><br><br>
+
+        <h3>8. Кнопки (SUBMIT, RESET, BUTTON)</h3>
+        <input type="submit" name="subm" value="Надіслати">
+        <input type="reset" name="res" value="Очистити">
+        <input type="button" value="Час" onclick="alert(Date());">
+    </form>
+</BODY>
+</HTML>

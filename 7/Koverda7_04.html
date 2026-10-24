@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+    <TITLE>Лабораторна робота №7 - Завдання 4</TITLE>
+    <meta charset=UTF-8>
+</HEAD>
+<BODY>
+    <h2 align="center">Завдання 4: Форма замовлення товару</h2>
+
+    <form action="" method="POST">
+        <pre>
+        Номер банківського рахунку: <input type="text" name="bank_account" size="30" maxlength="20">
+        Особистий номер користувача: <input type="text" name="user_id" size="20" maxlength="10">
+
+        Список товарів (можна обрати декілька):
+        <select name="products" size="4" multiple>
+            <option value="laptop">Ноутбук Lenovo</option>
+            <option value="phone">Смартфон Samsung</option>
+            <option value="tablet">Планшет Apple iPad</option>
+            <option value="monitor">Монітор Dell</option>
+        </select>
+
+        Вид оплати:
+        <input type="radio" name="payment" value="cash" checked> Готівковий розрахунок
+        <input type="radio" name="payment" value="cashless"> Безготівковий розрахунок
+
+        Додаткова інформація, яку бажаєте одержати:
+        <input type="checkbox" name="info_balance" value="yes" checked> Дані про залишки на рахунку
+        <input type="checkbox" name="info_payments" value="yes"> Список останніх виплат по рахунку
+
+        Довільні коментарі користувача:
+        </pre>
+        <textarea name="comments" rows="4" cols="50">Ваші побажання до замовлення...</textarea><br><br>
+
+        <input type="submit" value="Підтвердити замовлення">
+        <input type="reset" value="Скинути дані">
+    </form>
+</BODY>
+</HTML>
