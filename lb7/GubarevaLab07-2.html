@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Лабораторна робота №7 - Завдання 2</title>
+    </head>
+    <body>
+        <h2>Завдання 2. Форма із застосуванням усіх елементів керування</h2>
+        <form action="success.html">
+            <!-- TEXT (однорядкове текстове поле) -->
+            <p>
+                Введіть ім'я користувача:
+                <input type="text" name="FIO" align="LEFT" size="23" maxlength="30">
+            </p>
+
+            <!-- PASSWORD (поле для введення пароля) -->
+            <p>
+                Введіть пароль доступу:
+                <input type="password" size="8" maxlength="10">
+            </p>
+            <!-- RADIOBUTTON (радіокнопка) -->
+            <p>
+                Укажіть Вашу стать (вибір одного значення):<br>
+                <input type="radio" name="gender" value="1" checked> Чоловіча<br>
+                <input type="radio" name="gender" value="2"> Жіноча
+            </p>
+            <!-- CHECKBOX (прапорець) -->
+            <p>
+                Укажіть Ваші навички:<br>
+                <input type="checkbox" name="skill" value="1" checked> HTML<br>
+                <input type="checkbox" name="skill" value="2"> JavaScript<br>
+                <input type="checkbox" name="skill" value="3"> Perl<br>
+                <input type="checkbox" name="skill" value="4"> XML<br>
+                <input type="checkbox" name="skill" value="5"> FLASH
+            </p>
+            <!-- SELECT (список з єдиним вибором) -->
+            <p>
+                Оберіть день тижня:
+                <select name="week" size="1">
+                    <option value="1" selected>Понеділок</option>
+                    <option value="2">Вівторок</option>
+                    <option value="3">Середа</option>
+                    <option value="4">Четвер</option>
+                    <option value="5">П’ятниця</option>
+                    <option value="6">Субота</option>
+                    <option value="7">Неділя</option>
+                </select>
+            </p>
+            <!-- SELECT з атрибутом MULTIPLE (список з множинним вибором) -->
+            <p>
+                Оберіть декілька днів (з затиснутою клавішею Ctrl):<br>
+                <select name="days" size="4" multiple>
+                    <option value="1">Понеділок</option>
+                    <option value="2">Вівторок</option>
+                    <option value="3">Середа</option>
+                    <option value="4">Четвер</option>
+                    <option value="5">П’ятниця</option>
+                </select>
+            </p>
+            <!-- FILE (прикріплення файлів) -->
+            <p>
+                Прикріпити файл (резюме/фото):
+                <input type="file" name="user_file" size="50" accept="image/*">
+            </p>
+            <!-- TEXTAREA (багаторядкова текстова область) -->
+            <p>
+                Ваша адреса / інформація про себе:<br>
+                <textarea name="address" wrap="virtual" cols="30" rows="3">Ваша адреса...</textarea>
+            </p>
+            <!-- BUTTON (звичайна кнопка з дійством onclick) -->
+            <p>
+                <input type="button" value="Показати сьогоднішнє число" onclick="alert(Date());">
+            </p>
+            <!-- RESET та SUBMIT (командні кнопки) -->
+            <p>
+                <input type="reset" name="reset_btn" value="СКАСУВАТИ ВВОД">
+                <input type="submit" name="subm" value="ВІДПРАВИТИ ДАНІ">
+            </p>
+        </form>
+    </body>
+</html>

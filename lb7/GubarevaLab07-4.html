@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Замовлення товару</title>
+    </head>
+    <body>
+
+        <h2>Завдання 3. Форма для заповнення замовлення на товар</h2>
+
+        <form action="success.html" target="_blank">
+            
+            <!-- 1. Поле вводу номера банківського рахунку -->
+            <p>
+                Номер банківського рахунку:<br>
+                <input type="text" name="account_number" size="30" maxlength="30">
+            </p>
+
+            <!-- 2. Поле вводу особистого номера користувача -->
+            <p>
+                Особистий номер користувача:<br>
+                <input type="text" name="user_id" size="20" maxlength="20">
+            </p>
+
+            <!-- 3. Список товарів (вибір одного або декількох) -->
+            <p>
+                Оберіть товари (для вибору декількох затисніть Ctrl):<br>
+                <select name="products" size="4" multiple>
+                    <option value="item1">Ноутбук</option>
+                    <option value="item2">Смартфон</option>
+                    <option value="item3">Навушники</option>
+                    <option value="item4">Клавіатура</option>
+                    <option value="item5">Монітор</option>
+                </select>
+            </p>
+
+            <!-- 4. Вид оплати (готівковий чи безготівковий розрахунок) -->
+            <p>
+                Вид оплати:<br>
+                <input type="radio" name="payment_type" value="cash" checked> Готівковий розрахунок<br>
+                <input type="radio" name="payment_type" value="cashless"> Безготівковий розрахунок
+            </p>
+
+            <!-- 5. Додаткова інформація при відповіді (прапорці) -->
+            <p>
+                Бажана додаткова інформація при відповіді:<br>
+                <input type="checkbox" name="info_balance" value="yes"> Данi про залишки на рахунку<br>
+                <input type="checkbox" name="info_payments" value="yes"> Список останнiх виплат по рахунку
+            </p>
+
+            <!-- 6. Довільні коментарі користувача -->
+            <p>
+                Довільні коментарі до замовлення:<br>
+                <textarea name="comments" cols="40" rows="5" wrap="virtual"></textarea>
+            </p>
+
+            <!-- Кнопки керування -->
+            <p>
+                <input type="submit" value="Відправити замовлення">
+                <input type="reset" value="Очистити форму">
+            </p>
+
+        </form>
+
+    </body>
+</html>
