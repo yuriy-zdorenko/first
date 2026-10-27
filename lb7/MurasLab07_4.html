@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Завдання 3 - Форма замовлення товару</title>
+    <meta charset="utf-8" >
+</head>
+<body>
+    <h2 align="center">Завдання 3. Форма для заповнення замовлення на товар</h2>
+<form>
+    Введіть номер банківського рахунку:<br>
+    <input type="text" name="bank_account" size="30" maxlength="30"><br><br>
+    Введіть особистий номер користувача:<br>
+    <input type="text" name="user_id" size="20" maxlength="20"><br><br>
+    Виберіть товар(и) зі списку:<br>
+    <select name="goods" size="5" multiple>
+        <option value="1">Ноутбук</option>
+        <option value="2">Смартфон</option>
+        <option value="3">Монітор</option>
+        <option value="4">Клавіатура</option>
+        <option value="5">Миша</option>
+    </select><br><br>
+    Напишіть довільні коментарі:<br>
+    <textarea name="comments" cols="40" rows="4" wrap="virtual">Ваші коментарі...</textarea><br><br>
+    Вкажіть вид оплати:<br>
+    <input type="radio" name="payment" value="cash" checked> Готівковий розрахунок<br>
+    <input type="radio" name="payment" value="noncash"> Безготівковий розрахунок<br><br>
+    Одержати додаткову інформацію при відповіді:<br>
+    <input type="checkbox" name="balance" value="yes"> Дані про залишки на рахунку<br>
+    <input type="checkbox" name="payments" value="yes"> Список останніх виплат по рахунку<br><br>
+    <input type="submit" value="Відправити дані">
+    <input type="reset" value="Скинути форму">
+</form>
+</body>
+</html>
