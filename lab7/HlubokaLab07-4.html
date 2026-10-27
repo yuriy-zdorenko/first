@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Форма для заповнення замолення на товар</title>
+    </head>
+    <body>
+        <form action="result.html" target="_blank">
+            <p>
+                Введіть номер банківського рахунку: 
+                <input type="text" name="number" size="30">
+                <br>
+                Введіть особистий номер користувача:
+                <input type="text" name="usernum" size="30">
+                <br><br><br>
+                Оберіть список товарів:<br>
+                <input type="checkbox" name="tovar1" value="yes"> Джордж Орвелл — «1984» <br>
+                <input type="checkbox" name="tovar2" value="yes"> Антуан де Сент-Екзюпері — «Маленький принц» <br>
+                <input type="checkbox" name="tovar3" value="yes"> Джоан Роулінг — «Гаррі Поттер і філософський камінь» <br>
+                <input type="checkbox" name="tovar4" value="yes"> Гарпер Лі — «Убити пересмішника» <br>
+                <br><br><br>
+                Ввести коментар:<br>
+                <textarea name="coment" cols="40" rows="6"></textarea>
+                <br><br><br>
+                Вкажіть спосіб оплати:<br>
+                <input type="radio" name="pay" value="card"> Карта
+                <input type="radio" name="pay" value="cash"> Гіотівка 
+                <br><br><br>
+                Яку додаткову інформація бажаєте отримати?<br>
+                <input type="checkbox" name="var1"> Дані про залишки на рахунку <br>
+                <input type="checkbox" name="var2"> Список останніх виплат по рахнку
+                <br><br><br>
+                <input type="submit" value="Надіслати">
+                <input type="reset" value="Скасувати">
+            </p>
+        </form>
+    </body>
+</html>
