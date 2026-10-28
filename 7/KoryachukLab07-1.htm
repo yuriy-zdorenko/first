@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <TITLE>Проста форма</TITLE>
+    <meta name="Description" content="Форма із текстовим полем, перемикачами, списком і прапорцями">
+    <meta name="Keywords" content="форма, HTML, лабораторна робота 7">
+</HEAD>
+<BODY BGCOLOR="#E3F2FD" TEXT="#0D1B3E">
+    <H2 ALIGN="CENTER"><FONT FACE="Georgia" COLOR="#AD1457">Завдання 1: створення простої форми студента</FONT></H2>
+    <FORM ACTION="KoryachukLab07-1-result.htm" METHOD="GET" TARGET="_blank">
+<PRE>
+Ваше ім'я: <INPUT NAME="name" TYPE="text" MAXLENGTH="40" SIZE="40" VALUE="">
+Ваша стать: <INPUT TYPE="radio" NAME="pol" VALUE="male" CHECKED> Чоловіча   <INPUT TYPE="radio" NAME="pol" VALUE="female"> Жіноча
+
+На якому курсі Ви навчаєтесь?
+<SELECT NAME="curs" SIZE="1">
+    <OPTION VALUE="1" SELECTED> Перший </OPTION>
+    <OPTION VALUE="2">Другий</OPTION>
+    <OPTION VALUE="3">Третій</OPTION>
+    <OPTION VALUE="4">Четвертий</OPTION>
+    <OPTION VALUE="5">П'ятий</OPTION>
+</SELECT>
+
+Які дисципліни Ви вивчаєте?
+<INPUT TYPE="checkbox" NAME="web" VALUE="yes" CHECKED> WEB-програмування
+<INPUT TYPE="checkbox" NAME="eldinam" VALUE="yes"> Технічна електродинаміка
+<INPUT TYPE="checkbox" NAME="networks" VALUE="yes"> Комп'ютерні мережі
+<INPUT TYPE="checkbox" NAME="cpp" VALUE="yes"> Програмування на C++
+
+Напишіть декілька слів про себе:
+</PRE>
+        <TEXTAREA NAME="about" ROWS="5" COLS="60" WRAP="off"></TEXTAREA>
+        <P>
+            <INPUT TYPE="submit" VALUE=" Відіслати дані ">
+            <INPUT TYPE="reset" VALUE=" Очистити форму ">
+        </P>
+    </FORM>
+</BODY>
+</HTML>

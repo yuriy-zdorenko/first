@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <TITLE>Усі елементи форм</TITLE>
+    <meta name="Description" content="Форма, що містить усі основні елементи вводу HTML">
+    <meta name="Keywords" content="форма, HTML, лабораторна робота 7">
+</HEAD>
+<BODY BGCOLOR="#FFF8E1" TEXT="#263238">
+    <H2 ALIGN="CENTER"><FONT FACE="Georgia" COLOR="#AD1457">Завдання 2: форма з усіма елементами вводу</FONT></H2>
+    <FORM ACTION="KoryachukLab07-1-result.htm" METHOD="POST" ENCTYPE="multipart/form-data">
+    <FONT FACE="Verdana" SIZE="2">
+        <H3>1. Текстове поле (TEXT)</H3>
+        Прізвище та ім'я: <INPUT TYPE="text" NAME="fullname" SIZE="30" MAXLENGTH="50" VALUE="Корячук В.В.">
+
+        <H3>2. Поле пароля (PASSWORD)</H3>
+        Пароль: <INPUT TYPE="password" NAME="pwd" SIZE="15" MAXLENGTH="20">
+
+        <H3>3. Багаторядкове поле (TEXTAREA)</H3>
+        <TEXTAREA NAME="comment" ROWS="4" COLS="45"></TEXTAREA>
+
+        <H3>4. Списки (SELECT)</H3>
+        Місто навчання:
+        <SELECT NAME="city" SIZE="1">
+            <OPTION VALUE="kyiv" SELECTED>Київ</OPTION>
+            <OPTION VALUE="lviv">Львів</OPTION>
+            <OPTION VALUE="kharkiv">Харків</OPTION>
+            <OPTION VALUE="odesa">Одеса</OPTION>
+        </SELECT>
+        &nbsp;&nbsp; Улюблені мови програмування (можна кілька):
+        <SELECT NAME="langs" SIZE="4" MULTIPLE>
+            <OPTION VALUE="cpp">C++</OPTION>
+            <OPTION VALUE="python">Python</OPTION>
+            <OPTION VALUE="js">JavaScript</OPTION>
+            <OPTION VALUE="java">Java</OPTION>
+        </SELECT>
+
+        <H3>5. Прапорці (CHECKBOX)</H3>
+        <INPUT TYPE="checkbox" NAME="html" VALUE="yes" CHECKED> HTML
+        <INPUT TYPE="checkbox" NAME="css" VALUE="yes"> CSS
+        <INPUT TYPE="checkbox" NAME="js" VALUE="yes"> JavaScript
+
+        <H3>6. Перемикачі (RADIO)</H3>
+        <INPUT TYPE="radio" NAME="form" VALUE="day" CHECKED> Денна форма навчання
+        <INPUT TYPE="radio" NAME="form" VALUE="extra"> Заочна форма навчання
+
+        <H3>7. Вибір файлу (FILE)</H3>
+        Резюме: <INPUT TYPE="file" NAME="resume" SIZE="40">
+
+        <H3>8. Кнопки (SUBMIT, RESET, BUTTON)</H3>
+        <INPUT TYPE="submit" NAME="send" VALUE="Надіслати">
+        <INPUT TYPE="reset" NAME="clear" VALUE="Очистити">
+        <INPUT TYPE="button" NAME="date" VALUE="Показати дату" ONCLICK="alert(new Date());">
+    </FONT>
+    </FORM>
+</BODY>
+</HTML>

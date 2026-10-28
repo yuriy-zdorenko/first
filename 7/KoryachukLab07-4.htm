@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <TITLE>Замовлення товару</TITLE>
+    <meta name="Description" content="Форма замовлення товару з банківським рахунком та способом оплати">
+    <meta name="Keywords" content="форма, HTML, лабораторна робота 7">
+</HEAD>
+<BODY BGCOLOR="#EDE7F6" TEXT="#1A237E">
+    <H2 ALIGN="CENTER"><FONT FACE="Georgia" COLOR="#4A148C">Завдання 4: форма замовлення товару</FONT></H2>
+    <FORM ACTION="KoryachukLab07-1-result.htm" METHOD="POST">
+    <FONT FACE="Verdana" SIZE="2">
+        <P>Номер банківського рахунку:<BR>
+        <INPUT TYPE="text" NAME="account" SIZE="30" MAXLENGTH="29"></P>
+
+        <P>Особистий номер користувача:<BR>
+        <INPUT TYPE="text" NAME="userid" SIZE="20" MAXLENGTH="12"></P>
+
+        <P>Список товарів (утримуйте Ctrl, щоб обрати декілька):<BR>
+        <SELECT NAME="goods" SIZE="5" MULTIPLE>
+            <OPTION VALUE="laptop">Ноутбук</OPTION>
+            <OPTION VALUE="mouse">Комп'ютерна миша</OPTION>
+            <OPTION VALUE="keyboard">Клавіатура</OPTION>
+            <OPTION VALUE="monitor">Монітор</OPTION>
+            <OPTION VALUE="headset">Навушники</OPTION>
+        </SELECT></P>
+
+        <P>Вид оплати:<BR>
+        <INPUT TYPE="radio" NAME="payment" VALUE="cash" CHECKED> Готівковий розрахунок<BR>
+        <INPUT TYPE="radio" NAME="payment" VALUE="cashless"> Безготівковий розрахунок</P>
+
+        <P>Яку додаткову інформацію бажаєте отримати у відповіді?<BR>
+        <INPUT TYPE="checkbox" NAME="balance" VALUE="yes"> Дані про залишок на рахунку<BR>
+        <INPUT TYPE="checkbox" NAME="payments" VALUE="yes"> Список останніх виплат по рахунку</P>
+
+        <P>Коментарі користувача:<BR>
+        <TEXTAREA NAME="comments" ROWS="4" COLS="50"></TEXTAREA></P>
+
+        <P><INPUT TYPE="submit" VALUE="Підтвердити замовлення">
+        <INPUT TYPE="reset" VALUE="Очистити форму"></P>
+    </FONT>
+    </FORM>
+</BODY>
+</HTML>
