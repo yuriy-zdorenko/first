@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: powderblue
+        }
+    </style>
+    <meta name="Kaywords" charset="Сторінка, НТМL">
+    <meta name="Description" charset="Текстова сторінка">
+    <meta charset="utf-8">
+    <title>Головна сторінка</title>
+</head>
+<body>
+    <header>
+    </header>
+    <section>
+        <article>
+        <header><h1 style="text-align:center; color: blue; font-family: Arial;">Про себе</h1></header>
+        <p style="text-align:left; font-family: Arial;">
+            Мене звати <i><b>Олег</b></i>. Я — людина, яка вміє бачити красу в дрібницях: у вранішньому світлі, що пробивається крізь фіранки, у запаху свіжої кави, у щирій усмішці незнайомця. Я люблю тишу, але не боюся голосно говорити про те, що важливо. <i><u>Моє серце</u></i> — це поєднання мрій і логіки: я можу годинами фантазувати про майбутнє, а потім скласти чіткий план, як його досягти.
+
+<br/>Я вірю в силу доброти, у важливість чесності й у те, що кожна людина має свою історію, яку варто почути. Мені подобається вчитися — не лише з книжок, а й з життя. І хоча іноді я вагаюся, я завжди знаходжу в собі сили йти вперед.
+        </p>
+        </article>
+        <article>
+        <header><h1 style="text-align:center; color: blue; font-family: Arial;">Мої хобі</h1></header>
+        <p style="text-align: left; font-family: Arial;">
+            Мої хобі — це частинка мене, те, що робить мої дні яскравішими. Я обожнюю <i><u>читати</u></i>: книжки для мене — як двері в інші світи. Особливо люблю історії, які змушують замислитися, переосмислити щось у собі.
+
+<br/>Ще я <i><u> малюю</u></i>. Коли беру пензель до рук, все навколо стихає. Це мій спосіб передати емоції, які словами не завжди виходить висловити. Я не прагну ідеальності — мені важливо, щоб картина була щирою.
+
+<br/><i><u>Фотографія</u></i> — ще одна моя пристрасть. Я ловлю моменти, які швидко минають, і зберігаю їх у кадрі. Люблю природне світло, несподівані ракурси, справжні емоції.
+
+<br/>А іноді просто гуляю з навушниками у вухах. <u><i>Музика</i></u> — мій настрій, мій ритм, моя тиша. Вона допомагає мені бути ближче до себе.
+        </p>
+        </article>
+        <article>
+        <header><h2 style="text-align: center; color: blue; font-family: Arial;">Програмування</h2></header>
+        <pre><code>
+          CREATE TABLE `Groups` (
+    GroupID   INT AUTO_INCREMENT PRIMARY KEY,
+    GroupName VARCHAR(20)  NOT NULL UNIQUE,
+    Faculty   VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Teachers (
+    TeacherID INT AUTO_INCREMENT PRIMARY KEY,
+    FullName  VARCHAR(100) NOT NULL,
+    Position  VARCHAR(50)  NOT NULL
+);
+
+CREATE TABLE Subjects (
+    SubjectID   INT AUTO_INCREMENT PRIMARY KEY,
+    SubjectName VARCHAR(100) NOT NULL,
+    TeacherID   INT NOT NULL,
+    FOREIGN KEY (TeacherID) REFERENCES Teachers(TeacherID)
+);
+
+CREATE TABLE Students (
+    StudentID INT AUTO_INCREMENT PRIMARY KEY,
+    FullName  VARCHAR(100) NOT NULL,
+    BirthDate DATE         NOT NULL,
+    Email     VARCHAR(100) NOT NULL UNIQUE,
+    GroupID   INT NOT NULL,
+    FOREIGN KEY (GroupID) REFERENCES `Groups`(GroupID)
+);
+
+CREATE TABLE Grades (
+    GradeID      INT AUTO_INCREMENT PRIMARY KEY,
+    StudentID    INT NOT NULL,
+    SubjectID    INT NOT NULL,
+    Grade        TINYINT UNSIGNED NOT NULL,
+    DateReceived DATE NOT NULL,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
+    FOREIGN KEY (SubjectID) REFERENCES Subjects(SubjectID)
+);
+        </code></pre>
+        </article>
+        </section>
+        <footer>
+        <p style="text-align: right"><u><i>Студентка групи 301-ТН Тонченко О. М.</i></u></p>
+        </footer>
+</body>
+</html>
