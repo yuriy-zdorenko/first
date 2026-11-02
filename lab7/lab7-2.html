@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна 7 - Завдання 2 (Усі елементи форм)</title>
+</head>
+<body bgcolor="#FFFFFF" text="#1A1A1A">
+
+    <h2>Завдання 4.1. Комплексна форма з усіма типами елементів</h2>
+
+    <form action="success.html" target="_blank" method="GET">
+        <fieldset>
+            <legend><b>Особисті дані та автентифікація</b></legend>
+            <p>Логін користувача (TEXT): <input type="text" name="username" value="MOMON8798" size="25" maxlength="20"></p>
+            <p>Пароль доступу (PASSWORD): <input type="password" name="pass" size="15" maxlength="15"></p>
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend><b>Навички та формат навчання</b></legend>
+            <p>Виберіть напрямок (RADIO):<br>
+                <input type="radio" name="direction" value="go" checked> Go Backend
+                <input type="radio" name="direction" value="frontend"> Frontend
+                <input type="radio" name="direction" value="devops"> DevOps
+            </p>
+
+            <p>Технології (CHECKBOX):<br>
+                <input type="checkbox" name="tech1" value="postgres" checked> PostgreSQL
+                <input type="checkbox" name="tech2" value="docker" checked> Docker
+                <input type="checkbox" name="tech3" value="grpc"> gRPC
+                <input type="checkbox" name="tech4" value="kafka"> Kafka
+            </p>
+
+            <p>Рівень володіння англійською (SELECT):<br>
+                <select name="english" size="1">
+                    <option value="A2">A2 - Pre-Intermediate</option>
+                    <option value="B1">B1 - Intermediate</option>
+                    <option value="B2" selected>B2 - Upper-Intermediate</option>
+                    <option value="C1">C1 - Advanced</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend><b>Додаткові файли та коментарі</b></legend>
+            <p>Завантажити портфоліо (FILE): <input type="file" name="portfolio" accept="image/*,.pdf"></p>
+            <p>Про себе (TEXTAREA):<br>
+                <textarea name="bio" rows="4" cols="50">Студент групи 302-ТН, розробник Go.</textarea>
+            </p>
+        </fieldset>
+
+        <br>
+        <p>
+            <input type="button" value="Показати поточний час" onclick="alert('Поточний час: ' + new Date().toLocaleTimeString());">
+            <input type="submit" value="Відправити форму">
+            <input type="reset" value="Скинути введення">
+        </p>
+    </form>
+
+    <br><hr width="90%">
+    <p align="right">Студент групи <i>302-ТН</i> <b>Зав'ялов Д.</b></p>
+
+</body>
+</html>

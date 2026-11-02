@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна 7 - Завдання 1 (Зав'ялов Д.)</title>
+</head>
+<body bgcolor="#F9F9F9" text="#000000">
+
+    <h2>Завдання 1. Створення базової форми зворотного зв'язку</h2>
+
+    <form action="success.html" target="_blank" method="GET">
+        <pre>
+Ваше ім'я: <input name="name" type="text" maxlength="40" size="40" value="Зав'ялов Денис">
+
+Ваша стать: <input type="radio" name="pol" value="male" checked>Чоловіча   <input type="radio" name="pol" value="female">Жіноча
+
+На якому курсі Ви навчаєтесь? 
+            <select name="curs" size="1">
+                <option value="1">Перший</option>
+                <option value="2">Другий</option>
+                <option value="3" selected>Третій</option>
+                <option value="4">Четвертий</option>
+                <option value="5">П'ятий</option>
+            </select>
+
+Які дисципліни ви вивчаєте на курсі?
+            <input type="checkbox" name="web" value="yes" checked> WEB-програмування
+            <input type="checkbox" name="eldinam" value="yes"> Технічна електродинаміка
+            <input type="checkbox" name="db" value="yes" checked> Бази даних
+            <input type="checkbox" name="os" value="yes"> Операційні системи
+
+Напишіть декілька слів про себе:
+        </pre>
+
+        <textarea name="about" rows="6" cols="60" wrap="off">Студент групи 302-ТН, вивчаю Go та веб-технотехнології.</textarea>
+        
+        <p>
+            Прикріпити резюме/файл: <input type="file" name="friend" size="50" accept=".pdf,.docx,.jpg">
+        </p>
+
+        <p>
+            <input type="submit" value="Відіслати дані">
+            <input type="reset" value="Очистити форму">
+        </p>
+    </form>
+
+    <br><hr width="90%">
+    <p align="right">Студент групи <i>302-ТН</i> <b>Зав'ялов Д.</b></p>
+
+</body>
+</html>

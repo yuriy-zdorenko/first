@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна 7 - Завдання 4 (Замовлення товарів)</title>
+</head>
+<body bgcolor="#FFFDF0" text="#1A1A1A">
+
+    <h2>Завдання 4.3. Форма замовлення товарів та банківські реквізити</h2>
+
+    <form action="success.html" target="_blank" method="GET">
+        <table border="1" cellpadding="8" cellspacing="0" bgcolor="#FFFFFF" width="75%" align="center">
+            <tr bgcolor="#4682B4">
+                <th colspan="2"><font color="#FFFFFF" size="4">ОФОРМЛЕННЯ ЗАМОВЛЕННЯ ТА ОПЛАТИ</font></th>
+            </tr>
+            <tr>
+                <td width="45%"><b>Номер банківського рахунку:</b></td>
+                <td><input type="text" name="account_number" placeholder="UA1234567890000001234567890" size="32" maxlength="29" required></td>
+            </tr>
+            <tr>
+                <td><b>Особистий номер (ID / PIN):</b></td>
+                <td><input type="password" name="user_pin" size="10" maxlength="8" required></td>
+            </tr>
+            <tr>
+                <td><b>Вибір товарів (утримуйте Ctrl для вибору декількох):</b></td>
+                <td>
+                    <select name="products" size="5" multiple required>
+                        <option value="p1">Серверне обладнання Dell PowerEdge</option>
+                        <option value="p2" selected>Маршрутизатор MikroTik RouterBOARD</option>
+                        <option value="p3" selected>Механічна клавіатура Keychron</option>
+                        <option value="p4">Монітор LG UltraGear 27"</option>
+                        <option value="p5">Накопичувач SSD NVMe 2TB Samsung</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Вид оплати:</b></td>
+                <td>
+                    <input type="radio" name="payment_type" value="cash"> Готівковий розрахунок<br>
+                    <input type="radio" name="payment_type" value="cashless" checked> Безготівковий розрахунок
+                </td>
+            </tr>
+            <tr>
+                <td><b>Додаткові виписки при відповіді:</b></td>
+                <td>
+                    <input type="checkbox" name="req_balance" value="yes" checked> Дані про залишки на рахунку<br>
+                    <input type="checkbox" name="req_payouts" value="yes"> Список останніх виплат по рахунку
+                </td>
+            </tr>
+            <tr>
+                <td><b>Довільний коментар до замовлення:</b></td>
+                <td><textarea name="order_comment" rows="3" cols="38" placeholder="Вкажіть побажання щодо доставки..."></textarea></td>
+            </tr>
+            <tr bgcolor="#F0F8FF" align="center">
+                <td colspan="2">
+                    <input type="submit" value="Підтвердити замовлення">
+                    <input type="reset" value="Скинути дані">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <br><hr width="90%">
+    <p align="right">Студент групи <i>302-ТН</i> <b>Зав'ялов Д.</b></p>
+
+</body>
+</html>

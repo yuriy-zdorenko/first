@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна 7 - Завдання 3 (Анкета)</title>
+</head>
+<body bgcolor="#F4F8F9" text="#000000">
+
+    <h2>Завдання 4.2. Анкета студента / абітурієнта</h2>
+
+    <form action="success.html" target="_blank" method="GET">
+        <table border="1" cellpadding="8" cellspacing="0" bgcolor="#FFFFFF" width="80%" align="center">
+            <tr bgcolor="#008080">
+                <th colspan="2"><font color="#FFFFFF" size="4">АНКЕТА СТУДЕНТА ГРУПИ 302-ТН</font></th>
+            </tr>
+            <tr>
+                <td width="40%"><b>Прізвище, Ім'я, По батькові:</b></td>
+                <td><input type="text" name="fio" value="Зав'ялов Денис Денисович" size="40" required></td>
+            </tr>
+            <tr>
+                <td><b>Дата народження:</b></td>
+                <td><input type="date" name="birthdate"></td>
+            </tr>
+            <tr>
+                <td><b>Стать:</b></td>
+                <td>
+                    <input type="radio" name="gender" value="m" checked> Чоловіча
+                    <input type="radio" name="gender" value="f"> Жіноча
+                </td>
+            </tr>
+            <tr>
+                <td><b>Спеціальність та навчальний заклад:</b></td>
+                <td>
+                    <select name="specialty" size="1">
+                        <option value="121">121 Інженерія програмного забезпечення</option>
+                        <option value="122" selected>122 Комп'ютерні науки (Полтавська політехніка)</option>
+                        <option value="123">123 Комп'ютерна інженерія</option>
+                        <option value="125">125 Кібербезпека</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Основні сфери інтересів:</b></td>
+                <td>
+                    <input type="checkbox" name="interest" value="backend" checked> Backend розробка<br>
+                    <input type="checkbox" name="interest" value="db" checked> Проектування БД<br>
+                    <input type="checkbox" name="interest" value="devops"> Хмарні технології та Docker<br>
+                    <input type="checkbox" name="interest" value="frontend"> Web UI / UX
+                </td>
+            </tr>
+            <tr>
+                <td><b>Контактний e-mail:</b></td>
+                <td><input type="email" name="email" value="zavialov.denis@gmail.com" size="30"></td>
+            </tr>
+            <tr>
+                <td><b>Прикріпити фотографію:</b></td>
+                <td><input type="file" name="photo" accept="image/*"></td>
+            </tr>
+            <tr>
+                <td><b>Додаткові побажання:</b></td>
+                <td><textarea name="comments" rows="3" cols="40">Прагну пройти стажування у сфері Go розробки.</textarea></td>
+            </tr>
+            <tr bgcolor="#EAEAEA" align="center">
+                <td colspan="2">
+                    <input type="submit" value="Зберегти анкету">
+                    <input type="reset" value="Очистити">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <br><hr width="90%">
+    <p align="right">Студент групи <i>302-ТН</i> <b>Зав'ялов Д.</b></p>
+
+</body>
+</html>
