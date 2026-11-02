@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна 8 - Завдання 2 (Глобальні стилі)</title>
+    <style>
+        body {
+            background-color: #F4F7F6;
+            color: #222222;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #0056B3;
+            font-size: 22pt;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            border-bottom: 3px solid #0056B3;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #333333;
+            text-align: justify;
+            text-indent: 2em;
+            margin-bottom: 15px;
+        }
+
+        div.section {
+            background-color: #FFFFFF;
+            border: 1px solid #DCDCDC;
+            border-left: 6px solid #0056B3;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        div.section-title {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #0056B3;
+            margin-bottom: 10px;
+            text-indent: 0;
+        }
+
+        span.highlight {
+            color: #C0392B;
+            font-weight: bold;
+            background-color: #FDEDEC;
+            padding: 2px 6px;
+        }
+
+        .footer-text {
+            text-align: right;
+            font-style: italic;
+            color: #666666;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Завдання 2. Забезпечення єдності стилю через тег &lt;style&gt;</h2>
+
+    <div class="section">
+        <div class="section-title">Розділ 1. Принцип дії глобальних стилів</div>
+        <p>
+            Глобальні таблиці стилів оголошуються в заголовочній секції <span class="highlight">&lt;head&gt;</span> HTML-документа за допомогою тега <span class="highlight">&lt;style&gt;</span>. Це дозволяє централізовано керувати зовнішнім виглядом усіх однотипних тегів на сторінці.
+        </p>
+        <p>
+            Зміна одного значення у селекторі автоматично оновлює відображення елементів у всіх абзацах та блоках документа, що значно скорочує розмір файлу та спрощує розробку.
+        </p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Розділ 2. Застосування контейнерів &lt;div&gt; та &lt;p&gt;</div>
+        <p>
+            Контейнери <span class="highlight">&lt;div&gt;</span> використовуються для групування елементів сторінки у логічні блоки та модулі. Завдяки CSS можна легко налаштувати внутрішні відступи (padding), зовнішні поля (margin), кольори фону та рамки для кожного блоку.
+        </p>
+        <p>
+            Завдяки єдиному правилу форматування абзаців <span class="highlight">p { text-indent: 2em; text-align: justify; }</span> весь текст на сторінці має акуратний вигляд із дотриманням типографічних норм.
+        </p>
+    </div>
+
+    <div class="footer-text">
+        Студент групи <i>302-ТН</i> <b>Зав'ялов Д.</b>
+    </div>
+
+</body>
+</html>
