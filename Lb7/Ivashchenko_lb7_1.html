@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<meta charset=utf-8>
+<TITLE>Завдання 1</TITLE>
+</HEAD>
+<BODY>
+
+<H2>Анкета студента</H2>
+
+<FORM ACTION="file.html" METHOD="GET" TARGET="_blank">
+<PRE>Ваше ім'я: <INPUT NAME="name" TYPE="text" MAXLENGTH="40" SIZE="40" VALUE="">
+
+Ваша стать: <INPUT TYPE="radio" NAME="stat" VALUE="male"> Чоловіча
+            <INPUT TYPE="radio" NAME="stat" VALUE="female"> Жіноча
+
+На якому курсі Ви навчаєтесь?
+<SELECT NAME="curs" SIZE="1">
+<OPTION VALUE="1" SELECTED>Перший</OPTION>
+<OPTION VALUE="2">Другий</OPTION>
+<OPTION VALUE="3">Третій</OPTION>
+<OPTION VALUE="4">Четвертий</OPTION>
+<OPTION VALUE="5">П'ятий</OPTION>
+</SELECT>
+
+Які дисципліни ви вивчаєте на курсі?
+<INPUT TYPE="checkbox" NAME="bd" VALUE="yes"> Бази даних
+<INPUT TYPE="checkbox" NAME="web" VALUE="yes" CHECKED> Веб-програмування
+<INPUT TYPE="checkbox" NAME="bigdata" VALUE="yes"> Big Data (вибіркова дисципліна)
+<INPUT TYPE="checkbox" NAME="english" VALUE="yes"> Іноземна мова за професійним спрямуванням
+<INPUT TYPE="checkbox" NAME="networks" VALUE="yes"> Комп'ютерні мережі
+<INPUT TYPE="checkbox" NAME="tdr" VALUE="yes"> Теорія прийняття рішень
+<INPUT TYPE="checkbox" NAME="tkpr" VALUE="yes"> Технологія комп'ютерного проєктування
+
+Напишіть декілька слів про себе:
+</PRE>
+<TEXTAREA NAME="about" ROWS="6" COLS="60" WRAP="off"></TEXTAREA>
+<P><INPUT TYPE="submit" VALUE=" Відіслати дані ">
+<INPUT TYPE="reset" VALUE=" Очистити форму ">
+<INPUT TYPE="file" NAME="friend" SIZE="50" ACCEPT="припустимий тип файлу">
+</P>
+</FORM>
+
+</BODY>
+</HTML>

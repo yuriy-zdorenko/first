@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<meta charset=utf-8>
+    <TITLE>Завдання 4</TITLE>
+</HEAD>
+<BODY>
+
+<H3>Замовлення товару</H3>
+<FORM ACTION="file.html" METHOD="POST" TARGET="_blank">
+
+    <P>
+        Номер банківського рахунку:<BR>
+        <INPUT TYPE="text" NAME="bank_account" SIZE="35">
+    </P>
+
+    <P>
+        Особистий номер користувача:<BR>
+        <INPUT TYPE="text" NAME="user_id" SIZE="35">
+    </P>
+<P>
+        Список товарів (можна обрати кілька):<BR>
+        <INPUT TYPE="checkbox" NAME="products" VALUE="item1"> Ноутбук HP <BR>
+        <INPUT TYPE="checkbox" NAME="products" VALUE="item2"> Ноутбук Lenovo<BR>
+        <INPUT TYPE="checkbox" NAME="products" VALUE="item3"> Ноутбук ASUS<BR>
+        <INPUT TYPE="checkbox" NAME="products" VALUE="item4"> Ноутбук Apple MacBook<BR>
+    </P>
+   
+    <P>
+        Вид оплати:<BR>
+        <INPUT TYPE="radio" NAME="payment" VALUE="cash" CHECKED> Готівковий розрахунок<BR>
+        <INPUT TYPE="radio" NAME="payment" VALUE="cashless"> Безготівковий розрахунок
+    </P>
+
+    <P>
+        Додаткова інформація при відповіді:<BR>
+        <INPUT TYPE="checkbox" NAME="balance" VALUE="yes"> Дані про залишки на рахунку<BR>
+        <INPUT TYPE="checkbox" NAME="payments" VALUE="yes"> Список останніх виплат по рахунку
+    </P>
+
+    <P>
+        Коментар до замовлення:<BR>
+        <INPUT TYPE="text" NAME="comments" SIZE="50">
+    </P>
+
+    <P>
+        <INPUT TYPE="submit" VALUE="Оформити замовлення">
+        <INPUT TYPE="reset" VALUE="Очистити форму">
+    </P>
+</FORM>
+
+</BODY>
+</HTML>

@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>Завдання 2</TITLE>
+</HEAD>
+<BODY>
+
+<H2>Анкета покупця морозива</H2>
+
+<FORM ACTION="file.html" METHOD="GET" TARGET="_blank">
+<PRE>Ваше ім'я: <INPUT NAME="name" TYPE="text" MAXLENGTH="40" SIZE="40" VALUE="">
+
+Улюблений тип морозива: <INPUT TYPE="radio" NAME="ice_type" VALUE="plombir"> Пломбір
+                        <INPUT TYPE="radio" NAME="ice_type" VALUE="fruit" CHECKED> Фруктовий лід
+
+Яка ваша улюблена порція?
+<SELECT NAME="portion" SIZE="1">
+<OPTION VALUE="small" SELECTED>Маленька (стаканчик)</OPTION>
+<OPTION VALUE="medium">Середня (ріжок)</OPTION>
+<OPTION VALUE="large">Велика (відерце)</OPTION>
+</SELECT>
+
+Які добавки ви любите у морозиві?
+<INPUT TYPE="checkbox" NAME="top1" VALUE="yes" CHECKED> Шоколад
+<INPUT TYPE="checkbox" NAME="top2" VALUE="yes"> Горіхи
+<INPUT TYPE="checkbox" NAME="top3" VALUE="yes"> Фрукти або ягоди
+<INPUT TYPE="checkbox" NAME="top4" VALUE="yes"> Карамель
+
+Напишіть свої побажання щодо смаків:
+</PRE>
+<TEXTAREA NAME="about" ROWS="6" COLS="60" WRAP="off"></TEXTAREA>
+<P><INPUT TYPE="submit" VALUE=" Відсилати дані ">
+<INPUT TYPE="reset" VALUE=" Очистити форму ">
+<INPUT TYPE="file" NAME="friend" SIZE="50" ACCEPT="припустимий тип файлу">
+</P>
+</FORM>
+
+</BODY>
+</HTML>
