@@ -1,0 +1,39 @@
+h1{
+    text-align: center;
+    color: blueviolet;
+    font-weight: bold;
+    font-style: normal;
+}
+div{
+    text-indent: 20px;
+    text-align: justify;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+a:link{
+    color: blue;
+    text-decoration: underline;
+}
+a:visited{
+    color: purple;
+    text-decoration: underline;
+}
+a:hover {
+    color: green;
+    text-decoration: underline;
+}
+a:active{
+    color:red;
+    text-decoration: underline;
+}
+.img-block{
+    display: block;
+}
+.inside{
+    float: left;
+    margin: 15px;
+}
+.a-flex{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Завдання 2</title>
+            <meta charset="UTF-8"> 
+    </head>
+    <body>
+        <h2> Створити форму та надати ім’я цьому файлу IvanennkoLab07- 1.htm. 
+            Використати заголовок 2-го рівня із інформацією  про завдання, яке виконується. 
+            Попередньо створити файл із наявним текстом «Ваша форма прийнята до обробки. Дякуємо за увагу». </h2>
+        <form
+            <pre>Ваше ім'я: <input name="name" type="text" maxlength="40" size="40" value=""><br>
+            Ваша стать:<br><input type="radio" name="pol" value="male">Чоловіча<br>
+                                <input type="radio" name="pol" value="female">Жіноча<br>
+            На якому курсі Ви навчаєтесь?  <br>
+                           <select name="curs" size="1">
+                                      <option value="1" selected> Перший </option>
+                                      <option value="2">Другий</option>
+                                      <option value="3">Третій</option>
+                                      <option value="4">Четвертий</option>
+                                      <option value="5">П'ятий </option>
+                            </select><br>
+            Які дисципліни ви вивчаєте на курсі?
+                    <input type="checkbox" name="web" value="yes" checked> WEB-програмування
+                    <input type="checkbox" name="eldinam" value="yes"> Технічна електродинаміка<br>
+
+            Напишіть декілька слів про себе: <br>
+            </pre>
+                  <textarea name="about" rows="6" cols="60" wrap="off"></textarea>
+            <p><input type="submit" value=" Відіслати дані ">
+                  <input type="reset" value=" Очистити форму ">
+                  <input type="file" name="friend" size="50" accept=".png" > 
+        </ form >
+    </body>
+</html>
