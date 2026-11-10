@@ -1,4 +1,3 @@
-// Додаткове завдання: клієнт-серверний веб-додаток на Node.js + Express.js
 // Кожна раніше створена сторінка має окремий роут.
 const express = require('express');
 const path = require('path');
