@@ -1,0 +1,128 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Float</title>
+<style>
+  * { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+  }
+  html, body { 
+    height: 100%; 
+  }
+  body { 
+    font-family: Arial, Helvetica, sans-serif; 
+    background: #fff; 
+  }
+
+  .wrapper { 
+    height: 100vh; 
+    height: 100dvh; 
+    overflow: hidden; 
+  }
+
+  .block {
+    float: left;
+    margin: 3px;
+    border: 1px solid #d9d9d9;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .header { background: #5b9bd5; }
+  .aside  { background: #6f7f83; }
+  .a      { background: #5fd3d3; }
+  .b      { background: #e06c6c; }
+  .main   { background: #ffc000; }
+  .d      { background: #31a672; }
+  .footer { background: #c55a11; }
+
+  .header::after { 
+    content: "float · <500px"; 
+    font-size: 12px; 
+    font-weight: normal; 
+    margin-left: 8px; opacity: .85; 
+  }
+
+  /* <500px */
+  .block { 
+    width: calc(100% - 6px); 
+    height: calc(100% / 7 - 6px); 
+  }
+
+  /* ≥500px */
+  @media (min-width: 500px) {
+    .block  { height: calc(20% - 6px); }
+    .header, .d, .footer { width: calc(100% - 6px); }
+    .aside, .a, .b, .main { width: calc(50% - 6px); }
+    .header::after { content: "float · ≥500px"; }
+  }
+
+  /* ≥750px */
+  @media (min-width: 750px) {
+    .block  { height: calc(25% - 6px); }
+    .header, .footer { width: calc(100% - 6px); }
+    .aside { width: calc(20% - 6px); }
+    .a, .b { width: calc(40% - 6px); }
+    .main  { width: calc(60% - 6px); }
+    .d     { width: calc(40% - 6px); }
+    .header::after { content: "float · ≥750px"; }
+  }
+
+  /* ≥950px */
+  @media (min-width: 950px) {
+    .aside  { float: right; }
+    .header { 
+      width: calc(75% - 6px); 
+      height: calc(25% - 6px); 
+    }
+    .aside  { 
+      width: calc(25% - 6px); 
+      height: calc(79% - 6px); 
+    }
+    .a, .b  { 
+      width: calc(37.5% - 6px); 
+      height: calc(23% - 6px); 
+    }
+    .main, .d { 
+      width: calc(37.5% - 6px); 
+      height: calc(31% - 6px); 
+    }
+    .footer { 
+      width: calc(100% - 6px); 
+      height: calc(21% - 6px); 
+    }
+    .header::after { 
+      content: "float · ≥950px"; 
+    }
+  }
+
+  /* ≥1200px */
+  @media (min-width: 1200px) {
+    .main   { float: right; } 
+    .header { width: calc(80% - 6px); height: calc(30% - 6px); }
+    .aside  { width: calc(20% - 6px); height: calc(79% - 6px); }
+    .a, .b  { width: calc(25% - 6px); height: calc(22% - 6px); }
+    .main   { width: calc(30% - 6px); height: calc(49% - 6px); }
+    .d      { width: calc(50% - 6px); height: calc(27% - 6px); }
+    .footer { width: calc(100% - 6px); height: calc(21% - 6px); }
+    .header::after { content: "float · ≥1200px"; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="block header">header</div>
+    <div class="block aside">aside</div>
+    <div class="block a">A</div>
+    <div class="block b">B</div>
+    <div class="block main">main</div>
+    <div class="block d">D</div>
+    <div class="block footer">footer</div>
+  </div>
+</body>
+</html>

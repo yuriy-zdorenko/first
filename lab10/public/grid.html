@@ -1,0 +1,154 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid</title>
+<style>
+  * { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+  }
+  html, body { 
+    height: 100%; 
+  }
+  body { 
+    font-family: Arial, Helvetica, sans-serif; 
+    background: #fff; 
+  }
+
+  .wrapper {
+    height: 100vh; height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+      "header"
+      "aside"
+      "a"
+      "b"
+      "main"
+      "d"
+      "footer";
+  }
+
+  .block {
+    margin: 3px;
+    border: 1px solid #d9d9d9;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    overflow: hidden;
+    min-width: 0; 
+    min-height: 0;
+  }
+  .header { 
+    grid-area: header;
+    background: #5b9bd5; 
+  }
+  .aside { 
+    grid-area: aside;  
+    background: #6f7f83; 
+  }
+  .a { 
+    grid-area: a;       
+    background: #5fd3d3; 
+  }
+  .b { 
+    grid-area: b;       
+    background: #e06c6c; 
+  }
+  .main { 
+    grid-area: main;   
+    background: #ffc000; 
+  }
+  .d { 
+    grid-area: d;       
+    background: #31a672; 
+  }
+  .footer { 
+    grid-area: footer; 
+    background: #c55a11; 
+  }
+
+  .header::after { 
+    content: "grid · <500px"; 
+    font-size: 12px; 
+    font-weight: normal; 
+    margin-left: 8px; 
+    opacity: .85; 
+  }
+
+  /* ≥500px */
+  @media (min-width: 500px) {
+    .wrapper {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-areas:
+        "header header"
+        "aside  a"
+        "b      main"
+        "d      d"
+        "footer footer";
+    }
+    .header::after { content: "grid · ≥500px"; }
+  }
+
+  /* ≥750px */
+  @media (min-width: 750px) {
+    .wrapper {
+      grid-template-columns: 1fr 2fr 2fr;
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas:
+        "header header header"
+        "aside  a      b"
+        "main   main   d"
+        "footer footer footer";
+    }
+    .header::after { content: "grid · ≥750px"; }
+  }
+
+  /* ≥950px */
+  @media (min-width: 950px) {
+    .wrapper {
+      grid-template-columns: 3fr 3fr 2fr;
+      grid-template-rows: 25fr 23fr 31fr 21fr;
+      grid-template-areas:
+        "header header aside"
+        "a      b      aside"
+        "main   d      aside"
+        "footer footer footer";
+    }
+    .header::after { content: "grid · ≥950px"; }
+  }
+
+  /* ≥1200px */
+  @media (min-width: 1200px) {
+    .wrapper {
+      grid-template-columns: 5fr 5fr 6fr 4fr;
+      grid-template-rows: 30fr 22fr 27fr 21fr;
+      grid-template-areas:
+        "header header header aside"
+        "a      b      main   aside"
+        "d      d      main   aside"
+        "footer footer footer footer";
+    }
+    .header::after { content: "grid · ≥1200px"; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="block header">header</div>
+    <div class="block aside">aside</div>
+    <div class="block a">A</div>
+    <div class="block b">B</div>
+    <div class="block main">main</div>
+    <div class="block d">D</div>
+    <div class="block footer">footer</div>
+  </div>
+</body>
+</html>
