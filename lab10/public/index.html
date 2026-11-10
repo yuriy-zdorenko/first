@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS-макети</title>
+<style>
+  * { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0; 
+  }
+  body { 
+    font-family: Arial, Helvetica, sans-serif; 
+    background: #f4f6f8; 
+    color: #222;
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px; 
+  }
+  .card { 
+    background: #fff; 
+    border: 1px solid #d9d9d9; 
+    border-radius: 8px; 
+    padding: 28px; 
+    max-width: 460px; 
+    width: 100%; 
+  }
+  h1 { 
+    font-size: 22px; 
+    margin-bottom: 6px; 
+  }
+  p  { 
+    color: #555; 
+    margin-bottom: 18px; 
+    font-size: 14px; 
+  }
+  a  { 
+    display: block;
+    margin: 8px 0; 
+    padding: 12px 16px; 
+    border-radius: 6px; 
+    color: #fff;
+    text-decoration: none; 
+    font-weight: bold; 
+  }
+  a:hover { 
+    opacity: .88; 
+  }
+  .float { 
+    background: #5b9bd5; 
+  } 
+  .flex { 
+    background: #31a672; 
+  } 
+  .grid { 
+    background: #c55a11; 
+  }
+  small { 
+    font-weight: normal; 
+    opacity: .85; 
+    margin-left: 6px; 
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Веб-технології та веб-дизайн</h1>
+    <p>Адаптивна розмітка сторінки трьома способами.</p>
+    <a class="float" href="/float">1. float <small>/float</small></a>
+    <a class="flex"  href="/flex">2. flexbox <small>/flex</small></a>
+    <a class="grid"  href="/grid">3. grid<small>/grid</small></a>
+  </div>
+</body>
+</html>

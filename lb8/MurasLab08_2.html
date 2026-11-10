@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="utf-8" >
+        <title>Контейнер style. Глобальні стилі</title>
+        <style type="text/css">
+            body {
+                background-color: #fafafa;
+                font-family: Tahoma, sans-serif;
+                margin: 20px;
+            }
+            h2{
+                color: #2c3e50;
+                text-align: center;
+                border: #3498db;
+                border-width: 4px;
+                border-style: solid;
+                padding-bottom: 10px;
+            }
+            div.section{
+                background-color: #ffffff;
+                margin-bottom: 20px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+            }
+            p.highlight{
+                font-size: 13pt;
+                color: #333333;
+                line-height: 1.6;
+                text-align: justify;
+                text-indent: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Завдання 2\. Єдність оформлення за допомогою контейнера</h2>
+        <div class="section">
+            <h3>
+                Розділ 1. Основний опис
+            </h3>
+            <p>
+                Перший абзац у першому розділі. Завдяки глобальній таблиці стилів усі абзаци мають
+                 єдине вирівнювання, розмір шрифту та міжрядковий інтервал.
+            </p>
+            <p class="highlight">
+                Цей абзац має додатковий клас оформлення для акцентування уваги на важливих деталях.
+            </p>
+        </div>
+        <div class="section">
+            <h3>Розділ 2. Додаткова інформація</h3>
+            <p>
+                Це абзац у другому розділі. Він автоматично успадковує всі стильові правила, 
+                задані в секції head для тега p та блоку div.
+            </p>
+        </div>
+    </body>
+</html>
