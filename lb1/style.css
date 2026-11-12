@@ -1,0 +1,51 @@
+body {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #f4f0e8;
+    color: #29263d;
+    font: 1rem/1.6 Arial, sans-serif;
+}
+
+.page {
+    padding: 2rem;
+    background: #fffdf8;
+    border-radius: 10px;
+}
+
+h1,
+h2 {
+    color: #245b68;
+}
+
+p {
+    text-align: justify;
+}
+
+pre {
+    overflow-x: auto;
+    padding: 1rem;
+    color: #f7f4ed;
+    background: #29263d;
+    border-radius: 6px;
+}
+
+code {
+    font-family: Consolas, "Courier New", monospace;
+}
+
+.signature {
+    margin-top: 2rem;
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .page {
+        padding: 1rem;
+    }
+}
