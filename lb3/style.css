@@ -1,0 +1,170 @@
+body {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #1e1c18;
+    color: #29263d;
+    font: 1rem/1.6 Arial, sans-serif;
+}
+
+.page {
+    padding: 2rem;
+    background: #716956;
+    border-radius: 10px;
+}
+
+h1,
+h2 {
+    color: #ffffff;
+}
+
+p {
+    text-align: justify;
+    color: #f7f4ed;
+}
+
+pre {
+    overflow-x: auto;
+    padding: 1rem;
+    color: #f7f4ed;
+    background: #442e21;
+    border-radius: 6px;
+}                                           
+
+code {
+    font-family: Consolas, "Courier New", monospace;
+}
+
+.signature {
+    margin-top: 2rem;
+    text-align: right;
+    color: #f7f4ed;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .page {
+        padding: 1rem;
+    }
+}
+
+.emblem {
+    margin: 1.5rem auto;
+    text-align: center;
+    color: #f7f4ed;
+}
+
+.emblem img {
+    max-width: 100%;
+    height: auto;
+}
+
+.emblem figcaption,
+.photo-card figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.assignment-page {
+    max-width: 760px;
+    margin: 2rem auto;
+}
+
+.schedule-page {
+    text-align: center;
+}
+
+.clock-image {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    border: 3px solid #245b68;
+    border-radius: 50%;
+}
+
+.background-body,
+.group-background {
+    display: flex;
+    max-width: none;
+    min-height: 100vh;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 2rem;
+    background: #29263d url("image/backgrnd.gif") center / cover fixed no-repeat;
+}
+
+.background-page,
+.group-page {
+    width: 100%;
+    max-width: 800px;
+}
+
+.group-page {
+    background: rgba(49, 46, 38, 0.94);
+}
+
+.group-photo {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 1.5rem auto;
+    border: 3px solid #ffffff;
+    border-radius: 8px;
+}
+
+.group-page figcaption {
+    text-align: center;
+    color: #ffffff;
+}
+
+.gallery-body {
+    max-width: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 2rem;
+}
+
+.gallery-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.5rem;
+}
+
+.photo-card {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    background: #e0d4b7;
+    border: 1px solid #d5d0c6;
+    border-radius: 10px;
+}
+
+.photo-card img {
+    width: 100%;
+    height: auto;
+    border: 3px solid #245b68;
+    border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+    .background-body,
+    .group-background,
+    .gallery-body {
+        padding: 1rem;
+    }
+}
