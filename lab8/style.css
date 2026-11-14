@@ -1,0 +1,31 @@
+/* ===== Завдання 1 ===== */
+body.t1 { background-color: #f5f5dc; margin-left: 5%; margin-right: 5%; }
+body.t1 h2 { font-family: Arial; color: darkblue; text-align: center; text-transform: uppercase; }
+body.t1 p.a { font-family: "Times New Roman", serif; font-size: large; font-weight: bold; font-style: italic;
+      color: blue; text-decoration: underline; text-align: left; text-indent: 25%; text-transform: capitalize;
+      line-height: 20pt; background-color: yellow; }
+body.t1 p.b { font-family: Arial; font-size: 14pt; font-weight: normal; color: darkgreen; text-align: justify;
+      text-indent: 5%; text-decoration: overline; }
+body.t1 p.c { font-family: Verdana; font-size: 12pt; font-weight: 900; color: #800000; text-align: right;
+      text-transform: uppercase; text-decoration: line-through; background-color: #ffe4e1; }
+body.t1 p.d { font-family: "Courier New", monospace; font-size: x-large; font-style: italic; color: rgb(128,0,128);
+      text-align: center; text-transform: lowercase; margin-left: 15%; margin-right: 15%;
+      padding-left: 10px; padding-right: 10px; border-width: thick; border-style: solid; border-color: orange; }
+
+/* ===== Завдання 2 ===== */
+body.t2 { background-color: #f0f8ff; font-family: Arial, sans-serif; margin-left: 8%; margin-right: 8%; }
+body.t2 h2 { color: #003366; text-align: center; }
+body.t2 p { font-size: 14pt; color: #222222; text-align: justify; text-indent: 3%; line-height: 20pt; }
+body.t2 div { margin-top: 15px; padding: 10px; border-width: thin; border-style: solid; border-color: steelblue; background-color: #ffffff; }
+body.t2 div h3 { color: darkred; font-style: italic; text-decoration: underline; }
+
+/* ===== Завдання 3 ===== */
+body.t3 { background-color: #fff0f5; margin-left: 6%; margin-right: 6%; font-family: "Times New Roman", serif; }
+body.t3 h1 { font-size: 35pt; font-weight: bold; color: darkred; text-align: center; }
+body.t3 h2 { font-size: 20pt; font-weight: bold; color: #8a2be2; }
+body.t3 p { font-size: 14pt; font-style: italic; color: black; text-indent: 2%; text-align: justify; }
+body.t3 ul.toc li { font-size: 14pt; margin-bottom: 4px; }
+body.t3 a { color: darkmagenta; }
+body.t3 a:visited { color: purple; }
+body.t3 a:hover { color: red; text-decoration: none; }
+body.t3 p.back { text-indent: 0; font-style: normal; text-align: right; }
