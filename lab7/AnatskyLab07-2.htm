@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h2>Завдання 2. Використання елементів HTML-форм</h2>
+
+<form action="#" method="post" enctype="multipart/form-data">
+
+    <h3>1. Текстове поле (TEXT)</h3>
+    Введіть ваше прізвище, ім'я та по батькові:
+    <br>
+    <input type="text" name="fio"
+           value="Іваненко Іван Іванович"
+           size="35" maxlength="50">
+    <br><br>
+
+    <h3>2. Текстова область (TEXTAREA)</h3>
+    Вкажіть вашу адресу:
+    <br>
+    <textarea name="address" cols="40" rows="4"
+              wrap="virtual">Ваша адреса...</textarea>
+    <br><br>
+
+    <h3>3. Список (SELECT)</h3>
+    Оберіть факультет:
+    <br>
+    <select name="faculty" size="4">
+        <option value="it" selected>Інформаційних технологій</option>
+        <option value="economic">Економічний</option>
+        <option value="engineering">Інженерний</option>
+        <option value="humanities">Гуманітарний</option>
+    </select>
+    <br><br>
+
+    <h3>4. Прапорці (CHECKBOX)</h3>
+    Укажіть ваші навички:
+    <br>
+    <input type="checkbox" name="skill_html" value="HTML" checked>
+    HTML
+    <br>
+    <input type="checkbox" name="skill_css" value="CSS">
+    CSS
+    <br>
+    <input type="checkbox" name="skill_js" value="JavaScript">
+    JavaScript
+    <br>
+    <input type="checkbox" name="skill_python" value="Python">
+    Python
+    <br><br>
+
+    <h3>5. Радіокнопки (RADIO)</h3>
+    Оберіть курс навчання:
+    <br>
+    <input type="radio" name="course" value="1" checked>
+    Перший курс
+    <br>
+    <input type="radio" name="course" value="2">
+    Другий курс
+    <br>
+    <input type="radio" name="course" value="3">
+    Третій курс
+    <br>
+    <input type="radio" name="course" value="4">
+    Четвертий курс
+    <br><br>
+
+    <h3>6. Пароль (PASSWORD)</h3>
+    Введіть пароль:
+    <br>
+    <input type="password" name="password"
+           size="20" maxlength="20">
+    <br><br>
+
+    <h3>7. Прикріплення файлу (FILE)</h3>
+    Виберіть файл для прикріплення:
+    <br>
+    <input type="file" name="attachment"
+           accept=".jpg,.png,.pdf,.txt">
+    <br><br>
+
+    <h3>8. Кнопки керування формою</h3>
+
+    <input type="submit" name="submit"
+           value="Відправити дані">
+
+    <input type="reset" name="reset"
+           value="Очистити форму">
+
+    <input type="button"
+           value="Показати сьогоднішню дату"
+           onclick="alert(new Date().toLocaleDateString('uk-UA'))">
+
+</form>
+
+</body>
+</html>

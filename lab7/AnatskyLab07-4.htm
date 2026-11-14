@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Лабораторна робота №7</title>
+</head>
+<body>
+<h2>Завдання 2: форма замовлення товару</h2>
+
+<form action="thanks.htm" method="get" target="_blank">
+<p>Номер банківського рахунку:
+<input type="text" name="account" maxlength="20" size="30" required></p>
+
+<p>Особистий номер користувача:
+<input type="text" name="userid" maxlength="15" size="20" required></p>
+
+<p>Оберіть товар (можна вибрати декілька, утримуючи Ctrl):<br>
+<select name="goods" size="5" multiple>
+  <option value="laptop">Ноутбук</option>
+  <option value="phone">Смартфон</option>
+  <option value="tablet">Планшет</option>
+  <option value="headphones">Навушники</option>
+  <option value="printer">Принтер</option>
+</select></p>
+
+<p>Вид оплати:<br>
+<input type="radio" name="payment" value="cash" checked> Готівковий розрахунок<br>
+<input type="radio" name="payment" value="cashless"> Безготівковий розрахунок</p>
+
+<p>Додаткова інформація у відповіді:<br>
+<input type="checkbox" name="balance" value="yes"> Дані про залишок на рахунку<br>
+<input type="checkbox" name="payments" value="yes"> Список останніх виплат по рахунку</p>
+
+<p>Коментарі:<br>
+<textarea name="comments" rows="6" cols="60"></textarea></p>
+
+<p><input type="submit" value=" Відіслати замовлення ">
+<input type="reset" value=" Очистити форму "></p>
+</form>
+</body>
+</html>
