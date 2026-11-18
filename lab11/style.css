@@ -1,0 +1,56 @@
+body {
+    background-image: url(img/backgound.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+p{
+    text-indent: 25px;
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-style: italic;
+    font-size: 20px;
+    background-color: #79d279;
+}
+h1{
+    font-weight: bold;
+    text-align: center;
+    color: #008000;
+    background-color: aliceblue;
+    font-style: normal;
+}
+a:link {
+    color: green;
+    text-decoration: none;
+    background-color: azure;
+}
+
+a:visited {
+    color: darkblue;
+    text-decoration: none;
+}
+
+a:active {
+    color: #ff6600;
+}
+
+.menu{
+    text-align: center;
+}
+
+.left{
+    float: left;
+    width: 300px;
+    margin-left: 5%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 3px solid black;
+}
+.right{
+    float: right;
+    width: 500px;
+    margin-left: 3%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+    border: 3px solid black;
+}
