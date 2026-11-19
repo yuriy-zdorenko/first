@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Лабораторна робота №9 — Завдання 1</title>
+  <style type="text/css">
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8fafc;
+      margin: 25px;
+    }
+
+    h2.topic {
+      color: #1d4ed8;
+      font-family: "Times New Roman", serif;
+      font-size: 22pt;
+      text-align: left;
+      border-bottom: 2px solid #93c5fd;
+      padding-bottom: 4px;
+    }
+
+    h2.important {
+      color: #b91c1c;
+      font-family: Arial, sans-serif;
+      font-size: 20pt;
+      font-style: italic;
+      text-transform: uppercase;
+      background-color: #fee2e2;
+      padding: 8px 12px;
+    }
+
+    h2.summary {
+      color: #047857;
+      font-family: Georgia, serif;
+      font-size: 19pt;
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    p {
+      font-size: 14pt;
+      line-height: 1.5;
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body>
+  <h2 class="topic">1. Призначення стильових класів у CSS</h2>
+  <p>
+    Стильові класи дозволяють створювати кілька варіантів оформлення для одного й того самого HTML-тега та застосовувати їх вибірково до потрібних фрагментів документа.
+  </p>
+
+  <h2 class="important">Важлива особливість прив'язаних класів</h2>
+  <p>
+    Клас, оголошений як <code>h2.important</code>, працюватиме виключно для заголовків другого рівня і не впливатиме на звичайні абзаци чи інші елементи.
+  </p>
+
+  <h2 class="topic">2. Переваги повторного використання стилів</h2>
+  <p>
+    Замість дублювання атрибута <code>style</code> у кожному заголовку достатньо один раз описати клас у контейнері <code>&lt;style&gt;</code> та підключити його через <code>class="..."</code>.
+  </p>
+
+  <h2 class="important">Порада щодо іменування класів</h2>
+  <p>
+    Назви класів варто давати за їхнім змістом або роллю на сторінці (наприклад, <code>topic</code>, <code>important</code>, <code>summary</code>), щоб код залишався зрозумілим.
+  </p>
+
+  <h2 class="summary">Проміжний висновок до першої частини</h2>
+  <p>
+    У межах однієї сторінки можна поєднувати будь-яку кількість класів для тега <code>&lt;h2&gt;</code> без конфліктів між правилами.
+  </p>
+
+  <h2 class="summary">Підсумок виконання завдання</h2>
+  <p>
+    Кожен із трьох створених класів заголовка другого рівня використано в документі двічі, що підтверджує зручність каскадних таблиць стилів.
+  </p>
+</body>
+</html>
