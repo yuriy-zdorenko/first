@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заняття 10 — Float Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background-color: #193054;
+      font-family: Arial, sans-serif;
+    }
+    .wrapper {
+      width: 100%;
+      min-height: 100vh;
+      padding: 3px;
+      overflow: hidden;
+    }
+    .box {
+      float: left;
+      margin: 3px;
+      padding: 16px;
+      border: 1px solid #e5e7eb;
+      color: #ffffff;
+      font-weight: bold;
+      min-height: 140px;
+    }
+    .b1 { background-color: #2563eb; }
+    .b2 { background-color: #0d9488; }
+    .b3 { background-color: #d97706; }
+    .b4 { background-color: #7c3aed; }
+    .b5 { background-color: #dc2626; }
+    .b6 { background-color: #4f46e5; }
+
+    /* < 500px: 1 колонка */
+    .box {
+      width: calc(100% - 6px);
+    }
+
+    /* >= 500px: 2 колонки */
+    @media (min-width: 500px) {
+      .box {
+        width: calc(50% - 6px);
+      }
+    }
+
+    /* >= 750px: заголовний блок на всю ширину + 2 колонки */
+    @media (min-width: 750px) {
+      .b1 {
+        width: calc(100% - 6px);
+      }
+      .b2, .b3, .b4, .b5 {
+        width: calc(50% - 6px);
+      }
+      .b6 {
+        width: calc(100% - 6px);
+      }
+    }
+
+    /* >= 950px: 3 колонки */
+    @media (min-width: 950px) {
+      .b1 {
+        width: calc(100% - 6px);
+      }
+      .b2, .b3, .b4 {
+        width: calc(33.333% - 6px);
+      }
+      .b5 {
+        width: calc(50% - 6px);
+      }
+      .b6 {
+        width: calc(50% - 6px);
+      }
+    }
+
+    /* >= 1200px: широка сітка */
+    @media (min-width: 1200px) {
+      .b1 {
+        width: calc(100% - 6px);
+      }
+      .b2, .b3, .b4, .b5 {
+        width: calc(25% - 6px);
+      }
+      .b6 {
+        width: calc(100% - 6px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="box b1">Блок 1 (Header)</div>
+    <div class="box b2">Блок 2</div>
+    <div class="box b3">Блок 3</div>
+    <div class="box b4">Блок 4</div>
+    <div class="box b5">Блок 5</div>
+    <div class="box b6">Блок 6 (Footer)</div>
+  </div>
+</body>
+</html>
