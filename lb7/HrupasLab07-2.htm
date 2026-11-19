@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Самостійна робота 7.1 — Усі елементи форми</title>
+</head>
+<body>
+  <h2>Самостійна робота, завдання 1. Форма з усіма типами елементів HTML</h2>
+
+  <form action="success.htm" method="get" target="_blank">
+    <p>
+      <label>Логін (text): <input type="text" name="login" size="25" maxlength="30" value="student_user"></label>
+    </p>
+    <p>
+      <label>Пароль (password): <input type="password" name="pass" size="20" maxlength="16"></label>
+    </p>
+    <p>
+      <label>Короткий опис (textarea):<br>
+      <textarea name="bio" rows="4" cols="45" wrap="soft">Коротка інформація про користувача</textarea></label>
+    </p>
+    <p>
+      <label>Оберіть напрям (select):<br>
+      <select name="direction" size="3">
+        <option value="web" selected>Веброзробка</option>
+        <option value="networks">Комп'ютерні мережі</option>
+        <option value="databases">Адміністрування баз даних</option>
+      </select></label>
+    </p>
+    <p>
+      Рівень підготовки (radio):<br>
+      <label><input type="radio" name="level" value="beginner" checked> Початковий</label>
+      <label><input type="radio" name="level" value="intermediate"> Середній</label>
+      <label><input type="radio" name="level" value="advanced"> Просунутий</label>
+    </p>
+    <p>
+      Інструменти (checkbox):<br>
+      <label><input type="checkbox" name="tools" value="vscode" checked> VS Code</label>
+      <label><input type="checkbox" name="tools" value="git"> Git</label>
+      <label><input type="checkbox" name="tools" value="mysql"> MySQL</label>
+    </p>
+    <p>
+      <label>Прикріпити файл (file): <input type="file" name="attachment" size="40" accept=".pdf,.doc,.docx,.txt"></label>
+    </p>
+    <p>
+      <input type="button" value="Показати поточну дату" onclick="alert(new Date().toLocaleDateString('uk-UA'))">
+      <input type="reset" value="Очистити">
+      <input type="submit" value="Надіслати">
+    </p>
+  </form>
+</body>
+</html>
