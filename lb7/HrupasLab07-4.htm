@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Замовлення товару</title>
+</head>
+<body>
+  <h2>Самостійна робота, завдання 3. Форма оформлення замовлення на товар</h2>
+
+  <form action="success.htm" method="get" target="_blank">
+    <p>
+      <label>Номер банківського рахунку:<br>
+      <input type="text" name="account_number" size="35" maxlength="34" placeholder="UA000000000000000000000000000"></label>
+    </p>
+
+    <p>
+      <label>Особистий номер користувача:<br>
+      <input type="text" name="user_id" size="25" maxlength="20"></label>
+    </p>
+
+    <p>
+      <label>Список товарів (затисніть Ctrl або Shift для вибору кількох позицій):<br>
+      <select name="products" size="4" multiple>
+        <option value="notebook">Ноутбук</option>
+        <option value="mouse">Бездротова миша</option>
+        <option value="keyboard">Механічна клавіатура</option>
+        <option value="monitor">Монітор 24"</option>
+        <option value="headphones">Гарнітура</option>
+      </select></label>
+    </p>
+
+    <p>
+      <label>Довільні коментарі до замовлення:<br>
+      <textarea name="comments" rows="4" cols="45" wrap="soft"></textarea></label>
+    </p>
+
+    <p>
+      Вид оплати:<br>
+      <label><input type="radio" name="payment_type" value="cash" checked> Готівковий розрахунок</label><br>
+      <label><input type="radio" name="payment_type" value="cashless"> Безготівковий розрахунок</label>
+    </p>
+
+    <p>
+      Яку додаткову інформацію бажаєте одержати у відповіді?<br>
+      <label><input type="checkbox" name="info_balance" value="yes"> Дані про залишки на рахунку</label><br>
+      <label><input type="checkbox" name="info_payments" value="yes"> Список останніх виплат по рахунку</label>
+    </p>
+
+    <p>
+      <input type="reset" value="Очистити">
+      <input type="submit" value="Оформити замовлення">
+    </p>
+  </form>
+</body>
+</html>
