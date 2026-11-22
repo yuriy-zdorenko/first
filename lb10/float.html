@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <title>Лабораторна робота 10 - Float</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                height: 100%;
+                width: 100%;
+            }
+
+            .clearfix::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            /* Головний блок wrapper */
+            .wrapper {
+                width: 100%;
+                min-height: 100vh;
+                padding: 3px;
+                background-color: #ffffff;
+            }
+
+            .box {
+                border: 1px solid #e0e0e0; /* Рамка 1px світло-сірого кольору */
+                margin-bottom: 3px;        /* Зовнішній відступ знизу 3px */
+            }
+
+            .blue   { background-color: #5b9bd5; }
+            .cyan   { background-color: #5bc8d0; }
+            .red    { background-color: #de6868; }
+            .yellow { background-color: #ffc000; }
+            .green { 
+                background-color: #329d70; 
+                clear: both; 
+            }
+            .gray   { background-color: #6e787d; }
+            .brown  { background-color: #c55a11; margin-bottom: 0; }
+
+            /* =========================================================
+            1. Екрани < 500px (мобільні: все в один стовпчик)
+            ========================================================= */
+            .left-main, .sub-left, .box {
+                width: 100%;
+                float: none;
+                height: calc((100vh - 24px) / 7); /* Рівномірно заповнюємо висоту екрана */
+                min-height: 70px;
+            }
+
+            .left-main, .middle-area, .sub-left, .top-section {
+                height: auto;
+            }
+
+            /* =========================================================
+            2. Екрани >= 500px (бірюзовий і червоний стають у 2 колонки)
+            ========================================================= */
+            @media (min-width: 500px) {
+                .cyan {
+                    float: left;
+                    width: calc(50% - 1.5px);
+                    margin-right: 3px;
+                }
+                .red {
+                    float: left;
+                    width: calc(50% - 1.5px);
+                }
+                .yellow, .green, .gray, .blue, .brown {
+                    height: calc((100vh - 21px) / 6);
+                }
+            }
+
+            /* =========================================================
+            3. Екрани >= 750px (жовтий стає поруч із бірюзовим, червоним і зеленим)
+            ========================================================= */
+            @media (min-width: 750px) {
+                .sub-left {
+                    float: left;
+                    width: calc(62% - 1.5px);
+                    margin-right: 3px;
+                }
+                .cyan, .red {
+                    height: calc((100vh - 18px) * 0.22);
+                }
+                .green {
+                    height: calc((100vh - 18px) * 0.24);
+                }
+                .yellow {
+                    float: left;
+                    width: calc(38% - 1.5px);
+                    /* Висота дорівнює сумі висот cyan/red + 3px відступу + green */
+                    height: calc((100vh - 18px) * 0.46 + 3px);
+                }
+                .blue {
+                    height: calc((100vh - 18px) * 0.22);
+                }
+                .gray, .brown {
+                    height: calc((100vh - 18px) * 0.16);
+                }
+            }
+
+            /* =========================================================
+            4. Екрани >= 950px (точний макет зі зразка: сірий блок стає праворуч)
+            ========================================================= */
+            @media (min-width: 950px) {
+                .left-main {
+                    float: left;
+                    width: calc(78% - 1.5px);
+                    margin-right: 3px;
+                }
+                .blue {
+                    height: calc((100vh - 15px) * 0.30);
+                }
+                .cyan, .red {
+                    height: calc((100vh - 15px) * 0.24);
+                }
+                .green {
+                    height: calc((100vh - 15px) * 0.28);
+                }
+                .yellow {
+                    /* Висота = висота cyan/red + 3px + висота green */
+                    height: calc((100vh - 15px) * 0.52 + 3px);
+                }
+                .gray {
+                    float: left;
+                    width: calc(22% - 1.5px);
+                    /* Висота = висота blue + 3px + висота yellow */
+                    height: calc((100vh - 15px) * 0.82 + 6px);
+                }
+                .brown {
+                    clear: both;
+                    width: 100%;
+                    height: calc((100vh - 15px) * 0.18);
+                }
+            }
+
+            /* =========================================================
+            5. Екрани >= 1200px (широкоформатні екрани, трохи інші пропорції колонок)
+            ========================================================= */
+            @media (min-width: 1200px) {
+                .left-main {
+                    width: calc(80% - 1.5px);
+                }
+                .gray {
+                    width: calc(20% - 1.5px);
+                }
+                .sub-left {
+                    width: calc(60% - 1.5px);
+                }
+                .yellow {
+                    width: calc(40% - 1.5px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper clearfix">
+            <!-- Верхня та центральна частина (все, що над коричневим блоком) -->
+            <div class="top-section clearfix">
+                <!-- Ліва основна колонка (синій, бірюзовий, червоний, жовтий, зелений) -->
+                <div class="left-main">
+                    <div class="box blue"></div>
+                    
+                    <div class="middle-area clearfix">
+                        <!-- Колонка для бірюзового, червоного та зеленого -->
+                        <div class="sub-left clearfix">
+                            <div class="box cyan"></div>
+                            <div class="box red"></div>
+                            <div class="box green"></div>
+                        </div>
+                        <!-- Жовтий блок праворуч від них -->
+                        <div class="box yellow"></div>
+                    </div>
+                </div>
+
+                <!-- Сірий блок праворуч -->
+                <div class="box gray"></div>
+            </div>
+
+            <!-- Нижній коричневий блок на всю ширину -->
+            <div class="box brown"></div>
+        </div>
+    </body>
+</html>
