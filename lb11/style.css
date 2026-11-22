@@ -1,0 +1,71 @@
+/* Фонове зображення сторінки */
+body {
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Georgia, serif;
+}
+
+/* Заголовок 1-го рівня: жирний, по центру, визначеного кольору, нормальний стиль */
+h1 {
+    font-weight: bold;
+    text-align: center;
+    color: darkgreen;
+    font-style: normal;
+    font-size: 28px;
+}
+
+/* Абзаци: червоний рядок, по ширині, відступи зліва/справа, курсив, розмір */
+p {
+    text-indent: 40px;
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+/* Оформлення посилань */
+a:link {
+    color: green;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+    color: darkblue;
+    text-decoration: none;
+}
+
+a:active {
+    color: #0000FF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* Навігаційне меню */
+.menu {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+/* Розташування рисунків */
+.img-left {
+    float: left;
+    margin: 10px 20px 10px 5%;
+    width: 230px;
+    border: 2px solid darkgreen;
+}
+
+.img-right {
+    float: right;
+    margin: 10px 5% 10px 20px;
+    width: 230px;
+    border: 2px solid darkgreen;
+}
