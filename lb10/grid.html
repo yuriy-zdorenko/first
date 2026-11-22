@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <title>Лабораторна робота - Grid</title>
+        <style>
+            * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            display: grid;
+            min-height: 100vh;
+            width: 100%;
+            gap: 3px; 
+            padding: 3px;
+            background-color: #ffffff;
+            
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "blue"
+                "cyan"
+                "red"
+                "yellow"
+                "green"
+                "gray"
+                "brown";
+        }
+
+        .box {
+            border: 1px solid #e0e0e0;
+            min-height: 80px;
+        }
+
+        .blue   { grid-area: blue;   background-color: #5b9bd5; }
+        .cyan   { grid-area: cyan;   background-color: #5bc8d0; }
+        .red    { grid-area: red;    background-color: #de6868; }
+        .yellow { grid-area: yellow; background-color: #ffc000; }
+        .green  { grid-area: green;  background-color: #329d70; }
+        .gray   { grid-area: gray;   background-color: #6e787d; }
+        .brown  { grid-area: brown;  background-color: #c55a11; }
+
+        /* Для екранів >= 500px */
+        @media (min-width: 500px) {
+            .wrapper {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                    "blue blue"
+                    "cyan red"
+                    "yellow green"
+                    "gray gray"
+                    "brown brown";
+            }
+        }
+
+        /* Для екранів >= 750px */
+        @media (min-width: 750px) {
+            .wrapper {
+                grid-template-columns: 1fr 1fr 1.2fr;
+                grid-template-areas:
+                    "blue blue blue"
+                    "cyan red yellow"
+                    "green green yellow"
+                    "gray gray gray"
+                    "brown brown brown";
+            }
+        }
+
+        /* Для екранів >= 950px */
+        @media (min-width: 950px) {
+            .wrapper {
+                grid-template-columns: 1fr 1fr 1.3fr 0.8fr;
+                grid-template-rows: 1.3fr 1fr 1.1fr 0.8fr;
+                grid-template-areas:
+                    "blue   blue   blue   gray"
+                    "cyan   red    yellow gray"
+                    "green  green  yellow gray"
+                    "brown  brown  brown  brown";
+            }
+        }
+
+        /* Для екранів >= 1200px */
+        @media (min-width: 1200px) {
+            .wrapper {
+                grid-template-columns: 1.2fr 1.2fr 1.5fr 1fr;
+                grid-template-rows: 1.4fr 1fr 1.2fr 0.8fr;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="box blue"></div>
+            <div class="box cyan"></div>
+            <div class="box red"></div>
+            <div class="box yellow"></div>
+            <div class="box green"></div>
+            <div class="box gray"></div>
+            <div class="box brown"></div>
+        </div>
+    </body>
+</html>
