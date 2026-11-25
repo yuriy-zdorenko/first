@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+</head>
+<body>
+
+<form>
+<table border="1" align="center" cellpadding="5" bgcolor="#E0FFFF">
+
+<tr>
+    <td colspan="3" align="center">
+        <h2 style="color:red;">Анкета</h2>
+    </td>
+</tr>
+
+<tr>
+    <td>1.</td>
+    <td>Прізвище</td>
+    <td><input type="text" size="30"></td>
+</tr>
+
+<tr>
+    <td>2.</td>
+    <td>Ім'я, по батькові</td>
+    <td><input type="text" size="30"></td>
+</tr>
+
+<tr>
+    <td>3.</td>
+    <td>Число і рік народження</td>
+    <td><input type="date"></td>
+</tr>
+
+<tr>
+    <td>4.</td>
+    <td>Домашня адреса</td>
+    <td><input type="text" size="30"></td>
+</tr>
+
+<tr>
+    <td>5.</td>
+    <td>Місце навчання (роботи)</td>
+    <td><input type="text" size="30"></td>
+</tr>
+
+<tr>
+    <td>6.</td>
+    <td>Домашній (робочий) телефон</td>
+    <td>
+        <input type="text" size="30"
+        inputmode="numeric"
+        oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+    </td>
+</tr>
+
+<tr>
+    <td>7.</td>
+    <td>E-mail</td>
+    <td><input type="email" size="30"></td>
+</tr>
+
+<tr>
+    <td>8.</td>
+    <td>Область наукових інтересів</td>
+    <td>
+        1. <input type="text"><br>
+        2. <input type="text"><br>
+        3. <input type="text"><br>
+        4. <input type="text"><br>
+        5. <input type="text"><br>
+        6. <input type="text">
+    </td>
+</tr>
+
+<tr>
+    <td colspan="3">
+        <input type="reset" value="Відмінити введення">
+        <br><br>
+        <input type="button"
+        value="Надіслати дані та перейти до 2 етапу реєстрації"
+        onclick="window.location.href='OkhrimenkoLab07-3-2.htm'">
+    </td>
+</tr>
+
+</table>
+</form>
+
+</body>
+</html>

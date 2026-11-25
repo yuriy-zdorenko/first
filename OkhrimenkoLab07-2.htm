@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма</title>
+</head>
+<body>
+
+<h2 align="center">Форма користувача</h2>
+
+<form>
+    <p>Прізвище:
+        <input type="text" name="surname">
+    </p>
+
+    <p>Ім'я:
+        <input type="text" name="name">
+    </p>
+
+    <p>Пароль:
+        <input type="password" name="password">
+    </p>
+
+    <p>Дата народження:
+        <input type="date" name="date">
+    </p>
+
+    <p>Стать:</p>
+    <input type="radio" name="gender" value="Чоловіча"> Чоловіча
+    <input type="radio" name="gender" value="Жіноча"> Жіноча
+
+    <p>Ваші інтереси:</p>
+    <input type="checkbox" name="interest"> Комп'ютери
+    <input type="checkbox" name="interest"> Спорт
+    <input type="checkbox" name="interest"> Музика
+    <input type="checkbox" name="interest"> Ігри
+    <input type="checkbox" name="interest"> Подорожі
+
+    <p>Місто:</p>
+    <select name="city">
+        <option>Полтава</option>
+        <option>Київ</option>
+        <option>Харків</option>
+        <option>Львів</option>
+        <option>Черкаси</option>
+        <option>Суми</option>
+        <option>Дніпро</option>
+    </select>
+
+    <p>Коментар:</p>
+    <textarea name="comment" rows="4" cols="30"></textarea>
+
+    <p>
+        <input type="submit" value="Надіслати">
+        <input type="reset" value="Очистити">
+    </p>
+</form>
+
+</body>
+</html>
