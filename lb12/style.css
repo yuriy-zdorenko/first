@@ -1,0 +1,15 @@
+body {
+  background-color: #f4f7fb;
+  font-family: Arial, sans-serif;
+  margin: 40px;
+}
+
+.student-record {
+  color: #1e3a8a;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ffffff;
+  border-left: 6px solid #2563eb;
+  padding: 16px 24px;
+}
