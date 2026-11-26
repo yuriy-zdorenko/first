@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Лабораторна робота №9 — Завдання 2</title>
+  <style type="text/css">
+    body {
+      background-color: #f3f4f6;
+      margin: 25px;
+    }
+
+    .section-title {
+      font-family: Arial, sans-serif;
+      font-size: 20pt;
+      font-weight: bold;
+      color: #4c1d95;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    .body-text {
+      font-family: "Times New Roman", serif;
+      font-size: 14pt;
+      color: #111827;
+      text-align: justify;
+      text-indent: 3%;
+      line-height: 1.5;
+    }
+
+    .footnote {
+      font-family: Arial, sans-serif;
+      font-size: 11pt;
+      font-style: italic;
+      color: #4b5563;
+      background-color: #e5e7eb;
+      padding: 6px 10px;
+      margin-top: 6px;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="section-title">Розділ 1. Універсальні (вільні) класи CSS</div>
+  <p class="body-text">
+    Вільний стильовий клас починається з крапки і не прив'язується до жодного конкретного HTML-тега. Завдяки цьому його можна додавати як до заголовків або блоків <code>&lt;div&gt;</code>, так і до окремих абзаців чи рядкових елементів.
+  </p>
+  <div class="footnote">
+    * Примітка 1: синтаксис оголошення вільного класу має вигляд <code>.назва_класу { властивості }</code>.
+  </div>
+
+  <h3 class="section-title">Розділ 2. Гнучке поєднання з різними елементами</h3>
+  <div class="body-text">
+    У цьому розділі клас <code>section-title</code> застосовано вже до тега <code>&lt;h3&gt;</code>, а клас <code>body-text</code> — до контейнера <code>&lt;div&gt;</code>, проте оформлення залишається повністю однаковим.
+  </div>
+  <p class="footnote">
+    * Примітка 2: однакові класи забезпечують візуальну цілісність великих вебсайтів.
+  </p>
+
+  <div class="section-title">Розділ 3. Спрощення підтримки коду</div>
+  <p class="body-text">
+    Якщо виникне потреба змінити колір усіх виносок або розмір шрифту основного тексту, достатньо відредагувати лише один блок правил у секції стилів.
+  </p>
+  <p class="footnote">
+    * Примітка 3: усі три вільні класи використані в документі по три рази на різних тегах.
+  </p>
+</body>
+</html>
