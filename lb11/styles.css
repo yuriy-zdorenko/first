@@ -1,0 +1,74 @@
+body {
+  background-image: url("images/bg-pattern.svg");
+  background-repeat: repeat;
+  background-color: #f4f7fb;
+  font-family: "Times New Roman", serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.nav-bar {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.nav-bar a {
+  margin: 0 12px;
+  font-size: 14pt;
+  font-style: normal;
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+  color: #1e3a8a;
+  font-style: normal;
+  font-size: 26pt;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+p {
+  text-indent: 35px;
+  text-align: justify;
+  margin-left: 6%;
+  margin-right: 6%;
+  font-style: italic;
+  font-size: 14pt;
+  color: #111827;
+  line-height: 1.5;
+}
+
+.media-block {
+  text-align: center;
+  margin: 18px 6%;
+}
+
+.media-block img {
+  max-width: 320px;
+  height: auto;
+  border: 1px solid #94a3b8;
+}
+
+/* Оформление ссылок */
+a:link {
+  color: #047857;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #4338ca;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #dc2626;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ea580c;
+  text-decoration: underline;
+}

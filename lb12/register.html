@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Реєстрація користувача</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #1f2937;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: #3898ec;
+      padding: 12px 24px;
+      border-bottom: 2px solid #ef4444;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .blog-title {
+      font-size: 26px;
+      font-weight: bold;
+      color: #000000;
+    }
+    .blog-author {
+      font-size: 13px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-top: 2px;
+    }
+    nav a {
+      color: #000000;
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 15px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 36px 16px;
+    }
+    .reg-card {
+      width: 100%;
+      max-width: 440px;
+      border: 1px solid #d1d5db;
+      background-color: #ffffff;
+    }
+    .reg-header {
+      background-color: #3898ec;
+      color: #ffffff;
+      text-align: center;
+      font-weight: bold;
+      font-size: 17px;
+      padding: 10px;
+    }
+    .reg-body {
+      padding: 20px 28px;
+    }
+    .form-group {
+      margin-bottom: 14px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 5px;
+      color: #111827;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 7px 9px;
+      border: 1px solid #d1d5db;
+      border-radius: 3px;
+      font-size: 14px;
+      background-color: #ffffff;
+    }
+    .submit-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 18px;
+    }
+    .submit-row button {
+      padding: 7px 14px;
+      font-size: 14px;
+      background-color: #efefef;
+      color: #000000;
+      border: 1px solid #8b8b8b;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #333d42;
+      color: #e5e7eb;
+      text-align: center;
+      padding: 18px 12px;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <div class="blog-title">Мій особистий блог</div>
+      <div class="blog-author">Автор блогу</div>
+    </div>
+    <nav>
+      <a href="flexbox.html">Вхід</a>
+      <a href="register.html">Реєстрація</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="reg-card">
+      <div class="reg-header">Реєстрація користувача</div>
+      <form class="reg-body" action="#" method="post">
+        <div class="form-group">
+          <label for="lastname">Прізвище</label>
+          <input id="lastname" name="lastname" type="text">
+        </div>
+        <div class="form-group">
+          <label for="firstname">Ім'я</label>
+          <input id="firstname" name="firstname" type="text">
+        </div>
+        <div class="form-group">
+          <label for="login">Логін</label>
+          <input id="login" name="login" type="text">
+        </div>
+        <div class="form-group">
+          <label for="group">Навчальна група</label>
+          <select id="group" name="group">
+            <option value="281">281</option>
+            <option value="282">282</option>
+            <option value="283">283</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="password">Пароль</label>
+          <input id="password" name="password" type="password">
+        </div>
+        <div class="form-group">
+          <label for="password_confirm">Підтвердження паролю</label>
+          <input id="password_confirm" name="password_confirm" type="password">
+        </div>
+        <div class="submit-row">
+          <button type="submit">Зареєструватись</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div>© Всі права захищені.</div>
+    <div>Розробник: студент навчальної групи</div>
+  </footer>
+</body>
+</html>
