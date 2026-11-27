@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №4. Використання рядків, що біжать у HTML-документах.">
+    <meta name="keywords" content="HTML, marquee, рядок що біжить, лабораторна робота 4">
+    <title>Лабораторна робота №4 — Вертикальні рядки</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 30px 20px;
+            background: #F1F8FF;
+            color: #30264A;
+            font-family: Arial, sans-serif;
+        }
+        h1 { text-align: center; color: #514080; margin: 0 0 10px; }
+        .intro { text-align: center; margin: 0 auto 28px; max-width: 850px; }
+        .strip {
+            width: min(900px, 100%);
+            margin: 18px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .strip-label {
+            width: min(900px, 100%);
+            margin: 24px auto 4px;
+            font-size: 14px;
+            color: #6554A4;
+            font-weight: bold;
+        }
+        marquee { font-family: Arial, sans-serif; }
+    </style>
+</head>
+
+<body>
+    <h1>Вертикальні рядки, що біжать</h1>
+    <p class="intro">П'ять вертикальних смуг що мають різний рух тексту та зображень у різних напрямках.</p>
+
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px; max-width:1000px; margin:auto;">
+        <section style="width:180px; text-align:center;">
+            <h3 style="font-size:15px; color:#514080;">1. Коливання</h3>
+            <div class="strip" style="height:280px; width:180px; background:#E5DDF8;">
+                <marquee width="180" height="280" direction="up" behavior="alternate" scrollamount="5">
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:10px; color:#5C3D99; font-weight:bold;">
+                        <span>Навчайся!</span><img src="image/smile01.png" width="90" height="75" alt="smile">
+                        <img src="image/smile02.png" width="90" height="75" alt="Зірка"><span>Смайлики</span>
+                    </div>
+                </marquee>
+            </div>
+        </section>
+
+        <section style="width:180px; text-align:center;">
+            <h3 style="font-size:15px; color:#087E8B;">2. Знизу вгору</h3>
+            <div class="strip" style="height:280px; width:180px; background:#DDF5F2;">
+                <marquee width="180" height="280" direction="up" behavior="scroll" scrollamount="4">
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+                        <img src="image/smile03.png" width="90" height="75" alt="Smile">
+                        <img src="image/smile04.png" width="90" height="75" alt="Smile">
+                        <img src="image/smile05.png" width="90" height="75" alt="Smile">
+                    </div>
+                </marquee>
+            </div>
+        </section>
+
+        <section style="width:180px; text-align:center;">
+            <h3 style="font-size:15px; color:#A0442D;">3. Згори вниз</h3>
+            <div class="strip" style="height:280px; width:180px; background:#FFE8D9;">
+                <marquee width="180" height="280" direction="down" behavior="slide" scrollamount="5">
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+                        <img src="image/smile01.png" width="90" height="75" alt="smile">
+                        <img src="image/smile02.png" width="90" height="75" alt="smile">
+                        <img src="image/smile03.png" width="90" height="75" alt="smile">
+                    </div>
+                </marquee>
+            </div>
+        </section>
+
+        <section style="width:180px; text-align:center;">
+            <h3 style="font-size:15px; color:#315B9A;">4. Мала затримка</h3>
+            <div class="strip" style="height:280px; width:180px; background:#E4EEFF;">
+                <marquee width="180" height="280" direction="down" behavior="scroll" scrollamount="4" scrolldelay="35">
+                    <div style="color:#315B9A; font-size:21px; font-weight:bold; text-align:center;">
+                        Ідеї<br>стають<br>проєктами<br><br>Код<br>оживає
+                    </div>
+                </marquee>
+            </div>
+        </section>
+
+        <section style="width:180px; text-align:center;">
+            <h3 style="font-size:15px; color:#805A00;">5. Велика затримка</h3>
+            <div class="strip" style="height:280px; width:180px; background:#FFF1B8;">
+                <marquee width="180" height="280" direction="up" behavior="scroll" scrollamount="4" scrolldelay="180">
+                    <div style="color:#805A00; font-size:21px; font-family:Georgia,serif; font-style:italic; text-align:center;">
+                        Програмування<br>надихає<br><br>Твори<br>та<br>створюй
+                    </div>
+                </marquee>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

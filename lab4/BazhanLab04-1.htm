@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №4. Використання рядків, що біжать у HTML-документах.">
+    <meta name="keywords" content="HTML, marquee, рядок що біжить, лабораторна робота 4">
+    <title>Лабораторна робота №4-Рядок, що біжить</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 30px 20px;
+            background: #FFF8E8;
+            color: #4800ff;
+            font-family: Arial, sans-serif;
+        }
+        h1 { text-align: center; color: #4400ff; margin: 0 0 10px; }
+        .intro { text-align: center; margin: 0 auto 28px; max-width: 850px; }
+        .strip {
+            width: min(900px, 100%);
+            margin: 18px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .strip-label {
+            width: min(900px, 100%);
+            margin: 24px auto 4px;
+            font-size: 14px;
+            color: #3000dd;
+            font-weight: bold;
+        }
+        marquee { font-family: Arial, sans-serif; }
+    </style>
+</head>
+
+<body>
+    <h1>Рядок, що біжить</h1>
+    <div class="strip" style="height:50px; background:#D9F2EE;">
+        <marquee width="90%" height="50" bgcolor="#D9F2EE" behavior="alternate" direction="left" scrollamount="5">
+            <span style="color:#5C3D99; font-family:Verdana,sans-serif; font-size:24px; font-weight:bold; font-style:italic;">
+                Вітаю! Ласкаво просимо на мою сторінку!
+            </span>
+        </marquee>
+    </div>
+</body>
+</html>
