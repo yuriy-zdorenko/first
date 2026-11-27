@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №4. Використання рядків, що біжать у HTML-документах.">
+    <meta name="keywords" content="HTML, marquee, рядок що біжить, лабораторна робота 4">
+    <title>Лабораторна робота №4 — Горизонтальні рядки</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 30px 20px;
+            background: #F7F4FF;
+            color: #30264A;
+            font-family: Arial, sans-serif;
+        }
+        h1 { text-align: center; color: #514080; margin: 0 0 10px; }
+        .intro { text-align: center; margin: 0 auto 28px; max-width: 850px; }
+        .strip {
+            width: min(900px, 100%);
+            margin: 18px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .strip-label {
+            width: min(900px, 100%);
+            margin: 24px auto 4px;
+            font-size: 14px;
+            color: #6554A4;
+            font-weight: bold;
+        }
+        marquee { font-family: Arial, sans-serif; }
+    </style>
+</head>
+
+<body>
+    <h1>Горизонтальні рядки, що біжать</h1>
+    <p class="intro">П'ять окремих смуг що мають різні режими руху, напрямки та швидкість тексту.</p>
+
+    <div class="strip" style="height:70px; background:#E5DDF8;">
+        <marquee width="100%" height="70" behavior="alternate" direction="left" scrollamount="6">
+            <span style="font-size:25px; color:#773ee9; font-weight:bold;">Смуга номер 1, що відбивається від полів</span>
+        </marquee>
+    </div>
+
+    <div class="strip" style="height:70px; background:#DDF5F2;">
+        <marquee width="100%" height="70" behavior="scroll" direction="left" scrollamount="7">
+            <span style="font-size:23px; color:#087E8B; font-family:Georgia,serif;">Смуга номер 2, що заходить за поля і йде по колу</span>
+        </marquee>
+    </div>
+
+    <div class="strip" style="height:70px; background:#FFE8D9;">
+        <marquee width="100%" height="70" behavior="slide" direction="right" scrollamount="7">
+            <span style="font-size:23px; color:#A0442D; font-style:italic; font-family:Verdana,sans-serif;">Смуга номер 3, що доходить до кінця і зупиняється</span>
+        </marquee>
+    </div>
+
+    <div class="strip" style="height:70px; background:#E4EEFF;">
+        <marquee width="100%" height="70" behavior="scroll" direction="right" scrollamount="5" scrolldelay="35">
+            <span style="font-size:22px; color:#315B9A; font-weight:bold;">Смуга номер 4, теж заходить за поля</span>
+        </marquee>
+    </div>
+
+    <div class="strip" style="height:70px; background:#FFF1B8;">
+        <marquee width="100%" height="70" behavior="scroll" direction="left" scrollamount="5" scrolldelay="180">
+            <span style="font-size:22px; color:#805A00; font-family:Georgia,serif; font-style:italic;">Смуга номер 5, має найменшу швидкість</span>
+        </marquee>
+    </div>
+</body>
+</html>
