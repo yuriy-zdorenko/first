@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Kalinichenko">
+    <meta name="description" content="Лабораторна робота №4.1 - горизонтальні рядки, що біжать">
+    <title>Завдання 4.1 — Горизонтальні рядки, що біжать</title>
+</head>
+<body bgcolor="#f0f8ff" text="#000000">
+
+    <h2 align="center">Горизонтальні рядки, що біжать</h2>
+
+    <!-- 1. Текст коливається з боку в бік -->
+    <marquee width="100%" height="50" bgcolor="#99ff00" behavior="alternate" direction="left">
+        <font color="#8b008b" face="Verdana" size="4"><b><i>
+            Рядок 1: Текст коливається з боку в бік (alternate)
+        </i></b></font>
+    </marquee>
+
+    <!-- 2. Текст пробігає справа наліво та з'являється знову -->
+    <marquee width="100%" height="50" bgcolor="#ffcc99" behavior="scroll" direction="left">
+        <font color="#006400" face="Arial" size="4"><b>
+            Рядок 2: Текст пробігає справа наліво та з'являється знову (scroll, left)
+        </b></font>
+    </marquee>
+
+    <!-- 3. Текст пробігає зліва направо та зупиняється -->
+    <marquee width="100%" height="50" bgcolor="#ccffff" behavior="slide" direction="right">
+        <font color="#8b0000" face="Tahoma" size="4"><b>
+            Рядок 3: Текст пробігає зліва направо та зупиняється (slide, right)
+        </b></font>
+    </marquee>
+
+    <!-- 4a. Рядок з малим запізненням (швидший) -->
+    <marquee width="100%" height="50" bgcolor="#ffccff" behavior="scroll" direction="left" scrolldelay="30" scrollamount="6">
+        <font color="#4b0082" face="Courier New" size="4"><b>
+            Рядок 4a: Мале запізнення (scrolldelay=30) — рух швидший
+        </b></font>
+    </marquee>
+
+    <!-- 4b. Рядок з великим запізненням (повільніший) -->
+    <marquee width="100%" height="50" bgcolor="#ffffcc" behavior="scroll" direction="left" scrolldelay="150" scrollamount="3">
+        <font color="#2f4f4f" face="Georgia" size="4"><b>
+            Рядок 4b: Велике запізнення (scrolldelay=150) — рух повільніший
+        </b></font>
+    </marquee>
+
+</body>
+</html>

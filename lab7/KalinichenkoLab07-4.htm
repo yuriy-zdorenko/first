@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Kalinichenko">
+    <meta name="description" content="Лабораторна робота №7 - Замовлення товару">
+    <title>Замовлення товару</title>
+</head>
+<body bgcolor="#f0f8ff" text="#000000">
+
+    <h2 align="center">Завдання 3: Замовлення товару</h2>
+
+    <form action="#" method="get">
+
+        <p>
+            <b>Номер банківського рахунку:</b><br>
+            <input type="text" name="account" size="30" maxlength="20">
+        </p>
+
+        <p>
+            <b>Особистий номер користувача:</b><br>
+            <input type="text" name="userid" size="30" maxlength="20">
+        </p>
+
+        <p>
+            <b>Виберіть товар (можна декілька):</b><br>
+            <select name="goods" size="6" multiple>
+                <option value="1">Ноутбук Lenovo</option>
+                <option value="2">Смартфон Samsung</option>
+                <option value="3">Навушники Sony</option>
+                <option value="4">Клавіатура Logitech</option>
+                <option value="5">Мишка Logitech</option>
+                <option value="6">Монітор LG</option>
+            </select>
+        </p>
+
+        <p>
+            <b>Вид оплати:</b><br>
+            <input type="radio" name="pay" value="cash" checked> Готівковий розрахунок<br>
+            <input type="radio" name="pay" value="noncash"> Безготівковий розрахунок
+        </p>
+
+        <p>
+            <b>Додаткова інформація при відповіді:</b><br>
+            <input type="checkbox" name="info_balance" value="yes"> Дані про залишки на рахунку<br>
+            <input type="checkbox" name="info_payments" value="yes"> Список останніх виплат по рахунку
+        </p>
+
+        <p>
+            <b>Коментарі:</b><br>
+            <textarea name="comments" rows="5" cols="60" wrap="virtual"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Оформити замовлення">
+            <input type="reset" value="Очистити форму">
+        </p>
+
+    </form>
+
+</body>
+</html>

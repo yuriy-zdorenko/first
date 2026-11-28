@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Kalinichenko">
+    <meta name="description" content="Лабораторна робота №9 - Класи menu та small">
+    <title>Завдання 3 — Класи menu та small</title>
+
+    <style type="text/css">
+        /* Клас для елементів меню */
+        .menu {
+            font-family: Arial, sans-serif;
+            font-size: 14pt;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #336699;
+            text-decoration: none;
+            padding: 6px 14px;
+            margin-right: 6px;
+            border-radius: 4px;
+            display: inline-block;
+            border: 1px solid #224466;
+        }
+        .menu:hover {
+            background-color: #ff9900;
+            color: #000000;
+        }
+        .menu-active {
+            background-color: #ff9900;
+            color: #000000;
+        }
+
+        /* Клас для невеликих інформаційних повідомлень */
+        .small {
+            font-family: Arial, sans-serif;
+            font-size: 10pt;
+            font-style: italic;
+            color: #666666;
+            background-color: #f0f0f0;
+            border-top: 1px solid #cccccc;
+            padding: 4px 8px;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        /* Основний стиль сторінки */
+        body {
+            background-color: #ffffff;
+            margin: 20px 40px;
+            font-family: "Times New Roman", serif;
+            font-size: 14pt;
+            color: #222222;
+        }
+
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 28pt;
+            color: darkred;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: Arial, sans-serif;
+            font-size: 20pt;
+            color: darkblue;
+            margin-top: 30px;
+        }
+
+        p {
+            text-align: justify;
+            text-indent: 2%;
+            line-height: 20pt;
+        }
+
+        /* Меню-контейнер */
+        .nav {
+            text-align: center;
+            background-color: #e6f0ff;
+            padding: 10px;
+            border: 1px solid #336699;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Класи menu та small</h1>
+
+    <!-- Меню з використанням класу .menu -->
+    <div class="nav">
+        <a href="#" class="menu menu-active">Головна</a>
+        <a href="#" class="menu">Про сайт</a>
+        <a href="#" class="menu">Послуги</a>
+        <a href="#" class="menu">Контакти</a>
+        <a href="#" class="menu">Допомога</a>
+    </div>
+
+    <h2>Про цю сторінку</h2>
+    <p>
+        Ця сторінка демонструє використання двох вільних класів: <b>.menu</b>
+        для оформлення елементів навігаційного меню та <b>.small</b> для
+        невеликих інформаційних повідомлень (адреса сторінки, ім'я автора,
+        дата оновлення тощо).
+    </p>
+
+    <h2>Клас .menu</h2>
+    <p>
+        Клас <b>.menu</b> застосовується до посилань меню. Він задає шрифт,
+        колір, фон, відступи, рамку та заокруглені кути. При наведенні миші
+        колір змінюється завдяки псевдокласу <b>:hover</b>.
+    </p>
+    <p>
+        Клас <b>.menu-active</b> додатково виділяє активний пункт меню
+        (наприклад, "Головна").
+    </p>
+
+    <h2>Клас .small</h2>
+    <p>
+        Клас <b>.small</b> використовується для невеликих інформаційних
+        повідомлень. Його можна застосовувати до абзаців, блоків div або
+        навіть до окремих рядків тексту.
+    </p>
+
+    <!-- Приклади використання класу .small -->
+    <div class="small">
+        Адреса поточної сторінки: <b>KalinichenkoLab09-3.htm</b>
+    </div>
+    <div class="small">
+        Автор: <b>Калініченко Роман</b>, студент групи 303-ТН
+    </div>
+    <div class="small">
+        Дата останнього оновлення: 2026 р.
+    </div>
+
+    <h2>Повторне використання</h2>
+    <p>
+        Обидва класи — <b>.menu</b> та <b>.small</b> — можна використовувати
+        багаторазово в одному документі. Це дозволяє підтримувати єдність
+        оформлення та скорочувати обсяг коду.
+    </p>
+
+    <!-- Ще одне меню (демонстрація повторного використання .menu) -->
+    <div class="nav">
+        <a href="#" class="menu">Пункт 1</a>
+        <a href="#" class="menu">Пункт 2</a>
+        <a href="#" class="menu">Пункт 3</a>
+    </div>
+
+    <!-- Ще одне повідомлення .small -->
+    <p class="small">
+        Це повідомлення оформлено класом <b>.small</b> застосованим до тега p.
+        Клас універсальний і працює з будь-яким текстовим елементом.
+    </p>
+
+</body>
+</html>

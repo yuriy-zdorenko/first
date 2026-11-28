@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Kalinichenko">
+    <meta name="description" content="Лабораторна робота №9 - Вільні класи">
+    <title>Завдання 2 — Вільні класи</title>
+
+    <style type="text/css">
+        /* Вільний клас для назви розділу */
+        .section-title {
+            font-family: Arial, sans-serif;
+            font-size: 22pt;
+            font-weight: bold;
+            color: darkblue;
+            text-align: left;
+            background-color: #e6f0ff;
+            padding: 8px 15px;
+            border-left: 6px solid darkblue;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        /* Вільний клас для основного тексту */
+        .text {
+            font-family: "Times New Roman", serif;
+            font-size: 14pt;
+            color: #222222;
+            text-align: justify;
+            text-indent: 2%;
+            line-height: 20pt;
+            margin-bottom: 12px;
+        }
+
+        /* Вільний клас для виноски */
+        .note {
+            font-family: Arial, sans-serif;
+            font-size: 12pt;
+            font-style: italic;
+            color: #555555;
+            background-color: #fffbe6;
+            border: 1px dashed #c9a227;
+            padding: 8px 12px;
+            margin: 10px 20px;
+            text-align: left;
+        }
+
+        body {
+            background-color: #ffffff;
+            margin: 20px 40px;
+        }
+
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 28pt;
+            color: darkred;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Вільні стильові класи</h1>
+
+    <!-- Розділ 1 -->
+    <div class="section-title">Розділ 1. Що таке вільні класи</div>
+    <p class="text">
+        Вільні класи — це класи, імена яких починаються з крапки і не прив'язані
+        до конкретного HTML-тега. Їх можна застосовувати до будь-яких елементів:
+        абзаців, заголовків, блоків div, span тощо. Це робить стилі гнучкішими
+        та дозволяє повторно використовувати одне й те саме оформлення.
+    </p>
+    <p class="text">
+        На відміну від класів, прив'язаних до тегів (наприклад, <b>h2.red</b>),
+        вільні класи описуються просто як <b>.ім'я_класу</b> і можуть
+        застосовуватися до будь-якого тега через атрибут <b>class</b>.
+    </p>
+    <div class="note">
+        Виноска 1: вільні класи дозволяють уникнути дублювання коду та
+        спрощують підтримку стилів.
+    </div>
+
+    <!-- Розділ 2 -->
+    <div class="section-title">Розділ 2. Переваги вільних класів</div>
+    <p class="text">
+        Використання вільних класів дає змогу створювати бібліотеку стилів,
+        яку можна застосовувати в різних частинах документа. Наприклад, клас
+        <b>.text</b> можна використовувати і для абзацу, і для елемента span,
+        і для будь-якого іншого текстового елемента.
+    </p>
+    <span class="text">
+        Цей текст оформлено класом <b>.text</b>, але він знаходиться всередині
+        тега span, а не p. Це демонструє універсальність вільного класу.
+    </span>
+    <div class="note">
+        Виноска 2: один і той самий клас можна застосовувати до різних тегів.
+    </div>
+
+    <!-- Розділ 3 -->
+    <div class="section-title">Розділ 3. Приклади застосування</div>
+    <p class="text">
+        Нижче наведено ще один приклад використання класу <b>.text</b> та
+        <b>.note</b>. Зверніть увагу, що оформлення однакове, незалежно від
+        тега, в якому застосовано клас.
+    </p>
+    <div class="text">
+        Цей блок оформлено як div із класом <b>.text</b> — виглядає так само,
+        як і абзац p з тим самим класом.
+    </div>
+    <div class="note">
+        Виноска 3: вільні класи — це основа сучасного CSS-оформлення.
+    </div>
+
+    <!-- Розділ 4 -->
+    <div class="section-title">Розділ 4. Підсумок</div>
+    <p class="text">
+        Отже, вільні класи — це потужний інструмент, який дозволяє гнучко
+        керувати оформленням документа, повторно використовувати стилі та
+        підтримувати єдність дизайну.
+    </p>
+    <div class="note">
+        Виноска 4: класи .section-title, .text та .note можна застосовувати
+        багаторазово в одному документі.
+    </div>
+
+</body>
+</html>
