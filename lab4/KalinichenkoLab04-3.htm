@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Kalinichenko">
+    <meta name="description" content="Лабораторна робота №4.2 - вертикальні рядки, що біжать">
+    <title>Завдання 4.2 — Вертикальні рядки, що біжать</title>
+</head>
+<body bgcolor="#f5f5dc" text="#000000">
+
+    <h2 align="center">Вертикальні рядки, що біжать</h2>
+
+    <!-- 1. Текст та рисунки коливаються (alternate, up) -->
+    <marquee width="100%" height="120" bgcolor="#99ff00" behavior="alternate" direction="up">
+        <div align="center">
+            <font color="#8b008b" face="Verdana" size="4"><b>
+                Рядок 1: Текст та рисунки коливаються (alternate, up)<br>
+                ★ ☆ ★ ☆ ★
+            </b></font>
+        </div>
+    </marquee>
+
+    <!-- 2. Послідовність рисунків пробігає знизу до гори та з'являється знову -->
+    <marquee width="100%" height="120" bgcolor="#ffcc99" behavior="scroll" direction="up">
+        <div align="center">
+            <font color="#006400" face="Arial" size="4"><b>
+                Рядок 2: Рух знизу до гори та поява знову (scroll, up)<br>
+                ▲ ▲ ▲ ▲ ▲
+            </b></font>
+        </div>
+    </marquee>
+
+    <!-- 3. Послідовність рисунків пробігає згори до низу із зупинкою -->
+    <marquee width="100%" height="120" bgcolor="#ccffff" behavior="slide" direction="down">
+        <div align="center">
+            <font color="#8b0000" face="Tahoma" size="4"><b>
+                Рядок 3: Рух згори до низу із зупинкою (slide, down)<br>
+                ▼ ▼ ▼ ▼ ▼
+            </b></font>
+        </div>
+    </marquee>
+
+    <!-- 4a. Вертикальний рядок з малим запізненням -->
+    <marquee width="100%" height="120" bgcolor="#ffccff" behavior="scroll" direction="up" scrolldelay="30" scrollamount="5">
+        <div align="center">
+            <font color="#4b0082" face="Courier New" size="4"><b>
+                Рядок 4a: Мале запізнення (scrolldelay=30) — швидший рух<br>
+                ♦ ♦ ♦ ♦ ♦
+            </b></font>
+        </div>
+    </marquee>
+
+    <!-- 4b. Вертикальний рядок з великим запізненням -->
+    <marquee width="100%" height="120" bgcolor="#ffffcc" behavior="scroll" direction="up" scrolldelay="150" scrollamount="2">
+        <div align="center">
+            <font color="#2f4f4f" face="Georgia" size="4"><b>
+                Рядок 4b: Велике запізнення (scrolldelay=150) — повільніший рух<br>
+                ● ● ● ● ●
+            </b></font>
+        </div>
+    </marquee>
+
+</body>
+</html>

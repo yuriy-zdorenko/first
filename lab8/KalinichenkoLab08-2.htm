@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Kalinichenko">
+    <meta name="description" content="Лабораторна робота №8 - Глобальні стилі">
+    <title>Завдання 2 — Глобальні стилі</title>
+
+    <style type="text/css">
+        /* Глобальний стиль для всього body */
+        body {
+            font-family: "Times New Roman", serif;
+            font-size: 14pt;
+            color: #222222;
+            background-color: #f5f5dc;
+            margin: 20px;
+        }
+
+        /* Стиль для всіх заголовків h1 */
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 26pt;
+            font-weight: bold;
+            color: darkred;
+            text-align: center;
+            text-transform: uppercase;
+            border-bottom: 3px solid darkred;
+            padding-bottom: 8px;
+        }
+
+        /* Стиль для всіх заголовків h2 */
+        h2 {
+            font-family: Arial, sans-serif;
+            font-size: 20pt;
+            color: darkblue;
+            text-align: left;
+        }
+
+        /* Стиль для всіх параграфів p */
+        p {
+            font-family: "Times New Roman", serif;
+            font-size: 14pt;
+            color: #222222;
+            text-align: justify;
+            text-indent: 2%;
+            line-height: 20pt;
+            margin-bottom: 12px;
+        }
+
+        /* Стиль для всіх розділів div */
+        div {
+            background-color: #ffffff;
+            border: 1px solid #999999;
+            padding: 12px;
+            margin-bottom: 18px;
+        }
+
+        /* Стиль для списків */
+        ul {
+            list-style-type: square;
+            font-family: Arial, sans-serif;
+            font-size: 13pt;
+            color: #333333;
+        }
+
+        /* Стиль для посилань */
+        a {
+            color: darkgreen;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Глобальні таблиці стилів</h1>
+
+    <div>
+        <h2>Розділ 1. Що таке CSS</h2>
+        <p>
+            CSS (Cascading Style Sheets) — це мова опису зовнішнього вигляду
+            документа, написаного мовою розмітки HTML. Вона дозволяє відокремити
+            зміст документа від його оформлення, що робить код чистішим і
+            зручнішим для підтримки.
+        </p>
+        <p>
+            За допомогою CSS можна керувати шрифтами, кольорами, відступами,
+            рамками, фоном та багатьма іншими властивостями елементів.
+        </p>
+    </div>
+
+    <div>
+        <h2>Розділ 2. Способи підключення стилів</h2>
+        <p>Існує чотири основні способи підключення стилів до HTML-документа:</p>
+        <ul>
+            <li>Внутрішні (inline) — через атрибут style;</li>
+            <li>Глобальні — через тег &lt;style&gt; у &lt;head&gt;;</li>
+            <li>Зовнішні (linked) — через тег &lt;link&gt;;</li>
+            <li>Імпортовані — через @import.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Розділ 3. Переваги глобальних стилів</h2>
+        <p>
+            Глобальні таблиці стилів дозволяють задати єдине оформлення для всіх
+            елементів певного типу в документі. Це значно скорочує код і
+            спрощує подальшу зміну дизайну сторінки.
+        </p>
+        <p>
+            Достатньо змінити одне правило в &lt;style&gt;, щоб оновити вигляд
+            усіх відповідних елементів на сторінці.
+        </p>
+        <p>
+            Детальніше про CSS можна дізнатися на
+            <a href="https://www.w3schools.com/css/" target="_blank">W3Schools</a>.
+        </p>
+    </div>
+
+</body>
+</html>

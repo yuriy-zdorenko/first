@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Kalinichenko">
+    <meta name="description" content="Лабораторна робота №7 - форма з усіма елементами">
+    <title>Форма з усіма елементами</title>
+</head>
+<body bgcolor="#f0f8ff" text="#000000">
+
+    <h2 align="center">Завдання 1: Форма з усіма елементами</h2>
+
+    <form action="KalinichenkoLab07-1.htm" method="get" target="_blank">
+
+        <!-- TEXT -->
+        <p>
+            <b>Ваше ім'я:</b><br>
+            <input type="text" name="fio" value="Іванов Іван Іванович"
+                   size="40" maxlength="40">
+        </p>
+
+        <!-- PASSWORD -->
+        <p>
+            <b>Пароль доступу:</b><br>
+            <input type="password" name="pass" size="20" maxlength="20">
+        </p>
+
+        <!-- RADIOBUTTON -->
+        <p>
+            <b>Ваша стать:</b><br>
+            <input type="radio" name="pol" value="male" checked> Чоловіча
+            <input type="radio" name="pol" value="female"> Жіноча
+        </p>
+
+        <!-- SELECT -->
+        <p>
+            <b>На якому курсі Ви навчаєтесь?</b><br>
+            <select name="curs" size="1">
+                <option value="1" selected>Перший</option>
+                <option value="2">Другий</option>
+                <option value="3">Третій</option>
+                <option value="4">Четвертий</option>
+                <option value="5">П'ятий</option>
+            </select>
+        </p>
+
+        <!-- CHECKBOX -->
+        <p>
+            <b>Які дисципліни ви вивчаєте на курсі?</b><br>
+            <input type="checkbox" name="web" value="yes" checked> WEB-програмування<br>
+            <input type="checkbox" name="eldinam" value="yes"> Технічна електродинаміка<br>
+            <input type="checkbox" name="math" value="yes"> Вища математика
+        </p>
+
+        <!-- TEXTAREA -->
+        <p>
+            <b>Напишіть декілька слів про себе:</b><br>
+            <textarea name="about" rows="6" cols="60" wrap="off"></textarea>
+        </p>
+
+        <!-- FILE -->
+        <p>
+            <b>Прикріпити файл:</b><br>
+            <input type="file" name="friend" size="50" accept="image/*, .pdf, .txt">
+        </p>
+
+        <!-- BUTTON, SUBMIT, RESET -->
+        <p>
+            <input type="submit" value="Відіслати дані">
+            <input type="reset" value="Очистити форму">
+            <input type="button" value="Показати сьогоднішнє число"
+                   onclick="alert(Date());">
+        </p>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Kalinichenko">
+    <meta name="description" content="Сенсорне зображення довільної форми">
+    <title>Сенсорне зображення — довільні області</title>
+
+    <map name="mapFree">
+        <!-- Довільна область 1 (верхня ліва) -->
+        <area shape="poly" coords="40,40,380,30,420,220,250,280,50,230"
+              href="#" alt="Зона А"
+              title="Зона А — верхня ліва частина зображення">
+
+        <!-- Довільна область 2 (верхня права) -->
+        <area shape="poly" coords="450,40,760,50,780,240,500,260,430,150"
+              href="#" alt="Зона Б"
+              title="Зона Б — верхня права частина зображення">
+
+        <!-- Довільна область 3 (нижня) -->
+        <area shape="poly" coords="80,330,400,320,600,340,700,560,400,580,150,560"
+              href="#" alt="Зона В"
+              title="Зона В — нижня частина зображення">
+    </map>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+
+    <h1 align="center">Сенсорне зображення</h1>
+
+    <p align="center">
+        Наведіть курсор на різні ділянки зображення — з'явиться відповідний текст.
+    </p>
+
+    <center>
+        <img src="https://th.bing.com/th/id/OIP.BFZh3Yd8yjjahObIJEQidwHaFj?w=246&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" width="800" height="600"
+             border="1" usemap="#mapFree" alt="Сенсорне зображення">
+    </center>
+
+</body>
+</html>
